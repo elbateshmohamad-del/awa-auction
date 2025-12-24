@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
         // Sometimes ciphers need adjustment too, but start with this.
     });
 
-    return new Promise((resolve) => {
+    return new Promise<NextResponse>((resolve) => {
         const req = https.get(url, {
             agent,
             headers: {
