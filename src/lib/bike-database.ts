@@ -101,9 +101,32 @@ export async function updateBike(id: string, updates: any) {
     return parseBike(bike);
 }
 
+
 export async function deleteBike(id: string) {
     await prisma.bike.delete({
         where: { id }
     });
     return true;
 }
+
+export async function addBikes(bikes: any[]) {
+    // Process sequentially to check for duplicates safely
+    // In a real high-throughput scenario, createMany would be better but we need JSON parsing logic
+    const results = [];
+    for (const bike of bikes) {
+        // Double check existance to be safe
+        const existing = await getBikeByBdsId(bike.bdsId);
+        if (!existing) {
+            results.push(await addBike(bike));
+        }
+    }
+    return results;
+}
+
+// TODO: Create ImportLog model in schema.prisma for persistent logging
+export async function addImportLog(log: any) {
+    console.log('[Import Log]', JSON.stringify(log, null, 2));
+    // For now, just logging to console. Return dummy object.
+    return { ...log, id: 'dummy-log' };
+}
+
