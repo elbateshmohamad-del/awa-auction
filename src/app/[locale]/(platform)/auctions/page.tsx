@@ -29,6 +29,7 @@ interface Bike {
     displacement?: string;
     color?: string;
     bidCount?: number;
+    currentPrice?: number;
 }
 
 // Helper to get current auction status and target date (JST)

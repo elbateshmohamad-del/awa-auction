@@ -2,7 +2,7 @@ import { HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
-    variant?: 'default' | 'success' | 'warning' | 'error' | 'info' | 'blue' | 'secondary' | 'green' | 'red' | 'yellow' | 'bronze' | 'purple' | 'orange';
+    variant?: 'default' | 'success' | 'warning' | 'error' | 'info' | 'blue' | 'secondary' | 'green' | 'red' | 'yellow' | 'bronze' | 'purple' | 'orange' | 'outline';
     size?: 'sm' | 'md' | 'lg';
     grade?: 'S' | 'A' | 'B' | 'C' | 'D';
 }
@@ -23,6 +23,7 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
             bronze: 'bg-[#cd7f32] text-white',
             purple: 'bg-purple-600 text-white',
             orange: 'bg-orange-500 text-white',
+            outline: 'border border-gray-200 bg-transparent text-gray-800',
         };
 
         const gradeStyles = {

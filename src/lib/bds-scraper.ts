@@ -80,7 +80,7 @@ interface ScrapedBikeData {
     bdsReport: string;
     sellerDeclaration: string;
     remarks?: { title: string; content: string }[];
-    inspectionImages?: Bike['inspectionImages']; // Reuse type from Bike
+    inspectionImages?: Record<string, string[]>;
     images: string[];
     videoUrls: string[];
 }
@@ -431,7 +431,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
         });
 
         // 5. Inspection Images (Categorized)
-        const inspectionImages: Bike['inspectionImages'] = {
+        const inspectionImages: Record<string, string[]> = {
             engine: [],
             frontSuspension: [],
             exterior: [],
@@ -449,7 +449,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
             '車台': 'frame'
         };
 
-        const inspectionDetailsMap: Bike['inspectionDetails'] = {
+        const inspectionDetailsMap: BikeInspectionDetail = {
             engine: {},
             frontSuspension: {},
             exterior: {},
@@ -507,7 +507,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
                 // or we update a local details object.
                 // Let's create a local `inspectionDetailsMap` similar to `inspectionImages`.
                 if (Object.keys(textDetails).length > 0) {
-                    inspectionDetailsMap[matchedKey as keyof typeof inspectionImages] = textDetails;
+                    inspectionDetailsMap[matchedKey as keyof BikeInspectionDetail] = textDetails;
                 }
             }
         });
@@ -566,7 +566,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
                         const label = $row.find('th').text().trim();
                         const value = $row.find('td').text().trim();
                         if (label && value) {
-                            inspectionDetails[key][label] = value;
+                            inspectionDetails[key as keyof BikeInspectionDetail][label] = value;
                         }
                     });
                 }
@@ -643,6 +643,9 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
 /**
  * Convert scraped data to Bike object
  */
+/**
+ * Convert scraped data to Bike object
+ */
 function convertToBike(bdsId: string, scraped: ScrapedBikeData): Bike {
     const makerResult = detectMaker(scraped.name);
 
@@ -679,16 +682,17 @@ function convertToBike(bdsId: string, scraped: ScrapedBikeData): Bike {
         electricGrade: scraped.electricGrade,
         frameGrade: scraped.frameGrade,
         awaGrade: convertGradeToAWA(scraped.overallGrade),
-        inspectionDetails: scraped.inspectionDetails,
-        awaReport: scraped.bdsReport, // Rename BDS報告 to AWA報告
+        inspectionDetails: JSON.stringify(scraped.inspectionDetails),
+        awaReport: scraped.bdsReport,
         sellerDeclaration: scraped.sellerDeclaration,
-        remarks: scraped.remarks || [],
-        inspectionImages: scraped.inspectionImages,
-        images: scraped.images,
-        videoUrls: scraped.videoUrls,
-        importedAt: new Date().toISOString(),
+        remarks: JSON.stringify(scraped.remarks || []),
+        images: JSON.stringify(scraped.images),
+        videoUrls: JSON.stringify(scraped.videoUrls),
+        importedAt: new Date(),
         status: 'active',
-    };
+        currentPrice: 0,
+        updatedAt: new Date(),
+    } as unknown as Bike;
 }
 
 export interface ImportResult {
@@ -1000,7 +1004,7 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
                             }
                         }
 
-                        bike.videoUrls = localVideoPaths;
+                        bike.videoUrls = JSON.stringify(localVideoPaths);
                     }
                     // --- VIDEO PROCESSING END ---
                     // --- VIDEO PROCESSING END ---
@@ -1009,7 +1013,7 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
                     result.imported.push(bike);
 
                     // Add to DB
-                    const existingBikes = getAllBikes();
+                    const existingBikes = await getAllBikes();
                     if (!existingBikes.some(b => b.bdsId === bike.bdsId)) {
                         addBike(bike);
                     } else {
@@ -1131,8 +1135,11 @@ export function generateMockBikes(count: number = 10): Bike[] {
                 ]
             },
             images: [],
-            importedAt: new Date().toISOString(),
+            importedAt: new Date(),
             status: 'active' as const,
-        };
+            currentPrice: 0,
+            videoUrls: '[]',
+            updatedAt: new Date(),
+        } as unknown as Bike;
     });
 }

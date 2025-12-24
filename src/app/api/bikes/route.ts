@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const maker = searchParams.get('maker');
 
-    let bikes = getAllBikes();
+    let bikes = await getAllBikes();
     if (maker) {
         bikes = bikes.filter(bike => bike.maker.toLowerCase() === maker.toLowerCase());
     }
@@ -67,8 +67,12 @@ export async function POST(request: Request) {
             awaReport: body.awaReport || '',
             sellerDeclaration: body.sellerDeclaration || '',
             images: body.images || [],
-            importedAt: new Date().toISOString(),
+            importedAt: new Date(),
             status: 'draft',
+            currentPrice: body.currentPrice || 0,
+            videoUrls: body.videoUrls || '[]',
+            remarks: body.remarks || '[]',
+            updatedAt: new Date(),
         };
 
         addBike(newBike);

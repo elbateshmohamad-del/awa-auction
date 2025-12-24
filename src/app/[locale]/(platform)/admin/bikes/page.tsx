@@ -20,7 +20,7 @@ export default async function AdminBikesPage(props: {
     const tCommon = await getTranslations('admin.common');
 
     // Fetch directly on server
-    let bikes = getAllBikes();
+    let bikes = await getAllBikes();
 
     // Filter Logic
     const q = typeof searchParams.q === 'string' ? searchParams.q.toLowerCase() : '';

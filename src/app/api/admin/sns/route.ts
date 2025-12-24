@@ -5,7 +5,7 @@ export async function GET() {
     try {
         const submissions = await prisma.snsSubmission.findMany({
             orderBy: {
-                submittedAt: 'desc',
+                createdAt: 'desc',
             },
         });
         return NextResponse.json(submissions);

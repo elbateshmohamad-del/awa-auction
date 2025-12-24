@@ -54,28 +54,31 @@ export function generateMockBikes(count: number = 5): Bike[] {
             electricGrade: Math.min(8, mock.overallGrade + 1),
             frameGrade: mock.overallGrade,
             awaGrade: convertGradeToAWA(mock.overallGrade),
-            inspectionDetails: {
+            inspectionDetails: JSON.stringify({
                 engine: {},
                 frontSuspension: {},
                 exterior: {},
                 rearSuspension: {},
                 electrical: {},
                 frame: {},
-            },
+            }),
             awaReport: 'AWAシステムにより取り込み',
             sellerDeclaration: '',
-            images: [
+            images: JSON.stringify([
                 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=2070&auto=format&fit=crop', // Main
                 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2070&auto=format&fit=crop', // Front
                 'https://images.unsplash.com/photo-1558981806-ec527fa84c3d?q=80&w=2070&auto=format&fit=crop', // Side
                 'https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=2070&auto=format&fit=crop', // Rear
-            ],
-            videoUrls: [
+            ]),
+            videoUrls: JSON.stringify([
                 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4', // Left Engine Sound (Mock)
                 'https://test-videos.co.uk/vids/jellyfish/mp4/h264/360/Jellyfish_360_10s_1MB.mp4'  // Right Engine Sound (Mock)
-            ],
-            importedAt: new Date().toISOString(),
-            status: 'active' as const,
-        };
+            ]),
+            importedAt: new Date(),
+            status: 'active',
+            currentPrice: 0,
+            remarks: JSON.stringify([]),
+            updatedAt: new Date(),
+        } as unknown as Bike;
     });
 }

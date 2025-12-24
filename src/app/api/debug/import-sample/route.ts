@@ -68,7 +68,7 @@ export async function GET(request: Request) {
         };
 
         // Check if bike exists and update, otherwise add
-        const allBikes = getAllBikes();
+        const allBikes = await getAllBikes();
         const existingIndex = allBikes.findIndex(b => b.id === fixedId);
 
         // We can't easily update via addBike, so we might need to overwrite in the file.

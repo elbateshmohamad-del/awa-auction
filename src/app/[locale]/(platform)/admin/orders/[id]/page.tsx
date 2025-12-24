@@ -81,7 +81,7 @@ export default function AdminOrderDetailPage({ params }: { params: Promise<{ id:
 
     const [order, setOrder] = useState(initialOrderData);
     const [invoicePreviewUrl, setInvoicePreviewUrl] = useState<string | null>(null);
-    const [currency, setCurrency] = useState<'USD' | 'EUR'>('USD');
+    const [currency, setCurrency] = useState<CurrencyCode>('USD');
 
     const STATUSES = ['Pending Payment', 'Paid', 'Processing', 'Shipped', 'Delivered', 'Cancelled'];
 
