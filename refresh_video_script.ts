@@ -1,7 +1,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { loginToBDS, requestBDS, extractVideoUrls, BDS_BASE_URL, SETTINGS_FILE, getSettings } from './src/lib/bds-scraper.ts';
+import { loginToBDS, requestBDS, extractVideoUrls, BDS_BASE_URL, SETTINGS_FILE, getSettings } from './src/lib/bds-scraper';
 
 const BIKES_FILE = path.join(process.cwd(), 'data', 'bikes.json');
 

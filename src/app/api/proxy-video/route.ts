@@ -3,11 +3,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import https from 'https';
 import { cookies } from 'next/headers';
 
+import crypto from 'crypto';
+
 // HTTPS Agent for legacy SSL support (same as proxy-image)
 const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
-    secureOptions: require('constants').SSL_OP_LEGACY_SERVER_CONNECT |
-        require('constants').SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION
+    secureOptions: crypto.constants.SSL_OP_LEGACY_SERVER_CONNECT || 0x4 |
+        crypto.constants.SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION
 });
 
 export async function GET(req: NextRequest) {
@@ -55,7 +57,7 @@ export async function GET(req: NextRequest) {
         headers['Range'] = range;
     }
 
-    return new Promise((resolve) => {
+    return new Promise<NextResponse>((resolve) => {
         const proxyReq = https.request(url, {
             method: 'GET',
             headers: headers,
