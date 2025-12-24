@@ -5,9 +5,34 @@
  */
 
 import { prisma } from '@/lib/prisma';
-import type { Bike } from '@prisma/client';
+import type { Bike } from '../generated/client';
 
 export type { Bike };
+
+export interface ImportLog {
+    id: string;
+    timestamp: string;
+    bikesImported: number;
+    errors: string[];
+}
+
+export interface BikeInspectionDetail {
+    engine: Record<string, string>;
+    frontSuspension: Record<string, string>;
+    exterior: Record<string, string>;
+    rearSuspension: Record<string, string>;
+    electrical: Record<string, string>;
+    frame: Record<string, string>;
+}
+
+export function convertGradeToAWA(overall: number | null): string {
+    if (overall === null || overall === undefined) return 'D';
+    if (overall >= 8) return 'S';
+    if (overall >= 6) return 'A';
+    if (overall >= 5) return 'B';
+    if (overall >= 4) return 'C';
+    return 'D';
+}
 
 // Helper to parse JSON fields
 function parseBike(bike: any) {
