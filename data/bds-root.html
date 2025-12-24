@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>&#x30ED;&#x30B0;&#x30A4;&#x30F3;</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-custom-jupiter.min.css?v=lUlY7AkF8CHt8pkkHGYvT4oRUrP_uapyRG2sFa-sNEg" />
+    <link rel="stylesheet" href="/lib/fontawesome/css/all.min.css?v=BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8" />
+    <style>
+        #screenLock {
+            height: 100%;
+            width: 100%;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            position: fixed;
+            background-color: transparent;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="/css/njp10100.min.css?v=ylWtFmHTPnYjruDVwHX5hkrKiNl8puUQ3bwhayG1T2M" />
+
+</head>
+<body class="body-layout">
+    <header class="sticky-top">
+        
+
+<nav class="navbar navbar-expand-sm navbar-toggleable navbar-dark bg-dark navbar-light border-bottom box-shadow machine">
+
+    
+    <span class="navbar-brand">
+        <img class="p-0 m-0" src="/assets/logo_jupiter2020.svg" style="width:6rem;" />
+    </span>
+	<div>
+				
+		
+        
+		
+	</div>
+    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        <ul class="navbar-nav flex-grow-1">
+        </ul>
+    </div>
+</nav>
+
+    </header>
+    
+
+    <div id="screenLock">
+        <div class="d-flex justify-content-center align-items-center" style="height:100%">
+            <div class="spinner-border" role="status" style="width: 10rem; height: 10rem;">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="h_UserIdentityName" />
+    <div class="container-fluid container-top-body">
+        <div class="row app-message-area">
+
+</div>
+        <div class="maincontainer mt-2">
+            <main role="main" class="pb-3">
+                
+
+<div class="row">
+    <div class="mx-auto">
+        <form method="post" action="/" autocomplete="off">
+            <div class="card njp10100-card">
+                <div class="card-header text-white h2" style="background-color:rgba(40, 167, 69, 1);">
+                    ログイン
+                </div>
+                <div class="card-body mb-0 pb-0">
+                    <div class="form-group">
+                        <label>会員番号</label>
+                        <input type="tel" class="form-control" autofocus data-val="true" data-val-length="&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9; MemberCd &#x306F;最大長&#x304C; 6 &#x306E;文字列&#x3067;&#x3042;&#x308B;必要&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;" data-val-length-max="6" data-val-regex="会員番号&#x3001;&#x307E;&#x305F;&#x306F;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x306B;誤&#x308A;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;" data-val-regex-pattern="^[0-9]&#x2B;$" data-val-required="会員番号&#x304C;入力&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;" id="member" maxlength="6" name="member" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="member" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>パスワード</label>
+                        <input class="form-control" type="password" data-val="true" data-val-length="会員番号&#x3001;&#x307E;&#x305F;&#x306F;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x306B;誤&#x308A;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;" data-val-length-max="16" data-val-length-min="4" id="pas" maxlength="16" name="pas" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="pas" data-valmsg-replace="true"></span>
+                        <table class="table table-sm w-100 table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="m-0 p-0 text-tyusyaku" colspan="2">
+                                        <span>
+                                            ※<span class="text-tyusyaku">
+                                                パスワードは16文字以下の半角英数字を入力して下さい。
+                                            </span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="m-0 p-0" colspan="2">
+                                        <span class="form-text text-tyusyaku">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英文字は大文字、小文字を区別します。
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="m-0 p-0">
+                                        <span class="form-text">
+                                            <a href="/NJP10/NJP10200"><span class="text-danger mr-1">≫</span>パスワードをお忘れの方はこちら</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button class="btn btn-primary c_enterEvent"><i class="far fa-hand-point-right mr-1"></i>ログイン</button>
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HUKs1AJMg1BjXrTU5DMOtzA2uLAKNPX6fyE3WfafCaVa2VMxwv8MS6zAX8GRjXVLv8Zr9tdCg6d07Y6P2VsCpnlq7pyRvjALaiO0Mdtw5jMw8kdugW8S2KjmrRqOR1xxRiMXG3NJadwrtnyFRvVHM4" /></form>
+        <p><a href="https://joac.jupiter.ac" class="">ＪＯＡオークションはこちら</a></p>
+        <div class="row">
+            <div class="col text-muted">
+                    推奨ブラウザ:<br />
+                    &nbsp;&nbsp;Google Chrome (最新版),&nbsp;&nbsp;Microsoft Edge (最新版)
+            </div>
+        </div>
+    </div>
+</div>
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted bg-light">
+        <div class="container-fluid ">
+		<div class="row m-3">
+    <div class="col text-center">
+        <a href="/assets/QAindex.htm">よくある質問</a><!-- <span class="mx-2">|</span> -->
+        <!-- <a href="https://www.bds.co.jp/company/">お問合せ</a><span class="mx-2">|</span> -->
+        <!-- <a href="~/assets/menseki.htm">免責事項</a> -->
+    </div>
+</div>
+			<div class="row m-2">
+		<div class="col text-center">
+			Copyright &copy; 2020 BDS COMPANY.,INC. All Rights Reserved.
+		</div>
+	</div>
+</div>
+    </footer>
+
+    
+    <div id="pickerdate-position">
+    </div>
+
+    <script>
+        window.addEventListener('beforeunload', function () {
+            document.getElementById('screenLock').style.display = 'block';
+        });
+
+        window.addEventListener('load', function (event) {
+            document.getElementById('screenLock').style.display = 'none';
+        });
+
+        window.addEventListener('pageshow', function (event) {
+            document.getElementById('screenLock').style.display = 'none';
+        });
+    </script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jupiter2020common.min.js?v=QOluUz0WscObI60cna7vmFSLyZLLB7FlP6IXdxQ6m_8" defer></script>
+	<script src="/js/auction.min.js?v=Gju8eetOYWuq_7R8j60wwdqpP7b4rkWAQRc2PS3x91Y" defer></script>
+    <script src="/js/site.min.js?v=M_NWkv1X50B_mnplD8xcwSuCiCT0T48sTRMzI9h7PBE"></script>
+
+
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+            // 会員情報チェック
+            var list_UserIdentityName = sessionStorage.getItem("UserIdentityName");
+
+            if (!list_UserIdentityName) {
+                // 会員情報がない場合
+                // 他会員情報を全削除
+                sessionStorage.clear();
+
+                // 会員情報 設定
+                sessionStorage.setItem("UserIdentityName", document.getElementById("h_UserIdentityName").value);
+
+                return;
+            }
+            else {
+                // 会員情報がある場合
+                if (list_UserIdentityName != document.getElementById("h_UserIdentityName").value) {
+                    // 他会員の場合
+                    // 他会員情報を全削除
+                    sessionStorage.clear();
+
+                    // 会員情報 設定
+                    sessionStorage.setItem("UserIdentityName", document.getElementById("h_UserIdentityName").value);
+                }
+            }
+
+        });
+    </script>
+    <script src="/js/keep-session.min.js?v=85PJOKZMQP8DgsJHru4LcEzrWCkxnd8fAsksSVeXVrs" defer></script>
+    <link rel="stylesheet" href="/lib/pickadate/themes/default.date.css?v=gcYve6gaT3vxaQ2bwjPHysiW0jY7cEbfFcYjjBrJlhw" />
+<link rel="stylesheet" href="/lib/pickadate/themes/default.time.css?v=2j5CVNPDdsP-HNf8ipEuCwT2QNIuNqNnt_6iw2QxHfE" />
+<link rel="stylesheet" href="/css/pickadate-custom.css?v=RIs-XdkzE7fmgoBBaWbobcbZb4yIY_fzuwACJs5FY08" />
+
+<script src="/lib/pickadate/picker.js?v=oJXL7pU64acHojjSG2JPJy-FOGtYh5qnKhtdwk4YlrU" defer></script>
+<script src="/lib/pickadate/picker.date.js?v=4jRSfwItZuLvFKlnkeHM-vL0bWgvrVbIF8peMhB7t2Q" defer></script>
+<script src="/lib/pickadate/picker.time.js?v=DBlI6KY-2OVA_L1yIlSXbtMvk32s-QNpsWvbmFHRCLc" defer></script>
+<script src="/lib/pickadate/legacy.js?v=9oJTEVJ5gHTrPioPnAiV6SOx4dfmJKBc05M8fcqNycE" defer></script>
+<script src="/js/pickadate-extention.min.js?v=mI9fWcYsih8YsNqeGD2oviuRx0utTpgIxwMECcl1SN8" defer></script>
+    
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js?v=eItLFOyfQ4d_OGzEnGchi2ZMVF8EhGgzS0k7fSOPifQ" defer></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY" defer></script>
+
+    
+    <script type="text/javascript" defer>
+        document.addEventListener("keydown", function (event) {
+            let key = 0;
+            if (event.keyCode) {
+                key = event.keyCode;
+            } else if (event.which) {
+                key = event.which;
+            }
+
+            if (key === 13) {
+                let target = document.getElementsByClassName("c_enterEvent");
+                if (target && target.length > 0) {
+                    event.preventDefault();
+                    target[0].click();
+                    return false;
+                }
+            }
+            return true;
+        });
+	$(document).ready(function () {
+		if (document.location.href.toLowerCase().indexOf('jupiter.ac') >= 0 && document.location.href.toLowerCase().indexOf('http://') >= 0) {
+			document.location.href = document.location.href.replace('http://', 'https://');
+		}
+	});
+    </script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-524361-12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-524361-12');
+    </script>
+</body>
+</html>

@@ -1,0 +1,2004 @@
+{
+    "common": {
+        "login": "Log In",
+        "signUp": "Sign Up",
+        "logout": "Log Out",
+        "auctions": "Auctions",
+        "services": "Services",
+        "about": "About",
+        "search": "Search",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "save": "Save",
+        "delete": "Delete",
+        "edit": "Edit",
+        "back": "Back",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Submit",
+        "close": "Close",
+        "viewAll": "View All",
+        "learnMore": "Learn More",
+        "readMore": "Read More",
+        "seeDetails": "See Details"
+    },
+    "header": {
+        "navigation": {
+            "auctions": "Auctions",
+            "services": "Services",
+            "about": "About",
+            "shippingSchedule": "Shipping Schedule"
+        },
+        "auth": {
+            "login": "Log In",
+            "signUp": "Sign Up",
+            "dashboard": "Dashboard",
+            "logout": "Log Out"
+        }
+    },
+    "footer": {
+        "description": "Japan's trusted motorcycle auction platform. Premium quality bikes delivered worldwide.",
+        "platform": {
+            "title": "Platform",
+            "auctions": "Auctions",
+            "howItWorks": "How It Works",
+            "subscriptionPlans": "Subscription Plans"
+        },
+        "support": {
+            "title": "Support",
+            "helpCenter": "Help Center",
+            "faq": "FAQ",
+            "contactUs": "Contact Us",
+            "shippingGuide": "Shipping Guide"
+        },
+        "company": {
+            "title": "Company",
+            "aboutAwa": "About AWA",
+            "careers": "Careers",
+            "news": "News",
+            "blog": "Blog"
+        },
+        "legal": {
+            "title": "Legal",
+            "termsOfService": "Terms of Service",
+            "privacyPolicy": "Privacy Policy",
+            "cookiePolicy": "Cookie Policy",
+            "exportRegulations": "Export Regulations"
+        },
+        "copyright": "© {year} AWA. All rights reserved."
+    },
+    "home": {
+        "hero": {
+            "title": "Global Trade, Simplified.",
+            "subtitle": "AWA connects the world to Japan's premium motorcycle market through technology, transparency, and trust.",
+            "enterAuction": "Enter Auction Platform",
+            "aboutAwa": "About AWA Inc."
+        },
+        "news": {
+            "title": "Latest News",
+            "item1": "2025.12.01 - Expansion into Southeast Asian market completed.",
+            "item2": "2025.11.15 - AWA reports record Q3 trading volume."
+        },
+        "sections": {
+            "business": {
+                "title": "Our Business",
+                "description": "We operate the world's leading digital marketplace for used Japanese motorcycles, facilitating seamless cross-border transactions for dealers and collectors."
+            },
+            "sustainability": {
+                "title": "Sustainability",
+                "description": "Promoting the circular economy by extending the lifecycle of quality vehicles. We are committed to carbon-neutral logistics by 2030."
+            },
+            "careers": {
+                "title": "Careers",
+                "description": "Join our global team of innovators, engineers, and automotive experts. We are hiring for remote positions and at our Tokyo HQ.",
+                "viewPositions": "View Open Positions →"
+            }
+        }
+    },
+    "auctions": {
+        "title": "Live Auctions",
+        "subtitle": "Bid in real-time on premium motorcycles from Japan",
+        "liveNow": "Live Now",
+        "upcoming": "Upcoming",
+        "ended": "Ended",
+        "timeRemaining": "Time Remaining",
+        "currentBid": "Current Bid",
+        "currentPrice": "Current Price",
+        "startingBid": "Starting Bid",
+        "startPrice": "Start Price",
+        "bids": "bids",
+        "noBids": "No bids",
+        "placeBid": "Place Bid",
+        "watchlist": "Add to Watchlist",
+        "filters": {
+            "title": "Filters",
+            "make": "Make",
+            "model": "Model",
+            "year": "Year",
+            "priceRange": "Price Range",
+            "mileage": "Mileage",
+            "condition": "Condition",
+            "clearAll": "Clear All"
+        },
+        "sort": {
+            "title": "Sort By",
+            "endingSoon": "Ending Soon",
+            "newlyListed": "Newly Listed",
+            "priceLowHigh": "Price: Low to High",
+            "priceHighLow": "Price: High to Low",
+            "mostBids": "Most Bids"
+        },
+        "noResults": "No auctions found",
+        "days": "days",
+        "hours": "hours",
+        "minutes": "min",
+        "seconds": "sec"
+    },
+    "catalog": {
+        "bikesAvailable": "bikes available"
+    },
+    "shippingSchedule": {
+        "title": "Shipping Schedule",
+        "subtitle": "Check our upcoming container schedules and book your space. We offer regular consolidated shipments to major Asian ports.",
+        "capacityUsed": "Capacity Used",
+        "almostFull": "Almost Full!",
+        "spaceAvailable": "Space Available",
+        "departure": "Departure",
+        "estPrice": "Est. Price",
+        "bookSpace": "Book Space Now",
+        "from": "From",
+        "status": {
+            "closingSoon": "Closing Soon",
+            "open": "Open",
+            "scheduled": "Scheduled"
+        },
+        "features": {
+            "direct": "Direct",
+            "fastClearance": "Fast Clearance",
+            "securePacking": "Secure Packing",
+            "monthlyService": "Monthly Service"
+        },
+        "destinations": {
+            "bangkok": "Bangkok",
+            "hoChiMinh": "Ho Chi Minh",
+            "manila": "Manila",
+            "thailand": "Thailand",
+            "vietnam": "Vietnam",
+            "philippines": "Philippines"
+        }
+    },
+    "bike": {
+        "details": "Details",
+        "specifications": "Specifications",
+        "condition": "Condition",
+        "inspectionReport": "Inspection Report",
+        "sellerInfo": "Seller Information",
+        "auctionHistory": "Bid History",
+        "similarBikes": "Similar Bikes",
+        "make": "Make",
+        "model": "Model",
+        "year": "Year",
+        "mileage": "Mileage",
+        "engineSize": "Engine Size",
+        "color": "Color",
+        "transmission": "Transmission",
+        "fuelType": "Fuel Type"
+    },
+    "auth": {
+        "login": {
+            "title": "Log In",
+            "email": "Email Address",
+            "password": "Password",
+            "rememberMe": "Remember me",
+            "forgotPassword": "Forgot password?",
+            "noAccount": "Don't have an account?",
+            "signUpHere": "Sign up here"
+        },
+        "loginPage": {
+            "heroTitle": "Welcome Back",
+            "heroSubtitle": "Continue your journey to find the perfect ride.",
+            "lightningTitle": "Lightning Fast Bidding",
+            "lightningDesc": "Real-time updates on all your active bids.",
+            "secureTitle": "Secure Transactions",
+            "secureDesc": "Your data and payments are always protected.",
+            "signIn": "Sign in to your account",
+            "newToAwa": "New to AWA?",
+            "createAccount": "Create an account",
+            "email": "Email or Member ID",
+            "password": "Password",
+            "forgotPassword": "Forgot password?",
+            "signInBtn": "Sign In",
+            "orContinueWith": "Or continue with",
+            "termsNotice": "By signing in, you agree to our",
+            "termsOfService": "Terms of Service",
+            "and": "and",
+            "privacyPolicy": "Privacy Policy"
+        },
+        "forgotPasswordPage": {
+            "title": "Forgot password?",
+            "subtitle": "No worries, we'll send you reset instructions.",
+            "email": "Email address",
+            "resetBtn": "Reset Password",
+            "backToLogin": "← Back to log in"
+        },
+        "register": {
+            "title": "Sign Up",
+            "fullName": "Full Name",
+            "email": "Email Address",
+            "password": "Password",
+            "confirmPassword": "Confirm Password",
+            "country": "Country",
+            "agreeTerms": "I agree to the Terms of Service",
+            "alreadyHaveAccount": "Already have an account?",
+            "loginHere": "Log in here"
+        },
+        "registerPage": {
+            "heroTitle": "Join the Revolution",
+            "heroSubtitle": "Start bidding on premium Japanese motorcycles today.",
+            "globalAccessTitle": "Global Access",
+            "globalAccessDesc": "Ship to over 50 countries with handled customs paperwork.",
+            "professionalGradeTitle": "Professional Grade",
+            "professionalGradeDesc": "Access detailed inspection reports normally reserved for dealers.",
+            "createAccount": "Create your account",
+            "alreadyHaveAccount": "Already have an account?",
+            "signIn": "Sign in",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email address",
+            "password": "Password",
+            "passwordHint": "Must be at least 8 characters long",
+            "confirmPassword": "Confirm Password",
+            "agreeToTerms": "I agree to the Terms",
+            "termsNotice": "By clicking create account, I agree to the",
+            "termsOfService": "Terms of Service",
+            "createAccountBtn": "Create Account"
+        },
+        "forgotPassword": {
+            "title": "Reset Password",
+            "description": "Enter your email address and we'll send you a link to reset your password.",
+            "sendLink": "Send Reset Link",
+            "backToLogin": "Back to Login"
+        },
+        "verifyEmail": {
+            "title": "Verify Your Email",
+            "description": "We've sent a verification email to your address. Click the link to activate your account.",
+            "resend": "Resend Verification Email"
+        }
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Welcome",
+        "overview": "Overview",
+        "myBids": "My Bids",
+        "myOrders": "My Orders",
+        "watchlist": "Watchlist",
+        "profile": "Profile",
+        "subscription": "Subscription",
+        "deposit": "Deposit",
+        "documents": "Documents",
+        "tracking": {
+            "title": "Shipment Tracking",
+            "trackById": "Track by ID",
+            "id": "Tracking ID",
+            "destination": "Destination",
+            "currentLocation": "Current Location",
+            "eta": "Estimated Arrival",
+            "steps": {
+                "processed": "Processed",
+                "shipped": "Shipped",
+                "transit": "In Transit",
+                "customs": "Customs",
+                "delivered": "Delivered"
+            }
+        },
+        "settings": {
+            "title": "Settings",
+            "profile": "Profile Settings",
+            "currency": "Display & Currency",
+            "notifications": "Notification Preferences",
+            "security": "Security",
+            "form": {
+                "accountType": "Account Type",
+                "individual": "Individual",
+                "corporate": "Corporate",
+                "phoneNumber": "Phone Number",
+                "address": "Address",
+                "corporateDetails": "Corporate Details",
+                "companyName": "Company Name",
+                "registrationNumber": "Registration Number",
+                "representativeName": "Representative Name",
+                "save": "Save Changes",
+                "saving": "Saving...",
+                "success": "Profile updated successfully! Reloading...",
+                "error": "Error updating profile"
+            }
+        },
+        "sns": "Social Media",
+        "kyc": {
+            "title": "KYC Verification",
+            "status": "Status",
+            "notSubmitted": "Not Submitted",
+            "rejected": "Rejected",
+            "verified": "Verified",
+            "pendingReview": "Pending Review",
+            "pleaseLogin": "Please log in.",
+            "loading": "Loading...",
+            "successfullyUploaded": "Successfully uploaded {type}",
+            "uploadFailed": "Upload failed",
+            "error": "Error: {message}",
+            "upload": "Upload",
+            "reUpload": "Re-upload",
+            "uploading": "Uploading...",
+            "submitted": "Submitted",
+            "documents": {
+                "COMPANY_REGISTRATION": "Company Registration (Tokibo)",
+                "PASSPORT": "Identity Document / Rep ID (Passport/License)",
+                "POA": "Power of Attorney (if applicable)",
+                "UTILITY_BILL": "Address Proof (Utility Bill)"
+            },
+            "submittedOn": "Submitted on: {date}",
+            "docStatus": "Status: {status}",
+            "reason": "Reason: {reason}",
+            "required": "*",
+            "accountType": "Account Type",
+            "individual": "Individual",
+            "corporate": "Corporate",
+            "change": "Change"
+        },
+        "snsCampaign": "SNS Campaign",
+        "activeBids": "Active Bids",
+        "wonAuctions": "Won Auctions",
+        "pendingPayments": "Pending Payments",
+        "inTransit": "In Transit",
+        "activity": {
+            "placeBid": "Place Bid on {item}",
+            "myBids": "My Bids on {item}"
+        }
+    },
+    "admin": {
+        "title": "Admin Panel",
+        "dashboard": "Dashboard",
+        "users": "User Management",
+        "kyc": "KYC Management",
+        "bikes": "Bike Management",
+        "auctions": "Auction Management",
+        "orders": "Order Management",
+        "containers": "Container Management",
+        "content": "Content Management",
+        "finance": "Finance Management",
+        "reports": "Reports",
+        "notifications": "Notification Center",
+        "sns": "SNS Management",
+        "settings": "Settings",
+        "dashboardPage": {
+            "title": "Dashboard",
+            "welcome": "Welcome to AWA Administration",
+            "actions": {
+                "downloadReport": "Download Report",
+                "systemHealth": "System Health Check"
+            },
+            "quickAccess": {
+                "title": "Quick Access",
+                "bikeInventory": "Bike Inventory",
+                "auctions": "Auctions",
+                "users": "Users",
+                "orders": "Orders",
+                "content": "Content (CMS)",
+                "finance": "Finance"
+            },
+            "metrics": {
+                "title": "Key Metrics",
+                "totalRevenue": "Total Revenue (Mo.)",
+                "activeAuctions": "Active Auctions",
+                "newUsers": "New Users (Wk.)",
+                "pendingKyc": "Pending KYC",
+                "actionReq": "Action Req."
+            },
+            "recentActivity": {
+                "title": "Recent System Activity",
+                "newUserReg": "New User Registration",
+                "auctionEnded": "Auction Ended",
+                "paymentReceived": "Payment Received",
+                "systemAlert": "System Alert",
+                "newBid": "New Bid",
+                "userRegDesc": "User ID:9928 registered from Thailand.",
+                "auctionEndedDesc": "Lot #1234 sold for ¥1,850,000.",
+                "paymentReceivedDesc": "Order #1029 payment confirmed.",
+                "backupDesc": "Backup completed successfully.",
+                "newBidDesc": "Bid placed on Lot #1235."
+            },
+            "pendingTasks": {
+                "title": "Pending Tasks",
+                "reviewKyc": "Review 3 KYC applications",
+                "confirmPayment": "Confirm payment for Order #1029",
+                "updateRates": "Update exchange rates"
+            },
+            "systemStatus": {
+                "title": "System Status",
+                "serverLoad": "Server Load",
+                "database": "Database",
+                "healthy": "Healthy",
+                "apiLatency": "API Latency"
+            }
+        },
+        "sidebar": {
+            "backToDashboard": "Back to Dashboard",
+            "menu": "Menu",
+            "quickActions": "Quick Actions",
+            "newBike": "+ New Bike",
+            "reviewKyc": "+ Review KYC",
+            "backToSite": "Back to Site",
+            "signOut": "Sign Out",
+            "superAdmin": "Super Admin"
+        },
+        "common": {
+            "loading": "Loading...",
+            "noData": "No data found",
+            "search": "Search",
+            "filter": "Filter",
+            "allTypes": "All Types",
+            "allStatus": "All Status",
+            "view": "View",
+            "edit": "Edit",
+            "delete": "Delete",
+            "save": "Save",
+            "cancel": "Cancel",
+            "confirm": "Confirm",
+            "approve": "Approve",
+            "reject": "Reject",
+            "loadMore": "Load More",
+            "exportCsv": "Export CSV",
+            "actions": "Actions",
+            "status": "Status",
+            "date": "Date",
+            "type": "Type",
+            "amount": "Amount",
+            "user": "User",
+            "individual": "Individual",
+            "corporate": "Corporate",
+            "active": "Active",
+            "pending": "Pending",
+            "verified": "Verified",
+            "suspended": "Suspended"
+        },
+        "usersPage": {
+            "title": "User Management",
+            "subtitle": "Manage user accounts, roles, and access permissions.",
+            "searchPlaceholder": "Search users...",
+            "pendingKyc": "Pending KYC",
+            "table": {
+                "user": "User",
+                "type": "Type",
+                "status": "Status",
+                "country": "Country",
+                "registered": "Registered"
+            }
+        },
+        "userDetailPage": {
+            "backToUsers": "← Back to Users",
+            "sendMessage": "Send Message",
+            "editUser": "Edit User",
+            "stats": {
+                "totalBids": "Total Bids",
+                "wonAuctions": "Won Auctions",
+                "totalSpent": "Total Spent",
+                "deposit": "Deposit"
+            },
+            "recentActivity": "Recent Activity",
+            "orderHistory": "Order History",
+            "viewAll": "View All",
+            "table": {
+                "orderId": "Order ID",
+                "bike": "Bike",
+                "amount": "Amount",
+                "status": "Status",
+                "date": "Date"
+            },
+            "profileInfo": "Profile Information",
+            "profile": {
+                "email": "Email",
+                "phone": "Phone",
+                "country": "Country",
+                "language": "Language",
+                "joined": "Joined",
+                "lastLogin": "Last Login"
+            },
+            "verification": "Verification & Plan",
+            "kycStatus": "KYC Status",
+            "subscription": "Subscription",
+            "actions": {
+                "viewKycDocs": "View KYC Documents",
+                "adjustDeposit": "Adjust Deposit",
+                "changeSubscription": "Change Subscription",
+                "suspendUser": "Suspend User"
+            },
+            "modals": {
+                "kycTitle": "KYC Documents",
+                "governmentId": "Government ID (Passport)",
+                "proofOfAddress": "Proof of Address (Utility Bill)",
+                "imagePlaceholder": "Image Placeholder",
+                "reject": "Reject",
+                "approve": "Approve",
+                "close": "Close",
+                "messageTitle": "Send Message to",
+                "subject": "Subject",
+                "subjectPlaceholder": "Regarding your account...",
+                "message": "Message",
+                "messagePlaceholder": "Type your message here...",
+                "cancel": "Cancel",
+                "send": "Send Message",
+                "editTitle": "Edit User Details",
+                "fullName": "Full Name",
+                "emailAddress": "Email Address",
+                "status": "Status",
+                "saveChanges": "Save Changes",
+                "depositTitle": "Adjust Deposit",
+                "currentDeposit": "Current Deposit",
+                "newAmount": "New Amount (¥)",
+                "updateDeposit": "Update Deposit",
+                "subscriptionTitle": "Change Subscription Plan",
+                "currentPlan": "Current Plan",
+                "newPlan": "New Plan",
+                "updatePlan": "Update Plan"
+            },
+            "success": "Success!",
+            "commandTriggered": "command has been triggered."
+        },
+        "kycPage": {
+            "title": "KYC Review",
+            "subtitle": "Review user identity and business verification documents.",
+            "pending": "Pending",
+            "noPending": "No pending reviews.",
+            "applicationType": "Application Type",
+            "documents": "Documents",
+            "submittedDocs": "Submitted Documents",
+            "internalNotes": "Internal Notes (saved on action, sent to user if rejected)",
+            "notesPlaceholder": "Notes will be saved on approve/reject. For rejection, this content will be emailed to user...",
+            "preview": "Preview (not implemented)"
+        },
+        "ordersPage": {
+            "title": "Order Management",
+            "searchPlaceholder": "Search orders...",
+            "table": {
+                "orderId": "Order ID",
+                "customer": "Customer"
+            },
+            "status": {
+                "paid": "Paid",
+                "pending": "Pending",
+                "shipped": "Shipped",
+                "processing": "Processing",
+                "cancelled": "Cancelled"
+            }
+        },
+        "orderDetailPage": {
+            "backToOrders": "← Back to Orders",
+            "createdOn": "Created on",
+            "printInvoice": "Print Invoice",
+            "updateStatus": "Update Status",
+            "timeline": {
+                "title": "Order Timeline",
+                "orderCreated": "Order Created",
+                "paymentReceived": "Payment Received",
+                "processingStarted": "Processing Started",
+                "exportDocuments": "Export Documents",
+                "shipped": "Shipped",
+                "delivered": "Delivered",
+                "pending": "Pending"
+            },
+            "vehicle": {
+                "title": "Vehicle Information",
+                "viewListing": "View Listing"
+            },
+            "shipping": {
+                "title": "Shipping Details",
+                "method": "Method",
+                "destination": "Destination",
+                "container": "Container",
+                "estDelivery": "Est. Delivery",
+                "trackContainer": "Track Container",
+                "updateShipping": "Update Shipping"
+            },
+            "buyer": {
+                "title": "Buyer Information",
+                "email": "Email",
+                "country": "Country",
+                "viewProfile": "View Profile"
+            },
+            "payment": {
+                "title": "Payment Summary",
+                "finalBid": "Final Bid",
+                "auctionFee": "Auction Fee",
+                "shipping": "Shipping",
+                "total": "Total"
+            },
+            "actions": {
+                "generateDocs": "Generate Documents",
+                "sendUpdate": "Send Update to Buyer",
+                "cancelOrder": "Cancel Order"
+            },
+            "invoicePreview": {
+                "title": "Invoice Preview",
+                "description": "Please review the content. If everything is correct, click Send. A copy will also be downloaded for admin records.",
+                "cancel": "Cancel",
+                "send": "Send & Download"
+            },
+            "status": {
+                "pendingPayment": "Pending Payment",
+                "paid": "Paid",
+                "processing": "Processing",
+                "shipped": "Shipped",
+                "delivered": "Delivered",
+                "cancelled": "Cancelled"
+            }
+        },
+        "snsPage": {
+            "title": "UGC Reward Review",
+            "subtitle": "Verify user posts and grant automated rewards.",
+            "submissionQueue": "Submission Queue",
+            "reviewVerify": "Review & Verify",
+            "selectSubmission": "Select a submission",
+            "openPostLink": "Open Post Link",
+            "views": "Views",
+            "likes": "Likes",
+            "comments": "Comments",
+            "shares": "Shares/RP",
+            "calculatedReward": "Calculated Reward",
+            "table": {
+                "userId": "User / ID",
+                "platform": "Platform",
+                "date": "Date",
+                "status": "Status",
+                "result": "Result"
+            },
+            "status": {
+                "pending": "Pending",
+                "approved": "Approved",
+                "rejected": "Rejected"
+            }
+        },
+        "bikesPage": {
+            "title": "Bike Inventory",
+            "subtitle": "Manage motorcycle listings and details.",
+            "addNew": "Add New Bike",
+            "searchPlaceholder": "Search bikes...",
+            "table": {
+                "image": "Image",
+                "name": "Name",
+                "year": "Year",
+                "mileage": "Mileage",
+                "price": "Price"
+            }
+        },
+        "auctionsPage": {
+            "title": "Auction Control Center",
+            "subtitle": "Monitor live bids and manage auction schedules.",
+            "systemLive": "System Live",
+            "createNew": "Create Auction",
+            "searchPlaceholder": "Search auctions...",
+            "stats": {
+                "activeAuctions": "Active Auctions",
+                "todaysVolume": "Today's Volume",
+                "totalBids24h": "Total Bids (24h)",
+                "completionRate": "Completion Rate"
+            },
+            "tabs": {
+                "live": "Live Auctions",
+                "upcoming": "Upcoming Auctions",
+                "ended": "Ended Auctions"
+            },
+            "table": {
+                "lot": "Lot #",
+                "bike": "Bike",
+                "startTime": "Start Time",
+                "startPrice": "Start Price",
+                "currentBid": "Current Bid",
+                "endTime": "End Time",
+                "action": "Action"
+            },
+            "live": {
+                "topBidder": "Top Bidder",
+                "bids": "bids",
+                "currentPrice": "Current Price",
+                "left": "left",
+                "pause": "Pause",
+                "endNow": "End Now"
+            },
+            "ended": {
+                "noHistory": "Ended auctions history would appear here."
+            },
+            "status": {
+                "live": "Live",
+                "scheduled": "Scheduled",
+                "ended": "Ended"
+            }
+        },
+        "containersPage": {
+            "title": "Container Management",
+            "subtitle": "Manage shipping container schedules and logistics.",
+            "createNew": "Create New Schedule",
+            "searchPlaceholder": "Search containers...",
+            "table": {
+                "routeName": "Route / Name",
+                "schedule": "Schedule (ETD/ETA)",
+                "loadStatus": "Load Status",
+                "priceUnit": "Price / Unit",
+                "status": "Status",
+                "actions": "Actions"
+            },
+            "status": {
+                "open": "Open",
+                "loading": "Loading",
+                "planning": "Planning",
+                "inTransit": "In Transit",
+                "arrived": "Arrived",
+                "delivered": "Delivered"
+            },
+            "manageLoad": "Manage Load →",
+            "modal": {
+                "title": "Create New Container Schedule",
+                "destination": "Destination",
+                "destinationPlaceholder": "e.g. Bangkok, Thailand",
+                "containerType": "Container Type",
+                "type40ft": "40ft High Cube",
+                "type20ft": "20ft Standard",
+                "pricePerUnit": "Price Per Unit",
+                "etd": "ETD (Departure)",
+                "eta": "ETA (Arrival)",
+                "cancel": "Cancel",
+                "create": "Create Schedule"
+            }
+        },
+        "contentPage": {
+            "title": "Content Management",
+            "subtitle": "Manage website content, banners, and announcements.",
+            "importContent": "Import Content",
+            "createNew": "Create New",
+            "stats": {
+                "published": "Published",
+                "draft": "Draft",
+                "scheduled": "Scheduled",
+                "totalPages": "Total Pages"
+            },
+            "filters": {
+                "all": "All",
+                "banners": "Banners",
+                "news": "News",
+                "guides": "Guides",
+                "faq": "FAQ",
+                "legal": "Legal"
+            },
+            "searchPlaceholder": "Search content...",
+            "allStatus": "All Status",
+            "table": {
+                "title": "Title",
+                "type": "Type",
+                "status": "Status",
+                "author": "Author",
+                "lastUpdated": "Last Updated",
+                "actions": "Actions"
+            },
+            "status": {
+                "published": "Published",
+                "draft": "Draft",
+                "scheduled": "Scheduled"
+            },
+            "noContent": "No content found matching filters.",
+            "loadMore": "Load More",
+            "edit": "Edit",
+            "delete": "Delete",
+            "deleteConfirm": "Are you sure you want to delete this item?",
+            "modal": {
+                "title": "Create New Content",
+                "contentType": "Content Type",
+                "types": {
+                    "news": "News",
+                    "banner": "Banner",
+                    "guide": "Guide",
+                    "faq": "FAQ"
+                },
+                "inputTitle": "Title",
+                "titlePlaceholderBanner": "e.g. Summer Sale Banner",
+                "titlePlaceholderDefault": "e.g. Maintenance Notice",
+                "newsBody": "News Body",
+                "newsPlaceholder": "Write your announcement here...",
+                "imageUrl": "Image URL",
+                "previewArea": "Preview Area",
+                "question": "Question",
+                "questionPlaceholder": "e.g. How do I pay?",
+                "answer": "Answer",
+                "answerPlaceholder": "Enter the answer...",
+                "guideContent": "Guide Content (Markdown supported)",
+                "guidePlaceholder": "# Introduction...",
+                "cancel": "Cancel",
+                "create": "Create"
+            }
+        },
+        "financePage": {
+            "title": "Finance",
+            "subtitle": "View financial reports and transaction history.",
+            "exportTransactions": "Export Transactions",
+            "processPayouts": "Process Payouts",
+            "summary": {
+                "totalRevenue": "Total Revenue",
+                "pendingPayments": "Pending Payments",
+                "completedPayouts": "Completed Payouts",
+                "refunds": "Refunds",
+                "thisMonth": "This Month",
+                "orders": "orders"
+            },
+            "transactions": {
+                "title": "Recent Transactions",
+                "searchPlaceholder": "Search transactions...",
+                "viewAll": "View All",
+                "table": {
+                    "transaction": "Transaction",
+                    "reference": "Reference",
+                    "amount": "Amount",
+                    "status": "Status",
+                    "date": "Date"
+                },
+                "types": {
+                    "paymentReceived": "Payment Received",
+                    "subscription": "Subscription",
+                    "deposit": "Deposit",
+                    "refund": "Refund"
+                },
+                "status": {
+                    "completed": "Completed",
+                    "pending": "Pending"
+                }
+            },
+            "pendingPayments": {
+                "title": "Pending Payments",
+                "pending": "Pending",
+                "days": "days",
+                "clickForDetails": "Click for Details & Actions",
+                "sendRemindersAll": "Send Reminders to All"
+            },
+            "exchangeRates": {
+                "title": "Exchange Rates",
+                "update": "Update",
+                "updating": "Updating...",
+                "lastUpdated": "Last updated",
+                "clickToFetch": "Click Update to fetch rates"
+            },
+            "quickActions": {
+                "generateInvoice": "Generate Invoice",
+                "processRefund": "Process Refund",
+                "bankReconciliation": "Bank Reconciliation"
+            },
+            "modal": {
+                "title": "Payment Details",
+                "orderRef": "Order Ref",
+                "customerProfile": "Customer Profile",
+                "name": "Name",
+                "kycStatus": "KYC Status",
+                "email": "Email",
+                "phone": "Phone",
+                "address": "Address",
+                "orderBreakdown": "Order Breakdown",
+                "itemDescription": "Item / Description",
+                "vin": "VIN",
+                "price": "Price",
+                "totalAmountDue": "Total Amount Due",
+                "communicationLog": "Communication Log",
+                "noLogs": "No communication logs recorded.",
+                "sendEmail": "Send Email",
+                "callCustomer": "Call Customer",
+                "markAsPaid": "Mark as Paid"
+            },
+            "kycStatus": {
+                "verified": "Verified",
+                "pending": "Pending",
+                "unverified": "Unverified"
+            }
+        },
+        "reportsPage": {
+            "title": "Reports",
+            "subtitle": "Generate and view analytics reports.",
+            "exportReport": "Export Report",
+            "period": {
+                "last6Months": "Last 6 Months",
+                "last12Months": "Last 12 Months",
+                "thisYear": "This Year",
+                "allTime": "All Time"
+            },
+            "summary": {
+                "totalRevenue": "Total Revenue",
+                "totalAuctions": "Total Auctions",
+                "activeUsers": "Active Users",
+                "avgOrderValue": "Avg. Order Value",
+                "vsPrevPeriod": "vs prev period"
+            },
+            "revenueTrend": {
+                "title": "Revenue Trend",
+                "subtitle": "Revenue in Millions (JPY)"
+            },
+            "salesByRegion": {
+                "title": "Sales by Region",
+                "southeastAsia": "Southeast Asia",
+                "oceania": "Oceania",
+                "middleEast": "Middle East",
+                "africa": "Africa",
+                "others": "Others"
+            },
+            "topBuyers": {
+                "title": "Top Buyers",
+                "viewAll": "View All",
+                "table": {
+                    "buyer": "Buyer",
+                    "orders": "Orders",
+                    "totalSpent": "Total Spent"
+                }
+            },
+            "topModels": {
+                "title": "Top Selling Models",
+                "viewAll": "View All",
+                "table": {
+                    "model": "Model",
+                    "sold": "Sold",
+                    "revenue": "Revenue"
+                },
+                "units": "units"
+            }
+        },
+        "notificationsPage": {
+            "title": "Notifications",
+            "subtitle": "Manage system notifications and alerts.",
+            "tabs": {
+                "overview": "Overview",
+                "automation": "Automation Rules"
+            },
+            "stats": {
+                "sentToday": "Sent Today",
+                "pending": "Pending",
+                "failed": "Failed",
+                "openRate": "Open Rate"
+            },
+            "recentNotifications": {
+                "title": "Recent Notifications",
+                "searchPlaceholder": "Search...",
+                "table": {
+                    "notification": "Notification",
+                    "type": "Type",
+                    "recipients": "Recipients",
+                    "status": "Status",
+                    "actions": "Actions"
+                },
+                "status": {
+                    "sent": "Sent",
+                    "pending": "Pending",
+                    "failed": "Failed"
+                },
+                "view": "View"
+            },
+            "quickActions": {
+                "title": "Quick Actions",
+                "createBlast": "Create New Blast",
+                "auctionReminder": "Auction Ending Reminder",
+                "paymentReminder": "Payment Reminder"
+            },
+            "automation": {
+                "categories": {
+                    "salesBidding": "Sales & Bidding",
+                    "paymentLogistics": "Payment & Logistics",
+                    "crmEngagement": "CRM & Engagement"
+                },
+                "rules": {
+                    "bidStart": "Waitlist Item Started",
+                    "bidStartDesc": "Notify when a watched item auction begins",
+                    "bidEnd": "Ending Soon Reminder",
+                    "bidEndDesc": "1 hour before auction ends",
+                    "outbid": "Outbid Alert",
+                    "outbidDesc": "When user is outbid by another bidder",
+                    "savedSearch": "Saved Search Hit",
+                    "savedSearchDesc": "New bike matches user saved specifications",
+                    "recommend": "Smart Recommender",
+                    "recommendDesc": "Recommend similar bikes to users who lost an auction",
+                    "invoiceAuto": "Auto Invoice Generation",
+                    "invoiceAutoDesc": "Send invoice immediately after win",
+                    "dunning3d": "Payment Reminder (3 Days)",
+                    "dunning3dDesc": "3 days before due date",
+                    "dunningDue": "Payment Due Today",
+                    "dunningDueDesc": "On the day of deadline",
+                    "cartRecovery": "Cart Abandonment",
+                    "cartRecoveryDesc": "Remind users who left during checkout",
+                    "shipStatus": "Shipping Status Updates",
+                    "shipStatusDesc": "Auto-notify on BL/Document status changes",
+                    "welcome": "Welcome Series",
+                    "welcomeDesc": "Onboarding emails for new signups",
+                    "reEngage": "Dormant User Wake-up",
+                    "reEngageDesc": "No login for 30 days",
+                    "birthday": "Birthday/Anniversary",
+                    "birthdayDesc": "Special coupon on anniversary"
+                }
+            }
+        },
+        "settingsPage": {
+            "title": "Settings",
+            "subtitle": "Configure system settings and preferences.",
+            "bdsConnection": {
+                "title": "BDS Connection Settings",
+                "userId": "User ID",
+                "password": "Password",
+                "placeholder": "BDS Login ID",
+                "passwordPlaceholder": "Enter password",
+                "change": "Change",
+                "save": "Save",
+                "saving": "Saving...",
+                "cancel": "Cancel",
+                "saved": "Saved!",
+                "loadError": "Failed to load settings",
+                "inputError": "Please enter ID and password",
+                "saveError": "Failed to save"
+            },
+            "invoice": {
+                "title": "Invoice Configuration",
+                "simulatorTitle": "Multi-Currency Simulator",
+                "simulatorDesc": "Configure costs, exchange rates, and pricing strategies.",
+                "configure": "Configure Invoice"
+            },
+            "import": {
+                "title": "Import Settings",
+                "testMode": "Test Mode",
+                "testModeDesc": "Import max 5 vehicles (for development)",
+                "enabled": "Enabled"
+            },
+            "invoiceSimulator": {
+                "title": "Multi-Currency Invoice Simulator",
+                "subtitle": "29 Cost Items & 3-Way Comparative Profit Analysis",
+                "globalSettings": {
+                    "monthlyVolume": "Monthly Volume",
+                    "avgPrice": "Avg Price (For Tax)"
+                },
+                "baseCost": {
+                    "title": "1. Base Cost Input (JPY)",
+                    "label": "Cost Input",
+                    "categoryJapan": "JAPAN",
+                    "categoryDest": "DEST",
+                    "categoryOther": "OTHER"
+                },
+                "pricing": {
+                    "title": "2. Pricing Strategy (Billing Amount)",
+                    "subtitle": "Select a currency tab and set the billing amount for each item.",
+                    "liveRate": "Live Rate",
+                    "safetyMargin": "Safety Margin",
+                    "autoFill": "Auto-Fill from Costs",
+                    "itemName": "Item Name",
+                    "jpyCost": "JPY Cost",
+                    "billing": "Billing",
+                    "profit": "Profit"
+                },
+                "simulation": {
+                    "title": "Profit Simulation (Monthly)",
+                    "billing": "Billing",
+                    "totalMonth": "Total / Month",
+                    "perUnit": "/ unit",
+                    "best": "BEST",
+                    "taxRefund": "Includes Estimated Tax Refund",
+                    "monthlyExport": "Monthly Export Vol"
+                },
+                "buttons": {
+                    "saving": "Saving...",
+                    "saved": "Saved!",
+                    "saveAll": "Save All Configuration"
+                },
+                "costItems": {
+                    "awaCommission": "AWA Commission (Profit)",
+                    "auctionFee": "Auction Fee",
+                    "inlandTransport": "Inland Transport",
+                    "yardStorage": "Yard Storage",
+                    "vanning": "Container Loading (Vanning)",
+                    "exportCustoms": "Export Customs",
+                    "documentation": "Documentation",
+                    "deregistration": "Deregistration",
+                    "packingFrame": "Wooden Frame Packing",
+                    "packingCrate": "Wooden Crate Packing",
+                    "packingPallet": "Pallet Packing",
+                    "packingCarton": "Carton Packing",
+                    "oceanFreight": "Ocean Freight",
+                    "unloading": "Port Unloading",
+                    "destInlandTransport": "Destination Inland Transport",
+                    "exchangeFee": "Payment Fee (Gas/Bank)",
+                    "bankRemittance": "Bank Remittance Fee",
+                    "demurrage": "Demurrage (Storage)"
+                }
+            }
+        }
+    },
+    "services": {
+        "title": "Services",
+        "inspection": {
+            "title": "Inspection Service",
+            "description": "Comprehensive 150-point inspection by experts"
+        },
+        "shipping": {
+            "title": "International Shipping",
+            "description": "Safe delivery to 120+ countries worldwide"
+        },
+        "finance": {
+            "title": "Financing",
+            "description": "Flexible payment options"
+        },
+        "support": {
+            "title": "24/7 Support",
+            "description": "Multilingual customer support"
+        }
+    },
+    "subscription": {
+        "title": "Subscription Plans",
+        "subtitle": "Choose the plan that fits your needs",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "mostPopular": "Most Popular",
+        "currentPlan": "Current Plan",
+        "selectPlan": "Select Plan",
+        "shippingDiscount": "Shipping Discount",
+        "snsMultiplier": "SNS Multiplier",
+        "featureComparison": "Feature Comparison",
+        "packaging": "Packaging",
+        "free": {
+            "name": "Free",
+            "features": [
+                "Access to public auctions",
+                "Standard transaction fees",
+                "Email support",
+                "Basic packaging"
+            ]
+        },
+        "starter": {
+            "name": "Starter",
+            "features": [
+                "All Free features",
+                "5% shipping discount",
+                "Shrink wrap packaging",
+                "Priority email support"
+            ]
+        },
+        "bronze": {
+            "name": "Bronze",
+            "features": [
+                "All Starter features",
+                "8% shipping discount",
+                "Rust protection",
+                "Monthly market report"
+            ]
+        },
+        "silver": {
+            "name": "Silver",
+            "features": [
+                "All Bronze features",
+                "12% shipping discount",
+                "1.5x SNS rewards",
+                "Parts protection",
+                "Priority bidding"
+            ]
+        },
+        "gold": {
+            "name": "Gold",
+            "features": [
+                "All Silver features",
+                "20% shipping discount",
+                "2.0x SNS rewards",
+                "Full protection package",
+                "Dedicated support line"
+            ]
+        },
+        "platinum": {
+            "name": "Platinum",
+            "features": [
+                "All Gold features",
+                "30% shipping discount",
+                "3.0x SNS rewards",
+                "Dedicated account manager",
+                "VIP priority everything",
+                "API access"
+            ]
+        }
+    },
+    "kyc": {
+        "title": "Identity Verification",
+        "subtitle": "Identity verification is required to start trading",
+        "personal": {
+            "title": "Personal Information",
+            "description": "Enter your basic information"
+        },
+        "business": {
+            "title": "Business Information",
+            "description": "Enter your company information"
+        },
+        "corporate": {
+            "title": "Corporate Verification",
+            "description": "Upload corporate verification documents"
+        },
+        "status": {
+            "pending": "Under Review",
+            "approved": "Approved",
+            "rejected": "Rejected",
+            "notSubmitted": "Not Submitted"
+        }
+    },
+    "checkout": {
+        "title": "Checkout",
+        "summary": "Order Summary",
+        "subtotal": "Subtotal",
+        "shipping": "Shipping",
+        "tax": "Tax",
+        "total": "Total",
+        "paymentMethod": "Payment via Bank Transfer",
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "placeOrder": "Confirm Subscription Application",
+        "bankTransferDescription": "Please transfer to the following account to activate your subscription.",
+        "bankDetails": "Bank Account Details",
+        "bankName": "Bank Name",
+        "branch": "Branch",
+        "accountType": "Account Type",
+        "ordinary": "Ordinary",
+        "accountNumber": "Account Number",
+        "accountName": "Account Name",
+        "transferTip": "Please include your registered email address or user ID in the transfer memo for faster processing.",
+        "confirmCheckbox": "I understand the bank transfer details and will complete the payment. My subscription will be activated within 1-2 business days after payment is confirmed.",
+        "termsNotice": "By subscribing, you agree to our Terms of Service and Privacy Policy. You can cancel anytime from your dashboard.",
+        "success": {
+            "title": "Application Received!",
+            "message": "Thank you for your application. Please transfer to the account below.",
+            "orderNumber": "Order Number",
+            "viewOrder": "View Order"
+        }
+    },
+    "guide": {
+        "title": "Guides",
+        "howToBid": {
+            "title": "How to Bid",
+            "subtitle": "Our bidding system is transparent and easy to use. Learn how to place bids and win your dream vehicle.",
+            "description": "Learn how to bid on AWA Auction",
+            "types": {
+                "title": "Bidding Types",
+                "live": {
+                    "title": "Live Bidding",
+                    "badge": "Real-time",
+                    "description": "Bid in real-time as the auction happens. Fast-paced and exciting."
+                },
+                "proxy": {
+                    "title": "Proxy Bidding",
+                    "badge": "Automated",
+                    "description": "Set your maximum price in advance. Our system bids for you incrementally."
+                }
+            },
+            "rules": {
+                "title": "Bidding Rules",
+                "increments": {
+                    "label": "Bid Increments:",
+                    "text": "Bids increase by fixed amounts (e.g., ¥1,000 or ¥10,000) depending on the current price."
+                },
+                "sniper": {
+                    "label": "Sniper Protection:",
+                    "text": "If a bid is placed in the last 5 minutes, the auction time is extended by 5 minutes to prevent last-second sniping."
+                },
+                "binding": {
+                    "label": "Binding Bids:",
+                    "text": "All bids are legally binding contracts. Do not bid if you do not intend to purchase."
+                }
+            },
+            "tips": {
+                "title": "Tips for Success",
+                "items": {
+                    "research": "Research the market value of the vehicle before bidding.",
+                    "budget": "Set a strict budget including shipping and import taxes.",
+                    "watchlist": "Use the watchlist to track multiple items.",
+                    "inspection": "Check the inspection sheet thoroughly."
+                }
+            }
+        },
+        "howToBuy": {
+            "title": "How to Buy",
+            "description": "From purchase to delivery"
+        },
+        "inspection": {
+            "title": "Inspection Reports",
+            "subtitle": "Trust is our priority. Every vehicle undergoes a rigorous multi-point inspection by certified mechanics.",
+            "description": "Understanding our grading system",
+            "download": "Download Sample Report",
+            "grading": {
+                "title": "Grading System",
+                "s": {
+                    "grade": "S",
+                    "desc": "Brand New. Never ridden."
+                },
+                "5": {
+                    "grade": "5",
+                    "desc": "Like New. Excellent condition with minimal signs of use."
+                },
+                "4": {
+                    "grade": "4",
+                    "desc": "Good. Well maintained with minor cosmetic scratches."
+                },
+                "3": {
+                    "grade": "3",
+                    "desc": "Average. Standard wear and tear for its age."
+                },
+                "r": {
+                    "grade": "R",
+                    "desc": "Repaired. Has history of repairs or accidents."
+                }
+            },
+            "points": {
+                "title": "Inspection Points",
+                "engine": "Engine Performance & Sound",
+                "frame": "Frame Alignment",
+                "electric": "Electrical Systems",
+                "exterior": "Exterior Condition",
+                "suspension": "Suspension & Brakes"
+            }
+        },
+        "delivery": {
+            "title": "Delivery Times",
+            "subtitle": "We ship globally to over 50 countries. Estimated shipping times from Japan port.",
+            "regions": {
+                "asia": {
+                    "name": "Asia",
+                    "time": "2-3 Weeks"
+                },
+                "oceania": {
+                    "name": "Oceania",
+                    "time": "4-5 Weeks"
+                },
+                "na": {
+                    "name": "North America",
+                    "time": "4-6 Weeks"
+                },
+                "europe": {
+                    "name": "Europe",
+                    "time": "6-8 Weeks"
+                },
+                "africa": {
+                    "name": "Africa",
+                    "time": "6-8 Weeks"
+                }
+            },
+            "note": "Times are estimates and depend on shipping schedules and customs clearance."
+        },
+        "payment": {
+            "title": "Payment Methods",
+            "subtitle": "Secure and flexible payment options for your convenience.",
+            "methods": {
+                "bank": {
+                    "title": "Bank Transfer (TT)",
+                    "desc": "Direct wire transfer to our Japanese bank account. Best for high-value transactions."
+                },
+                "card": {
+                    "title": "Credit Card",
+                    "desc": "Visa, Mastercard, and Amex accepted for deposits and small payments."
+                },
+                "paypal": {
+                    "title": "PayPal",
+                    "desc": "Quick and secure payment method for deposits."
+                }
+            }
+        },
+        "fees": {
+            "title": "Fees & Taxes",
+            "subtitle": "Transparent fee structure with no hidden costs.",
+            "list": {
+                "auction": {
+                    "title": "Auction Fee",
+                    "desc": "Fixed fee per vehicle purchased."
+                },
+                "shipping": {
+                    "title": "Shipping Fee",
+                    "desc": "Varies by destination and vehicle size."
+                },
+                "insurance": {
+                    "title": "Insurance",
+                    "desc": "Optional marine insurance for transit."
+                },
+                "tax": {
+                    "title": "Consumption Tax",
+                    "desc": "10% tax applied to domestic services."
+                }
+            }
+        },
+        "legal": {
+            "refunds": {
+                "title": "Refund Policy",
+                "subtitle": "Clear guidelines on deposits and cancellations.",
+                "deposit": {
+                    "title": "Deposit Refunds",
+                    "desc": "Deposits are fully refundable before bidding."
+                },
+                "cancellation": {
+                    "title": "Cancellations",
+                    "desc": "Cancellations after winning bid incur a penalty fee."
+                }
+            }
+        },
+        "verification": {
+            "title": "Account Verification",
+            "subtitle": "Complete KYC to unlock full bidding privileges.",
+            "steps": {
+                "id": "Upload Government ID",
+                "address": "Proof of Address",
+                "submit": "Submit for Review"
+            }
+        },
+        "careers": {
+            "badge": "We are hiring!",
+            "title": "Join the Future of Global Auctions",
+            "subtitle": "Help us build the most transparent and efficient auction platform connecting Japan to the world.",
+            "cta": "View Open Positions",
+            "culture": {
+                "title": "Why AWA Auction?",
+                "description": "We believe in transparency, innovation, and global connection. Join a diverse team passionate about simplifying cross-border trade.",
+                "growth": {
+                    "title": "Fast-Paced Growth",
+                    "desc": "Work in a dynamic environment where your impact is visible every day."
+                },
+                "global": {
+                    "title": "Global Impact",
+                    "desc": "Connect buyers and sellers from over 50 countries around the world."
+                },
+                "innovation": {
+                    "title": "Innovation First",
+                    "desc": "We leverage the latest technology to solve complex logistics and trading problems."
+                }
+            },
+            "positions": {
+                "title": "Open Positions",
+                "apply": "Apply Now",
+                "noOpenings": "There are currently no open positions.",
+                "jobs": [
+                    {
+                        "title": "Senior Full Stack Engineer",
+                        "department": "Engineering",
+                        "location": "Remote (Japan)",
+                        "type": "Full-time",
+                        "description": "We are looking for an experienced Full Stack Engineer to lead our platform development."
+                    },
+                    {
+                        "title": "Product Designer",
+                        "department": "Design",
+                        "location": "Tokyo, Japan",
+                        "type": "Full-time",
+                        "description": "Join our design team to create world-class user experiences for our global auction platform."
+                    },
+                    {
+                        "title": "Customer Success Manager",
+                        "department": "Operations",
+                        "location": "Remote",
+                        "type": "Full-time",
+                        "description": "Help our customers succeed and grow their businesses using the AWA platform."
+                    }
+                ]
+            }
+        },
+        "news": {
+            "title": "News & Updates",
+            "subtitle": "Stay up to date with the latest from AWA.",
+            "loadMore": "Load More Articles",
+            "readMore": "Read More",
+            "categories": {
+                "announcement": "Announcement",
+                "feature": "Feature Update",
+                "partnership": "Partnership",
+                "event": "Event",
+                "milestone": "Milestone"
+            },
+            "items": [
+                {
+                    "date": "December 5, 2025",
+                    "category": "announcement",
+                    "title": "AWA Platform Now Supports 50+ Countries",
+                    "excerpt": "We're excited to announce expanded shipping coverage to new destinations in South America and Africa.",
+                    "featured": true
+                },
+                {
+                    "date": "November 28, 2025",
+                    "category": "feature",
+                    "title": "Real-Time Bidding Engine 2.0 Released",
+                    "excerpt": "Our new bidding system offers faster updates, improved reliability, and a smoother user experience.",
+                    "featured": false
+                },
+                {
+                    "date": "November 15, 2025",
+                    "category": "partnership",
+                    "title": "Strategic Partnership with Leading Inspection Center",
+                    "excerpt": "We've partnered with Japan's top motorcycle inspection facility to enhance our quality assurance.",
+                    "featured": false
+                },
+                {
+                    "date": "October 30, 2025",
+                    "category": "event",
+                    "title": "AWA at Tokyo Motorcycle Show 2025",
+                    "excerpt": "Visit our booth at the Tokyo Motorcycle Show. Meet the team and learn about our services.",
+                    "featured": false
+                },
+                {
+                    "date": "October 10, 2025",
+                    "category": "milestone",
+                    "title": "10,000 Motorcycles Sold!",
+                    "excerpt": "We've reached a major milestone. Thank you to all our buyers and partners worldwide.",
+                    "featured": false
+                }
+            ],
+            "newsletter": {
+                "title": "Subscribe to Our Newsletter",
+                "subtitle": "Get auction alerts, new arrivals, and exclusive offers delivered to your inbox.",
+                "placeholder": "Enter your email",
+                "subscribe": "Subscribe"
+            }
+        },
+        "security": {
+            "title": "Security & Support",
+            "subtitle": "We protect your data and transactions.",
+            "support": "24/7 Customer Support via Email and Chat."
+        },
+        "export": {
+            "title": "Export Procedures",
+            "description": "Required documents and procedures for export"
+        },
+        "shipping": {
+            "title": "Global Shipping Guide",
+            "methods": {
+                "roro": {
+                    "title": "RoRo Shipping",
+                    "desc": "Roll-on/Roll-off. The most common and cost-effective method for drivable vehicles.",
+                    "benefits": {
+                        "0": "Fast processing",
+                        "1": "Lower cost",
+                        "2": "Vehicle must run"
+                    }
+                },
+                "container": {
+                    "title": "Container Shipping",
+                    "desc": "Secure shipping in 20ft or 40ft containers. Good for multiple bikes or high-value items.",
+                    "benefits": {
+                        "0": "Higher security",
+                        "1": "Can ship parts",
+                        "2": "Flexible loading"
+                    }
+                },
+                "air": {
+                    "title": "Air Freight",
+                    "desc": "The fastest option for urgent deliveries. Most expensive.",
+                    "benefits": {
+                        "0": "Fastest delivery",
+                        "1": "High cost",
+                        "2": "Good for prototypes"
+                    }
+                }
+            },
+            "rates": {
+                "title": "Estimated Shipping Rates (Motorcycles)",
+                "headers": {
+                    "region": "Region",
+                    "port": "Destination Port",
+                    "time": "Est. Time",
+                    "cost": "Est. Cost (USD)"
+                },
+                "rows": {
+                    "asia": {
+                        "region": "Asia",
+                        "port": "Manila, Phillipines",
+                        "time": "10-15 Days",
+                        "cost": "$300 - $500"
+                    },
+                    "oceania": {
+                        "region": "Oceania",
+                        "port": "Sydney, Australia",
+                        "time": "20-25 Days",
+                        "cost": "$600 - $800"
+                    },
+                    "na": {
+                        "region": "North America",
+                        "port": "Long Beach, USA",
+                        "time": "25-30 Days",
+                        "cost": "$800 - $1,200"
+                    },
+                    "europe": {
+                        "region": "Europe",
+                        "port": "Rotterdam, Netherlands",
+                        "time": "35-45 Days",
+                        "cost": "$900 - $1,300"
+                    },
+                    "africa": {
+                        "region": "Africa",
+                        "port": "Mombasa, Kenya",
+                        "time": "30-40 Days",
+                        "cost": "$700 - $1,000"
+                    }
+                },
+                "disclaimer": "* Rates are estimates and subject to fuel surcharges and seasonal changes."
+            }
+        }
+    },
+    "help": {
+        "title": "Help Center",
+        "gettingStarted": "Getting Started",
+        "faq": "FAQ",
+        "howToBid": "How to Bid",
+        "shippingGuide": "Shipping Guide",
+        "contact": "Contact Us"
+    },
+    "faq": {
+        "q1": "How do I register for an account?",
+        "a1": "Click on the 'Register' button at the top right corner. You'll need to provide your email, create a password, and verify your email address. For full access, you'll also need to complete KYC verification.",
+        "q2": "What payment methods do you accept?",
+        "a2": "We accept major credit cards (Visa, Mastercard, Amex), Bank Wire Transfers, and PayPal for deposits.",
+        "q3": "Can I inspect the vehicles before bidding?",
+        "a3": "Yes, we provide detailed inspection reports and high-resolution photos for every vehicle. You can also request a video inspection or hire a third-party inspector through our partners.",
+        "q4": "How long does shipping take?",
+        "a4": "Shipping times vary by destination. Typically, it takes 2-4 weeks for Asia, 4-6 weeks for Oceania and North America, and 6-8 weeks for Europe and Africa.",
+        "q5": "What if the vehicle is not as described?",
+        "a5": "We have a strict dispute resolution policy. If a vehicle significantly differs from the inspection report, please contact support within 48 hours of receiving the vehicle."
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Have questions or feedback? We'd love to hear from you.",
+        "form": {
+            "name": "Name",
+            "email": "Email Address",
+            "subject": "Subject",
+            "message": "Message",
+            "send": "Send Message"
+        },
+        "info": {
+            "addressLabel": "Address",
+            "address": "AWA Holdings Co., Ltd.<br>1-2-3 Minato Mirai, Nishi-ku<br>Yokohama, Kanagawa 220-0012<br>Japan",
+            "phoneLabel": "Phone",
+            "phone": "+81 45-123-4567",
+            "email": "support@awa-auction.com",
+            "hours": "Business Hours: Mon-Fri 9:00 AM - 6:00 PM JST"
+        }
+    },
+    "about": {
+        "title": "About AWA",
+        "mission": {
+            "title": "Mission",
+            "description": "Connecting motorcycle enthusiasts worldwide with Japan's premium motorcycles"
+        },
+        "vision": {
+            "title": "Vision",
+            "description": "To become the global leader in international motorcycle trade"
+        },
+        "values": {
+            "title": "Our Values",
+            "transparency": "Transparency",
+            "quality": "Quality",
+            "trust": "Trust",
+            "innovation": "Innovation"
+        }
+    },
+    "notifications": {
+        "title": "Notifications",
+        "markAllRead": "Mark All as Read",
+        "noNotifications": "No notifications",
+        "types": {
+            "bid": "Bid Notification",
+            "auction": "Auction Notification",
+            "order": "Order Notification",
+            "system": "System Notification"
+        }
+    },
+    "exportRegulations": {
+        "title": "Export Regulations",
+        "subtitle": "International Export Guidelines",
+        "overview": {
+            "title": "Overview",
+            "content": "Exporting motorcycles from Japan is subject to various regulations and requirements. AWA handles all export documentation on behalf of buyers, ensuring compliance with both Japanese export laws and destination country import regulations.",
+            "note": "Note: Import duties and taxes are the responsibility of the buyer and vary by destination country."
+        },
+        "japan": {
+            "title": "Japanese Export Requirements",
+            "items": {
+                "certificate": {
+                    "title": "Export Certificate",
+                    "desc": "Required for all vehicles exported from Japan. AWA obtains this on your behalf."
+                },
+                "deregistration": {
+                    "title": "Deregistration",
+                    "desc": "Vehicle must be deregistered from Japanese roads before export."
+                },
+                "customs": {
+                    "title": "Customs Declaration",
+                    "desc": "Full documentation of vehicle specifications and value for customs clearance."
+                },
+                "preparation": {
+                    "title": "Fuel & Battery",
+                    "desc": "Fuel tank must be drained and battery disconnected for maritime shipping."
+                }
+            }
+        },
+        "documents": {
+            "title": "Documents Provided by AWA",
+            "items": [
+                "Export Certificate (輸出抹消)",
+                "Bill of Lading (B/L)",
+                "Commercial Invoice",
+                "Packing List",
+                "Inspection Report",
+                "Original Keys & Documents"
+            ]
+        },
+        "countries": {
+            "title": "Country-Specific Import Requirements",
+            "uae": {
+                "title": "United Arab Emirates",
+                "items": [
+                    "Vehicles under 5 years old preferred",
+                    "GCC compliance certificate may be required",
+                    "Import duty: 5%"
+                ]
+            },
+            "uk": {
+                "title": "United Kingdom",
+                "items": [
+                    "DVLA registration required after import",
+                    "MOT test within 14 days of registration",
+                    "Import duty: 6% + 20% VAT"
+                ]
+            },
+            "usa": {
+                "title": "United States",
+                "items": [
+                    "Must be 25+ years old OR EPA/DOT compliant",
+                    "CBP Form 7501 required",
+                    "Import duty: 2.4%"
+                ]
+            },
+            "australia": {
+                "title": "Australia",
+                "items": [
+                    "SEVS or RAWS approval required for newer models",
+                    "Quarantine inspection mandatory",
+                    "Import duty: 5% + 10% GST"
+                ]
+            }
+        },
+        "prohibited": {
+            "title": "Prohibited & Restricted Items",
+            "desc": "The following items cannot be included in shipments:",
+            "items": [
+                "Fuel or flammable liquids",
+                "Aftermarket exhaust systems (some countries)",
+                "Performance ECU modifications (some countries)",
+                "Weapons or sharp objects stored in vehicle"
+            ]
+        },
+        "contact": {
+            "title": "Need Help with Export?",
+            "desc": "Our export specialists are here to assist you.",
+            "button": "Contact Support"
+        }
+    },
+    "cookies": {
+        "title": "Cookie Policy",
+        "lastUpdated": "Last updated: December 2024",
+        "intro": {
+            "title": "What are Cookies?",
+            "content": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our platform."
+        },
+        "types": {
+            "title": "Types of Cookies We Use",
+            "essential": {
+                "title": "Essential Cookies",
+                "desc": "Required for the website to function properly. These cannot be disabled.",
+                "items": {
+                    "session": "Session management",
+                    "security": "Security tokens",
+                    "login": "Login status"
+                }
+            },
+            "analytics": {
+                "title": "Analytics Cookies",
+                "desc": "Help us understand how visitors interact with our website.",
+                "items": {
+                    "views": "Page views and navigation",
+                    "time": "Time spent on pages",
+                    "error": "Error tracking"
+                }
+            },
+            "functional": {
+                "title": "Functional Cookies",
+                "desc": "Remember your preferences and settings.",
+                "items": {
+                    "language": "Language preference",
+                    "currency": "Currency settings",
+                    "display": "Display preferences"
+                }
+            },
+            "marketing": {
+                "title": "Marketing Cookies",
+                "desc": "Used to deliver relevant advertisements and track campaign effectiveness.",
+                "items": {
+                    "targeting": "Ad targeting",
+                    "remarketing": "Remarketing",
+                    "social": "Social media integration"
+                }
+            }
+        },
+        "list": {
+            "title": "Cookies We Use",
+            "headers": {
+                "name": "Cookie Name",
+                "purpose": "Purpose",
+                "duration": "Duration"
+            },
+            "items": {
+                "session": {
+                    "desc": "Session management",
+                    "duration": "Session"
+                },
+                "auth": {
+                    "desc": "Authentication token",
+                    "duration": "7 days"
+                },
+                "lang": {
+                    "desc": "Language preference",
+                    "duration": "1 year"
+                },
+                "currency": {
+                    "desc": "Currency preference",
+                    "duration": "1 year"
+                },
+                "ga": {
+                    "desc": "Google Analytics",
+                    "duration": "2 years"
+                }
+            }
+        },
+        "managing": {
+            "title": "Managing Cookies",
+            "content": "You can control and manage cookies in various ways. Please note that removing or blocking cookies may impact your user experience and some functionality may no longer be available.",
+            "browser": "Browser Settings: Most browsers allow you to refuse or accept cookies and to delete existing cookies. Check your browser's help section for instructions."
+        },
+        "thirdParty": {
+            "title": "Third-Party Cookies",
+            "content": "We may use third-party services that also place cookies on your device:",
+            "items": {
+                "ga": "Google Analytics - Website analytics",
+                "stripe": "Stripe - Payment processing",
+                "intercom": "Intercom - Customer support chat"
+            }
+        },
+        "contact": {
+            "title": "Questions about Cookies?",
+            "content": "Contact our privacy team for more information.",
+            "button": "Contact Us"
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: December 1, 2025",
+        "sections": {
+            "collection": {
+                "title": "1. Information We Collect",
+                "content": "We collect information you provide directly to us, including:",
+                "items": {
+                    "personal": "Personal identification (name, address, ID documents for KYC)",
+                    "contact": "Contact information (email, phone number)",
+                    "payment": "Payment information (billing address, transaction history)",
+                    "activity": "Account activity (bids, purchases, watchlist)"
+                }
+            },
+            "usage": {
+                "title": "2. How We Use Your Information",
+                "items": {
+                    "process": "Process your bids and transactions",
+                    "verify": "Verify your identity (KYC compliance)",
+                    "communicate": "Communicate about your orders and account",
+                    "promotional": "Send promotional materials (with your consent)",
+                    "improve": "Improve our services and prevent fraud"
+                }
+            },
+            "sharing": {
+                "title": "3. Information Sharing",
+                "content": "We do not sell your personal information. We may share data with:",
+                "items": {
+                    "logistics": "Shipping and logistics partners (to deliver your purchases)",
+                    "payment": "Payment processors (to complete transactions)",
+                    "legal": "Legal authorities (when required by law)"
+                }
+            },
+            "security": {
+                "title": "4. Data Security",
+                "content": "We implement industry-standard security measures including encryption, secure servers, and regular security audits. However, no method of transmission over the Internet is 100% secure."
+            },
+            "cookies": {
+                "title": "5. Cookies",
+                "content": "We use cookies to improve your browsing experience, analyze site traffic, and personalize content. You can control cookies through your browser settings."
+            },
+            "rights": {
+                "title": "6. Your Rights",
+                "content": "Depending on your location, you may have the right to:",
+                "items": {
+                    "access": "Access your personal data",
+                    "correction": "Request correction of inaccurate data",
+                    "deletion": "Request deletion of your data",
+                    "optout": "Opt out of marketing communications"
+                }
+            },
+            "contact": {
+                "title": "7. Contact Us",
+                "content": "For privacy-related inquiries, please contact:",
+                "emailLabel": "Email:",
+                "addressLabel": "Address:",
+                "address": "1-2-3 Minato Mirai, Nishi-ku, Yokohama 220-0012, Japan"
+            }
+        }
+    },
+    "terms": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last updated: December 1, 2025",
+        "sections": {
+            "acceptance": {
+                "title": "1. Acceptance of Terms",
+                "content": "By accessing or using the AWA Auction Platform (\"Service\"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our Service."
+            },
+            "registration": {
+                "title": "2. User Registration",
+                "content": "To participate in auctions, you must create an account and complete our KYC (Know Your Customer) verification process. You agree to provide accurate information and keep your account credentials secure.",
+                "rules": {
+                    "age": "You must be at least 18 years old to use our Service",
+                    "responsibility": "You are responsible for all activity under your account",
+                    "security": "You must notify us immediately of any unauthorized access"
+                }
+            },
+            "auction": {
+                "title": "3. Auction Rules",
+                "content": "All bids placed on our platform are binding. By placing a bid, you agree to purchase the item at your bid price if you are the winning bidder.",
+                "rules": {
+                    "retraction": "Bids cannot be retracted once placed",
+                    "winning": "The highest bidder at auction close wins",
+                    "fees": "Buyer's premium (5%) applies to all winning bids",
+                    "payment": "Payment must be completed within 3 business days"
+                }
+            },
+            "payment": {
+                "title": "4. Payment Terms",
+                "content": "Accepted payment methods include bank wire transfer and credit cards. Full payment must be received before shipping can commence. Failure to pay may result in account suspension."
+            },
+            "shipping": {
+                "title": "5. Shipping & Delivery",
+                "content": "AWA arranges international shipping on behalf of buyers. Shipping quotes are estimates and final costs may vary. Risk of loss transfers to buyer upon departure from Japan."
+            },
+            "liability": {
+                "title": "6. Limitation of Liability",
+                "content": "AWA provides inspection reports in good faith but does not guarantee the accuracy of all information. Buyers are encouraged to conduct their own due diligence. Our liability is limited to the amount of fees paid to AWA."
+            },
+            "governing": {
+                "title": "7. Governing Law",
+                "content": "These Terms shall be governed by the laws of Japan. Any disputes shall be resolved in the courts of Yokohama, Kanagawa Prefecture."
+            },
+            "contact": {
+                "title": "8. Contact",
+                "content": "For questions about these Terms, please contact us at:",
+                "emailLabel": "Email:",
+                "addressLabel": "Address:",
+                "address": "1-2-3 Minato Mirai, Nishi-ku, Yokohama 220-0012, Japan"
+            }
+        }
+    },
+    "errors": {
+        "notFound": {
+            "title": "Page Not Found",
+            "description": "The page you're looking for doesn't exist or has been moved.",
+            "backHome": "Back to Home"
+        },
+        "serverError": {
+            "title": "Server Error",
+            "description": "Sorry, something went wrong on our end.",
+            "tryAgain": "Try Again"
+        }
+    },
+    "languageSwitcher": {
+        "title": "Language",
+        "ja": "日本語",
+        "en": "English",
+        "ar": "العربية"
+    }
+}

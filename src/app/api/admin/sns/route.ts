@@ -1,0 +1,16 @@
+import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
+
+export async function GET() {
+    try {
+        const submissions = await prisma.snsSubmission.findMany({
+            orderBy: {
+                submittedAt: 'desc',
+            },
+        });
+        return NextResponse.json(submissions);
+    } catch (error) {
+        console.error('Failed to fetch SNS submissions:', error);
+        return NextResponse.json({ error: 'Failed to fetch submissions' }, { status: 500 });
+    }
+}

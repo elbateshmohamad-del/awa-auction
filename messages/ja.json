@@ -1,0 +1,2037 @@
+{
+  "common": {
+    "login": "ログイン",
+    "signUp": "新規登録",
+    "logout": "ログアウト",
+    "auctions": "オークション",
+    "services": "サービス",
+    "about": "会社概要",
+    "search": "検索",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "close": "閉じる",
+    "viewAll": "すべて見る",
+    "learnMore": "詳しく見る",
+    "readMore": "続きを読む",
+    "seeDetails": "詳細を見る"
+  },
+  "catalog": {
+    "bikesAvailable": "台のバイクが出品中"
+  },
+  "header": {
+    "navigation": {
+      "auctions": "オークション",
+      "services": "サービス",
+      "about": "会社概要",
+      "shippingSchedule": "配送スケジュール"
+    },
+    "auth": {
+      "login": "ログイン",
+      "signUp": "新規登録",
+      "dashboard": "ダッシュボード",
+      "logout": "ログアウト"
+    }
+  },
+  "footer": {
+    "description": "日本の信頼されるバイクオークションプラットフォーム。厳選された高品質バイクを世界中にお届けします。",
+    "platform": {
+      "title": "プラットフォーム",
+      "auctions": "オークション",
+      "howItWorks": "ご利用方法",
+      "subscriptionPlans": "サブスクリプションプラン"
+    },
+    "support": {
+      "title": "サポート",
+      "helpCenter": "ヘルプセンター",
+      "faq": "よくある質問",
+      "contactUs": "お問い合わせ",
+      "shippingGuide": "配送ガイド"
+    },
+    "tracking": {
+      "title": "配送状況の確認",
+      "trackById": "IDで検索",
+      "id": "追跡ID",
+      "destination": "目的地",
+      "currentLocation": "現在地",
+      "eta": "到着予定日",
+      "steps": {
+        "processed": "手続き完了",
+        "shipped": "発送済み",
+        "transit": "輸送中",
+        "customs": "通関手続き中",
+        "delivered": "配達完了"
+      }
+    },
+    "settings": {
+      "title": "設定",
+      "profile": "プロフィール設定",
+      "notifications": "通知設定",
+      "security": "セキュリティ"
+    },
+    "company": {
+      "title": "会社情報",
+      "aboutAwa": "AWAについて",
+      "careers": "採用情報",
+      "news": "ニュース",
+      "blog": "ブログ"
+    },
+    "legal": {
+      "title": "法務",
+      "termsOfService": "利用規約",
+      "privacyPolicy": "プライバシーポリシー",
+      "cookiePolicy": "クッキーポリシー",
+      "exportRegulations": "輸出規制"
+    },
+    "copyright": "© {year} AWA. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "グローバル貿易を、シンプルに。",
+      "subtitle": "AWAは、テクノロジー、透明性、信頼を通じて、日本のプレミアムバイク市場を世界に繋げます。",
+      "enterAuction": "オークションプラットフォームへ",
+      "aboutAwa": "AWA Inc.について"
+    },
+    "news": {
+      "title": "最新ニュース",
+      "item1": "2025.12.01 - 東南アジア市場への展開完了。",
+      "item2": "2025.11.15 - AWA、第3四半期の取引量が過去最高を記録。"
+    },
+    "sections": {
+      "business": {
+        "title": "事業内容",
+        "description": "日本の中古バイクを世界に向けたデジタルマーケットプレイスを運営し、ディーラーやコレクター向けにシームレスな国際取引を促進しています。"
+      },
+      "sustainability": {
+        "title": "サステナビリティ",
+        "description": "高品質車両のライフサイクル延長を通じて循環経済を推進。2030年までにカーボンニュートラルな物流を目指しています。"
+      },
+      "careers": {
+        "title": "採用情報",
+        "description": "イノベーター、エンジニア、自動車の専門家からなるグローバルチームに参加しませんか。リモートおよび東京本社でのポジションを募集中です。",
+        "viewPositions": "募集ポジションを見る →"
+      }
+    }
+  },
+  "auctions": {
+    "title": "ライブオークション",
+    "subtitle": "日本からの厳選されたプレミアムバイクにリアルタイムで入札",
+    "liveNow": "開催中",
+    "upcoming": "開催予定",
+    "ended": "終了",
+    "timeRemaining": "残り時間",
+    "currentBid": "現在の入札額",
+    "currentPrice": "現在価格",
+    "startingBid": "開始価格",
+    "startPrice": "開始価格",
+    "bids": "入札",
+    "noBids": "入札なし",
+    "placeBid": "入札する",
+    "watchlist": "ウォッチリストに追加",
+    "filters": {
+      "title": "フィルター",
+      "make": "メーカー",
+      "model": "モデル",
+      "year": "年式",
+      "priceRange": "価格帯",
+      "mileage": "走行距離",
+      "condition": "状態",
+      "clearAll": "すべてクリア"
+    },
+    "sort": {
+      "title": "並び替え",
+      "endingSoon": "終了間近",
+      "newlyListed": "新着順",
+      "priceLowHigh": "価格: 安い順",
+      "priceHighLow": "価格: 高い順",
+      "mostBids": "入札数が多い順"
+    },
+    "noResults": "該当するオークションがありません",
+    "days": "日",
+    "hours": "時間",
+    "minutes": "分",
+    "seconds": "秒"
+  },
+  "shippingSchedule": {
+    "title": "配送スケジュール",
+    "subtitle": "コンテナのスケジュールを確認し、スペースを予約してください。主要なアジアの港への定期混載便を提供しています。",
+    "capacityUsed": "使用率",
+    "almostFull": "満杯近し！",
+    "spaceAvailable": "空きあり",
+    "departure": "出港予定",
+    "estPrice": "予想価格",
+    "bookSpace": "スペースを予約",
+    "from": "",
+    "status": {
+      "closingSoon": "まもなく締切",
+      "open": "受付中",
+      "scheduled": "予定",
+      "Closing Soon": "まもなく締切",
+      "Open": "受付中",
+      "Scheduled": "予定"
+    },
+    "features": {
+      "direct": "直行便",
+      "fastClearance": "迅速な通関",
+      "securePacking": "安全な梱包",
+      "monthlyService": "月次便",
+      "Direct": "直行便",
+      "Fast Clearance": "迅速な通関",
+      "Secure Packing": "安全な梱包",
+      "Monthly Service": "月次便"
+    },
+    "destinations": {
+      "bangkok": "バンコク",
+      "hoChiMinh": "ホーチミン",
+      "manila": "マニラ",
+      "thailand": "タイ",
+      "vietnam": "ベトナム",
+      "philippines": "フィリピン",
+      "Bangkok": "バンコク",
+      "Ho Chi Minh": "ホーチミン",
+      "Manila": "マニラ",
+      "Thailand": "タイ",
+      "Vietnam": "ベトナム",
+      "Philippines": "フィリピン"
+    }
+  },
+  "bike": {
+    "details": "詳細情報",
+    "specifications": "仕様",
+    "condition": "車両状態",
+    "inspectionReport": "検査レポート",
+    "sellerInfo": "出品者情報",
+    "auctionHistory": "入札履歴",
+    "similarBikes": "似ているバイク",
+    "make": "メーカー",
+    "model": "モデル",
+    "year": "年式",
+    "mileage": "走行距離",
+    "engineSize": "排気量",
+    "color": "カラー",
+    "transmission": "ミッション",
+    "fuelType": "燃料タイプ"
+  },
+  "auth": {
+    "login": {
+      "title": "ログイン",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "rememberMe": "ログイン状態を維持",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "noAccount": "アカウントをお持ちでない方",
+      "signUpHere": "こちらから登録"
+    },
+    "loginPage": {
+      "heroTitle": "おかえりなさい",
+      "heroSubtitle": "最高のバイクを見つける旅を続けましょう。",
+      "lightningTitle": "高速入札",
+      "lightningDesc": "すべてのアクティブな入札をリアルタイムで更新。",
+      "secureTitle": "安全な取引",
+      "secureDesc": "お客様のデータと支払いは常に保護されています。",
+      "signIn": "アカウントにログイン",
+      "newToAwa": "AWAが初めてですか？",
+      "createAccount": "アカウントを作成",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "signInBtn": "ログイン",
+      "orContinueWith": "または以下でログイン",
+      "termsNotice": "ログインすることで、以下に同意したものとみなされます：",
+      "termsOfService": "利用規約",
+      "and": "と",
+      "privacyPolicy": "プライバシーポリシー"
+    },
+    "forgotPasswordPage": {
+      "title": "パスワードをお忘れですか？",
+      "subtitle": "ご安心ください、リセット手順をお送りします。",
+      "email": "メールアドレス",
+      "resetBtn": "パスワードをリセット",
+      "backToLogin": "← ログインに戻る"
+    },
+    "register": {
+      "title": "新規登録",
+      "fullName": "氏名",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirmPassword": "パスワード確認",
+      "country": "国",
+      "agreeTerms": "利用規約に同意する",
+      "alreadyHaveAccount": "すでにアカウントをお持ちの方",
+      "loginHere": "こちらからログイン"
+    },
+    "registerPage": {
+      "heroTitle": "革命に参加しよう",
+      "heroSubtitle": "日本のプレミアムバイクへの入札を今すぐ始めましょう。",
+      "globalAccessTitle": "グローバルアクセス",
+      "globalAccessDesc": "50カ国以上への配送と通関手続きをサポート。",
+      "professionalGradeTitle": "プロフェッショナルグレード",
+      "professionalGradeDesc": "通常はディーラー向けの詳細な検査レポートにアクセス。",
+      "createAccount": "アカウントを作成",
+      "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+      "signIn": "ログイン",
+      "firstName": "名",
+      "lastName": "姓",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "passwordHint": "8文字以上で入力してください",
+      "confirmPassword": "パスワード確認",
+      "agreeToTerms": "利用規約に同意します",
+      "termsNotice": "アカウント作成をクリックすることで、以下に同意したものとみなされます：",
+      "termsOfService": "利用規約",
+      "createAccountBtn": "アカウントを作成"
+    },
+    "forgotPassword": {
+      "title": "パスワードをリセット",
+      "description": "登録したメールアドレスを入力してください。パスワードリセット用のリンクをお送りします。",
+      "sendLink": "リセットリンクを送信",
+      "backToLogin": "ログインに戻る"
+    },
+    "verifyEmail": {
+      "title": "メールアドレスを確認",
+      "description": "登録したメールアドレスに確認メールを送信しました。リンクをクリックしてアカウントを有効化してください。",
+      "resend": "確認メールを再送信"
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "welcome": "ようこそ",
+    "overview": "概要",
+    "myBids": "入札履歴",
+    "myOrders": "注文履歴",
+    "watchlist": "ウォッチリスト",
+    "profile": "プロフィール",
+    "subscription": "サブスクリプション",
+    "deposit": "デポジット",
+    "documents": "書類",
+    "tracking": {
+      "title": "配送状況の確認",
+      "trackById": "IDで検索",
+      "id": "追跡ID",
+      "destination": "目的地",
+      "currentLocation": "現在地",
+      "eta": "到着予定日",
+      "steps": {
+        "processed": "手続き完了",
+        "shipped": "発送済み",
+        "transit": "輸送中",
+        "customs": "通関手続き中",
+        "delivered": "配達完了"
+      }
+    },
+    "settings": {
+      "title": "設定",
+      "profile": "プロフィール設定",
+      "currency": "表示・通貨設定",
+      "notifications": "通知設定",
+      "security": "セキュリティ",
+      "form": {
+        "accountType": "アカウントタイプ",
+        "individual": "個人",
+        "corporate": "法人",
+        "phoneNumber": "電話番号",
+        "address": "住所",
+        "corporateDetails": "法人情報",
+        "companyName": "法人名",
+        "registrationNumber": "法人番号",
+        "representativeName": "代表者名",
+        "save": "変更を保存",
+        "saving": "保存中...",
+        "success": "プロフィールを更新しました！リロードします...",
+        "error": "プロフィールの更新に失敗しました"
+      }
+    },
+    "sns": "SNS連携",
+    "kyc": {
+      "title": "本人確認(KYC)",
+      "status": "ステータス",
+      "notSubmitted": "未提出",
+      "rejected": "却下",
+      "verified": "認証済み",
+      "pendingReview": "審査中",
+      "pleaseLogin": "ログインしてください。",
+      "loading": "読み込み中...",
+      "successfullyUploaded": "{type} を正常にアップロードしました",
+      "uploadFailed": "アップロードに失敗しました",
+      "error": "エラー: {message}",
+      "upload": "アップロード",
+      "reUpload": "再アップロード",
+      "uploading": "アップロード中...",
+      "submitted": "提出済み",
+      "documents": {
+        "COMPANY_REGISTRATION": "会社登記簿謄本 (Tokibo)",
+        "PASSPORT": "本人確認書類 / 代表者ID (パスポート/免許証)",
+        "POA": "委任状 (該当する場合)",
+        "UTILITY_BILL": "住所確認書類 (公共料金請求書)"
+      },
+      "submittedOn": "提出日: {date}",
+      "docStatus": "ステータス: {status}",
+      "reason": "理由: {reason}",
+      "required": "*",
+      "accountType": "アカウントタイプ",
+      "individual": "個人",
+      "corporate": "法人",
+      "change": "変更"
+    },
+    "snsCampaign": "SNSキャンペーン",
+    "activeBids": "アクティブな入札",
+    "wonAuctions": "落札済み",
+    "pendingPayments": "支払い待ち",
+    "inTransit": "配送中",
+    "activity": {
+      "placeBid": "{item}に入札",
+      "myBids": "{item}への入札"
+    }
+  },
+  "admin": {
+    "title": "管理パネル",
+    "dashboard": "ダッシュボード",
+    "users": "ユーザー管理",
+    "kyc": "KYC管理",
+    "bikes": "バイク管理",
+    "auctions": "オークション管理",
+    "orders": "注文管理",
+    "containers": "コンテナ管理",
+    "content": "コンテンツ管理",
+    "finance": "財務管理",
+    "reports": "レポート",
+    "notifications": "通知管理",
+    "sns": "SNS管理",
+    "settings": "設定",
+    "dashboardPage": {
+      "title": "ダッシュボード",
+      "welcome": "AWA管理画面へようこそ",
+      "actions": {
+        "downloadReport": "レポートをダウンロード",
+        "systemHealth": "システムヘルスチェック"
+      },
+      "quickAccess": {
+        "title": "クイックアクセス",
+        "bikeInventory": "バイク在庫",
+        "auctions": "オークション",
+        "users": "ユーザー",
+        "orders": "注文",
+        "content": "コンテンツ (CMS)",
+        "finance": "財務"
+      },
+      "metrics": {
+        "title": "主要指標",
+        "totalRevenue": "総収益 (月次)",
+        "activeAuctions": "開催中オークション",
+        "newUsers": "新規ユーザー (週次)",
+        "pendingKyc": "KYC未承認",
+        "actionReq": "要対応"
+      },
+      "recentActivity": {
+        "title": "最近のシステムアクティビティ",
+        "newUserReg": "新規ユーザー登録",
+        "auctionEnded": "オークション終了",
+        "paymentReceived": "支払い受領",
+        "systemAlert": "システムアラート",
+        "newBid": "新規入札",
+        "userRegDesc": "ユーザーID:9928 がタイから登録しました。",
+        "auctionEndedDesc": "ロット #1234 が ¥1,850,000 で落札されました。",
+        "paymentReceivedDesc": "注文 #1029 の支払いが確認されました。",
+        "backupDesc": "バックアップが正常に完了しました。",
+        "newBidDesc": "ロット #1235 に入札がありました。"
+      },
+      "pendingTasks": {
+        "title": "保留中のタスク",
+        "reviewKyc": "KYC申請を3件確認する",
+        "confirmPayment": "注文 #1029 の支払いを確認する",
+        "updateRates": "為替レートを更新する"
+      },
+      "systemStatus": {
+        "title": "システムステータス",
+        "serverLoad": "サーバー負荷",
+        "database": "データベース",
+        "healthy": "正常",
+        "apiLatency": "APIレイテンシ"
+      }
+    },
+    "sidebar": {
+      "backToDashboard": "ダッシュボードに戻る",
+      "menu": "メニュー",
+      "quickActions": "クイックアクション",
+      "newBike": "+ 新規バイク",
+      "reviewKyc": "+ KYC審査",
+      "backToSite": "サイトに戻る",
+      "signOut": "ログアウト",
+      "superAdmin": "スーパー管理者"
+    },
+    "common": {
+      "loading": "読み込み中...",
+      "noData": "データがありません",
+      "search": "検索",
+      "filter": "フィルター",
+      "allTypes": "すべてのタイプ",
+      "allStatus": "すべてのステータス",
+      "view": "表示",
+      "edit": "編集",
+      "delete": "削除",
+      "save": "保存",
+      "cancel": "キャンセル",
+      "confirm": "確認",
+      "approve": "承認",
+      "reject": "却下",
+      "loadMore": "もっと見る",
+      "exportCsv": "CSVエクスポート",
+      "actions": "操作",
+      "status": "ステータス",
+      "date": "日付",
+      "type": "タイプ",
+      "amount": "金額",
+      "user": "ユーザー",
+      "individual": "個人",
+      "corporate": "法人",
+      "active": "有効",
+      "pending": "保留中",
+      "verified": "認証済み",
+      "suspended": "停止中"
+    },
+    "usersPage": {
+      "title": "ユーザー管理",
+      "subtitle": "ユーザーアカウント、権限、アクセス管理を行います。",
+      "searchPlaceholder": "ユーザーを検索...",
+      "pendingKyc": "KYC未完了",
+      "table": {
+        "user": "ユーザー",
+        "type": "タイプ",
+        "status": "ステータス",
+        "country": "国",
+        "registered": "登録日"
+      }
+    },
+    "userDetailPage": {
+      "backToUsers": "← ユーザー一覧へ戻る",
+      "sendMessage": "メッセージ送信",
+      "editUser": "ユーザー編集",
+      "stats": {
+        "totalBids": "総入札数",
+        "wonAuctions": "落札数",
+        "totalSpent": "総支払額",
+        "deposit": "デポジット"
+      },
+      "recentActivity": "最近のアクティビティ",
+      "orderHistory": "注文履歴",
+      "viewAll": "すべて見る",
+      "table": {
+        "orderId": "注文ID",
+        "bike": "バイク",
+        "amount": "金額",
+        "status": "ステータス",
+        "date": "日付"
+      },
+      "profileInfo": "プロフィール情報",
+      "profile": {
+        "email": "メールアドレス",
+        "phone": "電話番号",
+        "country": "国",
+        "language": "言語",
+        "joined": "登録日",
+        "lastLogin": "最終ログイン"
+      },
+      "verification": "認証とプラン",
+      "kycStatus": "KYCステータス",
+      "subscription": "サブスクリプション",
+      "actions": {
+        "viewKycDocs": "KYC書類を表示",
+        "adjustDeposit": "デポジット調整",
+        "changeSubscription": "プラン変更",
+        "suspendUser": "ユーザーを停止"
+      },
+      "modals": {
+        "kycTitle": "KYC書類",
+        "governmentId": "本人確認書類（パスポート）",
+        "proofOfAddress": "住所確認書類（公共料金請求書）",
+        "imagePlaceholder": "画像プレースホルダー",
+        "reject": "却下",
+        "approve": "承認",
+        "close": "閉じる",
+        "messageTitle": "メッセージを送信",
+        "subject": "件名",
+        "subjectPlaceholder": "アカウントについて...",
+        "message": "メッセージ",
+        "messagePlaceholder": "メッセージを入力...",
+        "cancel": "キャンセル",
+        "send": "送信",
+        "editTitle": "ユーザー情報を編集",
+        "fullName": "氏名",
+        "emailAddress": "メールアドレス",
+        "status": "ステータス",
+        "saveChanges": "変更を保存",
+        "depositTitle": "デポジット調整",
+        "currentDeposit": "現在のデポジット",
+        "newAmount": "新しい金額（¥）",
+        "updateDeposit": "デポジットを更新",
+        "subscriptionTitle": "サブスクリプションプラン変更",
+        "currentPlan": "現在のプラン",
+        "newPlan": "新しいプラン",
+        "updatePlan": "プランを更新"
+      },
+      "success": "成功！",
+      "commandTriggered": "コマンドが実行されました。"
+    },
+    "kycPage": {
+      "title": "本人確認(KYC)審査",
+      "subtitle": "ユーザーの身分証明書や事業確認書類の審査を行います。",
+      "pending": "審査待ち",
+      "noPending": "審査待ちの申請はありません。",
+      "applicationType": "申請タイプ",
+      "documents": "書類",
+      "submittedDocs": "提出書類",
+      "internalNotes": "社内メモ（審査時に保存・却下時にユーザーへ通知）",
+      "notesPlaceholder": "承認/却下時に保存されます。却下の場合はこの内容がメールで送信されます...",
+      "preview": "プレビュー（未実装）"
+    },
+    "ordersPage": {
+      "title": "注文管理",
+      "searchPlaceholder": "注文を検索...",
+      "table": {
+        "orderId": "注文ID",
+        "customer": "顧客"
+      },
+      "status": {
+        "paid": "支払済",
+        "pending": "未払い",
+        "shipped": "発送済",
+        "processing": "処理中",
+        "cancelled": "キャンセル"
+      }
+    },
+    "orderDetailPage": {
+      "backToOrders": "← 注文一覧へ戻る",
+      "createdOn": "作成日",
+      "printInvoice": "請求書印刷",
+      "updateStatus": "ステータス更新",
+      "timeline": {
+        "title": "注文タイムライン",
+        "orderCreated": "注文作成",
+        "paymentReceived": "支払い受領",
+        "processingStarted": "処理開始",
+        "exportDocuments": "輸出書類",
+        "shipped": "発送済",
+        "delivered": "配達完了",
+        "pending": "保留中"
+      },
+      "vehicle": {
+        "title": "車両情報",
+        "viewListing": "リスティングを見る"
+      },
+      "shipping": {
+        "title": "配送情報",
+        "method": "配送方法",
+        "destination": "目的地",
+        "container": "コンテナ",
+        "estDelivery": "到着予定",
+        "trackContainer": "コンテナ追跡",
+        "updateShipping": "配送情報更新"
+      },
+      "buyer": {
+        "title": "購入者情報",
+        "email": "メール",
+        "country": "国",
+        "viewProfile": "プロフィールを見る"
+      },
+      "payment": {
+        "title": "支払い概要",
+        "finalBid": "落札価格",
+        "auctionFee": "オークション手数料",
+        "shipping": "配送料",
+        "total": "合計"
+      },
+      "actions": {
+        "generateDocs": "書類作成",
+        "sendUpdate": "購入者に更新を送信",
+        "cancelOrder": "注文キャンセル"
+      },
+      "invoicePreview": {
+        "title": "請求書プレビュー",
+        "description": "内容を確認してください。問題なければ「送信」ボタンを押してください。送信と同時に、管理者用の控えもダウンロードされます。",
+        "cancel": "修正する",
+        "send": "送信する"
+      },
+      "status": {
+        "pendingPayment": "支払待ち",
+        "paid": "支払済",
+        "processing": "処理中",
+        "shipped": "発送済",
+        "delivered": "配達完了",
+        "cancelled": "キャンセル"
+      }
+    },
+    "snsPage": {
+      "title": "UGCリワード審査",
+      "subtitle": "ユーザーの投稿を確認し、自動報酬を付与します。",
+      "submissionQueue": "申請キュー",
+      "reviewVerify": "審査・確認",
+      "selectSubmission": "申請を選択してください",
+      "openPostLink": "投稿を開く",
+      "views": "再生数",
+      "likes": "いいね",
+      "comments": "コメント",
+      "shares": "シェア/リポスト",
+      "calculatedReward": "計算された報酬",
+      "table": {
+        "userId": "ユーザー / ID",
+        "platform": "プラットフォーム",
+        "date": "日付",
+        "status": "ステータス",
+        "result": "結果"
+      },
+      "status": {
+        "pending": "審査中",
+        "approved": "承認済み",
+        "rejected": "却下"
+      }
+    },
+    "bikesPage": {
+      "title": "バイク在庫",
+      "subtitle": "バイクの一覧と詳細を管理します。",
+      "addNew": "新規バイク追加",
+      "searchPlaceholder": "バイクを検索...",
+      "table": {
+        "image": "画像",
+        "name": "車名",
+        "year": "年式",
+        "mileage": "走行距離",
+        "price": "価格"
+      }
+    },
+    "auctionsPage": {
+      "title": "オークション管理",
+      "subtitle": "ライブ入札の監視とオークションスケジュールを管理します。",
+      "systemLive": "システム稼働中",
+      "createNew": "オークション作成",
+      "searchPlaceholder": "オークションを検索...",
+      "stats": {
+        "activeAuctions": "開催中オークション",
+        "todaysVolume": "本日の取引額",
+        "totalBids24h": "総入札数（24時間）",
+        "completionRate": "完了率"
+      },
+      "tabs": {
+        "live": "ライブオークション",
+        "upcoming": "予定オークション",
+        "ended": "終了オークション"
+      },
+      "table": {
+        "lot": "ロット番号",
+        "bike": "バイク",
+        "startTime": "開始時刻",
+        "startPrice": "開始価格",
+        "currentBid": "現在価格",
+        "endTime": "終了時刻",
+        "action": "アクション"
+      },
+      "live": {
+        "topBidder": "最高入札者",
+        "bids": "入札",
+        "currentPrice": "現在価格",
+        "left": "残り",
+        "pause": "一時停止",
+        "endNow": "今すぐ終了"
+      },
+      "ended": {
+        "noHistory": "終了したオークション履歴がここに表示されます。"
+      },
+      "status": {
+        "live": "開催中",
+        "scheduled": "予定",
+        "ended": "終了"
+      }
+    },
+    "containersPage": {
+      "title": "コンテナ管理",
+      "subtitle": "配送コンテナスケジュールと物流を管理します。",
+      "createNew": "新規スケジュール作成",
+      "searchPlaceholder": "コンテナを検索...",
+      "table": {
+        "routeName": "ルート / 名前",
+        "schedule": "スケジュール (ETD/ETA)",
+        "loadStatus": "積載状況",
+        "priceUnit": "料金 / 単位",
+        "status": "ステータス",
+        "actions": "操作"
+      },
+      "status": {
+        "open": "受付中",
+        "loading": "積込中",
+        "planning": "計画中",
+        "inTransit": "輸送中",
+        "arrived": "到着済",
+        "delivered": "配達完了"
+      },
+      "manageLoad": "積載管理 →",
+      "modal": {
+        "title": "新規コンテナスケジュール作成",
+        "destination": "目的地",
+        "destinationPlaceholder": "例: バンコク, タイ",
+        "containerType": "コンテナタイプ",
+        "type40ft": "40フィート ハイキューブ",
+        "type20ft": "20フィート 標準",
+        "capacity": "積載可能台数",
+        "pricePerUnit": "単位あたり料金",
+        "etd": "ETD (出発日)",
+        "eta": "ETA (到着日)",
+        "cancel": "キャンセル",
+        "create": "スケジュール作成"
+      }
+    },
+    "contentPage": {
+      "title": "コンテンツ管理",
+      "subtitle": "ウェブサイトのコンテンツ、バナー、お知らせを管理します。",
+      "importContent": "コンテンツをインポート",
+      "createNew": "新規作成",
+      "stats": {
+        "published": "公開済み",
+        "draft": "下書き",
+        "scheduled": "予約済み",
+        "totalPages": "総ページ数"
+      },
+      "filters": {
+        "all": "すべて",
+        "banners": "バナー",
+        "news": "お知らせ",
+        "guides": "ガイド",
+        "faq": "よくある質問",
+        "legal": "法的ページ"
+      },
+      "searchPlaceholder": "コンテンツを検索...",
+      "allStatus": "すべてのステータス",
+      "table": {
+        "title": "タイトル",
+        "type": "タイプ",
+        "status": "ステータス",
+        "author": "作成者",
+        "lastUpdated": "最終更新",
+        "actions": "操作"
+      },
+      "status": {
+        "published": "公開済み",
+        "draft": "下書き",
+        "scheduled": "予約済み"
+      },
+      "noContent": "フィルターに一致するコンテンツがありません。",
+      "loadMore": "もっと見る",
+      "edit": "編集",
+      "delete": "削除",
+      "deleteConfirm": "このアイテムを削除してもよろしいですか？",
+      "modal": {
+        "title": "新規コンテンツ作成",
+        "contentType": "コンテンツタイプ",
+        "types": {
+          "news": "お知らせ",
+          "banner": "バナー画像",
+          "guide": "ガイドページ",
+          "faq": "よくある質問"
+        },
+        "inputTitle": "タイトル",
+        "titlePlaceholderBanner": "例：夏のセールバナー",
+        "titlePlaceholderDefault": "例：メンテナンスのお知らせ",
+        "newsBody": "本文",
+        "newsPlaceholder": "お知らせの内容をここに入力...",
+        "imageUrl": "画像URL",
+        "previewArea": "プレビューエリア",
+        "question": "質問",
+        "questionPlaceholder": "例：支払い方法は？",
+        "answer": "回答",
+        "answerPlaceholder": "回答を入力...",
+        "guideContent": "ガイド内容（Markdown対応）",
+        "guidePlaceholder": "# はじめに...",
+        "cancel": "キャンセル",
+        "create": "作成"
+      }
+    },
+    "financePage": {
+      "title": "財務",
+      "subtitle": "財務レポートと取引履歴を表示します。",
+      "exportTransactions": "取引をエクスポート",
+      "processPayouts": "支払い処理",
+      "summary": {
+        "totalRevenue": "総収入",
+        "pendingPayments": "未払い",
+        "completedPayouts": "完了済み支払い",
+        "refunds": "返金",
+        "thisMonth": "今月",
+        "orders": "件"
+      },
+      "transactions": {
+        "title": "最近の取引",
+        "searchPlaceholder": "取引を検索...",
+        "viewAll": "すべて見る",
+        "table": {
+          "transaction": "取引",
+          "reference": "参照",
+          "amount": "金額",
+          "status": "ステータス",
+          "date": "日時"
+        },
+        "types": {
+          "paymentReceived": "支払い受領",
+          "subscription": "サブスクリプション",
+          "deposit": "デポジット",
+          "refund": "返金"
+        },
+        "status": {
+          "completed": "完了",
+          "pending": "保留中"
+        }
+      },
+      "pendingPayments": {
+        "title": "未払い",
+        "pending": "保留中",
+        "days": "日",
+        "clickForDetails": "クリックして詳細を表示",
+        "sendRemindersAll": "全員にリマインダーを送信"
+      },
+      "exchangeRates": {
+        "title": "為替レート",
+        "update": "更新",
+        "updating": "更新中...",
+        "lastUpdated": "最終更新",
+        "clickToFetch": "更新をクリックしてレートを取得"
+      },
+      "quickActions": {
+        "generateInvoice": "請求書を生成",
+        "processRefund": "返金処理",
+        "bankReconciliation": "銀行照合"
+      },
+      "modal": {
+        "title": "支払い詳細",
+        "orderRef": "注文参照",
+        "customerProfile": "顧客プロフィール",
+        "name": "名前",
+        "kycStatus": "KYCステータス",
+        "email": "メール",
+        "phone": "電話",
+        "address": "住所",
+        "orderBreakdown": "注文内訳",
+        "itemDescription": "項目 / 説明",
+        "vin": "VIN",
+        "price": "価格",
+        "totalAmountDue": "合計請求額",
+        "communicationLog": "連絡履歴",
+        "noLogs": "連絡履歴はありません。",
+        "sendEmail": "メールを送信",
+        "callCustomer": "顧客に電話",
+        "markAsPaid": "支払済みにする"
+      },
+      "kycStatus": {
+        "verified": "認証済み",
+        "pending": "保留中",
+        "unverified": "未認証"
+      }
+    },
+    "reportsPage": {
+      "title": "レポート",
+      "subtitle": "分析レポートを生成・表示します。",
+      "exportReport": "レポートをエクスポート",
+      "period": {
+        "last6Months": "過去6ヶ月",
+        "last12Months": "過去12ヶ月",
+        "thisYear": "今年",
+        "allTime": "全期間"
+      },
+      "summary": {
+        "totalRevenue": "総収入",
+        "totalAuctions": "総オークション",
+        "activeUsers": "アクティブユーザー",
+        "avgOrderValue": "平均注文額",
+        "vsPrevPeriod": "前期比"
+      },
+      "revenueTrend": {
+        "title": "収益トレンド",
+        "subtitle": "収益（百万円単位）"
+      },
+      "salesByRegion": {
+        "title": "地域別売上",
+        "southeastAsia": "東南アジア",
+        "oceania": "オセアニア",
+        "middleEast": "中東",
+        "africa": "アフリカ",
+        "others": "その他"
+      },
+      "topBuyers": {
+        "title": "トップバイヤー",
+        "viewAll": "すべて見る",
+        "table": {
+          "buyer": "バイヤー",
+          "orders": "注文数",
+          "totalSpent": "合計購入額"
+        }
+      },
+      "topModels": {
+        "title": "売れ筋モデル",
+        "viewAll": "すべて見る",
+        "table": {
+          "model": "モデル",
+          "sold": "販売数",
+          "revenue": "収益"
+        },
+        "units": "台"
+      }
+    },
+    "notificationsPage": {
+      "title": "通知",
+      "subtitle": "システム通知とアラートを管理します。",
+      "tabs": {
+        "overview": "概要",
+        "automation": "自動化ルール"
+      },
+      "stats": {
+        "sentToday": "本日送信",
+        "pending": "保留中",
+        "failed": "失敗",
+        "openRate": "開封率"
+      },
+      "recentNotifications": {
+        "title": "最近の通知",
+        "searchPlaceholder": "検索...",
+        "table": {
+          "notification": "通知",
+          "type": "タイプ",
+          "recipients": "受信者数",
+          "status": "ステータス",
+          "actions": "操作"
+        },
+        "status": {
+          "sent": "送信済み",
+          "pending": "保留中",
+          "failed": "失敗"
+        },
+        "view": "表示"
+      },
+      "quickActions": {
+        "title": "クイックアクション",
+        "createBlast": "新規一斉送信作成",
+        "auctionReminder": "オークション終了リマインダー",
+        "paymentReminder": "支払いリマインダー"
+      },
+      "automation": {
+        "categories": {
+          "salesBidding": "入札・販売",
+          "paymentLogistics": "支払い・物流",
+          "crmEngagement": "CRM・エンゲージメント"
+        },
+        "rules": {
+          "bidStart": "ウォッチリストアイテム開始",
+          "bidStartDesc": "ウォッチしている商品のオークション開始を通知",
+          "bidEnd": "終了間近リマインダー",
+          "bidEndDesc": "オークション終了1時間前",
+          "outbid": "上回られた通知",
+          "outbidDesc": "他の入札者に上回られた時",
+          "savedSearch": "保存検索ヒット",
+          "savedSearchDesc": "保存した条件に合う新しいバイクが登場",
+          "recommend": "スマートレコメンド",
+          "recommendDesc": "オークションに負けたユーザーに類似バイクを推薦",
+          "invoiceAuto": "自動請求書生成",
+          "invoiceAutoDesc": "落札直後に請求書を送信",
+          "dunning3d": "支払いリマインダー（3日前）",
+          "dunning3dDesc": "支払期日の3日前",
+          "dunningDue": "支払期日当日",
+          "dunningDueDesc": "支払期日の当日",
+          "cartRecovery": "カート放棄",
+          "cartRecoveryDesc": "チェックアウト中に離脱したユーザーにリマインド",
+          "shipStatus": "配送状況更新",
+          "shipStatusDesc": "B/L・書類状況の変更を自動通知",
+          "welcome": "ウェルカムシリーズ",
+          "welcomeDesc": "新規登録者向けオンボーディングメール",
+          "reEngage": "休眠ユーザー復帰",
+          "reEngageDesc": "30日間ログインなし",
+          "birthday": "誕生日・記念日",
+          "birthdayDesc": "記念日に特別クーポン"
+        }
+      }
+    },
+    "settingsPage": {
+      "title": "設定",
+      "subtitle": "システム設定と環境設定を行います。",
+      "bdsConnection": {
+        "title": "BDS接続設定",
+        "userId": "ユーザーID",
+        "password": "パスワード",
+        "placeholder": "BDSログインID",
+        "passwordPlaceholder": "パスワードを入力",
+        "change": "変更する",
+        "save": "保存する",
+        "saving": "保存中...",
+        "cancel": "キャンセル",
+        "saved": "保存しました！",
+        "loadError": "設定の読み込みに失敗しました",
+        "inputError": "ID・パスワードを入力してください",
+        "saveError": "保存に失敗しました"
+      },
+      "invoice": {
+        "title": "請求書設定",
+        "simulatorTitle": "マルチ通貨シミュレーター",
+        "simulatorDesc": "コスト、為替レート、価格戦略を設定します。",
+        "configure": "請求書設定"
+      },
+      "import": {
+        "title": "取り込み設定",
+        "testMode": "テストモード",
+        "testModeDesc": "最大5台まで取り込み（開発用）",
+        "enabled": "有効"
+      },
+      "invoiceSimulator": {
+        "title": "マルチ通貨請求書シミュレーター",
+        "subtitle": "29項目の費用 & 3通貨比較利益分析",
+        "globalSettings": {
+          "monthlyVolume": "月間取扱数",
+          "avgPrice": "平均価格（税計算用）"
+        },
+        "baseCost": {
+          "title": "1. 原価入力 (JPY)",
+          "label": "原価入力",
+          "categoryJapan": "JAPAN",
+          "categoryDest": "DEST",
+          "categoryOther": "OTHER"
+        },
+        "pricing": {
+          "title": "2. 価格戦略（請求額）",
+          "subtitle": "通貨タブを選択して各項目の請求額を設定します。",
+          "liveRate": "ライブレート",
+          "safetyMargin": "安全マージン",
+          "autoFill": "原価から自動入力",
+          "itemName": "項目名",
+          "jpyCost": "原価(JPY)",
+          "billing": "請求額",
+          "profit": "利益"
+        },
+        "simulation": {
+          "title": "利益シミュレーション（月間）",
+          "billing": "請求",
+          "totalMonth": "月間合計",
+          "perUnit": "/ 単位",
+          "best": "BEST",
+          "taxRefund": "消費税還付込み",
+          "monthlyExport": "月間輸出台数"
+        },
+        "buttons": {
+          "saving": "保存中...",
+          "saved": "保存しました！",
+          "saveAll": "すべての設定を保存"
+        },
+        "costItems": {
+          "awaCommission": "AWA手数料 (利益)",
+          "auctionFee": "オークション落札手数料",
+          "inlandTransport": "陸送費 (Inland Transport)",
+          "yardStorage": "ヤード保管料",
+          "vanning": "コンテナ積込作業費",
+          "exportCustoms": "輸出通関費用",
+          "documentation": "書類作成費",
+          "deregistration": "抹消登録費用",
+          "packingFrame": "木枠梱包 (Wooden Frame)",
+          "packingCrate": "密閉木箱 (Wooden Crate)",
+          "packingPallet": "パレット梱包 (Pallet)",
+          "packingCarton": "段ボール梱包 (Carton)",
+          "oceanFreight": "海上運賃 (Ocean Freight)",
+          "unloading": "港荷降ろし費用",
+          "destInlandTransport": "現地陸送費",
+          "exchangeFee": "決済手数料 (Gas/Bank)",
+          "bankRemittance": "海外送金手数料 (被仕向)",
+          "demurrage": "デマレージ (保管料)"
+        }
+      }
+    }
+  },
+  "services": {
+    "title": "サービス",
+    "inspection": {
+      "title": "検査サービス",
+      "description": "専門家による150項目の詳細検査"
+    },
+    "shipping": {
+      "title": "国際配送",
+      "description": "世界120カ国以上への安全な配送"
+    },
+    "finance": {
+      "title": "ファイナンス",
+      "description": "柔軟な支払いオプション"
+    },
+    "support": {
+      "title": "24/7サポート",
+      "description": "多言語対応のカスタマーサポート"
+    }
+  },
+  "subscription": {
+    "title": "サブスクリプションプラン",
+    "subtitle": "あなたのニーズに合ったプランを選択",
+    "monthly": "月額",
+    "yearly": "年額",
+    "mostPopular": "一番人気",
+    "currentPlan": "現在のプラン",
+    "selectPlan": "プランを選択",
+    "shippingDiscount": "配送割引",
+    "snsMultiplier": "SNS倍率",
+    "featureComparison": "機能比較",
+    "packaging": "梱包",
+    "free": {
+      "name": "フリー",
+      "features": [
+        "公開オークションへのアクセス",
+        "標準取引手数料",
+        "メールサポート",
+        "基本梱包"
+      ]
+    },
+    "starter": {
+      "name": "スターター",
+      "features": [
+        "フリープランの全機能",
+        "5%配送割引",
+        "シュリンクラップ梱包",
+        "優先メールサポート"
+      ]
+    },
+    "bronze": {
+      "name": "ブロンズ",
+      "features": [
+        "スタータープランの全機能",
+        "8%配送割引",
+        "防錆処理",
+        "月次市場レポート"
+      ]
+    },
+    "silver": {
+      "name": "シルバー",
+      "features": [
+        "ブロンズプランの全機能",
+        "12%配送割引",
+        "1.5倍SNSリワード",
+        "パーツ保護",
+        "優先入札"
+      ]
+    },
+    "gold": {
+      "name": "ゴールド",
+      "features": [
+        "シルバープランの全機能",
+        "20%配送割引",
+        "2.0倍SNSリワード",
+        "フル保護パッケージ",
+        "専用サポートライン"
+      ]
+    },
+    "platinum": {
+      "name": "プラチナ",
+      "features": [
+        "ゴールドプランの全機能",
+        "30%配送割引",
+        "3.0倍SNSリワード",
+        "専任アカウントマネージャー",
+        "VIP優先対応",
+        "APIアクセス"
+      ]
+    }
+  },
+  "kyc": {
+    "title": "本人確認",
+    "subtitle": "取引を開始するには本人確認が必要です",
+    "personal": {
+      "title": "個人情報",
+      "description": "基本情報を入力"
+    },
+    "business": {
+      "title": "法人情報",
+      "description": "会社情報を入力"
+    },
+    "corporate": {
+      "title": "企業認証",
+      "description": "企業認証書類をアップロード"
+    },
+    "status": {
+      "pending": "審査中",
+      "approved": "承認済み",
+      "rejected": "却下",
+      "notSubmitted": "未提出"
+    }
+  },
+  "checkout": {
+    "title": "お支払い",
+    "summary": "注文概要",
+    "subtotal": "小計",
+    "shipping": "送料",
+    "tax": "税金",
+    "total": "合計",
+    "paymentMethod": "銀行振込でのお支払い",
+    "billingAddress": "請求先住所",
+    "shippingAddress": "配送先住所",
+    "placeOrder": "申し込みを確定",
+    "bankTransferDescription": "サブスクリプションを有効にするには、以下の口座にお振込みください。",
+    "bankDetails": "振込先口座情報",
+    "bankName": "銀行名",
+    "branch": "支店名",
+    "accountType": "口座種別",
+    "ordinary": "普通",
+    "accountNumber": "口座番号",
+    "accountName": "口座名義",
+    "transferTip": "お振込みの際、登録メールアドレスまたはユーザーIDを備考欄にご記入いただくと、処理が早くなります。",
+    "confirmCheckbox": "振込先情報を確認し、お支払いを完了することを理解しました。お支払い確認後、1〜2営業日以内にサブスクリプションが有効になります。",
+    "termsNotice": "お申し込みにより、利用規約およびプライバシーポリシーに同意したものとみなされます。ダッシュボードからいつでもキャンセルできます。",
+    "success": {
+      "title": "お申し込みありがとうございます",
+      "message": "お申し込みを受け付けました。以下の口座にお振込みください。",
+      "orderNumber": "注文番号",
+      "viewOrder": "注文を確認"
+    }
+  },
+  "guide": {
+    "title": "ガイド",
+    "howToBid": {
+      "title": "入札方法",
+      "subtitle": "当社の入札システムは透明性が高く、使いやすい設計です。入札方法を学び、希望の車両を落札しましょう。",
+      "description": "AWAオークションでの入札方法について",
+      "types": {
+        "title": "入札の種類",
+        "live": {
+          "title": "ライブ入札",
+          "badge": "リアルタイム",
+          "description": "オークション開催中にリアルタイムで入札します。スピーディーでエキサイティングな体験です。"
+        },
+        "proxy": {
+          "title": "代理入札",
+          "badge": "自動",
+          "description": "事前に上限価格を設定します。システムが自動で最低必要額ずつ入札を行います。"
+        }
+      },
+      "rules": {
+        "title": "入札ルール",
+        "increments": {
+          "label": "入札単位:",
+          "text": "現在の価格に応じて、一定額（例：1,000円または10,000円）ずつ入札額が上がります。"
+        },
+        "sniper": {
+          "label": "自動延長:",
+          "text": "終了5分前に入札があった場合、オークション時間が5分間延長され、終了間際の駆け込み入札を防ぎます。"
+        },
+        "binding": {
+          "label": "入札の拘束力:",
+          "text": "すべての入札は法的な拘束力を持ちます。購入意思のない入札は行わないでください。"
+        }
+      },
+      "tips": {
+        "title": "落札のコツ",
+        "items": {
+          "research": "入札前に市場価格を調査しましょう。",
+          "budget": "送料や輸入税を含めた総予算を設定しましょう。",
+          "watchlist": "ウォッチリストを使って、複数の商品を追跡しましょう。",
+          "inspection": "検査票（出品票）を隅々まで確認しましょう。"
+        }
+      }
+    },
+    "howToBuy": {
+      "title": "購入方法",
+      "description": "購入から配送までの流れ"
+    },
+    "inspection": {
+      "title": "車両検査レポート",
+      "subtitle": "信頼が第一です。すべての車両は認定整備士による厳格な多点検査を受けています。",
+      "description": "評価システムについて",
+      "download": "サンプルレポートをダウンロード",
+      "grading": {
+        "title": "評価システム（点数）",
+        "s": {
+          "grade": "S",
+          "desc": "新車。未走行車。"
+        },
+        "5": {
+          "grade": "5",
+          "desc": "極上。使用感の少ない素晴らしい状態。"
+        },
+        "4": {
+          "grade": "4",
+          "desc": "良品。適切なメンテナンスが行われており、小傷程度。"
+        },
+        "3": {
+          "grade": "3",
+          "desc": "並品。年式相応の使用感や摩耗あり。"
+        },
+        "r": {
+          "grade": "R",
+          "desc": "修復歴あり。過去に修理や事故の履歴があります。"
+        }
+      },
+      "points": {
+        "title": "主な検査項目",
+        "engine": "エンジン性能・異音",
+        "frame": "フレームの歪み",
+        "electric": "電気系統",
+        "exterior": "外装の状態",
+        "suspension": "サスペンション・ブレーキ"
+      }
+    },
+    "delivery": {
+      "title": "配送日数",
+      "subtitle": "世界50カ国以上へ配送可能です。日本国内の港からの推定配送期間です。",
+      "regions": {
+        "asia": {
+          "name": "アジア",
+          "time": "2-3週間"
+        },
+        "oceania": {
+          "name": "オセアニア",
+          "time": "4-5週間"
+        },
+        "na": {
+          "name": "北米",
+          "time": "4-6週間"
+        },
+        "europe": {
+          "name": "ヨーロッパ",
+          "time": "6-8週間"
+        },
+        "africa": {
+          "name": "アフリカ",
+          "time": "6-8週間"
+        }
+      },
+      "note": "時間は目安であり、船のスケジュールや通関手続きにより変動する場合があります。"
+    },
+    "payment": {
+      "title": "お支払い方法",
+      "subtitle": "安全で柔軟なお支払い方法をご用意しています。",
+      "methods": {
+        "bank": {
+          "title": "銀行振込 (TT)",
+          "desc": "当社の日本国内銀行口座への直接送金。高額取引に最適です。"
+        },
+        "card": {
+          "title": "クレジットカード",
+          "desc": "Visa、Mastercard、Amexがデポジットや小額決済にご利用いただけます。"
+        },
+        "paypal": {
+          "title": "PayPal",
+          "desc": "デポジットのお支払いに便利な、迅速かつ安全な決済方法です。"
+        }
+      }
+    },
+    "fees": {
+      "title": "手数料・税金",
+      "subtitle": "隠れたコストのない透明な料金体系。",
+      "list": {
+        "auction": {
+          "title": "オークション手数料",
+          "desc": "落札車両ごとの固定手数料。"
+        },
+        "shipping": {
+          "title": "配送料",
+          "desc": "目的地や車両サイズにより異なります。"
+        },
+        "insurance": {
+          "title": "保険",
+          "desc": "輸送中の任意の海上保険。"
+        },
+        "tax": {
+          "title": "消費税",
+          "desc": "国内サービスには10%の消費税が適用されます。"
+        }
+      }
+    },
+    "legal": {
+      "refunds": {
+        "title": "返金ポリシー",
+        "subtitle": "デポジットとキャンセルに関する明確なガイドライン。",
+        "deposit": {
+          "title": "デポジット返金",
+          "desc": "入札前のデポジットは全額返金可能です。"
+        },
+        "cancellation": {
+          "title": "キャンセル",
+          "desc": "落札後のキャンセルには違約金が発生します。"
+        }
+      }
+    },
+    "verification": {
+      "title": "本人確認",
+      "subtitle": "すべての入札権限を解除するにはKYCを完了してください。",
+      "steps": {
+        "id": "身分証明書のアップロード"
+      }
+    },
+    "careers": {
+      "badge": "採用情報",
+      "title": "グローバルオークションの未来を共に創ろう",
+      "subtitle": "日本と世界をつなぐ、最も透明で効率的なオークションプラットフォームの構築に参加しませんか。",
+      "cta": "募集職種を見る",
+      "culture": {
+        "title": "なぜAWA Auctionなのか？",
+        "description": "私たちは透明性、革新、そして世界とのつながりを大切にしています。クロスボーダー取引の簡素化に情熱を持つ多様なチームに参加しましょう。",
+        "growth": {
+          "title": "急成長する環境",
+          "desc": "日々のインパクトが実感できるダイナミックな環境で働きましょう。"
+        },
+        "global": {
+          "title": "グローバルな影響力",
+          "desc": "世界50カ国以上の買い手と売り手をつなぎます。"
+        },
+        "innovation": {
+          "title": "イノベーション第一",
+          "desc": "最新のテクノロジーを活用して、複雑な物流と取引の課題を解決します。"
+        }
+      },
+      "positions": {
+        "title": "募集中の職種",
+        "apply": "今すぐ応募",
+        "noOpenings": "現在募集中の職種はありません。",
+        "jobs": [
+          {
+            "title": "シニアフルスタックエンジニア",
+            "department": "エンジニアリング",
+            "location": "リモート（日本）",
+            "type": "フルタイム",
+            "description": "プラットフォーム開発をリードする経験豊富なフルスタックエンジニアを募集しています。"
+          },
+          {
+            "title": "プロダクトデザイナー",
+            "department": "デザイン",
+            "location": "東京",
+            "type": "フルタイム",
+            "description": "デザインチームに参加し、グローバルオークションプラットフォームのための世界クラスのユーザー体験を創造しましょう。"
+          },
+          {
+            "title": "カスタマーサクセスマネージャー",
+            "department": "オペレーション",
+            "location": "リモート",
+            "type": "フルタイム",
+            "description": "AWAプラットフォームを活用して顧客のビジネス成功と成長を支援します。"
+          }
+        ]
+      }
+    },
+    "news": {
+      "title": "ニュース＆アップデート",
+      "subtitle": "AWAの最新情報をお届けします。",
+      "loadMore": "もっと見る",
+      "readMore": "続きを読む",
+      "categories": {
+        "announcement": "お知らせ",
+        "feature": "機能アップデート",
+        "partnership": "パートナーシップ",
+        "event": "イベント",
+        "milestone": "マイルストーン"
+      },
+      "items": [
+        {
+          "date": "2025年12月5日",
+          "category": "announcement",
+          "title": "AWAプラットフォームが50カ国以上に対応",
+          "excerpt": "南米やアフリカの新しい目的地への配送カバレッジを拡大しました。",
+          "featured": true
+        },
+        {
+          "date": "2025年11月28日",
+          "category": "feature",
+          "title": "リアルタイム入札エンジン2.0 リリース",
+          "excerpt": "より高速な更新、信頼性の向上、よりスムーズなユーザー体験を提供する新しい入札システムです。",
+          "featured": false
+        },
+        {
+          "date": "2025年11月15日",
+          "category": "partnership",
+          "title": "大手検査センターとの戦略的提携",
+          "excerpt": "品質保証を強化するため、日本トップクラスのバイク検査施設と提携しました。",
+          "featured": false
+        },
+        {
+          "date": "2025年10月30日",
+          "category": "event",
+          "title": "東京モーターサイクルショー2025に出展",
+          "excerpt": "東京モーターサイクルショーのブースへぜひお越しください。チームに会い、サービスについてもっと知りましょう。",
+          "featured": false
+        },
+        {
+          "date": "2025年10月10日",
+          "category": "milestone",
+          "title": "累計販売台数10,000台突破！",
+          "excerpt": "大きなマイルストーンに到達しました。世界中のバイヤーとパートナーの皆様に感謝いたします。",
+          "featured": false
+        }
+      ],
+      "newsletter": {
+        "title": "ニュースレターに登録",
+        "subtitle": "オークションのアラート、新着情報、限定オファーを受信トレイにお届けします。",
+        "placeholder": "メールアドレスを入力",
+        "subscribe": "登録する"
+      }
+    },
+    "security": {
+      "title": "セキュリティ＆サポート",
+      "subtitle": "お客様のデータと取引を保護します。",
+      "support": "メールとチャットによる24時間365日のカスタマーサポート。"
+    },
+    "export": {
+      "title": "輸出手続き",
+      "description": "輸出に必要な書類と手続き"
+    },
+    "shipping": {
+      "title": "国際配送ガイド",
+      "methods": {
+        "roro": {
+          "title": "RoRo船（自動車専用船）",
+          "desc": "ロールオン・ロールオフ方式。自走可能な車両にとって最も一般的で費用対効果の高い方法です。",
+          "benefits": {
+            "0": "手続きが早い",
+            "1": "コストが低い",
+            "2": "自走可能である必要あり"
+          }
+        },
+        "container": {
+          "title": "コンテナ輸送",
+          "desc": "20フィートまたは40フィートコンテナでの安全な輸送。複数台のバイクや高価な車両に最適です。",
+          "benefits": {
+            "0": "セキュリティが高い",
+            "1": "パーツも輸送可能",
+            "2": "積み込みの柔軟性"
+          }
+        },
+        "air": {
+          "title": "航空貨物",
+          "desc": "お急ぎの場合の最速オプション。コストは最も高くなります。",
+          "benefits": {
+            "0": "最速でのお届け",
+            "1": "コストが高い",
+            "2": "プロトタイプ等に適する"
+          }
+        }
+      },
+      "rates": {
+        "title": "推定配送料（オートバイ）",
+        "headers": {
+          "region": "地域",
+          "port": "仕向港",
+          "time": "推定日数",
+          "cost": "推定費用 (USD)"
+        },
+        "rows": {
+          "asia": {
+            "region": "アジア",
+            "port": "マニラ（フィリピン）",
+            "time": "10-15 日",
+            "cost": "$300 - $500"
+          },
+          "oceania": {
+            "region": "オセアニア",
+            "port": "シドニー（オーストラリア）",
+            "time": "20-25 日",
+            "cost": "$600 - $800"
+          },
+          "na": {
+            "region": "北米",
+            "port": "ロングビーチ（米国）",
+            "time": "25-30 日",
+            "cost": "$800 - $1,200"
+          },
+          "europe": {
+            "region": "ヨーロッパ",
+            "port": "ロッテルダム（オランダ）",
+            "time": "35-45 日",
+            "cost": "$900 - $1,300"
+          },
+          "africa": {
+            "region": "アフリカ",
+            "port": "モンバサ（ケニア）",
+            "time": "30-40 日",
+            "cost": "$700 - $1,000"
+          }
+        },
+        "disclaimer": "* 料金は概算であり、燃料サーチャージや季節変動により変更される場合があります。"
+      }
+    }
+  },
+  "help": {
+    "title": "ヘルプセンター",
+    "gettingStarted": "はじめに",
+    "faq": "よくある質問",
+    "howToBid": "入札方法",
+    "shippingGuide": "配送ガイド",
+    "contact": "お問い合わせ"
+  },
+  "faq": {
+    "q1": "アカウント登録はどのようにしますか？",
+    "a1": "右上の「登録」ボタンをクリックしてください。メールアドレスの入力、パスワードの作成、メールアドレスの確認が必要です。フルアクセスには、KYC認証も必要です。",
+    "q2": "どのような支払い方法がありますか？",
+    "a2": "主要なクレジットカード（Visa、Mastercard、Amex）、銀行振込、PayPalでのデポジットを受け付けています。",
+    "q3": "入札前に車両を検査できますか？",
+    "a3": "はい、すべての車両について詳細な検査レポートと高解像度の写真を提供しています。ビデオ検査のリクエストや、提携業者を通じてサードパーティの検査も可能です。",
+    "q4": "配送にはどのくらいかかりますか？",
+    "a4": "配送時間は目的地によって異なります。通常、アジアは2〜4週間、オセアニアと北米は4〜6週間、ヨーロッパとアフリカは6〜8週間です。",
+    "q5": "車両が説明と異なる場合はどうなりますか？",
+    "a5": "厳格な紛争解決ポリシーがあります。車両が検査レポートと大きく異なる場合は、車両受け取りから48時間以内にサポートにご連絡ください。"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "ご質問やご意見がありましたらお気軽にお問い合わせください",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "send": "メッセージを送信"
+    },
+    "info": {
+      "addressLabel": "住所",
+      "address": "AWAホールディングス株式会社<br>神奈川県横浜市西区みなとみらい1-2-3<br>〒220-0012",
+      "phoneLabel": "電話番号",
+      "phone": "045-123-4567",
+      "email": "support@awa-auction.com",
+      "hours": "営業時間: 月〜金 9:00 - 18:00"
+    }
+  },
+  "about": {
+    "title": "AWAについて",
+    "mission": {
+      "title": "ミッション",
+      "description": "世界中のバイク愛好家と日本の高品質バイクを繋ぐ"
+    },
+    "vision": {
+      "title": "ビジョン",
+      "description": "国際バイク取引のグローバルリーダーになる"
+    },
+    "values": {
+      "title": "私たちの価値観",
+      "transparency": "透明性",
+      "quality": "品質",
+      "trust": "信頼",
+      "innovation": "革新"
+    }
+  },
+  "notifications": {
+    "title": "通知",
+    "markAllRead": "すべて既読にする",
+    "noNotifications": "通知はありません",
+    "types": {
+      "bid": "入札通知",
+      "auction": "オークション通知",
+      "order": "注文通知",
+      "system": "システム通知"
+    }
+  },
+  "exportRegulations": {
+    "title": "輸出規制",
+    "subtitle": "輸出規制に関する情報",
+    "overview": {
+      "title": "概要",
+      "content": "日本からのオートバイ輸出には、様々な規制や要件が適用されます。AWAは、日本の輸出法および仕向け国の輸入規制の両方を遵守し、購入者に代わってすべての輸出書類を作成します。",
+      "note": "注：輸入関税および税金は購入者の責任であり、仕向け国によって異なります。"
+    },
+    "japan": {
+      "title": "日本の輸出要件",
+      "items": {
+        "certificate": {
+          "title": "輸出抹消仮登録証明書",
+          "desc": "日本から輸出されるすべての車両に必要です。AWAが代行して取得します。"
+        },
+        "deregistration": {
+          "title": "抹消登録",
+          "desc": "輸出前に車両の登録を抹消する必要があります。"
+        },
+        "customs": {
+          "title": "税関申告",
+          "desc": "通関手続きのための車両仕様および価格の完全な書類作成。"
+        },
+        "preparation": {
+          "title": "燃料とバッテリー",
+          "desc": "海上輸送のために、燃料タンクを空にし、バッテリーを取り外す必要があります。"
+        }
+      }
+    },
+    "documents": {
+      "title": "AWAが提供する書類",
+      "items": [
+        "輸出抹消仮登録証明書（Export Certificate）",
+        "船荷証券（B/L）",
+        "コマーシャルインボイス",
+        "パッキングリスト",
+        "検査報告書",
+        "オリジナルの鍵および書類"
+      ]
+    },
+    "countries": {
+      "title": "国別の輸入要件",
+      "uae": {
+        "title": "アラブ首長国連邦（UAE）",
+        "items": [
+          "5年未満の車両が推奨されます",
+          "GCC適合証明書が必要な場合があります",
+          "輸入関税：5%"
+        ]
+      },
+      "uk": {
+        "title": "イギリス（UK）",
+        "items": [
+          "輸入後のDVLA登録が必要です",
+          "登録から14日以内にMOTテストが必要です",
+          "輸入関税：6% + 20% VAT"
+        ]
+      },
+      "usa": {
+        "title": "アメリカ合衆国（USA）",
+        "items": [
+          "25年以上経過しているか、EPA/DOTに適合している必要があります",
+          "CBP Form 7501が必要です",
+          "輸入関税：2.4%"
+        ]
+      },
+      "australia": {
+        "title": "オーストラリア",
+        "items": [
+          "新しいモデルにはSEVSまたはRAWSの承認が必要です",
+          "検疫検査が義務付けられています",
+          "輸入関税：5% + 10% GST"
+        ]
+      }
+    },
+    "prohibited": {
+      "title": "禁止・制限品目",
+      "desc": "以下の品目は船積みに含めることができません：",
+      "items": [
+        "燃料または可燃性液体",
+        "アフターマーケット排気システム（一部の国）",
+        "ECU改造（一部の国）",
+        "車両内に保管された武器や鋭利な物体"
+      ]
+    },
+    "contact": {
+      "title": "輸出に関するサポートが必要ですか？",
+      "desc": "当社の輸出スペシャリストがお手伝いします。",
+      "button": "サポートに連絡"
+    }
+  },
+  "cookies": {
+    "title": "クッキーポリシー",
+    "lastUpdated": "最終更新日：2024年12月",
+    "intro": {
+      "title": "クッキーとは？",
+      "content": "クッキーとは、お客様が当社のウェブサイトを訪問した際に、お使いのデバイスに保存される小さなテキストファイルです。クッキーは、お客様の設定を記憶し、プラットフォームの利用状況を把握することで、より良い体験を提供するのに役立ちます。"
+    },
+    "types": {
+      "title": "使用するクッキーの種類",
+      "essential": {
+        "title": "必須クッキー",
+        "desc": "ウェブサイトが正常に機能するために必要です。これらを無効にすることはできません。",
+        "items": {
+          "session": "セッション管理",
+          "security": "セキュリティトークン",
+          "login": "ログイン状態"
+        }
+      },
+      "analytics": {
+        "title": "分析クッキー",
+        "desc": "訪問者がウェブサイトをどのように利用しているかを理解するのに役立ちます。",
+        "items": {
+          "views": "ページビューとナビゲーション",
+          "time": "ページ滞在時間",
+          "error": "エラートラッキング"
+        }
+      },
+      "functional": {
+        "title": "機能性クッキー",
+        "desc": "お客様の設定や好みを記憶します。",
+        "items": {
+          "language": "言語設定",
+          "currency": "通貨設定",
+          "display": "表示設定"
+        }
+      },
+      "marketing": {
+        "title": "マーケティングクッキー",
+        "desc": "関連性の高い広告を配信し、キャンペーンの効果を追跡するために使用されます。",
+        "items": {
+          "targeting": "広告ターゲティング",
+          "remarketing": "リマーケティング",
+          "social": "ソーシャルメディア連携"
+        }
+      }
+    },
+    "list": {
+      "title": "使用しているクッキー一覧",
+      "headers": {
+        "name": "クッキー名",
+        "purpose": "目的",
+        "duration": "有効期限"
+      },
+      "items": {
+        "session": {
+          "desc": "セッション管理",
+          "duration": "セッション"
+        },
+        "auth": {
+          "desc": "認証トークン",
+          "duration": "7日間"
+        },
+        "lang": {
+          "desc": "言語設定",
+          "duration": "1年間"
+        },
+        "currency": {
+          "desc": "通貨設定",
+          "duration": "1年間"
+        },
+        "ga": {
+          "desc": "Google Analytics",
+          "duration": "2年間"
+        }
+      }
+    },
+    "managing": {
+      "title": "クッキーの管理",
+      "content": "クッキーの管理方法はいくつかあります。クッキーを削除またはブロックすると、ユーザー体験に影響が出たり、一部の機能が利用できなくなる場合がありますのでご注意ください。",
+      "browser": "ブラウザ設定：ほとんどのブラウザでは、クッキーの拒否、許可、既存のクッキーの削除が可能です。手順についてはブラウザのヘルプをご確認ください。"
+    },
+    "thirdParty": {
+      "title": "サードパーティクッキー",
+      "content": "以下のサードパーティサービスもお客様のデバイスにクッキーを設定する場合があります：",
+      "items": {
+        "ga": "Google Analytics - ウェブサイト分析",
+        "stripe": "Stripe - 決済処理",
+        "intercom": "Intercom - カスタマーサポートチャット"
+      }
+    },
+    "contact": {
+      "title": "クッキーに関するご質問",
+      "content": "詳細については、プライバシーチームまでお問い合わせください。",
+      "button": "お問い合わせ"
+    }
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日：2025年12月1日",
+    "sections": {
+      "collection": {
+        "title": "1. 収集する情報",
+        "content": "当社は、お客様から直接提供される以下の情報を収集します：",
+        "items": {
+          "personal": "本人確認情報（氏名、住所、KYC用身分証明書）",
+          "contact": "連絡先情報（メールアドレス、電話番号）",
+          "payment": "支払い情報（請求先住所、取引履歴）",
+          "activity": "アカウント活動（入札、購入、ウォッチリスト）"
+        }
+      },
+      "usage": {
+        "title": "2.情報の利用目的",
+        "items": {
+          "process": "入札および取引の処理",
+          "verify": "本人確認（KYCコンプライアンス）",
+          "communicate": "注文およびアカウントに関する連絡",
+          "promotional": "販促資料の送付（同意がある場合）",
+          "improve": "サービスの改善および不正防止"
+        }
+      },
+      "sharing": {
+        "title": "3. 情報の共有",
+        "content": "当社は、お客様の個人情報を販売することはありません。以下の場合にデータを共有することがあります：",
+        "items": {
+          "logistics": "配送および物流パートナー（購入品の配送のため）",
+          "payment": "決済処理業者（取引完了のため）",
+          "legal": "法的機関（法律により義務付けられる場合）"
+        }
+      },
+      "security": {
+        "title": "4. データセキュリティ",
+        "content": "暗号化、安全なサーバー、定期的なセキュリティ監査など、業界標準のセキュリティ対策を実施しています。ただし、インターネット上の送信方法は100%安全ではありません。"
+      },
+      "cookies": {
+        "title": "5. クッキー",
+        "content": "当サイトでは、閲覧体験の向上、トラフィック分析、コンテンツのパーソナライズのためにクッキーを使用しています。ブラウザの設定でクッキーを管理できます。"
+      },
+      "rights": {
+        "title": "6. お客様の権利",
+        "content": "居住地により、以下の権利を有する場合があります：",
+        "items": {
+          "access": "個人データへのアクセス",
+          "correction": "不正確なデータの訂正請求",
+          "deletion": "データの削除請求",
+          "optout": "マーケティング通信のオプトアウト"
+        }
+      },
+      "contact": {
+        "title": "7. お問い合わせ",
+        "content": "プライバシーに関するお問い合わせはこちらまで：",
+        "emailLabel": "Eメール：",
+        "addressLabel": "住所：",
+        "address": "〒220-0012 神奈川県横浜市西区みなとみらい1-2-3"
+      }
+    }
+  },
+  "terms": {
+    "title": "利用規約",
+    "lastUpdated": "最終更新日：2025年12月1日",
+    "sections": {
+      "acceptance": {
+        "title": "1. 規約への同意",
+        "content": "AWAオークションプラットフォーム（以下「サービス」）にアクセスまたは利用することにより、お客様は本利用規約に拘束されることに同意したものとみなされます。本規約に同意されない場合は、本サービスをご利用いただけません。"
+      },
+      "registration": {
+        "title": "2. ユーザー登録",
+        "content": "オークションに参加するには、アカウントを作成し、KYC（本人確認）プロセスを完了する必要があります。お客様は正確な情報を提供し、アカウントの認証情報を安全に管理することに同意するものとします。",
+        "rules": {
+          "age": "本サービスを利用するには18歳以上である必要があります",
+          "responsibility": "お客様は、ご自身のアカウントでのすべての活動に対して責任を負います",
+          "security": "不正アクセスがあった場合は、直ちに当社に通知する必要があります"
+        }
+      },
+      "auction": {
+        "title": "3. オークションルール",
+        "content": "当プラットフォームでのすべての入札は拘束力を持ちます。入札を行うことにより、お客様は落札者となった場合に入札価格でその商品を購入することに同意したものとみなされます。",
+        "rules": {
+          "retraction": "一度行われた入札は取り消すことができません",
+          "winning": "オークション終了時の最高入札者が落札者となります",
+          "fees": "すべての落札価格に対してバイヤーズプレミアム（5%）が適用されます",
+          "payment": "支払いは3営業日以内に完了する必要があります"
+        }
+      },
+      "payment": {
+        "title": "4. 支払い条件",
+        "content": "支払い方法は銀行振込およびクレジットカードが利用可能です。配送手続きは全額の入金確認後に開始されます。支払いが滞った場合、アカウントが停止される可能性があります。"
+      },
+      "shipping": {
+        "title": "5. 配送",
+        "content": "AWAは購入者に代わって国際配送を手配します。配送料の見積もりは概算であり、最終的な費用は変動する場合があります。日本からの出荷時点で、損失のリスクは購入者に移転します。"
+      },
+      "liability": {
+        "title": "6. 免責事項",
+        "content": "AWAは誠意を持って検査報告書を提供しますが、すべての情報の正確性を保証するものではありません。購入者は独自のデューデリジェンスを行うことをお勧めします。当社の責任は、AWAに支払われた手数料の額を上限とします。"
+      },
+      "governing": {
+        "title": "7. 準拠法",
+        "content": "本規約は日本法に準拠します。紛争が生じた場合は、神奈川県横浜市の裁判所を管轄裁判所とします。"
+      },
+      "contact": {
+        "title": "8. お問い合わせ",
+        "content": "本規約に関するご質問は、以下までお問い合わせください：",
+        "emailLabel": "Eメール：",
+        "addressLabel": "住所：",
+        "address": "〒220-0012 神奈川県横浜市西区みなとみらい1-2-3"
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "ページが見つかりません",
+      "description": "お探しのページは存在しないか、移動した可能性があります。",
+      "backHome": "ホームに戻る"
+    },
+    "serverError": {
+      "title": "サーバーエラー",
+      "description": "申し訳ございません。サーバーで問題が発生しました。",
+      "tryAgain": "再試行"
+    }
+  },
+  "languageSwitcher": {
+    "title": "言語",
+    "ja": "日本語",
+    "en": "English",
+    "ar": "العربية"
+  }
+}

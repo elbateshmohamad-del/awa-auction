@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+    --color-navy: #0F4C81;
+    --color-blue: #2563EB;
+    --color-sky: #E0F2FE;
+    --font-inter: Inter, sans-serif;
+    --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
+}
+
+/* AWA Design System - Pattern 5a (Sporty Dynamic) */
+
+:root {
+    --color-navy: #0F4C81;
+    --color-blue: #2563EB;
+    --color-sky: #E0F2FE;
+}
+
+body {
+    background-color: white;
+    color: #111827;
+    /* gray-900 */
+    font-family: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--color-navy);
+}
+
+/* Dynamic Skew Utilities - Using standard CSS classes for portability */
+.skew-bg-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.skew-bg-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, var(--color-navy), #1e5faf);
+    transform: skewX(-20deg);
+    z-index: 0;
+}
+
+/* Thin Accent Lines */
+.accent-line-diagonal {
+    position: absolute;
+    background-color: var(--color-blue);
+    width: 2px;
+    height: 150%;
+    transform: rotate(20deg);
+    opacity: 0.1;
+}
+
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Component Overrides */
+.awa-button-primary {
+    @apply bg-[#0F4C81] text-white px-8 py-4 font-bold text-lg uppercase tracking-wider transition-all duration-300 transform skew-x-[-10deg] hover:bg-[#0D3D68] hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center;
+}
+
+.awa-button-primary span {
+    @apply block transform skew-x-[10deg];
+    /* Text un-skew */
+}
+
+.awa-card {
+    @apply bg-white border-l-4 border-[#0F4C81] shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+}

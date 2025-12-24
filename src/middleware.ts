@@ -1,0 +1,93 @@
+import createMiddleware from 'next-intl/middleware';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { routing } from './i18n/routing';
+import { jwtVerify } from 'jose';
+
+const intlMiddleware = createMiddleware(routing);
+
+// JWT Secret for Edge Runtime
+const JWT_SECRET = new TextEncoder().encode(
+    process.env.JWT_SECRET || 'awa-auction-dev-secret-key-change-in-production'
+);
+
+interface AuthPayload {
+    userId: string;
+    role: string;
+    email: string;
+}
+
+async function verifyTokenEdge(token: string): Promise<AuthPayload | null> {
+    try {
+        const { payload } = await jwtVerify(token, JWT_SECRET);
+        return payload as unknown as AuthPayload;
+    } catch {
+        return null;
+    }
+}
+
+export async function middleware(request: NextRequest) {
+    const pathname = request.nextUrl.pathname;
+
+    // Check if this is a locale-prefixed path
+    const localeMatch = pathname.match(/^\/(ja|en|ar)(\/|$)/);
+    const locale = localeMatch ? localeMatch[1] : 'ja';
+    const pathWithoutLocale = localeMatch ? pathname.replace(/^\/(ja|en|ar)/, '') || '/' : pathname;
+
+    // Check Authentication with JWT verification
+    const authToken = request.cookies.get('auth_token')?.value;
+    let userRole: string | null = null;
+    let isLoggedIn = false;
+
+    if (authToken) {
+        const payload = await verifyTokenEdge(authToken);
+        if (payload) {
+            userRole = payload.role;
+            isLoggedIn = true;
+        }
+        // If verification fails, token is invalid/tampered - treat as not logged in
+    }
+
+    // Protect Admin Routes
+    if (pathWithoutLocale.startsWith('/admin')) {
+        // Exclude the admin login page to prevent loops
+        if (pathWithoutLocale === '/admin-login') {
+            // Pass through - public page
+        }
+        // Old admin login path redirection
+        else if (pathWithoutLocale === '/admin/login') {
+            return NextResponse.redirect(new URL(`/${locale}/admin-login`, request.url));
+        }
+        else {
+            if (!isLoggedIn) {
+                return NextResponse.redirect(new URL(`/${locale}/admin-login`, request.url));
+            }
+
+            // Access Control (RBAC)
+            // Only ADMIN and STAFF can access admin area
+            if (userRole !== 'ADMIN' && userRole !== 'STAFF') {
+                return NextResponse.redirect(new URL(`/${locale}/dashboard`, request.url));
+            }
+
+            // Restricted Areas for STAFF
+            const restrictedForStaff = ['/admin/users', '/admin/orders', '/admin/finance'];
+            if (userRole === 'STAFF' && restrictedForStaff.some(p => pathWithoutLocale.startsWith(p))) {
+                return NextResponse.redirect(new URL(`/${locale}/admin`, request.url));
+            }
+        }
+    }
+
+    // Protect Dashboard Routes
+    if (pathWithoutLocale.startsWith('/dashboard')) {
+        if (!isLoggedIn) {
+            return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
+        }
+    }
+
+    // Handle i18n routing
+    return intlMiddleware(request);
+}
+
+export const config = {
+    matcher: ['/', '/(ja|en|ar)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)'],
+};

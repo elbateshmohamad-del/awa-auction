@@ -1,0 +1,227 @@
+{
+  "globalSettings": {
+    "monthlyVolume": 10000,
+    "exportRatio": 30,
+    "avgBikePrice": 300000
+  },
+  "costs": {
+    "awaCommission": {
+      "label": "AWA手数料 (利益)",
+      "category": "japan",
+      "jpyCost": 50000,
+      "defaultBilling": {
+        "USD": 500,
+        "EUR": 480,
+        "GBP": 420
+      }
+    },
+    "auctionFee": {
+      "label": "オークション落札手数料",
+      "category": "japan",
+      "jpyCost": 20000,
+      "defaultBilling": {
+        "JPY": 20000
+      }
+    },
+    "inlandTransport": {
+      "label": "国内輸送費",
+      "category": "japan",
+      "jpyCost": 15000,
+      "defaultBilling": {
+        "JPY": 25000
+      }
+    },
+    "yardStorage": {
+      "label": "ヤード保管料",
+      "category": "japan",
+      "jpyCost": 1000,
+      "defaultBilling": {
+        "JPY": 5000
+      }
+    },
+    "vanning": {
+      "label": "コンテナ積込作業費",
+      "category": "japan",
+      "jpyCost": 5000,
+      "defaultBilling": {
+        "JPY": 15000
+      }
+    },
+    "exportCustoms": {
+      "label": "輸出通関費用",
+      "category": "japan",
+      "jpyCost": 3000,
+      "defaultBilling": {
+        "JPY": 8000
+      }
+    },
+    "documentation": {
+      "label": "書類作成費",
+      "category": "japan",
+      "jpyCost": 500,
+      "defaultBilling": {
+        "JPY": 5000
+      }
+    },
+    "deregistration": {
+      "label": "抹消登録費用",
+      "category": "japan",
+      "jpyCost": 1000,
+      "defaultBilling": {
+        "JPY": 5000
+      }
+    },
+    "packingFrame": {
+      "label": "木枠梱包 (Wooden Frame)",
+      "category": "japan",
+      "jpyCost": 3000,
+      "defaultBilling": {
+        "JPY": 80000
+      }
+    },
+    "packingCrate": {
+      "label": "密閉木箱 (Wooden Crate)",
+      "category": "japan",
+      "jpyCost": 7000,
+      "defaultBilling": {
+        "JPY": 120000
+      }
+    },
+    "packingPallet": {
+      "label": "パレット梱包 (Pallet)",
+      "category": "japan",
+      "jpyCost": 10000,
+      "defaultBilling": {
+        "JPY": 20000
+      }
+    },
+    "packingCarton": {
+      "label": "段ボール梱包 (Carton)",
+      "category": "japan",
+      "jpyCost": 3000,
+      "defaultBilling": {
+        "JPY": 8000
+      }
+    },
+    "oceanFreight": {
+      "label": "船代 (海上運賃)",
+      "category": "japan",
+      "jpyCost": 10000,
+      "defaultBilling": {
+        "JPY": 80000
+      }
+    },
+    "unloading": {
+      "label": "港荷降ろし費用",
+      "category": "destination",
+      "jpyCost": 3000,
+      "defaultBilling": {
+        "JPY": 0
+      }
+    },
+    "destInlandTransport": {
+      "label": "現地陸送費",
+      "category": "destination",
+      "jpyCost": 2000,
+      "defaultBilling": {
+        "JPY": 0
+      }
+    },
+    "exchangeFee": {
+      "label": "決済手数料 (Gas/Bank)",
+      "category": "other",
+      "jpyCost": 2000,
+      "defaultBilling": {
+        "JPY": 2000
+      }
+    },
+    "bankRemittance": {
+      "label": "銀行送金手数料",
+      "category": "other",
+      "jpyCost": 4000,
+      "defaultBilling": {
+        "JPY": 5000
+      }
+    },
+    "demurrage": {
+      "label": "遅延倉庫料",
+      "category": "other",
+      "jpyCost": 0,
+      "defaultBilling": {
+        "JPY": 0
+      }
+    }
+  },
+  "margins": {
+    "USD": 3,
+    "EUR": 3,
+    "GBP": 5,
+    "JPY": 0
+  },
+  "usdPricing": {
+    "awaCommission": 500,
+    "auctionFee": 0,
+    "inlandTransport": 250,
+    "yardStorage": 50,
+    "vanning": 100,
+    "exportCustoms": 100,
+    "documentation": 55,
+    "deregistration": 30,
+    "packingFrame": 60,
+    "packingCrate": 100,
+    "packingPallet": 200,
+    "packingCarton": 60,
+    "oceanFreight": 400,
+    "unloading": 50,
+    "destInlandTransport": 30,
+    "exchangeFee": 50,
+    "bankRemittance": 50,
+    "demurrage": 200,
+    "packing": 0,
+    "thc": 0,
+    "extraPacking": 0
+  },
+  "eurPricing": {
+    "awaCommission": 500,
+    "auctionFee": 0,
+    "inlandTransport": 250,
+    "yardStorage": 50,
+    "vanning": 100,
+    "exportCustoms": 100,
+    "documentation": 55,
+    "deregistration": 30,
+    "packingFrame": 60,
+    "packingCrate": 100,
+    "packingPallet": 200,
+    "packingCarton": 60,
+    "oceanFreight": 400,
+    "unloading": 50,
+    "destInlandTransport": 30,
+    "exchangeFee": 50,
+    "bankRemittance": 50,
+    "demurrage": 200,
+    "packing": 0,
+    "thc": 0,
+    "extraPacking": 0
+  },
+  "gbpPricing": {
+    "awaCommission": 500,
+    "auctionFee": 0,
+    "inlandTransport": 250,
+    "yardStorage": 50,
+    "vanning": 100,
+    "exportCustoms": 100,
+    "documentation": 55,
+    "deregistration": 30,
+    "packingFrame": 60,
+    "packingCrate": 100,
+    "packingPallet": 200,
+    "packingCarton": 60,
+    "oceanFreight": 400,
+    "unloading": 50,
+    "destInlandTransport": 30,
+    "exchangeFee": 50,
+    "bankRemittance": 50,
+    "demurrage": 200
+  }
+}

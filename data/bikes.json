@@ -1,0 +1,1282 @@
+{
+  "bikes": [
+    {
+      "id": "awa-1765862341222-y2iz6h16b",
+      "bdsId": "0002",
+      "lane": "",
+      "auctionNumber": "0002",
+      "auctionDate": "2025年12月17日",
+      "name": " ﾚﾌﾞﾙ250S",
+      "maker": "Honda",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "MC49-1406766",
+      "engineNumber": "MC49E-5202492",
+      "mileage": "5,755K",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "ガンメタ",
+      "displacement": "250cc",
+      "firstRegistration": "",
+      "inspection": "",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 200000,
+      "result": "",
+      "overallGrade": 6,
+      "engineGrade": 5,
+      "frontGrade": 5,
+      "exteriorGrade": 7,
+      "rearGrade": 5,
+      "electricGrade": 6,
+      "frameGrade": 6,
+      "awaGrade": "B",
+      "inspectionDetails": {
+        "engine": {
+          "①エンジン": "サビ小",
+          "③オイル漏れ": "下小"
+        },
+        "frontSuspension": {
+          "③ステム": "サビ",
+          "④ハンドル": "レバーキズ"
+        },
+        "exterior": {
+          "⑤タンク": "キズ小",
+          "⑥シート": "カバー付き"
+        },
+        "rearSuspension": {
+          "⑦タイヤ": "ヒビ要交換"
+        },
+        "electrical": {
+          "①キー": "２",
+          "⑨マフラー": "キズ、カバーキズ",
+          "⑩エキパイ": "サビ小"
+        },
+        "frame": {
+          "④シートレール": "キズ小",
+          "⑤ステップ": "キズ サビ"
+        }
+      },
+      "awaReport": "元レンタル。取説・メンテナンスノートあり",
+      "sellerDeclaration": "元レンタル。取説・メンテナンスノートあり\n        \n            ※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000220251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000220251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000220251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000220251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862341222-y2iz6h16b/video_1.mp4",
+        "/videos/awa-1765862341222-y2iz6h16b/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:19:01.223Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862344762-8n5y95ht4",
+      "bdsId": "0003",
+      "lane": "",
+      "auctionNumber": "0003",
+      "auctionDate": "2025年12月17日",
+      "name": " ﾄﾘｹｼ",
+      "maker": "Unknown",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "",
+      "listingType": "定例",
+      "vin": "ﾄﾘｹｼ*",
+      "engineNumber": "",
+      "mileage": "0K",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "ナシ",
+      "displacement": "0cc",
+      "firstRegistration": "",
+      "inspection": "",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 999999000,
+      "result": "",
+      "overallGrade": 0,
+      "engineGrade": 0,
+      "frontGrade": 0,
+      "exteriorGrade": 0,
+      "rearGrade": 0,
+      "electricGrade": 0,
+      "frameGrade": 0,
+      "awaGrade": "D",
+      "inspectionDetails": {
+        "engine": {},
+        "frontSuspension": {},
+        "exterior": {},
+        "rearSuspension": {},
+        "electrical": {},
+        "frame": {}
+      },
+      "awaReport": "",
+      "sellerDeclaration": "※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000320251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000320251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000320251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000320251217_060_04.jpg"
+      ],
+      "videoUrls": [],
+      "importedAt": "2025-12-16T05:19:04.762Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862346576-4sehe2ca9",
+      "bdsId": "0004",
+      "lane": "",
+      "auctionNumber": "0004",
+      "auctionDate": "2025年12月17日",
+      "name": " X-ADV750",
+      "maker": "Honda",
+      "makerConfirmed": true,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "RC95-1100104",
+      "engineNumber": "RC88E-2200155",
+      "mileage": "21,900K",
+      "documentMileage": "21,400K",
+      "pastMileage": "",
+      "color": "銀",
+      "displacement": "750cc",
+      "firstRegistration": "H30",
+      "inspection": "R   9/10",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 600000,
+      "result": "",
+      "overallGrade": 6,
+      "engineGrade": 5,
+      "frontGrade": 7,
+      "exteriorGrade": 5,
+      "rearGrade": 6,
+      "electricGrade": 7,
+      "frameGrade": 7,
+      "awaGrade": "B",
+      "inspectionDetails": {
+        "engine": {
+          "①エンジン": "サビ",
+          "③オイル漏れ": "左下小",
+          "④ラジエター": "サビ"
+        },
+        "frontSuspension": {
+          "④ハンドル": "カバーキズ小",
+          "⑤ホイル": "サビ小"
+        },
+        "exterior": {
+          "③アンダー": "サビ",
+          "⑤タンク": "カバーキズ"
+        },
+        "rearSuspension": {
+          "①ショック": "サビ小",
+          "③チェーン": "ケースキズ",
+          "⑤ホイル": "サビ小"
+        },
+        "electrical": {
+          "①キー": "２",
+          "⑨マフラー": "カバーキズ小",
+          "⑩エキパイ": "サビ小"
+        },
+        "frame": {
+          "①メインフレーム": "サビ小",
+          "⑤ステップ": "ボードキズ",
+          "⑥スタンド": "キズ小"
+        }
+      },
+      "awaReport": "ＥＴＣ付き。エンジンガード付きキズ。",
+      "sellerDeclaration": "※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000420251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000420251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000420251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000420251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862346576-4sehe2ca9/video_1.mp4",
+        "/videos/awa-1765862346576-4sehe2ca9/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:19:06.576Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862368614-hb3gh4fet",
+      "bdsId": "0005",
+      "lane": "",
+      "auctionNumber": "0005",
+      "auctionDate": "2025年12月17日",
+      "name": " KTM690SMC R",
+      "maker": "KTM",
+      "makerConfirmed": true,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "VBKLSV404LM785360",
+      "engineNumber": "L-76814922",
+      "mileage": "15,739K",
+      "documentMileage": "14,200K",
+      "pastMileage": "",
+      "color": "黒／オレンジ",
+      "displacement": "690cc",
+      "firstRegistration": "R2",
+      "inspection": "R   9/ 7",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 400000,
+      "result": "",
+      "overallGrade": 5,
+      "engineGrade": 5,
+      "frontGrade": 5,
+      "exteriorGrade": 4,
+      "rearGrade": 4,
+      "electricGrade": 5,
+      "frameGrade": 5,
+      "awaGrade": "B",
+      "inspectionDetails": {
+        "engine": {
+          "①エンジン": "サビ",
+          "②カバー": "キズ サビ",
+          "③オイル漏れ": "ヘッドカバー小",
+          "④ラジエター": "サビ"
+        },
+        "frontSuspension": {
+          "①アウター": "シール破れ",
+          "④ハンドル": "カバーキズ、レバー社外",
+          "⑤ホイル": "サビ"
+        },
+        "exterior": {
+          "①アッパー": "キズ",
+          "②センター": "キズ",
+          "④サイド": "キズ",
+          "⑦テール": "キズ、バー欠品",
+          "⑧前フェンダー": "キズ",
+          "⑨後フェンダー": "欠品"
+        },
+        "rearSuspension": {
+          "①ショック": "サビ",
+          "②スイングアーム": "サビ多",
+          "⑤ホイル": "サビ",
+          "⑦タイヤ": "減り要交換"
+        },
+        "electrical": {
+          "①キー": "１",
+          "③ウインカー": "キズ 曲り",
+          "④ライト": "キズ",
+          "⑧ミラー": "キズ小 社外",
+          "⑨マフラー": "キズ 変色",
+          "⑩エキパイ": "サビ"
+        },
+        "frame": {
+          "①メインフレーム": "キズ",
+          "⑤ステップ": "キズ、ペダル社外、バー社外",
+          "⑥スタンド": "キズ"
+        }
+      },
+      "awaReport": "外装ステッカー貼り。",
+      "sellerDeclaration": "※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000520251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000520251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000520251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000520251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862368614-hb3gh4fet/video_1.mp4",
+        "/videos/awa-1765862368614-hb3gh4fet/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:19:28.619Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862378420-vsz5zovaf",
+      "bdsId": "0006",
+      "lane": "",
+      "auctionNumber": "0006",
+      "auctionDate": "2025年12月17日",
+      "name": " BMWS1000R",
+      "maker": "BMW",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "WB10P3106S6L26457",
+      "engineNumber": "A11A10C06254223",
+      "mileage": "318K",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "黒／青",
+      "displacement": "1,000cc",
+      "firstRegistration": "R7",
+      "inspection": "R  10/ 5",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 1350000,
+      "result": "",
+      "overallGrade": 7,
+      "engineGrade": 7,
+      "frontGrade": 5,
+      "exteriorGrade": 7,
+      "rearGrade": 6,
+      "electricGrade": 8,
+      "frameGrade": 8,
+      "awaGrade": "A",
+      "inspectionDetails": {
+        "engine": {
+          "④ラジエター": "フィン凹み小"
+        },
+        "frontSuspension": {
+          "①アウター": "オイル漏れ"
+        },
+        "exterior": {
+          "⑤タンク": "キズ小"
+        },
+        "rearSuspension": {
+          "⑤ホイル": "キズ"
+        },
+        "electrical": {
+          "①キー": "２"
+        },
+        "frame": {}
+      },
+      "awaReport": "取説あり",
+      "sellerDeclaration": "取説あり\n        \n            ※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000620251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000620251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000620251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000620251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862378420-vsz5zovaf/video_1.mp4",
+        "/videos/awa-1765862378420-vsz5zovaf/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:19:38.423Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862386130-4ive7w9jh",
+      "bdsId": "0007",
+      "lane": "",
+      "auctionNumber": "0007",
+      "auctionDate": "2025年12月17日",
+      "name": " ﾚﾌﾞﾙ1100",
+      "maker": "Honda",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "SC87-1000466",
+      "engineNumber": "SC87E-1000072",
+      "mileage": "3,090K",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "ツヤケシクロ",
+      "displacement": "1,100cc",
+      "firstRegistration": "R7",
+      "inspection": "R   9/ 5",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 700000,
+      "result": "",
+      "overallGrade": 7,
+      "engineGrade": 7,
+      "frontGrade": 7,
+      "exteriorGrade": 7,
+      "rearGrade": 7,
+      "electricGrade": 6,
+      "frameGrade": 6,
+      "awaGrade": "A",
+      "inspectionDetails": {
+        "engine": {
+          "①エンジン": "サビ小",
+          "②カバー": "キズ小"
+        },
+        "frontSuspension": {
+          "④ハンドル": "エンドキズ小"
+        },
+        "exterior": {
+          "⑤タンク": "キズ小",
+          "⑨後フェンダー": "曲り小"
+        },
+        "rearSuspension": {
+          "①ショック": "サビ小",
+          "③チェーン": "サビ小"
+        },
+        "electrical": {
+          "①キー": "２",
+          "③ウインカー": "キズ小",
+          "⑨マフラー": "キズ小",
+          "⑩エキパイ": "キズ"
+        },
+        "frame": {
+          "①メインフレーム": "キズ小 サビ小",
+          "⑤ステップ": "キズ"
+        }
+      },
+      "awaReport": "元ﾚﾝﾀﾙ。現行ﾓﾃﾞﾙ　ｸﾞﾘｯﾌﾟﾋｰﾀｰ付。",
+      "sellerDeclaration": "元ﾚﾝﾀﾙ。現行ﾓﾃﾞﾙ　ｸﾞﾘｯﾌﾟﾋｰﾀｰ付。\n        \n            ※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000720251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000720251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000720251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000720251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862386130-4ive7w9jh/video_1.mp4",
+        "/videos/awa-1765862386130-4ive7w9jh/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:19:46.137Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862394316-e101atpc1",
+      "bdsId": "0008",
+      "lane": "",
+      "auctionNumber": "0008",
+      "auctionDate": "2025年12月17日",
+      "name": " KTM890ﾃﾞｭｰｸGP",
+      "maker": "KTM",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "VBKTU9402PM849550",
+      "engineNumber": "P-63651596",
+      "mileage": "1K",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "黒／オレンジ",
+      "displacement": "890cc",
+      "firstRegistration": "",
+      "inspection": "",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 600000,
+      "result": "",
+      "overallGrade": 8,
+      "engineGrade": 6,
+      "frontGrade": 7,
+      "exteriorGrade": 9,
+      "rearGrade": 9,
+      "electricGrade": 9,
+      "frameGrade": 9,
+      "awaGrade": "S",
+      "inspectionDetails": {
+        "engine": {
+          "①エンジン": "キズ"
+        },
+        "frontSuspension": {
+          "⑤ホイル": "キズ小"
+        },
+        "exterior": {},
+        "rearSuspension": {},
+        "electrical": {
+          "①キー": "２"
+        },
+        "frame": {}
+      },
+      "awaReport": "",
+      "sellerDeclaration": "※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000820251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000820251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000820251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000820251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862394316-e101atpc1/video_1.mp4",
+        "/videos/awa-1765862394316-e101atpc1/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:19:54.320Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862402324-6is2gwr1v",
+      "bdsId": "0009",
+      "lane": "",
+      "auctionNumber": "0009",
+      "auctionDate": "2025年12月17日",
+      "name": " ﾚﾌﾞﾙ1100",
+      "maker": "Honda",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "SC83-1104170",
+      "engineNumber": "SC83E-1005062",
+      "mileage": "2K",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "ガンメタ",
+      "displacement": "1,100cc",
+      "firstRegistration": "R7",
+      "inspection": "R   9/10",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 850000,
+      "result": "",
+      "overallGrade": 7,
+      "engineGrade": 9,
+      "frontGrade": 9,
+      "exteriorGrade": 9,
+      "rearGrade": 9,
+      "electricGrade": 4,
+      "frameGrade": 7,
+      "awaGrade": "A",
+      "inspectionDetails": {
+        "engine": {},
+        "frontSuspension": {},
+        "exterior": {},
+        "rearSuspension": {},
+        "electrical": {
+          "①キー": "２",
+          "⑤バッテリー": "不良",
+          "⑨マフラー": "キズ小",
+          "⑩エキパイ": "キズ小"
+        },
+        "frame": {
+          "②ダウンチューブ": "キズ小"
+        }
+      },
+      "awaReport": "元レンタル。取説・メンテナンスノートあり",
+      "sellerDeclaration": "元レンタル。取説・メンテナンスノートあり\n        \n            ※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/000920251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000920251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/000920251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/000920251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862402324-6is2gwr1v/video_1.mp4",
+        "/videos/awa-1765862402324-6is2gwr1v/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:20:02.325Z",
+      "status": "sold"
+    },
+    {
+      "id": "awa-1765862412457-6ibzeq5ud",
+      "bdsId": "0010",
+      "lane": "",
+      "auctionNumber": "0010",
+      "auctionDate": "2025年12月17日",
+      "name": " ﾊｰﾚｰXLH1000",
+      "maker": "Harley-Davidson",
+      "makerConfirmed": false,
+      "region": "関東",
+      "inspectionStatus": "検査済",
+      "listingType": "定例",
+      "vin": "3A21297H4",
+      "engineNumber": "3A21297H4",
+      "mileage": "? 13,225M",
+      "documentMileage": "",
+      "pastMileage": "",
+      "color": "ワイン",
+      "displacement": "1,000cc",
+      "firstRegistration": "R7",
+      "inspection": "R  10/ 2",
+      "hasParts": "なし",
+      "registrationNumber": "",
+      "startPrice": 300000,
+      "result": "",
+      "overallGrade": 3,
+      "engineGrade": 3,
+      "frontGrade": 3,
+      "exteriorGrade": 3,
+      "rearGrade": 4,
+      "electricGrade": 3,
+      "frameGrade": 4,
+      "awaGrade": "C",
+      "inspectionDetails": {
+        "engine": {
+          "①エンジン": "サビ多 アイドル不良 煙はき大 回転落ち不良、プラグコード社外",
+          "②カバー": "キズ サビ多、右割れ 修正",
+          "③オイル漏れ": "下大",
+          "⑤キャブ": "サビ、エアクリーナーキズ多",
+          "⑥クラッチ": "不良"
+        },
+        "frontSuspension": {
+          "①アウター": "サビ大 削れ ヘタリ大",
+          "②インナー": "サビ磨き",
+          "③ステム": "サビ大",
+          "④ハンドル": "サビ、グリップ社外",
+          "⑤ホイル": "サビ大",
+          "⑥ブレーキ": "サビ多 塗装ハゲ、マスターキズ"
+        },
+        "exterior": {
+          "④サイド": "キズ多",
+          "⑤タンク": "キズ、内サビ大",
+          "⑥シート": "ヘタリ 破れ小",
+          "⑦テール": "キズ 凹み小多 塗装ハゲ多",
+          "⑧前フェンダー": "キズ 凹み小"
+        },
+        "rearSuspension": {
+          "①ショック": "キズ サビ多磨き",
+          "②スイングアーム": "キズ多 サビ",
+          "⑤ホイル": "サビ大"
+        },
+        "electrical": {
+          "①キー": "社外",
+          "②メーター": "キズ サビ 塗装ハゲ 不良 クモリ、レンズ割れ小多、トリップ不良",
+          "③ウインカー": "キズ多 不良",
+          "④ライト": "サビ",
+          "⑤バッテリー": "不良",
+          "⑦ブレーキランプ": "キズ 割れ",
+          "⑧ミラー": "サビ 社外",
+          "⑨マフラー": "キズ大",
+          "⑩エキパイ": "サビ多 社外"
+        },
+        "frame": {
+          "①メインフレーム": "キズ サビ多",
+          "②ダウンチューブ": "キズ多 サビ多 塗り",
+          "③ストッパー": "凹み",
+          "⑤ステップ": "キズ サビ多",
+          "⑥スタンド": "キズ 曲り サビ多"
+        }
+      },
+      "awaReport": "1974年式。",
+      "sellerDeclaration": "1974年式。\n        \n            ※ 背景が黄色表示の枠は、最初の掲載(仮入力を除く)から変更のあったものです。定例で0点のものは配番のみの仮入力です。   (撮影待ち･検査待ちの状態です)\n            ※ セリ予想時刻は、セリの進行状況等により実際のセリ開始時刻とは異なります。これによって会員様に生じた損害について、弊社は一切の責任を負いかねますのであらかじめご了承下さい。",
+      "remarks": [],
+      "inspectionImages": {
+        "engine": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_04.jpg"
+        ],
+        "frontSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_04.jpg"
+        ],
+        "exterior": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_04.jpg"
+        ],
+        "rearSuspension": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_04.jpg"
+        ],
+        "electrical": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_04.jpg"
+        ],
+        "frame": [
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_01.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_02.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_03.jpg",
+          "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_04.jpg"
+        ]
+      },
+      "images": [
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_r.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_l.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_f.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_a.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_b.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_s.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_cube_high/001020251217_u.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/001020251217_1.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_parts_high/001020251217_2.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_010_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_020_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_030_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_040_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_050_04.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_01.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_02.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_03.jpg",
+        "https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/image_item_high/001020251217_060_04.jpg"
+      ],
+      "videoUrls": [
+        "/videos/awa-1765862412457-6ibzeq5ud/video_1.mp4",
+        "/videos/awa-1765862412457-6ibzeq5ud/video_2.mp4"
+      ],
+      "importedAt": "2025-12-16T05:20:12.458Z",
+      "status": "sold"
+    }
+  ],
+  "importLogs": [
+    {
+      "id": "log-1765862416357",
+      "timestamp": "2025-12-16T05:20:16.358Z",
+      "bikesImported": 0,
+      "bikesSkipped": 10,
+      "errors": [
+        "バイク 0001 の解析に失敗しました"
+      ],
+      "bikeIds": []
+    }
+  ]
+}

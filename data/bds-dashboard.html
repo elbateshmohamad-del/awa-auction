@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>&#xFF34;&#xFF2F;&#xFF30;&#x30DA;&#x30FC;&#x30B8;</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-custom-jupiter.min.css?v=lUlY7AkF8CHt8pkkHGYvT4oRUrP_uapyRG2sFa-sNEg" />
+    <link rel="stylesheet" href="/lib/fontawesome/css/all.min.css?v=BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8" />
+    <style>
+        #screenLock {
+            height: 100%;
+            width: 100%;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            position: fixed;
+            background-color: transparent;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="/lib/Swiper/css/swiper.min.css?v=XwfUNXGiAjWyUGBhyXKdkRedMrizx1Ejqo_NReYNdUE" />
+
+</head>
+<body class="body-layout">
+    <header class="sticky-top">
+        
+
+<nav class="navbar navbar-expand-sm navbar-toggleable navbar-dark bg-dark navbar-light border-bottom box-shadow machine">
+
+    <a class="navbar-brand" href="/NJP10/NJP11000">
+        <img class="p-0 m-0" src="/assets/logo_jupiter2020.svg" style="width:6rem;" />
+    </a>
+    
+	<div>
+		
+        <span class="text-white d-sm-none mr-2"><i class="far fa-user mr-1"></i>028395</span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</div>
+    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="auctionWinOpen">&#x30AA;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;参加</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#x30D0;&#x30A4;&#x30AF;</a>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/NJP20/NJP20202">下見検索</a>
+                                <a class="dropdown-item" href="/NJP20/NJP20132?mylist=true">マイリスト</a>
+                                <a class="dropdown-item" href="/NJP20/NJP20140">マイリスト（レーン別）</a>
+								<a class="dropdown-item" href="/NJP20/NJP20150">マイリスト自動登録</a>
+                                <a class="dropdown-item" href="/NJP20/NJP21002">予約一覧</a>
+                                <a class="dropdown-item" href="/NJP20/NJP21200">グループ予約</a>
+                                <a class="dropdown-item" href="/NJP22/NJP22102">相場情報</a>
+                                <span class="dropdown-item disabled">ＷＥＢ出品一覧</span>
+                                <a class="dropdown-item" href="/NJP40/NJP46300">配送申込済車両一覧</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#x30D1;&#x30FC;&#x30C4;</a>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/NJP30/NJP30202">下見検索</a>
+                                <a class="dropdown-item" href="/NJP30/NJP30132?mylist=true">マイリスト</a>
+                                <a class="dropdown-item" href="/NJP30/NJP31002">予約一覧</a>
+                                <a class="dropdown-item" href="/NJP32/NJP32103">相場検索</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/NJP40/NJP40002">自社情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/NJP60/NJP60000">減算履歴</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/NJP10/NJP12000">監視アラーム</a>
+                    </li>
+                <li class="nav-item ml-sm-auto align-items-center d-none d-md-inline">
+                    
+                    <img asp-localized class="img-fluid" style="height:2rem" src="/assets/icon_jupiter_member.png" />
+                    
+                    </li>
+                <li class="nav-item ml-2 align-items-center d-flex mt-3 mt-sm-0">
+                    <a class="text-white mb-4 mb-sm-0" tabindex="-1" href="/NJP10/Language?lang=en&amp;url=%2FNJP10%2FNJP11000">日本語</a>
+                </li>
+                <li class="nav-item d-none d-md-inline">
+                    <span class="nav-link disabled text-white"><i class="far fa-user mr-1"></i>028395</span>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-light" href="/">LogOff</a>
+                </li>
+        </ul>
+    </div>
+</nav>
+
+    </header>
+    
+
+    <div id="screenLock">
+        <div class="d-flex justify-content-center align-items-center" style="height:100%">
+            <div class="spinner-border" role="status" style="width: 10rem; height: 10rem;">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="h_UserIdentityName" value="028395" />
+    <div class="container-fluid container-top-body">
+        <div class="row app-message-area">
+
+</div>
+        <div class="maincontainer mt-2">
+            <main role="main" class="pb-3">
+                
+
+
+<!-- #00-->
+<div class="row mb-3 d-none d-sm-flex">
+    <div class="col">
+        <div id="swiper-container1" class="swiper-container">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide w-100">
+                        <a href="https://bdsc.jupiter.ac/NJP10/NJP14102?no=202512023633&amp;pre=NJP11000"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000321.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+                    <div class="swiper-slide w-100">
+                        <a href="https://bdsc.jupiter.ac/NJP10/NJP14102?no=202512113646&amp;pre=NJP11000"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000322.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+                    <div class="swiper-slide w-100">
+                        <a href="https://bdsc.jupiter.ac/NJP10/NJP14102?no=202511243622&amp;pre=NJP11000"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000318.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+                    <div class="swiper-slide w-100">
+                        <a href="https://bdsc.jupiter.ac/NJP10/NJP14102?no=202511043594&amp;pre=NJP11000"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000314.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+                    <div class="swiper-slide w-100">
+                        <a href="https://bdsc.jupiter.ac/NJP10/NJP14102?no=202512013630&amp;pre=NJP11000"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000320.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+                    <div class="swiper-slide w-100">
+                        <a href="/NJP20/NJP20999?no=29&amp;inspect=true&amp;naction=true"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000029.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+                    <div class="swiper-slide w-100">
+                        <a href="https://bdsc.jupiter.ac/NJP10/NJP14102?no=202512013629&amp;pre=NJP11000"><img class="img-fluid w-100" src="/auctiondata/common/image_banner/000319.png" onerror="this.classList.add('lazyerror'); this.src='/assets/banner_no_image.jpg'"/></a>
+                    </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+<!-- #01-->
+<div class="row">
+    <div class="col-12  col-sm">
+        <!-- #02 -->
+
+        <div class="row mb-3">
+            <div class="col-sm-9 d-none d-sm-block mb-3">
+                <a href="/NJP10/NJP16000"><img src="/assets/btn_member_menu.png" class="img-fluid w-100" /></a>
+            </div>
+            <div class="col-sm-9 d-sm-none d-block mb-3">
+                <a href="/NJP10/NJP16000"><img src="/assets/btn_member_menu_sm.png" class="img-fluid w-100" /></a>
+            </div>
+            <div class="col-sm-3 d-none d-sm-block mb-3">
+                <a href="/NJP10/NJP17000" target="BBB" style="background:linear-gradient(#FFFFFF,#FFDBD5) ;border-radius:10px; border:solid 3px #FE2B09; display:flex; align-items: center; justify-content: center; box-shadow: #9795A3 3px 3px;" class="btn w-100 h-100 p-0"><img src="/assets/btn_bbb.png" class="img-fluid" /></a>
+            </div>
+            <div class="col-12 d-sm-none d-block mb-3">
+                <a href="/NJP10/NJP17000" target="BBB" style="background:linear-gradient(#FFFFFF,#FFDBD5) ;border-radius:4px; border:solid 1px #FE2B09; display:flex; align-items: center; justify-content: center; box-shadow: #9795A3 1px 1px;" class="btn w-100 h-100 p-0"><img src="/assets/btn_bbb.png" class="img-fluid" style="max-height:3.5rem;" /></a>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col">
+                <h3 class="">自社情報メニュー</h3>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6 col-sm-3 mb-2">
+                    <span class=" disabled">
+                        <img class="img-fluid w-100" src="/assets/btn_sales_bds_disabled.png" />
+                    </span>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a class="" href="/NJP40/NJP41112">
+                    <img class="img-fluid w-100" src="/assets/btn_buy_bds.png" />
+                </a>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                    <span class=" disabled">
+                        <img class="img-fluid w-100" src="/assets/btn_sales_cyb_disabled.png" />
+                    </span>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a class="" href="/NJP40/NJP41212">
+                    <img class="img-fluid w-100" src="/assets/btn_buy_cyb.png" />
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3 class="">会計メニュー</h3>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-6 col-sm-4 mb-2">
+				<a class="" href="/NJP40/NJP48002">
+					<img class="img-fluid w-100" src="/assets/btn_calc_fix.png" />
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 mb-2">
+				<a class="" href="/NJP40/NJP40002">
+					<img class="img-fluid w-100" src="/assets/btn_torihikimeisai_calc.png" />
+				</a>
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-6 offset-sm-0 col-sm-4 mb-2">
+				<a href="/NJP40/NJP49104">
+					<img class="w-100" src="/assets/btn_meihen_kanryou.png" />
+					<div class="d-sm-inline d-none pt-2 pl-1 text-center">
+							<div class="float-left align-middle mt-0 pt-3 pb-3" style="font-size:2rem;color:black;position:absolute;left:16.8rem;top:1.25rem;width:4.3rem">0</div>
+					</div>
+					<div class="d-sm-none d-inline pt-2 text-center">
+						<div class="float-left align-middle mt-0 mb-0 pt-1 pb-1" style="font-size:0.8rem;color:black;position:absolute;left:7.9rem;top:0.81rem;width:1.65rem">0</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 mb-2">
+				<a class="" href="/NJP40/NJP49102">
+					<img class="img-fluid w-100" src="/assets/btn_meihen.png" />
+				</a>
+			</div>
+			<div class="col-6 col-sm-4 mb-2">
+				<a class="" href="/NJP40/NJP49302">
+					<img class="img-fluid w-100" src="/assets/btn_meihen_henkin.png" />
+				</a>
+			</div>
+		</div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <h3 class="border-bottom-0">お知らせ一覧</h3>
+                                <div class="row d-none d-sm-flex">
+        <div class="col table-responsive">
+            <table class="table table-striped table-bordered mb-0">
+                <thead class="thead-dark text-nowrap">
+                    <tr>
+                        <th style="width:10%;">重要度</th>
+                        <th style="width:10%;">確認状態</th>
+                        <th style="width:15%;">掲載期限</th>
+                        <th style="width:65%;">題名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月07日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512113646&amp;pre=NJP11000">&#x3010;&#x30D7;&#x30EC;&#x30DF;&#x30A2;&#x30E0;AC&#x3011;1月7日&#xFF08;水&#xFF09;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30FC;&#x30CA;&#x30FC;&#x306E;注目車両&#x3092;&#x3054;紹介&#xFF01;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月14日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512103643&amp;pre=NJP11000">&#x3010;SIBO&#x3011;&#x30EA;&#x30B3;&#x30FC;&#x30EB;対象&#x30D0;&#x30C3;&#x30C6;&#x30EA;&#x30FC;&#x306B;&#x3064;&#x3044;&#x3066;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2025年12月31日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512103642&amp;pre=NJP11000">&#x3010;&#x30D7;&#x30EC;&#x30DF;&#x30A2;&#x30E0;&#x3011;11月&#x306E;注目落札情報&#x3092;&#x30D4;&#x30C3;&#x30AF;&#x30A2;&#x30C3;&#x30D7;&#xFF01;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月07日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512033635&amp;pre=NJP11000">&#x3010;BAS&#x3011;11月度請求書掲載&#x306E;&#x304A;知&#x3089;&#x305B;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月09日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512023633&amp;pre=NJP11000">&#x3010;3会場初&#x30BB;&#x30EA;&#x3011;&#x3054;商売大繁盛祈念&#x30AA;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;開催&#xFF01;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2025年12月19日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512013630&amp;pre=NJP11000">&#x3010;柏&#x306E;杜&#x3011;12月12日&#x30FB;19日&#xFF08;金&#xFF09;蚤&#x306E;市赤調連続開催&#xFF01;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月31日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202512013629&amp;pre=NJP11000">&#x3010;&#x30EC;&#x30B9;&#x30C8;&#x30A2;&#x30B7;&#x30E7;&#x30C3;&#x30D7;&#x3011;2026年1月限定&#xFF01;&#x30A6;&#x30A7;&#x30C3;&#x30C8;&#x30D6;&#x30E9;&#x30B9;&#x30C8;半額&#x30AD;&#x30E3;&#x30F3;&#x30DA;&#x30FC;&#x30F3;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月09日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202511243622&amp;pre=NJP11000">&#x3010;&#x304A;&#x3057;&#x3089;&#x305B;&#x3011;年末年始&#x306E;営業&#x306B;&#x3064;&#x3044;&#x3066;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2026年01月07日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202511043594&amp;pre=NJP11000">&#x3010;柏&#x306E;杜&#x3011;1月7日&#xFF08;水&#xFF09;初&#x30BB;&#x30EA;限定&#x300C;&#x30D7;&#x30EC;&#x30DF;&#x30A2;&#x30E0;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30FC;&#x30CA;&#x30FC;&#x300D;出品受付中&#xFF01;</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "></td>
+                                <td class="text-center text-danger">未読</td>
+                                <td class="text-nowrap text-center"><span>2025年12月31日</span></td>
+                                <td style="min-width:20rem;"><a href="/NJP10/NJP14102?no=202504153302&amp;pre=NJP11000">&#x3010;&#x30B8;&#x30E5;&#x30D4;&#x30BF;&#x30FC;&#x3011;PC&#x30AD;&#x30FC;&#x30DC;&#x30FC;&#x30C9;操作&#x306B;&#x3088;&#x308B;&#x30AA;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;応札方法&#x306B;&#x3064;&#x3044;&#x3066;</a></td>
+                            </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row d-flex d-sm-none">
+        <div class="col">
+                
+                <div class="d-flex flex-wrap p-0 p-sm-2">
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512113646&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月07日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;&#x30D7;&#x30EC;&#x30DF;&#x30A2;&#x30E0;AC&#x3011;1月7日&#xFF08;水&#xFF09;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30FC;&#x30CA;&#x30FC;&#x306E;注目車両&#x3092;&#x3054;紹介&#xFF01;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512103643&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月14日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;SIBO&#x3011;&#x30EA;&#x30B3;&#x30FC;&#x30EB;対象&#x30D0;&#x30C3;&#x30C6;&#x30EA;&#x30FC;&#x306B;&#x3064;&#x3044;&#x3066;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512103642&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2025年12月31日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;&#x30D7;&#x30EC;&#x30DF;&#x30A2;&#x30E0;&#x3011;11月&#x306E;注目落札情報&#x3092;&#x30D4;&#x30C3;&#x30AF;&#x30A2;&#x30C3;&#x30D7;&#xFF01;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512033635&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月07日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;BAS&#x3011;11月度請求書掲載&#x306E;&#x304A;知&#x3089;&#x305B;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512023633&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月09日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;3会場初&#x30BB;&#x30EA;&#x3011;&#x3054;商売大繁盛祈念&#x30AA;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;開催&#xFF01;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512013630&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2025年12月19日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;柏&#x306E;杜&#x3011;12月12日&#x30FB;19日&#xFF08;金&#xFF09;蚤&#x306E;市赤調連続開催&#xFF01;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202512013629&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月31日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;&#x30EC;&#x30B9;&#x30C8;&#x30A2;&#x30B7;&#x30E7;&#x30C3;&#x30D7;&#x3011;2026年1月限定&#xFF01;&#x30A6;&#x30A7;&#x30C3;&#x30C8;&#x30D6;&#x30E9;&#x30B9;&#x30C8;半額&#x30AD;&#x30E3;&#x30F3;&#x30DA;&#x30FC;&#x30F3;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202511243622&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月09日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;&#x304A;&#x3057;&#x3089;&#x305B;&#x3011;年末年始&#x306E;営業&#x306B;&#x3064;&#x3044;&#x3066;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202511043594&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2026年01月07日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;柏&#x306E;杜&#x3011;1月7日&#xFF08;水&#xFF09;初&#x30BB;&#x30EA;限定&#x300C;&#x30D7;&#x30EC;&#x30DF;&#x30A2;&#x30E0;&#x30B3;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30FC;&#x30CA;&#x30FC;&#x300D;出品受付中&#xFF01;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card d-block flex-grow-1 shadow-sm mb-3 rounded-0 rounded-sm tile-jupiter">
+                            <a href="/NJP10/NJP14102?no=202504153302&amp;pre=NJP11000">
+                                <div class="card-body">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:3rem;" class=""></td>
+                                                <td style="width:3rem;" class="text-center text-danger">未読</td>
+                                                <td class="text-right"><span class="mr-2">期限:</span><span>2025年12月31日</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-primary">&#x3010;&#x30B8;&#x30E5;&#x30D4;&#x30BF;&#x30FC;&#x3011;PC&#x30AD;&#x30FC;&#x30DC;&#x30FC;&#x30C9;操作&#x306B;&#x3088;&#x308B;&#x30AA;&#x30FC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;応札方法&#x306B;&#x3064;&#x3044;&#x3066;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                    <div class="flex-grow-1 tile-jupiter"></div>
+                </div>
+        </div>
+    </div>
+
+                <a href="/NJP10/NJP14000">過去のお知らせを見る</a>
+            </div>
+        </div>
+
+        <!--  #004  -->
+
+<!--  #004  -->
+
+        <div class="row">
+            <div class="col">
+                <h3 class="">会員登録情報</h3>
+            </div>
+        </div>
+        <div class="mb-3">
+			<div class="row mb-3">
+				<div class="col-6">
+					<a href="/NJP40/NJP42102"><img class="img-fluid w-100" src="/assets/btn_update_profile.png" /></a>
+				</div>
+				<div class="col-6">
+					<a href="/NJP40/NJP42202"><img class="img-fluid w-100" src="/assets/btn_change_password.png" /></a>
+				</div>
+			</div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3 class="">各種申請・ご案内</h3>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-6"><a href="/NJP40/NJP40200?category=000"><img class="img-fluid w-100" src="/assets/btn_contract_change.png" /></a></div>
+            <div class="col-6"><a href="/NJP40/NJP40200?category=001"><img class="img-fluid w-100" src="/assets/btn_contract_new.png" /></a></div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-6"><a href="/NJP40/NJP40200?category=002"><img class="img-fluid w-100" src="/assets/btn_sibo.png" /></a></div>
+            <div class="col-6"><a href="/NJP40/NJP40200?category=003"><img class="img-fluid w-100" src="/assets/btn_guide.png" /></a></div>
+        </div>
+        <br />
+
+        <!-- #06-1 -->
+<div class="row pb-4">
+	<div class="col-12">
+<h4 class="w-100"><img src="/assets/logo_bas.png">輸送料金検索</h4>
+	</div>
+<div class="col-6 mb-3">
+	<a href="http://basbike.jp/ryokin/index_ac.php?ACraku=rakusatu&AC=BASS" target="_NEW" alt="オークション落札">
+		<img class="img-fluid w-100" src="/assets/BAS_btn_01.png">
+	</a>
+</div>
+<div class="col-6 mb-3">
+	<a href="https://www.bds.co.jp/sys_bds/bas_charter/" target="_NEW" alt="チャーター配送">
+        <img class="img-fluid w-100" src="/assets/BAS_btn_02.png">
+	</a>
+</div>
+<div class="col-6 mb-3">
+	<a href="http://basbike.jp/ryokin/index_ac.php?ACraku=syuppin&AC=BAS" target="_NEW" alt="オークション出品">
+        <img class="img-fluid w-100" src="/assets/BAS_btn_03.png">
+	</a>
+</div>
+<div class="col-6 mb-3">
+	<a href="http://basbike.jp/ryokin/index_bds.php" target="_NEW" alt="個別配送">
+        <img class="img-fluid w-100" src="/assets/BAS_btn_04.png">
+	</a>
+</div>
+<div class="col-12">
+<p class="small my-0">※「輸送料金検索」はBASのページです。詳細はBASにお問い合わせください。</p>
+</div>
+
+<div class="col-12">
+    <div class="bg-light">
+        <div class="row px-1">
+            <div class="col-12"><p class="py-2 mb-0"><b>株式会社ビーエーエス　各営業所</b></p></div>
+            
+            <div class="col-sm-4"><p class="pb-1 mb-0">関東：04-7190-2711</p></div>
+            <div class="col-sm-4"><p class="pb-1 mb-0">関西：072-276-1221</p></div>
+            <div class="col-sm-4"><p class="pb-1 mb-0">九州：092-919-1421</p></div>
+    
+        </div>
+    </div>
+</div> 
+
+
+
+
+
+
+</div>
+
+
+
+    </div>
+    
+</div>
+
+<!-- #07-1 -->
+<div class="row pb-4" id="BDS_report-video">
+    <div class="col-12">
+        <h4 class="w-100">コンテンツ</h4>
+    </div>
+    <div class="col-4 mb-3">
+        <a href="https://www.bds.co.jp/bdsreport/">
+            <img class="w-100" src="/assets/parts_banner_report.png">
+        </a>
+    </div>
+    <div class="col-4 mb-3">
+        <a href="https://www.bbb-bike.com/video_land/list0.html" target="_NEW">
+            <img class="w-100" src="/assets/parts_banner_video.png">
+        </a>
+    </div>
+    <div class="col-4 mb-3">
+        <a href="https://youtu.be/uCO88PxS1NA" target="_NEW">
+            <img class="w-100" src="https://img.youtube.com/vi/uCO88PxS1NA/maxresdefault.jpg">
+        </a>
+    </div>
+</div>
+
+<div class="row pb-4" id="new_bbb">
+    <div class="col-12">
+        <h4 class="w-100">BDSバイクセンサーお申込みについて</h4>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <a href="https://www.bds.co.jp/new_BBB/new_bbb.html" target="_NEW">
+            <img class="w-100" src="https://www.bds.co.jp/bee-net/oshirase/newbbb_banner.jpg">
+        </a>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <p class="h4">
+            一般ユーザーへの車両PRなら、Jupiterとの連携でより使いやすくなった「BDSバイクセンサー」に決まり！車両・ショップともに多くの情報が掲載可能なので、自社の強みとマッチしたお客様を集客できます！
+        </p>
+    </div>
+</div>
+
+
+<div class="row pb-4" id="bds_line">
+    <div class="col-12">
+        <h4 class="w-100">BDS公式LINE公開中！</h4>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <a href="https://lin.ee/YlgflHL" target="_NEW">
+            <img class="w-100" src="https://www.bds.co.jp/bee-net/oshirase/bds_line.jpg">
+        </a>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <p class="h4">
+            BDS公式LINEでは、出品方法や車両相場、オークションについてなど何でも相談できる「出品お助け窓口」や下見・クレーム申請、イベント情報の配信など便利な機能満載！ぜひお気軽にご活用ください！
+        </p>
+    </div>
+</div>
+
+
+
+<div class="row py-5" id="BDS_premium">
+	<div class="col-12">
+		<div class="bg-light p-3">
+<img class="w-100 mb-2" src="/assets/title_premium.png">
+<div class="row align-items-cente">
+	<div class="col-sm-4">
+		<a href="https://youtu.be/2bPNhmk-xfM" target="_NEW">
+			<img class="w-100" src="https://img.youtube.com/vi/2bPNhmk-xfM/mqdefault.jpg">
+		</a>
+	</div>
+	<div class="col-sm-8">
+		<p class="text-left h3 my-0">
+<!--			<a class="text-reset" href="https://youtu.be/2bPNhmk-xfM?t=32" target="_NEW">0037：GS750<br>
+			<a class="text-reset" href="https://youtu.be/2bPNhmk-xfM?t=70" target="_NEW">7510：YZF-R7<br>
+			<a class="text-reset" href="https://youtu.be/2bPNhmk-xfM?t=110" target="_NEW">0056：ZEPHYR750<br>
+			<a class="text-reset" href="https://youtu.be/2bPNhmk-xfM?t=193" target="_NEW">7507：ﾄﾞﾘｰﾑ50<br>
+			<a class="text-reset" href="https://youtu.be/2bPNhmk-xfM?t=272" target="_NEW">0052：Z1<br>
+-->
+0021) ZRX1200D<br>
+2584) GSX1100Sカタナ<br>
+0050) NX650ﾄﾞﾐﾈｰﾀｰ<br>
+7520) R1-Z<br>
+	</div>
+</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- #07-2 -->
+<!--
+<div class="row pb-4" id="BDS_banner">
+	<div class="col-6 mb-2 pr-1">
+		<a href="https://www.bds.co.jp/vdlndbannerlink/common/img/20200508_01.pdf" target="_NEW">
+			<img class="w-100" src="https://www.bds.co.jp/vdlndbannerlink/common/jp2020/img/banner_001.jpg">
+		</a>
+	</div>
+	<div class="col-6 mb-2 pl-1">
+		<a href="https://www.bds.co.jp/service/web/" target="_NEW">
+			<img class="w-100" src="https://www.bds.co.jp/vdlndbannerlink/common/jp2020/img/banner_002.jpg">
+		</a>
+	</div>
+	<div class="col-6 pr-1">
+		<a href="http://jaba-au.or.jp/?page_id=582" target="_NEW">
+			<img class="w-100" src="https://www.bds.co.jp/vdlndbannerlink/common/jp2020/img/banner_003.jpg">
+		</a>
+	</div>
+	<div class="col-6 pl-1">
+		<a href="https://www.bds.co.jp/technicalschool/contact.html" target="_NEW">
+			<img class="w-100" src="https://www.bds.co.jp/vdlndbannerlink/common/jp2020/img/banner_004.jpg">
+		</a>
+	</div>
+
+
+
+</div>
+-->
+
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted bg-light">
+        <div class="container-fluid text-muted d-none d-sm-block">
+		<div class="row m-3">
+    <div class="col text-center">
+        <a href="/assets/QAindex.htm">よくある質問</a><!-- <span class="mx-2">|</span> -->
+        <!-- <a href="https://www.bds.co.jp/company/">お問合せ</a><span class="mx-2">|</span> -->
+        <!-- <a href="~/assets/menseki.htm">免責事項</a> -->
+    </div>
+</div>
+				<input type="hidden" id="auction_flash_url" value="/NJP10/NJP13000" />
+		<input type="hidden" id="auction_html5_pc_url" value="/TAC10/TAC11000" />
+		<input type="hidden" id="flash_ng_url"		   value="/TAC10/TAC11300" />
+		<input type="hidden" id="bidtest_html5_pc_url" value="/TAC10/TAC96000" />
+		<input type="hidden" id="auction_html5_sp_url" value="/TAC10/SAC11000" />
+		<input type="hidden" id="bidtest_html5_sp_url" value="/TAC10/SAC96000" />
+		<input type="hidden" id="auction_html5_pc_old_url" value="/TAC10/TAC10000" />
+		<input type="hidden" id="bidtest_html5_pc_old_url" value="/TAC10/TAC95000" />
+		<input type="hidden" id="auction_html5_sp_old_url" value="/TAC10/SAC10000" />
+		<input type="hidden" id="bidtest_html5_sp_old_url" value="/TAC10/SAC95000" />
+	<div class="row m-2">
+		<div class="col text-center">
+			Copyright &copy; 2020 BDS COMPANY.,INC. All Rights Reserved.
+		</div>
+	</div>
+</div>
+    </footer>
+
+    
+    <div id="pickerdate-position">
+    </div>
+
+    <script>
+        window.addEventListener('beforeunload', function () {
+            document.getElementById('screenLock').style.display = 'block';
+        });
+
+        window.addEventListener('load', function (event) {
+            document.getElementById('screenLock').style.display = 'none';
+        });
+
+        window.addEventListener('pageshow', function (event) {
+            document.getElementById('screenLock').style.display = 'none';
+        });
+    </script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jupiter2020common.min.js?v=QOluUz0WscObI60cna7vmFSLyZLLB7FlP6IXdxQ6m_8" defer></script>
+	<script src="/js/auction.min.js?v=Gju8eetOYWuq_7R8j60wwdqpP7b4rkWAQRc2PS3x91Y" defer></script>
+    <script src="/js/site.min.js?v=M_NWkv1X50B_mnplD8xcwSuCiCT0T48sTRMzI9h7PBE"></script>
+
+
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+            // 会員情報チェック
+            var list_UserIdentityName = sessionStorage.getItem("UserIdentityName");
+
+            if (!list_UserIdentityName) {
+                // 会員情報がない場合
+                // 他会員情報を全削除
+                sessionStorage.clear();
+
+                // 会員情報 設定
+                sessionStorage.setItem("UserIdentityName", document.getElementById("h_UserIdentityName").value);
+
+                return;
+            }
+            else {
+                // 会員情報がある場合
+                if (list_UserIdentityName != document.getElementById("h_UserIdentityName").value) {
+                    // 他会員の場合
+                    // 他会員情報を全削除
+                    sessionStorage.clear();
+
+                    // 会員情報 設定
+                    sessionStorage.setItem("UserIdentityName", document.getElementById("h_UserIdentityName").value);
+                }
+            }
+
+        });
+    </script>
+    <script src="/js/keep-session.min.js?v=85PJOKZMQP8DgsJHru4LcEzrWCkxnd8fAsksSVeXVrs" defer></script>
+    <link rel="stylesheet" href="/lib/pickadate/themes/default.date.css?v=gcYve6gaT3vxaQ2bwjPHysiW0jY7cEbfFcYjjBrJlhw" />
+<link rel="stylesheet" href="/lib/pickadate/themes/default.time.css?v=2j5CVNPDdsP-HNf8ipEuCwT2QNIuNqNnt_6iw2QxHfE" />
+<link rel="stylesheet" href="/css/pickadate-custom.css?v=RIs-XdkzE7fmgoBBaWbobcbZb4yIY_fzuwACJs5FY08" />
+
+<script src="/lib/pickadate/picker.js?v=oJXL7pU64acHojjSG2JPJy-FOGtYh5qnKhtdwk4YlrU" defer></script>
+<script src="/lib/pickadate/picker.date.js?v=4jRSfwItZuLvFKlnkeHM-vL0bWgvrVbIF8peMhB7t2Q" defer></script>
+<script src="/lib/pickadate/picker.time.js?v=DBlI6KY-2OVA_L1yIlSXbtMvk32s-QNpsWvbmFHRCLc" defer></script>
+<script src="/lib/pickadate/legacy.js?v=9oJTEVJ5gHTrPioPnAiV6SOx4dfmJKBc05M8fcqNycE" defer></script>
+<script src="/js/pickadate-extention.min.js?v=mI9fWcYsih8YsNqeGD2oviuRx0utTpgIxwMECcl1SN8" defer></script>
+    
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js?v=eItLFOyfQ4d_OGzEnGchi2ZMVF8EhGgzS0k7fSOPifQ" defer></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js?v=9GycpJnliUjJDVDqP0UEu_bsm9U-3dnQUH8-3W10vkY" defer></script>
+
+    
+<script src="/lib/lazysizes/lazysizes.js?v=BgWYLhWr54reMajX4XHK_4XZGm5XXCU0pM3FJHK4Mc0" defer></script>
+    <script src="/lib/Swiper/js/swiper.min.js?v=uckMYBvIGtce2L5Vf_mwld5arpR5JuhAEeJyjPZSUKY" defer></script>
+    <script src="/js/InformationComponents.min.js?v=oZ19u1Rr3R8fx3esH0fjrRz5B0Pj03KA2PymjhOWgxs" defer></script>
+
+    <script src="/js/web-application-menu-scripts.min.js?v=B-Wgb4weDoszhOwAFGKDUATElgv-qdS0vziXxed4ocM" defer></script>
+    <script src="/js/njp11000.min.js?v=0T1DvsOx7L4HA93jU_jpzngHxa4xzLuGsQZ9HefUC9w" defer></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-524361-12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-524361-12');
+    </script>
+</body>
+</html>

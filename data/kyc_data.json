@@ -1,0 +1,39 @@
+[
+    {
+        "id": "1",
+        "user": "Michael Wong",
+        "type": "Individual",
+        "subDate": "2025-04-10",
+        "email": "michael@example.com",
+        "status": "Pending",
+        "docs": [
+            "Passport.pdf",
+            "ProofOfAddress.jpg"
+        ]
+    },
+    {
+        "id": "2",
+        "user": "Global Motors Inc.",
+        "type": "Corporate",
+        "subDate": "2025-04-11",
+        "email": "contact@globalmotors.com",
+        "status": "Pending",
+        "docs": [
+            "BusinessLicense.pdf",
+            "DirectorID.pdf"
+        ]
+    },
+    {
+        "id": "3",
+        "user": "Elena Costa",
+        "type": "Individual",
+        "subDate": "2025-04-12",
+        "email": "elena@example.com",
+        "status": "Pending",
+        "docs": [
+            "ID_Front.jpg",
+            "ID_Back.jpg",
+            "UtilityBill.pdf"
+        ]
+    }
+]

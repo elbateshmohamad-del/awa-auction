@@ -1,0 +1,54 @@
+[
+  {
+    "id": "CONT-8821",
+    "name": "TH-BKK-001",
+    "type": "40ft",
+    "status": "closingSoon",
+    "destination": "bangkok, thailand",
+    "capacity": 40,
+    "filled": 34,
+    "etd": "Late Dec 2025",
+    "eta": "Jan 2026",
+    "price": "200",
+    "features": []
+  },
+  {
+    "id": "CONT-8822",
+    "name": "VN-HCM-002",
+    "type": "40ft",
+    "status": "open",
+    "destination": "hoChiMinh, vietnam",
+    "capacity": 40,
+    "filled": 8,
+    "etd": "Mid Jan 2026",
+    "eta": "Feb 2026",
+    "price": "250",
+    "features": []
+  },
+  {
+    "id": "CONT-8823",
+    "name": "PH-MNL-003",
+    "type": "40ft",
+    "status": "scheduled",
+    "destination": "manila, philippines",
+    "capacity": 40,
+    "filled": 0,
+    "etd": "Feb 2026",
+    "eta": "Mar 2026",
+    "price": "220",
+    "features": []
+  },
+  {
+    "id": "CONT-2515",
+    "name": "TOK-004",
+    "type": "20ft",
+    "status": "open",
+    "destination": "Tokyo, Japan",
+    "capacity": 20,
+    "filled": 7,
+    "etd": "TBD",
+    "eta": "TBD",
+    "price": "0",
+    "features": []
+  }
+]

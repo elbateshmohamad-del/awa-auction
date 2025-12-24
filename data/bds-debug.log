@@ -1,0 +1,89 @@
+Thinking... Fetching root page: https://bdsc.jupiter.ac
+Saved root HTML to data/bds-root.html
+Token Input found: 1
+Token found: YES
+Initial Cookies: .AspNetCore.Identity.Application=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; samesite=lax; httponly; Identity.External=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; samesite=lax; httponly; Identity.TwoFactorUserId=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; samesite=lax; httponly; .AspNetCore.Antiforgery.EHBr0lAXvzQ=CfDJ8HUKs1AJMg1BjXrTU5DMOtxd5oJ4YQR7iwcccqrcgwlDUL2Xks_s4IfUb5JXkI_MF8alBDh4-L0y4RNMXogJEAUDYAW-VBEPb85q-sGxaVcpx1gZzYVNu59Ly7dcmdZ1Ev11Iey1s8h1x_Isj088D8g; path=/; samesite=strict; httponly; .AspNetCore.Session=CfDJ8HUKs1AJMg1BjXrTU5DMOtyeE2aS5tdCrams3uYWdlsN9ubqL2cdWi%2BHBTvdCfnYu5wyyIM6uX%2BpRsHV4EZPvTYUvURQpWRiBue7HiIDWNFJLOMcoJ1pGBN7dGP3Y54z3bP8GxNdCrCj53dnYpJse%2BNyPxXIrTd7LAojVdxo0d%2Br; path=/; samesite=lax; httponly; NSC_Wtfswfs_cetd=ffffffffc3a013d845525d5f4f58455e445a4a423660;path=/;secure;httponly
+Attempting login POST to https://bdsc.jupiter.ac with user 28395
+Redirecting [302] to: https://bdsc.jupiter.ac/NJP10/NJP10110
+Login Status: 200
+Login successful. Using accumulated cookies.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - ﾚﾌﾞﾙ250S
+Found Bike: 0003 - ﾄﾘｹｼ
+Found Bike: 0004 - X-ADV750
+Found Bike: 0005 - KTM690SMC R
+Found Bike: 0006 - BMWS1000R
+Found Bike: 0007 - ﾚﾌﾞﾙ1100
+Found Bike: 0008 - KTM890ﾃﾞｭｰｸGP
+Found Bike: 0009 - ﾚﾌﾞﾙ1100
+Found Bike: 0010 - ﾊｰﾚｰXLH1000
+Found Bike: 0011 - CBR1000RR-RSP
+Found Bike: 0012 - ﾊｰﾚｰFXBRS1870
+Found Bike: 0013 - ZX-10RSE
+Found Bike: 0014 - GSX-R1100-1
+Found Bike: 0015 - BMWC400GT
+Found Bike: 0016 - BMWF900XR
+Found Bike: 0017 - BMWS1000RRMﾊﾟｯｹｰｼﾞ
+Found Bike: 0018 - BMWR NINE Tﾋﾟｭｱ
+Found Bike: 0019 - BMWF900XR
+Found Bike: 0020 - BMWR1250GS
+Found Bike: 0021 - ﾒｸﾞﾛS1
+Found Bike: 0022 - ZX-6RA
+Found Bike: 0023 - ﾄﾗｲｱﾝﾌﾛｹｯﾄｽﾘｰGT
+Found Bike: 0024 - ﾊｰﾚｰVﾛｯﾄﾞﾏｯｽﾙ1250
+Found Bike: 0025 - GT500
+Found Bike: 0026 - B-KING
+Found Bike: 0027 - Z750F
+Found Bike: 0028 - BMWCE02
+Found Bike: 0029 - ﾊｰﾚｰXL1200C-I
+Found Bike: 0030 - GPZ400F
+Found Bike: 0031 - ﾊｰﾚｰX350
+Found Bike: 0032 - ﾊｰﾚｰFLHXS1870
+Found Bike: 0033 - BMWCE02
+Found Bike: 0034 - ZX-6RA
+Found Bike: 0035 - ﾊｰﾚｰFXDL1580
+Found Bike: 0036 - CB1300Sﾎﾞﾙﾄﾞｰﾙ-3SP
+Found Bike: 0037 - CB750
+Found Bike: 0038 - ﾊｰﾚｰFXSTC1580
+Found Bike: 0039 - ﾍﾞﾙｼｽ1000SE
+Found Bike: 0040 - ﾄﾞﾗｯｸﾞｽﾀｰ400ｸﾗｼｯｸ
+Found Bike: 0041 - ﾄﾘｹｼ
+Found Bike: 0042 - ﾄﾘｹｼ
+Found Bike: 0043 - ﾄﾘｹｼ
+Found Bike: 0044 - ﾄﾘｹｼ
+Found Bike: 0045 - ﾄﾘｹｼ
+Found Bike: 0046 - ﾊｰﾚｰFLTRXSTSE1980CVO
+Found Bike: 0047 - ﾊｰﾚｰFXDL1690
+Found Bike: 0048 - BMWR1250GS
+Found Bike: 0049 - BMWR1250GSｱﾄﾞﾍﾞﾝﾁｬｰ
+Found Bike: 0050 - KTM890ﾃﾞｭｰｸ
+Found 2 videos for bike awa-1765862341222-y2iz6h16b
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000220251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862341222-y2iz6h16b\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000220251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862341222-y2iz6h16b\video_2.mp4
+Found 2 videos for bike awa-1765862344762-8n5y95ht4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000320251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862344762-8n5y95ht4\video_1.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000320251217_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000320251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862344762-8n5y95ht4\video_2.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000320251217_l.mp4
+Found 2 videos for bike awa-1765862346576-4sehe2ca9
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000420251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862346576-4sehe2ca9\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000420251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862346576-4sehe2ca9\video_2.mp4
+Found 2 videos for bike awa-1765862368614-hb3gh4fet
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000520251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862368614-hb3gh4fet\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000520251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862368614-hb3gh4fet\video_2.mp4
+Found 2 videos for bike awa-1765862378420-vsz5zovaf
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000620251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862378420-vsz5zovaf\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000620251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862378420-vsz5zovaf\video_2.mp4
+Found 2 videos for bike awa-1765862386130-4ive7w9jh
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000720251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862386130-4ive7w9jh\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000720251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862386130-4ive7w9jh\video_2.mp4
+Found 2 videos for bike awa-1765862394316-e101atpc1
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000820251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862394316-e101atpc1\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000820251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862394316-e101atpc1\video_2.mp4
+Found 2 videos for bike awa-1765862402324-6is2gwr1v
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000920251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862402324-6is2gwr1v\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/000920251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862402324-6is2gwr1v\video_2.mp4
+Found 2 videos for bike awa-1765862412457-6ibzeq5ud
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/001020251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862412457-6ibzeq5ud\video_1.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/001020251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862412457-6ibzeq5ud\video_2.mp4

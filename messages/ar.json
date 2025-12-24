@@ -1,0 +1,1998 @@
+{
+    "common": {
+        "login": "تسجيل الدخول",
+        "signUp": "إنشاء حساب",
+        "logout": "تسجيل الخروج",
+        "auctions": "المزادات",
+        "services": "الخدمات",
+        "about": "عن الشركة",
+        "search": "بحث",
+        "loading": "جاري التحميل...",
+        "error": "خطأ",
+        "success": "نجاح",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد",
+        "save": "حفظ",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "back": "رجوع",
+        "next": "التالي",
+        "previous": "السابق",
+        "submit": "إرسال",
+        "close": "إغلاق",
+        "viewAll": "عرض الكل",
+        "learnMore": "اعرف المزيد",
+        "readMore": "اقرأ المزيد",
+        "seeDetails": "عرض التفاصيل"
+    },
+    "header": {
+        "navigation": {
+            "auctions": "المزادات",
+            "services": "الخدمات",
+            "about": "عن الشركة",
+            "shippingSchedule": "جدول الشحن"
+        },
+        "auth": {
+            "login": "تسجيل الدخول",
+            "signUp": "إنشاء حساب",
+            "dashboard": "لوحة التحكم",
+            "logout": "تسجيل الخروج"
+        }
+    },
+    "footer": {
+        "description": "منصة مزادات الدراجات النارية الموثوقة في اليابان. دراجات عالية الجودة تُسلَّم في جميع أنحاء العالم.",
+        "platform": {
+            "title": "المنصة",
+            "auctions": "المزادات",
+            "howItWorks": "كيف تعمل",
+            "subscriptionPlans": "خطط الاشتراك"
+        },
+        "support": {
+            "title": "الدعم",
+            "helpCenter": "مركز المساعدة",
+            "faq": "الأسئلة الشائعة",
+            "contactUs": "اتصل بنا",
+            "shippingGuide": "دليل الشحن"
+        },
+        "company": {
+            "title": "الشركة",
+            "aboutAwa": "عن AWA",
+            "careers": "الوظائف",
+            "news": "الأخبار",
+            "blog": "المدونة"
+        },
+        "legal": {
+            "title": "القانونية",
+            "termsOfService": "شروط الخدمة",
+            "privacyPolicy": "سياسة الخصوصية",
+            "cookiePolicy": "سياسة ملفات تعريف الارتباط",
+            "exportRegulations": "لوائح التصدير"
+        },
+        "copyright": "© {year} AWA. جميع الحقوق محفوظة."
+    },
+    "home": {
+        "hero": {
+            "title": "التجارة العالمية، مبسطة.",
+            "subtitle": "تربط AWA العالم بسوق الدراجات النارية اليابانية المتميزة من خلال التكنولوجيا والشفافية والثقة.",
+            "enterAuction": "دخول منصة المزادات",
+            "aboutAwa": "عن AWA Inc."
+        },
+        "news": {
+            "title": "آخر الأخبار",
+            "item1": "2025.12.01 - اكتمل التوسع في سوق جنوب شرق آسيا.",
+            "item2": "2025.11.15 - AWA تسجل حجم تداول قياسي في الربع الثالث."
+        },
+        "sections": {
+            "business": {
+                "title": "أعمالنا",
+                "description": "ندير السوق الرقمي الرائد عالمياً للدراجات النارية اليابانية المستعملة، مما يسهل المعاملات السلسة عبر الحدود للتجار وهواة الجمع."
+            },
+            "sustainability": {
+                "title": "الاستدامة",
+                "description": "تعزيز الاقتصاد الدائري من خلال إطالة دورة حياة المركبات عالية الجودة. نحن ملتزمون بلوجستيات محايدة للكربون بحلول عام 2030."
+            },
+            "careers": {
+                "title": "الوظائف",
+                "description": "انضم إلى فريقنا العالمي من المبتكرين والمهندسين وخبراء السيارات. نحن نوظف للمناصب عن بُعد وفي مقرنا الرئيسي في طوكيو.",
+                "viewPositions": "عرض الوظائف المتاحة ←"
+            }
+        }
+    },
+    "auctions": {
+        "title": "المزادات الحية",
+        "subtitle": "المزايدة في الوقت الفعلي على دراجات نارية متميزة من اليابان",
+        "liveNow": "مباشر الآن",
+        "upcoming": "قريباً",
+        "ended": "انتهى",
+        "timeRemaining": "الوقت المتبقي",
+        "currentBid": "المزايدة الحالية",
+        "currentPrice": "السعر الحالي",
+        "startingBid": "سعر البداية",
+        "startPrice": "سعر البداية",
+        "bids": "مزايدات",
+        "noBids": "لا توجد مزايدات",
+        "placeBid": "قدم مزايدة",
+        "watchlist": "أضف للمفضلة",
+        "filters": {
+            "title": "التصفية",
+            "make": "الشركة المصنعة",
+            "model": "الموديل",
+            "year": "السنة",
+            "priceRange": "نطاق السعر",
+            "mileage": "المسافة المقطوعة",
+            "condition": "الحالة",
+            "clearAll": "مسح الكل"
+        },
+        "sort": {
+            "title": "ترتيب حسب",
+            "endingSoon": "ينتهي قريباً",
+            "newlyListed": "المضافة حديثاً",
+            "priceLowHigh": "السعر: من الأقل للأعلى",
+            "priceHighLow": "السعر: من الأعلى للأقل",
+            "mostBids": "الأكثر مزايدة"
+        },
+        "noResults": "لم يتم العثور على مزادات",
+        "days": "أيام",
+        "hours": "ساعات",
+        "minutes": "دقائق",
+        "seconds": "ثواني"
+    },
+    "catalog": {
+        "bikesAvailable": "دراجات متاحة"
+    },
+    "shippingSchedule": {
+        "title": "جدول الشحن",
+        "subtitle": "تحقق من جداول الحاويات القادمة واحجز مساحتك. نقدم شحنات مجمعة منتظمة إلى الموانئ الآسيوية الرئيسية.",
+        "capacityUsed": "السعة المستخدمة",
+        "almostFull": "ممتلئ تقريباً!",
+        "spaceAvailable": "مساحة متوفرة",
+        "departure": "المغادرة",
+        "estPrice": "السعر المقدر",
+        "bookSpace": "احجز مساحة الآن",
+        "from": "من",
+        "status": {
+            "closingSoon": "تغلق قريباً",
+            "open": "مفتوح",
+            "scheduled": "مجدول",
+            "Closing Soon": "تغلق قريباً",
+            "Open": "مفتوح",
+            "Scheduled": "مجدول"
+        },
+        "features": {
+            "direct": "مباشر",
+            "fastClearance": "تخليص سريع",
+            "securePacking": "تغليف آمن",
+            "monthlyService": "خدمة شهرية",
+            "Direct": "مباشر",
+            "Fast Clearance": "تخليص سريع",
+            "Secure Packing": "تغليف آمن",
+            "Monthly Service": "خدمة شهرية"
+        },
+        "destinations": {
+            "bangkok": "بانكوك",
+            "hoChiMinh": "هو تشي منه",
+            "manila": "مانيلا",
+            "thailand": "تايلاند",
+            "vietnam": "فيتنام",
+            "philippines": "الفلبين",
+            "Bangkok": "بانكوك",
+            "Ho Chi Minh": "هو تشي منه",
+            "Manila": "مانيلا",
+            "Thailand": "تايلاند",
+            "Vietnam": "فيتنام",
+            "Philippines": "الفلبين"
+        }
+    },
+    "bike": {
+        "details": "التفاصيل",
+        "specifications": "المواصفات",
+        "condition": "الحالة",
+        "inspectionReport": "تقرير الفحص",
+        "sellerInfo": "معلومات البائع",
+        "auctionHistory": "سجل المزايدات",
+        "similarBikes": "دراجات مشابهة",
+        "make": "الشركة المصنعة",
+        "model": "الموديل",
+        "year": "السنة",
+        "mileage": "المسافة المقطوعة",
+        "engineSize": "حجم المحرك",
+        "color": "اللون",
+        "transmission": "ناقل الحركة",
+        "fuelType": "نوع الوقود"
+    },
+    "auth": {
+        "login": {
+            "title": "تسجيل الدخول",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "rememberMe": "تذكرني",
+            "forgotPassword": "نسيت كلمة المرور؟",
+            "noAccount": "ليس لديك حساب؟",
+            "signUpHere": "سجل هنا"
+        },
+        "loginPage": {
+            "heroTitle": "مرحباً بعودتك",
+            "heroSubtitle": "تابع رحلتك للعثور على الدراجة المثالية.",
+            "lightningTitle": "مزايدة سريعة",
+            "lightningDesc": "تحديثات فورية على جميع مزايداتك النشطة.",
+            "secureTitle": "معاملات آمنة",
+            "secureDesc": "بياناتك ومدفوعاتك محمية دائماً.",
+            "signIn": "تسجيل الدخول إلى حسابك",
+            "newToAwa": "جديد على AWA؟",
+            "createAccount": "إنشاء حساب",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "forgotPassword": "نسيت كلمة المرور؟",
+            "signInBtn": "تسجيل الدخول",
+            "orContinueWith": "أو المتابعة باستخدام",
+            "termsNotice": "بتسجيل الدخول، فإنك توافق على",
+            "termsOfService": "شروط الخدمة",
+            "and": "و",
+            "privacyPolicy": "سياسة الخصوصية"
+        },
+        "forgotPasswordPage": {
+            "title": "نسيت كلمة المرور؟",
+            "subtitle": "لا تقلق، سنرسل لك تعليمات إعادة التعيين.",
+            "email": "البريد الإلكتروني",
+            "resetBtn": "إعادة تعيين كلمة المرور",
+            "backToLogin": "← العودة لتسجيل الدخول"
+        },
+        "register": {
+            "title": "إنشاء حساب",
+            "fullName": "الاسم الكامل",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "confirmPassword": "تأكيد كلمة المرور",
+            "country": "البلد",
+            "agreeTerms": "أوافق على شروط الخدمة",
+            "alreadyHaveAccount": "لديك حساب بالفعل؟",
+            "loginHere": "سجل دخولك هنا"
+        },
+        "registerPage": {
+            "heroTitle": "انضم إلى الثورة",
+            "heroSubtitle": "ابدأ المزايدة على الدراجات النارية اليابانية المتميزة اليوم.",
+            "globalAccessTitle": "وصول عالمي",
+            "globalAccessDesc": "الشحن إلى أكثر من 50 دولة مع إنجاز إجراءات الجمارك.",
+            "professionalGradeTitle": "درجة احترافية",
+            "professionalGradeDesc": "الوصول إلى تقارير الفحص التفصيلية المخصصة عادةً للتجار.",
+            "createAccount": "إنشاء حسابك",
+            "alreadyHaveAccount": "لديك حساب بالفعل؟",
+            "signIn": "تسجيل الدخول",
+            "firstName": "الاسم الأول",
+            "lastName": "اسم العائلة",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "passwordHint": "يجب أن تكون 8 أحرف على الأقل",
+            "confirmPassword": "تأكيد كلمة المرور",
+            "agreeToTerms": "أوافق على الشروط",
+            "termsNotice": "بالنقر على إنشاء حساب، أوافق على",
+            "termsOfService": "شروط الخدمة",
+            "createAccountBtn": "إنشاء حساب"
+        },
+        "forgotPassword": {
+            "title": "إعادة تعيين كلمة المرور",
+            "description": "أدخل بريدك الإلكتروني وسنرسل لك رابطاً لإعادة تعيين كلمة المرور.",
+            "sendLink": "إرسال رابط إعادة التعيين",
+            "backToLogin": "العودة لتسجيل الدخول"
+        },
+        "verifyEmail": {
+            "title": "تحقق من بريدك الإلكتروني",
+            "description": "لقد أرسلنا رسالة تحقق إلى عنوانك. انقر على الرابط لتفعيل حسابك.",
+            "resend": "إعادة إرسال رسالة التحقق"
+        }
+    },
+    "dashboard": {
+        "title": "لوحة التحكم",
+        "welcome": "مرحباً",
+        "overview": "نظرة عامة",
+        "myBids": "مزايداتي",
+        "myOrders": "طلباتي",
+        "watchlist": "المفضلة",
+        "profile": "الملف الشخصي",
+        "subscription": "الاشتراك",
+        "deposit": "الإيداع",
+        "documents": "المستندات",
+        "settings": {
+            "title": "الإعدادات",
+            "profile": "إعدادات الملف الشخصي",
+            "notifications": "إعدادات الإشعارات",
+            "security": "الأمان"
+        },
+        "tracking": {
+            "title": "تتبع الشحنة",
+            "trackById": "تتبع بواسطة المعرف",
+            "id": "رقم التتبع",
+            "destination": "الوجهة",
+            "currentLocation": "الموقع الحالي",
+            "eta": "الوقت المقدر للوصول",
+            "steps": {
+                "processed": "تمت المعالجة",
+                "shipped": "تم الشحن",
+                "transit": "في الطريق",
+                "customs": "الجمارك",
+                "delivered": "تم التسليم"
+            }
+        },
+        "sns": "وسائل التواصل",
+        "kyc": {
+            "title": "التحقق من الهوية (KYC)",
+            "status": "الحالة",
+            "notSubmitted": "لم يتم التقديم",
+            "rejected": "مرفوض",
+            "verified": "تم التحقق",
+            "pendingReview": "قيد المراجعة",
+            "pleaseLogin": "يرجى تسجيل الدخول.",
+            "loading": "جاري التحميل...",
+            "successfullyUploaded": "تم تحميل {type} بنجاح",
+            "uploadFailed": "فشل التحميل",
+            "error": "خطأ: {message}",
+            "upload": "تحميل",
+            "reUpload": "إعادة التحميل",
+            "uploading": "جاري التحميل...",
+            "submitted": "تم الإرسال",
+            "documents": {
+                "COMPANY_REGISTRATION": "سجل الشركة (شهادة التسجيل)",
+                "PASSPORT": "وثيقة الهوية / هوية الممثل (جواز سفر/رخصة)",
+                "POA": "توكيل (إن وجد)",
+                "UTILITY_BILL": "إثبات العنوان (فاتورة مرافق)"
+            },
+            "submittedOn": "تم الإرسال في: {date}",
+            "docStatus": "الحالة: {status}",
+            "reason": "السبب: {reason}",
+            "required": "*",
+            "accountType": "نوع الحساب",
+            "individual": "فردي",
+            "corporate": "شركة",
+            "change": "تغيير"
+        },
+        "snsCampaign": "حملة SNS",
+        "activeBids": "المزايدات النشطة",
+        "wonAuctions": "المزادات الفائزة",
+        "pendingPayments": "المدفوعات المعلقة",
+        "inTransit": "قيد الشحن",
+        "activity": {
+            "placeBid": "المزايدة على {item}",
+            "myBids": "مزايداتي على {item}"
+        }
+    },
+    "admin": {
+        "title": "لوحة الإدارة",
+        "dashboard": "لوحة التحكم",
+        "users": "إدارة المستخدمين",
+        "kyc": "إدارة التحقق من الهوية",
+        "bikes": "إدارة الدراجات",
+        "auctions": "إدارة المزادات",
+        "orders": "إدارة الطلبات",
+        "containers": "إدارة الحاويات",
+        "content": "إدارة المحتوى",
+        "finance": "إدارة المالية",
+        "reports": "التقارير",
+        "notifications": "مركز الإشعارات",
+        "sns": "إدارة وسائل التواصل",
+        "settings": "الإعدادات",
+        "dashboardPage": {
+            "title": "لوحة التحكم",
+            "welcome": "مرحبًا بك في إدارة AWA",
+            "actions": {
+                "downloadReport": "تحميل التقرير",
+                "systemHealth": "فحص حالة النظام"
+            },
+            "quickAccess": {
+                "title": "الوصول السريع",
+                "bikeInventory": "مخزون الدراجات",
+                "auctions": "المزادات",
+                "users": "المستخدمين",
+                "orders": "الطلبات",
+                "content": "المحتوى (CMS)",
+                "finance": "المالية"
+            },
+            "metrics": {
+                "title": "المؤشرات الرئيسية",
+                "totalRevenue": "إجمالي الإيرادات (شهري)",
+                "activeAuctions": "المزادات النشطة",
+                "newUsers": "مستخدمون جدد (أسبوعي)",
+                "pendingKyc": "KYC معلق",
+                "actionReq": "مطلوب إجراء"
+            },
+            "recentActivity": {
+                "title": "نشاط النظام الأخير",
+                "newUserReg": "تسجيل مستخدم جديد",
+                "auctionEnded": "انتهاء المزاد",
+                "paymentReceived": "تم استلام الدفع",
+                "systemAlert": "تنبيه النظام",
+                "newBid": "مزايدة جديدة",
+                "userRegDesc": "تم تسجيل المستخدم ID:9928 من تايلاند.",
+                "auctionEndedDesc": "تم بيع القطعة #1234 مقابل 1,850,000 ين.",
+                "paymentReceivedDesc": "تم تأكيد دفع الطلب #1029.",
+                "backupDesc": "تم إكمال النسخ الاحتياطي بنجاح.",
+                "newBidDesc": "تم وضع مزايدة على القطعة #1235."
+            },
+            "pendingTasks": {
+                "title": "المهام المعلقة",
+                "reviewKyc": "مراجعة 3 طلبات KYC",
+                "confirmPayment": "تأكيد الدفع للطلب #1029",
+                "updateRates": "تحديث أسعار الصرف"
+            },
+            "systemStatus": {
+                "title": "حالة النظام",
+                "serverLoad": "حمل الخادم",
+                "database": "قاعدة البيانات",
+                "healthy": "صحي",
+                "apiLatency": "زمن انتقال API"
+            }
+        },
+        "sidebar": {
+            "backToDashboard": "العودة للوحة التحكم",
+            "menu": "القائمة",
+            "quickActions": "إجراءات سريعة",
+            "newBike": "+ دراجة جديدة",
+            "reviewKyc": "+ مراجعة KYC",
+            "backToSite": "العودة للموقع",
+            "signOut": "تسجيل الخروج",
+            "superAdmin": "المدير الأعلى"
+        },
+        "common": {
+            "loading": "جاري التحميل...",
+            "noData": "لا توجد بيانات",
+            "search": "بحث",
+            "filter": "تصفية",
+            "allTypes": "جميع الأنواع",
+            "allStatus": "جميع الحالات",
+            "view": "عرض",
+            "edit": "تعديل",
+            "delete": "حذف",
+            "save": "حفظ",
+            "cancel": "إلغاء",
+            "confirm": "تأكيد",
+            "approve": "موافقة",
+            "reject": "رفض",
+            "loadMore": "تحميل المزيد",
+            "exportCsv": "تصدير CSV",
+            "actions": "الإجراءات",
+            "status": "الحالة",
+            "date": "التاريخ",
+            "type": "النوع",
+            "amount": "المبلغ",
+            "user": "المستخدم",
+            "individual": "فردي",
+            "corporate": "شركة",
+            "active": "نشط",
+            "pending": "قيد الانتظار",
+            "verified": "موثق",
+            "suspended": "معلق"
+        },
+        "usersPage": {
+            "title": "إدارة المستخدمين",
+            "subtitle": "إدارة حسابات المستخدمين والأدوار وصلاحيات الوصول.",
+            "searchPlaceholder": "البحث عن مستخدمين...",
+            "pendingKyc": "KYC معلق",
+            "table": {
+                "user": "المستخدم",
+                "type": "النوع",
+                "status": "الحالة",
+                "country": "البلد",
+                "registered": "تاريخ التسجيل"
+            }
+        },
+        "userDetailPage": {
+            "backToUsers": "← العودة للمستخدمين",
+            "sendMessage": "إرسال رسالة",
+            "editUser": "تعديل المستخدم",
+            "stats": {
+                "totalBids": "إجمالي المزايدات",
+                "wonAuctions": "المزادات الفائزة",
+                "totalSpent": "إجمالي المصروفات",
+                "deposit": "الوديعة"
+            },
+            "recentActivity": "النشاط الأخير",
+            "orderHistory": "سجل الطلبات",
+            "viewAll": "عرض الكل",
+            "table": {
+                "orderId": "رقم الطلب",
+                "bike": "الدراجة",
+                "amount": "المبلغ",
+                "status": "الحالة",
+                "date": "التاريخ"
+            },
+            "profileInfo": "معلومات الملف الشخصي",
+            "profile": {
+                "email": "البريد الإلكتروني",
+                "phone": "الهاتف",
+                "country": "البلد",
+                "language": "اللغة",
+                "joined": "تاريخ الانضمام",
+                "lastLogin": "آخر تسجيل دخول"
+            },
+            "verification": "التحقق والخطة",
+            "kycStatus": "حالة التحقق",
+            "subscription": "الاشتراك",
+            "actions": {
+                "viewKycDocs": "عرض مستندات التحقق",
+                "adjustDeposit": "تعديل الوديعة",
+                "changeSubscription": "تغيير الاشتراك",
+                "suspendUser": "تعليق المستخدم"
+            },
+            "modals": {
+                "kycTitle": "مستندات التحقق",
+                "governmentId": "وثيقة الهوية (جواز السفر)",
+                "proofOfAddress": "إثبات العنوان (فاتورة المرافق)",
+                "imagePlaceholder": "مكان الصورة",
+                "reject": "رفض",
+                "approve": "موافقة",
+                "close": "إغلاق",
+                "messageTitle": "إرسال رسالة إلى",
+                "subject": "الموضوع",
+                "subjectPlaceholder": "بخصوص حسابك...",
+                "message": "الرسالة",
+                "messagePlaceholder": "اكتب رسالتك هنا...",
+                "cancel": "إلغاء",
+                "send": "إرسال الرسالة",
+                "editTitle": "تعديل تفاصيل المستخدم",
+                "fullName": "الاسم الكامل",
+                "emailAddress": "البريد الإلكتروني",
+                "status": "الحالة",
+                "saveChanges": "حفظ التغييرات",
+                "depositTitle": "تعديل الوديعة",
+                "currentDeposit": "الوديعة الحالية",
+                "newAmount": "المبلغ الجديد (¥)",
+                "updateDeposit": "تحديث الوديعة",
+                "subscriptionTitle": "تغيير خطة الاشتراك",
+                "currentPlan": "الخطة الحالية",
+                "newPlan": "الخطة الجديدة",
+                "updatePlan": "تحديث الخطة"
+            },
+            "success": "نجاح!",
+            "commandTriggered": "تم تنفيذ الأمر."
+        },
+        "kycPage": {
+            "title": "مراجعة التحقق من الهوية",
+            "subtitle": "مراجعة وثائق الهوية والتحقق من الأعمال.",
+            "pending": "قيد الانتظار",
+            "noPending": "لا توجد مراجعات معلقة.",
+            "applicationType": "نوع الطلب",
+            "documents": "المستندات",
+            "submittedDocs": "المستندات المقدمة",
+            "internalNotes": "ملاحظات داخلية (تُحفظ عند اتخاذ إجراء، تُرسل للمستخدم عند الرفض)",
+            "notesPlaceholder": "سيتم حفظ الملاحظات عند الموافقة/الرفض. في حالة الرفض، سيتم إرسال هذا المحتوى للمستخدم...",
+            "preview": "معاينة (غير مطبق)"
+        },
+        "ordersPage": {
+            "title": "إدارة الطلبات",
+            "searchPlaceholder": "البحث عن طلبات...",
+            "table": {
+                "orderId": "رقم الطلب",
+                "customer": "العميل"
+            },
+            "status": {
+                "paid": "مدفوع",
+                "pending": "معلق",
+                "shipped": "تم الشحن",
+                "processing": "قيد المعالجة",
+                "cancelled": "ملغي"
+            }
+        },
+        "orderDetailPage": {
+            "backToOrders": "← العودة للطلبات",
+            "createdOn": "تاريخ الإنشاء",
+            "printInvoice": "طباعة الفاتورة",
+            "updateStatus": "تحديث الحالة",
+            "timeline": {
+                "title": "الجدول الزمني للطلب",
+                "orderCreated": "تم إنشاء الطلب",
+                "paymentReceived": "تم استلام الدفع",
+                "processingStarted": "بدء المعالجة",
+                "exportDocuments": "مستندات التصدير",
+                "shipped": "تم الشحن",
+                "delivered": "تم التسليم",
+                "pending": "معلق"
+            },
+            "vehicle": {
+                "title": "معلومات المركبة",
+                "viewListing": "عرض القائمة"
+            },
+            "shipping": {
+                "title": "تفاصيل الشحن",
+                "method": "الطريقة",
+                "destination": "الوجهة",
+                "container": "الحاوية",
+                "estDelivery": "التسليم المتوقع",
+                "trackContainer": "تتبع الحاوية",
+                "updateShipping": "تحديث الشحن"
+            },
+            "buyer": {
+                "title": "معلومات المشتري",
+                "email": "البريد الإلكتروني",
+                "country": "البلد",
+                "viewProfile": "عرض الملف الشخصي"
+            },
+            "payment": {
+                "title": "ملخص الدفع",
+                "finalBid": "المزايدة النهائية",
+                "auctionFee": "رسوم المزاد",
+                "shipping": "الشحن",
+                "total": "الإجمالي"
+            },
+            "actions": {
+                "generateDocs": "إنشاء المستندات",
+                "sendUpdate": "إرسال تحديث للمشتري",
+                "cancelOrder": "إلغاء الطلب"
+            },
+            "invoicePreview": {
+                "title": "معاينة الفاتورة",
+                "description": "يرجى مراجعة المحتوى. إذا كان كل شيء صحيحًا، انقر على إرسال. سيتم أيضًا تنزيل نسخة لسجلات المسؤول.",
+                "cancel": "إلغاء",
+                "send": "إرسال وتنزيل"
+            },
+            "status": {
+                "pendingPayment": "في انتظار الدفع",
+                "paid": "مدفوع",
+                "processing": "قيد المعالجة",
+                "shipped": "تم الشحن",
+                "delivered": "تم التسليم",
+                "cancelled": "ملغي"
+            }
+        },
+        "snsPage": {
+            "title": "مراجعة مكافآت UGC",
+            "subtitle": "التحقق من منشورات المستخدمين ومنح المكافآت التلقائية.",
+            "submissionQueue": "قائمة الطلبات",
+            "reviewVerify": "المراجعة والتحقق",
+            "selectSubmission": "اختر طلباً",
+            "openPostLink": "فتح رابط المنشور",
+            "views": "المشاهدات",
+            "likes": "الإعجابات",
+            "comments": "التعليقات",
+            "shares": "المشاركات/إعادة النشر",
+            "calculatedReward": "المكافأة المحسوبة",
+            "table": {
+                "userId": "المستخدم / الرقم",
+                "platform": "المنصة",
+                "date": "التاريخ",
+                "status": "الحالة",
+                "result": "النتيجة"
+            },
+            "status": {
+                "pending": "قيد المراجعة",
+                "approved": "موافق عليه",
+                "rejected": "مرفوض"
+            }
+        },
+        "bikesPage": {
+            "title": "مخزون الدراجات",
+            "subtitle": "إدارة قوائم الدراجات والتفاصيل.",
+            "addNew": "إضافة دراجة جديدة",
+            "searchPlaceholder": "البحث عن دراجات...",
+            "table": {
+                "image": "الصورة",
+                "name": "الاسم",
+                "year": "السنة",
+                "mileage": "المسافة المقطوعة",
+                "price": "السعر"
+            }
+        },
+        "auctionsPage": {
+            "title": "مركز إدارة المزادات",
+            "subtitle": "مراقبة المزايدات المباشرة وإدارة جداول المزادات.",
+            "systemLive": "النظام يعمل",
+            "createNew": "إنشاء مزاد",
+            "searchPlaceholder": "البحث عن مزادات...",
+            "stats": {
+                "activeAuctions": "المزادات النشطة",
+                "todaysVolume": "حجم اليوم",
+                "totalBids24h": "إجمالي المزايدات (24 ساعة)",
+                "completionRate": "معدل الإتمام"
+            },
+            "tabs": {
+                "live": "مزادات مباشرة",
+                "upcoming": "مزادات قادمة",
+                "ended": "مزادات منتهية"
+            },
+            "table": {
+                "lot": "رقم اللوت",
+                "bike": "الدراجة",
+                "startTime": "وقت البدء",
+                "startPrice": "سعر البداية",
+                "currentBid": "المزايدة الحالية",
+                "endTime": "وقت الانتهاء",
+                "action": "إجراء"
+            },
+            "live": {
+                "topBidder": "أعلى مزايد",
+                "bids": "مزايدات",
+                "currentPrice": "السعر الحالي",
+                "left": "متبقي",
+                "pause": "إيقاف مؤقت",
+                "endNow": "إنهاء الآن"
+            },
+            "ended": {
+                "noHistory": "سيظهر سجل المزادات المنتهية هنا."
+            },
+            "status": {
+                "live": "مباشر",
+                "scheduled": "مجدول",
+                "ended": "انتهى"
+            }
+        },
+        "containersPage": {
+            "title": "إدارة الحاويات",
+            "subtitle": "إدارة جداول حاويات الشحن والخدمات اللوجستية.",
+            "createNew": "إنشاء جدول جديد",
+            "searchPlaceholder": "البحث عن حاويات...",
+            "table": {
+                "routeName": "المسار / الاسم",
+                "schedule": "الجدول (ETD/ETA)",
+                "loadStatus": "حالة التحميل",
+                "priceUnit": "السعر / الوحدة",
+                "status": "الحالة",
+                "actions": "الإجراءات"
+            },
+            "status": {
+                "open": "مفتوح",
+                "loading": "جاري التحميل",
+                "planning": "قيد التخطيط",
+                "inTransit": "في الطريق",
+                "arrived": "وصل",
+                "delivered": "تم التسليم"
+            },
+            "manageLoad": "إدارة التحميل →",
+            "modal": {
+                "title": "إنشاء جدول حاوية جديد",
+                "destination": "الوجهة",
+                "destinationPlaceholder": "مثال: بانكوك، تايلاند",
+                "containerType": "نوع الحاوية",
+                "type40ft": "40 قدم عالية السعة",
+                "type20ft": "20 قدم قياسي",
+                "pricePerUnit": "السعر لكل وحدة",
+                "etd": "ETD (المغادرة)",
+                "eta": "ETA (الوصول)",
+                "cancel": "إلغاء",
+                "create": "إنشاء الجدول"
+            }
+        },
+        "contentPage": {
+            "title": "إدارة المحتوى",
+            "subtitle": "إدارة محتوى الموقع والبانرات والإعلانات.",
+            "importContent": "استيراد المحتوى",
+            "createNew": "إنشاء جديد",
+            "stats": {
+                "published": "منشور",
+                "draft": "مسودة",
+                "scheduled": "مجدول",
+                "totalPages": "إجمالي الصفحات"
+            },
+            "filters": {
+                "all": "الكل",
+                "banners": "البانرات",
+                "news": "الأخبار",
+                "guides": "الأدلة",
+                "faq": "الأسئلة الشائعة",
+                "legal": "القانونية"
+            },
+            "searchPlaceholder": "البحث عن محتوى...",
+            "allStatus": "جميع الحالات",
+            "table": {
+                "title": "العنوان",
+                "type": "النوع",
+                "status": "الحالة",
+                "author": "المؤلف",
+                "lastUpdated": "آخر تحديث",
+                "actions": "الإجراءات"
+            },
+            "status": {
+                "published": "منشور",
+                "draft": "مسودة",
+                "scheduled": "مجدول"
+            },
+            "noContent": "لم يتم العثور على محتوى يطابق الفلاتر.",
+            "loadMore": "تحميل المزيد",
+            "edit": "تعديل",
+            "delete": "حذف",
+            "deleteConfirm": "هل أنت متأكد أنك تريد حذف هذا العنصر؟",
+            "modal": {
+                "title": "إنشاء محتوى جديد",
+                "contentType": "نوع المحتوى",
+                "types": {
+                    "news": "أخبار",
+                    "banner": "بانر",
+                    "guide": "دليل",
+                    "faq": "سؤال شائع"
+                },
+                "inputTitle": "العنوان",
+                "titlePlaceholderBanner": "مثال: بانر التخفيضات الصيفية",
+                "titlePlaceholderDefault": "مثال: إشعار الصيانة",
+                "newsBody": "نص الخبر",
+                "newsPlaceholder": "اكتب إعلانك هنا...",
+                "imageUrl": "رابط الصورة",
+                "previewArea": "منطقة المعاينة",
+                "question": "السؤال",
+                "questionPlaceholder": "مثال: كيف أدفع؟",
+                "answer": "الإجابة",
+                "answerPlaceholder": "أدخل الإجابة...",
+                "guideContent": "محتوى الدليل (يدعم Markdown)",
+                "guidePlaceholder": "# المقدمة...",
+                "cancel": "إلغاء",
+                "create": "إنشاء"
+            }
+        },
+        "financePage": {
+            "title": "المالية",
+            "subtitle": "عرض التقارير المالية وسجل المعاملات.",
+            "exportTransactions": "تصدير المعاملات",
+            "processPayouts": "معالجة المدفوعات",
+            "summary": {
+                "totalRevenue": "إجمالي الإيرادات",
+                "pendingPayments": "المدفوعات المعلقة",
+                "completedPayouts": "المدفوعات المكتملة",
+                "refunds": "المبالغ المستردة",
+                "thisMonth": "هذا الشهر",
+                "orders": "طلبات"
+            },
+            "transactions": {
+                "title": "المعاملات الأخيرة",
+                "searchPlaceholder": "البحث عن معاملات...",
+                "viewAll": "عرض الكل",
+                "table": {
+                    "transaction": "المعاملة",
+                    "reference": "المرجع",
+                    "amount": "المبلغ",
+                    "status": "الحالة",
+                    "date": "التاريخ"
+                },
+                "types": {
+                    "paymentReceived": "تم استلام الدفع",
+                    "subscription": "اشتراك",
+                    "deposit": "إيداع",
+                    "refund": "استرداد"
+                },
+                "status": {
+                    "completed": "مكتمل",
+                    "pending": "معلق"
+                }
+            },
+            "pendingPayments": {
+                "title": "المدفوعات المعلقة",
+                "pending": "معلق",
+                "days": "أيام",
+                "clickForDetails": "انقر للتفاصيل والإجراءات",
+                "sendRemindersAll": "إرسال تذكيرات للجميع"
+            },
+            "exchangeRates": {
+                "title": "أسعار الصرف",
+                "update": "تحديث",
+                "updating": "جاري التحديث...",
+                "lastUpdated": "آخر تحديث",
+                "clickToFetch": "انقر على تحديث لجلب الأسعار"
+            },
+            "quickActions": {
+                "generateInvoice": "إنشاء فاتورة",
+                "processRefund": "معالجة الاسترداد",
+                "bankReconciliation": "تسوية البنك"
+            },
+            "modal": {
+                "title": "تفاصيل الدفع",
+                "orderRef": "مرجع الطلب",
+                "customerProfile": "ملف العميل",
+                "name": "الاسم",
+                "kycStatus": "حالة KYC",
+                "email": "البريد الإلكتروني",
+                "phone": "الهاتف",
+                "address": "العنوان",
+                "orderBreakdown": "تفاصيل الطلب",
+                "itemDescription": "العنصر / الوصف",
+                "vin": "VIN",
+                "price": "السعر",
+                "totalAmountDue": "إجمالي المبلغ المستحق",
+                "communicationLog": "سجل الاتصالات",
+                "noLogs": "لا توجد سجلات اتصال.",
+                "sendEmail": "إرسال بريد إلكتروني",
+                "callCustomer": "الاتصال بالعميل",
+                "markAsPaid": "تحديد كمدفوع"
+            },
+            "kycStatus": {
+                "verified": "موثق",
+                "pending": "معلق",
+                "unverified": "غير موثق"
+            }
+        },
+        "reportsPage": {
+            "title": "التقارير",
+            "subtitle": "إنشاء وعرض تقارير التحليلات.",
+            "exportReport": "تصدير التقرير",
+            "period": {
+                "last6Months": "آخر 6 أشهر",
+                "last12Months": "آخر 12 شهرًا",
+                "thisYear": "هذا العام",
+                "allTime": "كل الأوقات"
+            },
+            "summary": {
+                "totalRevenue": "إجمالي الإيرادات",
+                "totalAuctions": "إجمالي المزادات",
+                "activeUsers": "المستخدمون النشطون",
+                "avgOrderValue": "متوسط قيمة الطلب",
+                "vsPrevPeriod": "مقارنة بالفترة السابقة"
+            },
+            "revenueTrend": {
+                "title": "اتجاه الإيرادات",
+                "subtitle": "الإيرادات بالملايين (ين)"
+            },
+            "salesByRegion": {
+                "title": "المبيعات حسب المنطقة",
+                "southeastAsia": "جنوب شرق آسيا",
+                "oceania": "أوقيانوسيا",
+                "middleEast": "الشرق الأوسط",
+                "africa": "أفريقيا",
+                "others": "أخرى"
+            },
+            "topBuyers": {
+                "title": "أفضل المشترين",
+                "viewAll": "عرض الكل",
+                "table": {
+                    "buyer": "المشتري",
+                    "orders": "الطلبات",
+                    "totalSpent": "إجمالي الإنفاق"
+                }
+            },
+            "topModels": {
+                "title": "الموديلات الأكثر مبيعًا",
+                "viewAll": "عرض الكل",
+                "table": {
+                    "model": "الموديل",
+                    "sold": "المباع",
+                    "revenue": "الإيرادات"
+                },
+                "units": "وحدة"
+            }
+        },
+        "notificationsPage": {
+            "title": "الإشعارات",
+            "subtitle": "إدارة إشعارات النظام والتنبيهات.",
+            "tabs": {
+                "overview": "نظرة عامة",
+                "automation": "قواعد التشغيل الآلي"
+            },
+            "stats": {
+                "sentToday": "أُرسل اليوم",
+                "pending": "معلق",
+                "failed": "فشل",
+                "openRate": "معدل الفتح"
+            },
+            "recentNotifications": {
+                "title": "الإشعارات الأخيرة",
+                "searchPlaceholder": "بحث...",
+                "table": {
+                    "notification": "الإشعار",
+                    "type": "النوع",
+                    "recipients": "المستلمون",
+                    "status": "الحالة",
+                    "actions": "الإجراءات"
+                },
+                "status": {
+                    "sent": "مُرسل",
+                    "pending": "معلق",
+                    "failed": "فشل"
+                },
+                "view": "عرض"
+            },
+            "quickActions": {
+                "title": "إجراءات سريعة",
+                "createBlast": "إنشاء رسالة جماعية جديدة",
+                "auctionReminder": "تذكير انتهاء المزاد",
+                "paymentReminder": "تذكير الدفع"
+            },
+            "automation": {
+                "categories": {
+                    "salesBidding": "المبيعات والمزايدة",
+                    "paymentLogistics": "الدفع واللوجستيات",
+                    "crmEngagement": "CRM والتفاعل"
+                },
+                "rules": {
+                    "bidStart": "بدء عنصر قائمة الانتظار",
+                    "bidStartDesc": "إشعار عند بدء مزاد عنصر مُراقب",
+                    "bidEnd": "تذكير قرب الانتهاء",
+                    "bidEndDesc": "قبل ساعة من انتهاء المزاد",
+                    "outbid": "تنبيه المزايدة المتفوقة",
+                    "outbidDesc": "عندما يتفوق مزايد آخر",
+                    "savedSearch": "نتيجة البحث المحفوظ",
+                    "savedSearchDesc": "دراجة جديدة تطابق المواصفات المحفوظة",
+                    "recommend": "التوصية الذكية",
+                    "recommendDesc": "توصية دراجات مماثلة للمستخدمين الذين خسروا المزاد",
+                    "invoiceAuto": "إنشاء الفاتورة تلقائيًا",
+                    "invoiceAutoDesc": "إرسال الفاتورة فور الفوز",
+                    "dunning3d": "تذكير الدفع (3 أيام)",
+                    "dunning3dDesc": "قبل 3 أيام من تاريخ الاستحقاق",
+                    "dunningDue": "الدفع مستحق اليوم",
+                    "dunningDueDesc": "في يوم الموعد النهائي",
+                    "cartRecovery": "سلة التسوق المتروكة",
+                    "cartRecoveryDesc": "تذكير المستخدمين الذين غادروا أثناء الدفع",
+                    "shipStatus": "تحديثات حالة الشحن",
+                    "shipStatusDesc": "إشعار تلقائي عند تغيير حالة BL/المستندات",
+                    "welcome": "سلسلة الترحيب",
+                    "welcomeDesc": "رسائل الإعداد للمسجلين الجدد",
+                    "reEngage": "إيقاظ المستخدم الخامل",
+                    "reEngageDesc": "لم يسجل الدخول لمدة 30 يومًا",
+                    "birthday": "عيد الميلاد/الذكرى السنوية",
+                    "birthdayDesc": "قسيمة خاصة في الذكرى السنوية"
+                }
+            }
+        },
+        "settingsPage": {
+            "title": "الإعدادات",
+            "subtitle": "تكوين إعدادات النظام والتفضيلات.",
+            "bdsConnection": {
+                "title": "إعدادات اتصال BDS",
+                "userId": "معرف المستخدم",
+                "password": "كلمة المرور",
+                "placeholder": "معرف تسجيل الدخول BDS",
+                "passwordPlaceholder": "أدخل كلمة المرور",
+                "change": "تغيير",
+                "save": "حفظ",
+                "saving": "جاري الحفظ...",
+                "cancel": "إلغاء",
+                "saved": "تم الحفظ!",
+                "loadError": "فشل في تحميل الإعدادات",
+                "inputError": "يرجى إدخال المعرف وكلمة المرور",
+                "saveError": "فشل في الحفظ"
+            },
+            "invoice": {
+                "title": "تكوين الفاتورة",
+                "simulatorTitle": "محاكي العملات المتعددة",
+                "simulatorDesc": "تكوين التكاليف وأسعار الصرف واستراتيجيات التسعير.",
+                "configure": "تكوين الفاتورة"
+            },
+            "import": {
+                "title": "إعدادات الاستيراد",
+                "testMode": "وضع الاختبار",
+                "testModeDesc": "استيراد 5 مركبات كحد أقصى (للتطوير)",
+                "enabled": "مفعل"
+            },
+            "invoiceSimulator": {
+                "title": "محاكي الفاتورة متعدد العملات",
+                "subtitle": "29 عنصر تكلفة وتحليل الربح المقارن بثلاث عملات",
+                "globalSettings": {
+                    "monthlyVolume": "الحجم الشهري",
+                    "avgPrice": "متوسط السعر (للضريبة)"
+                },
+                "baseCost": {
+                    "title": "1. إدخال التكلفة الأساسية (ين)",
+                    "label": "إدخال التكلفة",
+                    "categoryJapan": "اليابان",
+                    "categoryDest": "الوجهة",
+                    "categoryOther": "أخرى"
+                },
+                "pricing": {
+                    "title": "2. استراتيجية التسعير (مبلغ الفوترة)",
+                    "subtitle": "اختر علامة تبويب العملة وحدد مبلغ الفوترة لكل عنصر.",
+                    "liveRate": "السعر الحي",
+                    "safetyMargin": "هامش الأمان",
+                    "autoFill": "ملء تلقائي من التكاليف",
+                    "itemName": "اسم العنصر",
+                    "jpyCost": "التكلفة بالين",
+                    "billing": "الفوترة",
+                    "profit": "الربح"
+                },
+                "simulation": {
+                    "title": "محاكاة الربح (شهري)",
+                    "billing": "الفوترة",
+                    "totalMonth": "الإجمالي / الشهر",
+                    "perUnit": "/ وحدة",
+                    "best": "الأفضل",
+                    "taxRefund": "يشمل استرداد الضريبة المقدرة",
+                    "monthlyExport": "حجم التصدير الشهري"
+                },
+                "buttons": {
+                    "saving": "جاري الحفظ...",
+                    "saved": "تم الحفظ!",
+                    "saveAll": "حفظ جميع الإعدادات"
+                },
+                "costItems": {
+                    "awaCommission": "عمولة AWA (الربح)",
+                    "auctionFee": "رسوم المزاد",
+                    "inlandTransport": "النقل الداخلي",
+                    "yardStorage": "تخزين الساحة",
+                    "vanning": "تحميل الحاوية",
+                    "exportCustoms": "الجمارك للتصدير",
+                    "documentation": "المستندات",
+                    "deregistration": "إلغاء التسجيل",
+                    "packingFrame": "تغليف الإطار الخشبي",
+                    "packingCrate": "تغليف الصندوق الخشبي",
+                    "packingPallet": "تغليف المنصة",
+                    "packingCarton": "تغليف الكرتون",
+                    "oceanFreight": "الشحن البحري",
+                    "unloading": "تفريغ الميناء",
+                    "destInlandTransport": "النقل الداخلي للوجهة",
+                    "exchangeFee": "رسوم الدفع (الغاز/البنك)",
+                    "bankRemittance": "رسوم التحويل البنكي",
+                    "demurrage": "رسوم التأخير (التخزين)"
+                }
+            }
+        }
+    },
+    "services": {
+        "title": "الخدمات",
+        "inspection": {
+            "title": "خدمة الفحص",
+            "description": "فحص شامل من 150 نقطة بواسطة خبراء"
+        },
+        "shipping": {
+            "title": "الشحن الدولي",
+            "description": "توصيل آمن إلى أكثر من 120 دولة حول العالم"
+        },
+        "finance": {
+            "title": "التمويل",
+            "description": "خيارات دفع مرنة"
+        },
+        "support": {
+            "title": "دعم 24/7",
+            "description": "دعم عملاء متعدد اللغات"
+        }
+    },
+    "subscription": {
+        "title": "خطط الاشتراك",
+        "subtitle": "اختر الخطة التي تناسب احتياجاتك",
+        "monthly": "شهرياً",
+        "yearly": "سنوياً",
+        "mostPopular": "الأكثر شعبية",
+        "currentPlan": "الخطة الحالية",
+        "selectPlan": "اختر الخطة",
+        "shippingDiscount": "خصم الشحن",
+        "snsMultiplier": "مضاعف SNS",
+        "featureComparison": "مقارنة الميزات",
+        "packaging": "التغليف",
+        "free": {
+            "name": "مجاني",
+            "features": [
+                "الوصول للمزادات العامة",
+                "رسوم المعاملات القياسية",
+                "دعم البريد الإلكتروني",
+                "التغليف الأساسي"
+            ]
+        },
+        "starter": {
+            "name": "المبتدئ",
+            "features": [
+                "جميع ميزات المجاني",
+                "5% خصم شحن",
+                "تغليف انكماشي",
+                "دعم بريد إلكتروني ذو أولوية"
+            ]
+        },
+        "bronze": {
+            "name": "البرونزي",
+            "features": [
+                "جميع ميزات المبتدئ",
+                "8% خصم شحن",
+                "حماية من الصدأ",
+                "تقرير السوق الشهري"
+            ]
+        },
+        "silver": {
+            "name": "الفضي",
+            "features": [
+                "جميع ميزات البرونزي",
+                "12% خصم شحن",
+                "1.5x مكافآت SNS",
+                "حماية القطع",
+                "أولوية المزايدة"
+            ]
+        },
+        "gold": {
+            "name": "الذهبي",
+            "features": [
+                "جميع ميزات الفضي",
+                "20% خصم شحن",
+                "2.0x مكافآت SNS",
+                "حزمة الحماية الكاملة",
+                "خط دعم مخصص"
+            ]
+        },
+        "platinum": {
+            "name": "البلاتيني",
+            "features": [
+                "جميع ميزات الذهبي",
+                "30% خصم شحن",
+                "3.0x مكافآت SNS",
+                "مدير حساب مخصص",
+                "أولوية VIP لكل شيء",
+                "الوصول لـ API"
+            ]
+        }
+    },
+    "kyc": {
+        "title": "التحقق من الهوية",
+        "subtitle": "التحقق من الهوية مطلوب لبدء التداول",
+        "personal": {
+            "title": "المعلومات الشخصية",
+            "description": "أدخل معلوماتك الأساسية"
+        },
+        "business": {
+            "title": "معلومات العمل",
+            "description": "أدخل معلومات شركتك"
+        },
+        "corporate": {
+            "title": "التحقق المؤسسي",
+            "description": "تحميل وثائق التحقق المؤسسي"
+        },
+        "status": {
+            "pending": "قيد المراجعة",
+            "approved": "موافق عليه",
+            "rejected": "مرفوض",
+            "notSubmitted": "لم يُقدَّم"
+        }
+    },
+    "checkout": {
+        "title": "الدفع",
+        "summary": "ملخص الطلب",
+        "subtotal": "المجموع الفرعي",
+        "shipping": "الشحن",
+        "tax": "الضريبة",
+        "total": "المجموع",
+        "paymentMethod": "الدفع عبر التحويل البنكي",
+        "billingAddress": "عنوان الفواتير",
+        "shippingAddress": "عنوان الشحن",
+        "placeOrder": "تأكيد الاشتراك",
+        "bankTransferDescription": "يرجى التحويل إلى الحساب التالي لتفعيل اشتراكك.",
+        "bankDetails": "تفاصيل الحساب البنكي",
+        "bankName": "اسم البنك",
+        "branch": "الفرع",
+        "accountType": "نوع الحساب",
+        "ordinary": "عادي",
+        "accountNumber": "رقم الحساب",
+        "accountName": "اسم الحساب",
+        "transferTip": "يرجى تضمين بريدك الإلكتروني المسجل أو معرف المستخدم في ملاحظات التحويل للمعالجة السريعة.",
+        "confirmCheckbox": "أفهم تفاصيل التحويل البنكي وسأكمل الدفع. سيتم تفعيل اشتراكي خلال 1-2 يوم عمل بعد تأكيد الدفع.",
+        "termsNotice": "بالاشتراك، فإنك توافق على شروط الخدمة وسياسة الخصوصية. يمكنك الإلغاء في أي وقت من لوحة التحكم.",
+        "success": {
+            "title": "شكراً لطلبك",
+            "message": "تم استلام طلبك. يرجى التحويل إلى الحساب أدناه.",
+            "orderNumber": "رقم الطلب",
+            "viewOrder": "عرض الطلب"
+        }
+    },
+    "guide": {
+        "title": "الأدلة",
+        "howToBid": {
+            "title": "كيفية المزايدة",
+            "subtitle": "نظام المزايدة لدينا شفاف وسهل الاستخدام. تعلم كيفية تقديم العطاءات والفوز بمركبة أحلامك.",
+            "description": "تعلم كيفية المزايدة في مزاد AWA",
+            "types": {
+                "title": "أنواع المزايدة",
+                "live": {
+                    "title": "المزايدة المباشرة",
+                    "badge": "الوقت الفعلي",
+                    "description": "زايد في الوقت الفعلي أثناء حدوث المزاد. تجربة سريعة ومثيرة."
+                },
+                "proxy": {
+                    "title": "المزايدة بالوكالة",
+                    "badge": "تلقائي",
+                    "description": "حدد الحد الأقصى للسعر مسبقًا. سيقوم النظام بالمزايدة نيابة عنك بشكل تدريجي."
+                }
+            },
+            "rules": {
+                "title": "قواعد المزايدة",
+                "increments": {
+                    "label": "زيادات المزايدة:",
+                    "text": "تزداد العطاءات بمبالغ ثابتة (مثل 1,000 ين أو 10,000 ين) اعتمادًا على السعر الحالي."
+                },
+                "sniper": {
+                    "label": "حماية القناص:",
+                    "text": "إذا تم وضع عرض في آخر 5 دقائق، يتم تمديد وقت المزاد بمقدار 5 دقائق لمنع القنص في اللحظة الأخيرة."
+                },
+                "binding": {
+                    "label": "العطاءات الملزمة:",
+                    "text": "جميع العطاءات هي عقود ملزمة قانونًا. لا تقم بالمزايدة إذا لم تكن تنوي الشراء."
+                }
+            },
+            "tips": {
+                "title": "نصائح للنجاح",
+                "items": {
+                    "research": "ابحث عن القيمة السوقية للمركبة قبل المزايدة.",
+                    "budget": "حدد ميزانية صارمة تشمل الشحن وضرائب الاستيراد.",
+                    "watchlist": "استخدم قائمة المراقبة لتتبع عناصر متعددة.",
+                    "inspection": "تحقق من ورقة الفحص بدقة."
+                }
+            }
+        },
+        "howToBuy": {
+            "title": "كيفية الشراء",
+            "description": "من الشراء إلى التسليم"
+        },
+        "inspection": {
+            "title": "تقارير الفحص",
+            "subtitle": "الثقة هي أولويتنا. تخضع كل مركبة لفحص دقيق متعدد النقاط بواسطة ميكانيكيين معتمدين.",
+            "description": "فهم نظام التقييم لدينا",
+            "download": "تنزيل نموذج تقرير",
+            "grading": {
+                "title": "نظام التقييم",
+                "s": {
+                    "grade": "S",
+                    "desc": "جديد تمامًا. لم يتم قيادتها."
+                },
+                "5": {
+                    "grade": "5",
+                    "desc": "كالجديد. حالة ممتازة مع علامات استخدام ضئيلة."
+                },
+                "4": {
+                    "grade": "4",
+                    "desc": "جيد. صيانة جيدة مع خدوش تجميلية طفيفة."
+                },
+                "3": {
+                    "grade": "3",
+                    "desc": "متوسط. تآكل وتمزق قياسي بالنسبة لعمرها."
+                },
+                "r": {
+                    "grade": "R",
+                    "desc": "تم الإصلاح. لها تاريخ من الإصلاحات أو الحوادث."
+                }
+            },
+            "points": {
+                "title": "نقاط الفحص",
+                "engine": "أداء المحرك والصوت",
+                "frame": "استقامة الهيكل",
+                "electric": "الأنظمة الكهربائية",
+                "exterior": "حالة الهيكل الخارجي",
+                "suspension": "التعليق والمكابح"
+            }
+        },
+        "delivery": {
+            "title": "أوقات التوصيل",
+            "subtitle": "نشحن عالميًا لأكثر من 50 دولة. أوقات الشحن المقدرة من ميناء اليابان.",
+            "regions": {
+                "asia": {
+                    "name": "آسيا",
+                    "time": "2-3 أسابيع"
+                },
+                "oceania": {
+                    "name": "أوقيانوسيا",
+                    "time": "4-5 أسابيع"
+                },
+                "na": {
+                    "name": "أمريكا الشمالية",
+                    "time": "4-6 أسابيع"
+                },
+                "europe": {
+                    "name": "أوروبا",
+                    "time": "6-8 أسابيع"
+                },
+                "africa": {
+                    "name": "أفريقيا",
+                    "time": "6-8 أسابيع"
+                }
+            },
+            "note": "الأوقات تقديرية وتعتمد على جداول الشحن والتخليص الجمركي."
+        },
+        "payment": {
+            "title": "طرق الدفع",
+            "subtitle": "خيارات دفع آمنة ومرنة لراحتك.",
+            "methods": {
+                "bank": {
+                    "title": "التحويل البنكي (TT)",
+                    "desc": "تحويل مباشر لحسابنا البنكي في اليابان. الأفضل للمعاملات عالية القيمة."
+                },
+                "card": {
+                    "title": "بطاقة الائتمان",
+                    "desc": "نقبل Visa و Mastercard و Amex للودائع والمدفوعات الصغيرة."
+                },
+                "paypal": {
+                    "title": "PayPal",
+                    "desc": "طريقة دفع سريعة وآمنة للودائع."
+                }
+            }
+        },
+        "fees": {
+            "title": "الرسوم والضرائب",
+            "subtitle": "هيكل رسوم شفاف بدون تكاليف خفية.",
+            "list": {
+                "auction": {
+                    "title": "رسوم المزاد",
+                    "desc": "رسوم ثابتة لكل مركبة يتم شراؤها."
+                },
+                "shipping": {
+                    "title": "رسوم الشحن",
+                    "desc": "تختلف حسب الوجهة وحجم المركبة."
+                },
+                "insurance": {
+                    "title": "التأمين",
+                    "desc": "تأمين بحري اختياري للنقل."
+                },
+                "tax": {
+                    "title": "ضريبة الاستهلاك",
+                    "desc": "يتم تطبيق ضريبة 10% على الخدمات المحلية."
+                }
+            }
+        },
+        "legal": {
+            "refunds": {
+                "title": "سياسة الاسترداد",
+                "subtitle": "إرشادات واضحة حول الودائع والإلغاءات.",
+                "deposit": {
+                    "title": "استرداد الودائع",
+                    "desc": "الودائع قابلة للاسترداد بالكامل قبل المزايدة."
+                },
+                "cancellation": {
+                    "title": "الإلغاءات",
+                    "desc": "الإلغاء بعد الفوز بالمزايدة يترتب عليه رسوم جزائية."
+                }
+            }
+        },
+        "verification": {
+            "title": "التحقق من الحساب",
+            "subtitle": "أكمل إجراءات التعرف على العميل لفتح امتيازات المزايدة الكاملة.",
+            "steps": {
+                "id": "تحميل الهوية الحكومية"
+            }
+        },
+        "careers": {
+            "badge": "نحن نوظف!",
+            "title": "انضم إلى مستقبل المزادات العالمية",
+            "subtitle": "ساعدنا في بناء منصة المزادات الأكثر شفافية وكفاءة التي تربط اليابان بالعالم.",
+            "cta": "عرض الوظائف المتاحة",
+            "culture": {
+                "title": "لماذا AWA Auction؟",
+                "description": "نحن نؤمن بالشفافية والابتكار والاتصال العالمي. انضم إلى فريق متنوع شغوف بتبسيط التجارة عبر الحدود.",
+                "growth": {
+                    "title": "نمو سريع",
+                    "desc": "اعمل في بيئة ديناميكية حيث يكون تأثيرك مرئيًا كل يوم."
+                },
+                "global": {
+                    "title": "تأثير عالمي",
+                    "desc": "ربط المشترين والبائعين من أكثر من 50 دولة حول العالم."
+                },
+                "innovation": {
+                    "title": "الابتكار أولاً",
+                    "desc": "نستفيد من أحدث التقنيات لحل مشاكل الخدمات اللوجستية والتداول المعقدة."
+                }
+            },
+            "positions": {
+                "title": "الوظائف المتاحة",
+                "apply": "قدم الآن",
+                "jobs": [
+                    {
+                        "title": "مهندس Full Stack أول",
+                        "department": "هندسة",
+                        "location": "عن بعد (اليابان)",
+                        "type": "دوام كامل",
+                        "description": "نحن نبحث عن مهندس Full Stack ذو خبرة لقيادة تطوير منصتنا."
+                    },
+                    {
+                        "title": "مصمم منتج",
+                        "department": "تصميم",
+                        "location": "طوكيو، اليابان",
+                        "type": "دوام كامل",
+                        "description": "انضم إلى فريق التصميم لدينا لإنشاء تجارب مستخدم عالمية المستوى لمنصة المزادات العالمية الخاصة بنا."
+                    },
+                    {
+                        "title": "مدير نجاح العملاء",
+                        "department": "العمليات",
+                        "location": "عن بعد",
+                        "type": "دوام كامل",
+                        "description": "ساعد عملائنا على النجاح وتنمية أعمالهم باستخدام منصة AWA."
+                    }
+                ]
+            }
+        },
+        "security": {
+            "title": "الأمن والدعم",
+            "subtitle": "نحن نحمي بياناتك ومعاملاتك.",
+            "support": "دعم العملاء 24/7 عبر البريد الإلكتروني والدردشة."
+        },
+        "news": {
+            "title": "الأخبار والتحديثات",
+            "subtitle": "ابق على اطلاع بأحدث أخبار AWA.",
+            "loadMore": "تحميل المزيد",
+            "readMore": "اقرأ المزيد",
+            "categories": {
+                "announcement": "إعلان",
+                "feature": "تحديث الميزات",
+                "partnership": "شراكة",
+                "event": "حدث",
+                "milestone": "إنجاز"
+            },
+            "items": [
+                {
+                    "date": "5 ديسمبر 2025",
+                    "category": "announcement",
+                    "title": "منصة AWA تدعم الآن أكثر من 50 دولة",
+                    "excerpt": "يسعدنا الإعلان عن توسيع تغطية الشحن إلى وجهات جديدة في أمريكا الجنوبية وأفريقيا.",
+                    "featured": true
+                },
+                {
+                    "date": "28 نوفمبر 2025",
+                    "category": "feature",
+                    "title": "إطلاق محرك المزايدة في الوقت الفعلي 2.0",
+                    "excerpt": "نظام المزايدة الجديد لدينا يوفر تحديثات أسرع، وموثوقية محسنة، وتجربة مستخدم أكثر سلاسة.",
+                    "featured": false
+                },
+                {
+                    "date": "15 نوفمبر 2025",
+                    "category": "partnership",
+                    "title": "شراكة استراتيجية مع مركز فحص رائد",
+                    "excerpt": "لقد عقدنا شراكة مع أفضل منشأة لفحص الدراجات النارية في اليابان لتعزيز ضمان الجودة لدينا.",
+                    "featured": false
+                },
+                {
+                    "date": "30 أكتوبر 2025",
+                    "category": "event",
+                    "title": "AWA في معرض طوكيو للدراجات النارية 2025",
+                    "excerpt": "قم بزيارة جناحنا في معرض طوكيو للدراجات النارية. قابل الفريق وتعرف على خدماتنا.",
+                    "featured": false
+                },
+                {
+                    "date": "10 أكتوبر 2025",
+                    "category": "milestone",
+                    "title": "تم بيع 10,000 دراجة نارية!",
+                    "excerpt": "لقد وصلنا إلى إنجاز كبير. شكراً لجميع المشترين والشركاء في جميع أنحاء العالم.",
+                    "featured": false
+                }
+            ],
+            "newsletter": {
+                "title": "اشترك في النشرة الإخبارية",
+                "subtitle": "احصل على تنبيهات المزادات، والوافدين الجدد، والعروض الحصرية في بريدك الوارد.",
+                "placeholder": "أدخل بريدك الإلكتروني",
+                "subscribe": "اشترك"
+            }
+        },
+        "export": {
+            "title": "إجراءات التصدير",
+            "description": "المستندات والإجراءات المطلوبة للتصدير"
+        },
+        "shipping": {
+            "title": "دليل الشحن الدولي",
+            "methods": {
+                "roro": {
+                    "title": "شحن RoRo",
+                    "desc": "الدحرجة (Roll-on/Roll-off). الطريقة الأكثر شيوعًا وفعالية من حيث التكلفة للمركبات القابلة للقيادة.",
+                    "benefits": {
+                        "0": "معالجة سريعة",
+                        "1": "تكلفتها أقل",
+                        "2": "يجب أن تكون المركبة تعمل"
+                    }
+                },
+                "container": {
+                    "title": "شحن الحاويات",
+                    "desc": "شحن آمن في حاويات 20 قدمًا أو 40 قدمًا. جيد للدراجات المتعددة أو العناصر عالية القيمة.",
+                    "benefits": {
+                        "0": "أمان أعلى",
+                        "1": "يمكن شحن قطع الغيار",
+                        "2": "تحميل مرن"
+                    }
+                },
+                "air": {
+                    "title": "الشحن الجوي",
+                    "desc": "الخيار الأسرع للتسليم العاجل. الأكثر تكلفة.",
+                    "benefits": {
+                        "0": "أسرع تسليم",
+                        "1": "تكلفة عالية",
+                        "2": "جيد للنماذج الأولية"
+                    }
+                }
+            },
+            "rates": {
+                "title": "أسعار الشحن المقدرة (دراجات نارية)",
+                "headers": {
+                    "region": "المنطقة",
+                    "port": "مناء الوصول",
+                    "time": "الوقت المقدر",
+                    "cost": "التكلفة المقدرة (دولار)"
+                },
+                "rows": {
+                    "asia": {
+                        "region": "آسيا",
+                        "port": "مانيلا، الفلبين",
+                        "time": "10-15 يوم",
+                        "cost": "$300 - $500"
+                    },
+                    "oceania": {
+                        "region": "أوقيانوسيا",
+                        "port": "سيدني، أستراليا",
+                        "time": "20-25 يوم",
+                        "cost": "$600 - $800"
+                    },
+                    "na": {
+                        "region": "أمريكا الشمالية",
+                        "port": "لونغ بيتش، الولايات المتحدة",
+                        "time": "25-30 يوم",
+                        "cost": "$800 - $1,200"
+                    },
+                    "europe": {
+                        "region": "أوروبا",
+                        "port": "روتردام، هولندا",
+                        "time": "35-45 يوم",
+                        "cost": "$900 - $1,300"
+                    },
+                    "africa": {
+                        "region": "أفريقيا",
+                        "port": "مومباسا، كينيا",
+                        "time": "30-40 يوم",
+                        "cost": "$700 - $1,000"
+                    }
+                },
+                "disclaimer": "* الأسعار تقديرية وتخضع لرسوم الوقود الإضافية والتغيرات الموسمية."
+            }
+        }
+    },
+    "help": {
+        "title": "مركز المساعدة",
+        "gettingStarted": "البدء",
+        "faq": "الأسئلة الشائعة",
+        "howToBid": "كيفية المزايدة",
+        "shippingGuide": "دليل الشحن",
+        "contact": "اتصل بنا"
+    },
+    "faq": {
+        "q1": "كيف يمكنني التسجيل للحصول على حساب؟",
+        "a1": "انقر على زر 'تسجيل' في الزاوية العلوية اليمنى. ستحتاج إلى تقديم بريدك الإلكتروني وإنشاء كلمة مرور والتحقق من عنوان بريدك الإلكتروني. للوصول الكامل، ستحتاج أيضاً إلى إكمال التحقق من الهوية.",
+        "q2": "ما هي طرق الدفع المقبولة؟",
+        "a2": "نقبل بطاقات الائتمان الرئيسية (Visa، Mastercard، Amex)، والتحويلات البنكية، وPayPal للإيداعات.",
+        "q3": "هل يمكنني فحص المركبات قبل المزايدة؟",
+        "a3": "نعم، نقدم تقارير فحص مفصلة وصور عالية الدقة لكل مركبة. يمكنك أيضاً طلب فحص بالفيديو أو توظيف مفتش خارجي من خلال شركائنا.",
+        "q4": "كم يستغرق الشحن؟",
+        "a4": "تختلف أوقات الشحن حسب الوجهة. عادةً ما يستغرق 2-4 أسابيع لآسيا، و4-6 أسابيع لأوقيانوسيا وأمريكا الشمالية، و6-8 أسابيع لأوروبا وأفريقيا.",
+        "q5": "ماذا لو كانت المركبة مختلفة عن الوصف؟",
+        "a5": "لدينا سياسة صارمة لحل النزاعات. إذا اختلفت المركبة بشكل كبير عن تقرير الفحص، يرجى الاتصال بالدعم خلال 48 ساعة من استلام المركبة."
+    },
+    "contact": {
+        "title": "اتصل بنا",
+        "subtitle": "لديك أسئلة أو ملاحظات؟ يسعدنا سماعك.",
+        "form": {
+            "name": "الاسم",
+            "email": "البريد الإلكتروني",
+            "subject": "الموضوع",
+            "message": "الرسالة",
+            "send": "إرسال الرسالة"
+        },
+        "info": {
+            "addressLabel": "العنوان",
+            "address": "شركة AWA القابضة المحدودة<br>1-2-3 ميناتو ميراي، نيشي-كو<br>يوكوهاما، كاناغاوا 220-0012<br>اليابان",
+            "phoneLabel": "الهاتف",
+            "phone": "+81 45-123-4567",
+            "email": "support@awa-auction.com",
+            "hours": "ساعات العمل: الإثنين-الجمعة 9:00 صباحاً - 6:00 مساءً بتوقيت اليابان"
+        }
+    },
+    "about": {
+        "title": "عن AWA",
+        "mission": {
+            "title": "مهمتنا",
+            "description": "ربط عشاق الدراجات النارية حول العالم بدراجات اليابان المتميزة"
+        },
+        "vision": {
+            "title": "رؤيتنا",
+            "description": "أن نصبح الرائد العالمي في تجارة الدراجات النارية الدولية"
+        },
+        "values": {
+            "title": "قيمنا",
+            "transparency": "الشفافية",
+            "quality": "الجودة",
+            "trust": "الثقة",
+            "innovation": "الابتكار"
+        }
+    },
+    "notifications": {
+        "title": "الإشعارات",
+        "markAllRead": "تعيين الكل كمقروء",
+        "noNotifications": "لا توجد إشعارات",
+        "types": {
+            "bid": "إشعار مزايدة",
+            "auction": "إشعار مزاد",
+            "order": "إشعار طلب",
+            "system": "إشعار نظام"
+        }
+    },
+    "exportRegulations": {
+        "title": "لوائح التصدير",
+        "subtitle": "إرشادات التصدير الدولية",
+        "overview": {
+            "title": "نظرة عامة",
+            "content": "يخضع تصدير الدراجات النارية من اليابان لمختلف اللوائح والمتطلبات. تتعامل AWA مع جميع وثائق التصدير نيابة عن المشترين، مع ضمان الامتثال لكل من قوانين التصدير اليابانية ولوائح الاستيراد في بلد الوجهة.",
+            "note": "ملاحظة: رسوم الاستيراد والضرائب هي مسؤولية المشتري وتختلف حسب بلد الوجهة."
+        },
+        "japan": {
+            "title": "متطلبات التصدير اليابانية",
+            "items": {
+                "certificate": {
+                    "title": "شهادة التصدير",
+                    "desc": "مطلوبة لجميع المركبات المصدرة من اليابان. تحصل AWA على هذا نيابة عنك."
+                },
+                "deregistration": {
+                    "title": "إلغاء التسجيل",
+                    "desc": "يجب إلغاء تسجيل المركبة من الطرق اليابانية قبل التصدير."
+                },
+                "customs": {
+                    "title": "الإقرار الجمركي",
+                    "desc": "توثيق كامل لمواصفات المركبة وقيمتها للتخليص الجمركي."
+                },
+                "preparation": {
+                    "title": "الوقود والبطارية",
+                    "desc": "يجب تفريغ خزان الوقود وفصل البطارية للشحن البحري."
+                }
+            }
+        },
+        "documents": {
+            "title": "الوثائق المقدمة من AWA",
+            "items": [
+                "شهادة التصدير (Export Certificate)",
+                "بوليصة الشحن (B/L)",
+                "فاتورة تجارية",
+                "قائمة التعبئة",
+                "تقرير الفحص",
+                "المفاتيح والوثائق الأصلية"
+            ]
+        },
+        "countries": {
+            "title": "متطلبات الاستيراد الخاصة بالبلد",
+            "uae": {
+                "title": "الإمارات العربية المتحدة",
+                "items": [
+                    "تفضل المركبات التي تقل أعمارها عن 5 سنوات",
+                    "قد تكون شهادة الامتثال الخليجية مطلوبة",
+                    "رسوم الاستيراد: 5%"
+                ]
+            },
+            "uk": {
+                "title": "المملكة المتحدة",
+                "items": [
+                    "تسجيل DVLA مطلوب بعد الاستيراد",
+                    "اختبار MOT في غضون 14 يومًا من التسجيل",
+                    "رسوم الاستيراد: 6% + 20% ضريبة القيمة المضافة"
+                ]
+            },
+            "usa": {
+                "title": "الولايات المتحدة",
+                "items": [
+                    "يجب أن يكون عمرها 25+ سنة أو متوافقة مع EPA/DOT",
+                    "نموذج CBP 7501 مطلوب",
+                    "رسوم الاستيراد: 2.4%"
+                ]
+            },
+            "australia": {
+                "title": "أستراليا",
+                "items": [
+                    "موافقة SEVS أو RAWS مطلوبة للطرازات الأحدث",
+                    "فحص الحجر الصحي إلزامي",
+                    "رسوم الاستيراد: 5% + 10% ضريبة السلع والخدمات"
+                ]
+            }
+        },
+        "prohibited": {
+            "title": "المواد المحظورة والمقيدة",
+            "desc": "لا يمكن تضمين العناصر التالية في الشحنات:",
+            "items": [
+                "الوقود أو السوائل القابلة للاشتعال",
+                "أنظمة العادم المعدلة (بعض البلدان)",
+                "تعديلات وحدة التحكم الإلكترونية (ECU) (بعض البلدان)",
+                "الأسلحة أو الأشياء الحادة المخزنة في المركبة"
+            ]
+        },
+        "contact": {
+            "title": "تحتاج مساعدة في التصدير؟",
+            "desc": "أخصائيو التصدير لدينا هنا لمساعدتك.",
+            "button": "تواصل مع الدعم"
+        }
+    },
+    "cookies": {
+        "title": "سياسة ملفات تعريف الارتباط",
+        "lastUpdated": "آخر تحديث: ديسمبر 2024",
+        "intro": {
+            "title": "ما هي ملفات تعريف الارتباط؟",
+            "content": "ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم تخزينها على جهازك عند زيارة موقعنا. تساعدنا في تزويدك بتجربة أفضل من خلال تذكر تفضيلاتك وفهم كيفية استخدامك لمنصتنا."
+        },
+        "types": {
+            "title": "أنواع ملفات تعريف الارتباط التي نستخدمها",
+            "essential": {
+                "title": "ملفات تعريف الارتباط الأساسية",
+                "desc": "مطلوبة لكي يعمل الموقع بشكل صحيح. لا يمكن تعطيلها.",
+                "items": {
+                    "session": "إدارة الجلسة",
+                    "security": "رموز الأمان",
+                    "login": "حالة تسجيل الدخول"
+                }
+            },
+            "analytics": {
+                "title": "ملفات تعريف الارتباط التحليلية",
+                "desc": "تساعدنا في فهم كيفية تفاعل الزوار مع موقعنا.",
+                "items": {
+                    "views": "مشاهدات الصفحة والتنقل",
+                    "time": "الوقت المقضي في الصفحات",
+                    "error": "تتبع الأخطاء"
+                }
+            },
+            "functional": {
+                "title": "ملفات تعريف الارتباط الوظيفية",
+                "desc": "تتذكر تفضيلاتك وإعداداتك.",
+                "items": {
+                    "language": "تفضيل اللغة",
+                    "currency": "إعدادات العملة",
+                    "display": "تفضيلات العرض"
+                }
+            },
+            "marketing": {
+                "title": "ملفات تعريف الارتباط التسويقية",
+                "desc": "تستخدم لتقديم إعلانات ذات صلة وتتبع فعالية الحملات.",
+                "items": {
+                    "targeting": "استهداف الإعلانات",
+                    "remarketing": "إعادة التسويق",
+                    "social": "تكامل وسائل التواصل الاجتماعي"
+                }
+            }
+        },
+        "list": {
+            "title": "ملفات تعريف الارتباط التي نستخدمها",
+            "headers": {
+                "name": "اسم ملف تعريف الارتباط",
+                "purpose": "الغرض",
+                "duration": "المدة"
+            },
+            "items": {
+                "session": {
+                    "desc": "إدارة الجلسة",
+                    "duration": "جلسة"
+                },
+                "auth": {
+                    "desc": "رمز المصادقة",
+                    "duration": "7 أيام"
+                },
+                "lang": {
+                    "desc": "تفضيل اللغة",
+                    "duration": "سنة واحدة"
+                },
+                "currency": {
+                    "desc": "تفضيل العملة",
+                    "duration": "سنة واحدة"
+                },
+                "ga": {
+                    "desc": "تحليلات جوجل",
+                    "duration": "سنتان"
+                }
+            }
+        },
+        "managing": {
+            "title": "إدارة ملفات تعريف الارتباط",
+            "content": "يمكنك التحكم في ملفات تعريف الارتباط وإدارتها بطرق مختلفة. يرجى ملاحظة أن إزالة ملفات تعريف الارتباط أو حظرها قد يؤثر على تجربة المستخدم الخاصة بك وقد لا تتوفر بعض الوظائف.",
+            "browser": "إعدادات المتصفح: تسمح لك معظم المتصفحات برفض أو قبول ملفات تعريف الارتباط وحذف ملفات تعريف الارتباط الموجودة. تحقق من قسم المساعدة في متصفحك للحصول على التعليمات."
+        },
+        "thirdParty": {
+            "title": "ملفات تعريف الارتباط للجهات الخارجية",
+            "content": "قد نستخدم خدمات جهات خارجية تضع أيضًا ملفات تعريف ارتباط على جهازك:",
+            "items": {
+                "ga": "تحليلات جوجل - تحليلات الموقع",
+                "stripe": "Stripe - معالجة المدفوعات",
+                "intercom": "Intercom - دردشة دعم العملاء"
+            }
+        },
+        "contact": {
+            "title": "أسئلة حول ملفات تعريف الارتباط؟",
+            "content": "اتصل بفريق الخصوصية لدينا لمزيد من المعلومات.",
+            "button": "اتصل بنا"
+        }
+    },
+    "privacy": {
+        "title": "سياسة الخصوصية",
+        "lastUpdated": "آخر تحديث: 1 ديسمبر 2025",
+        "sections": {
+            "collection": {
+                "title": "1. المعلومات التي نجمعها",
+                "content": "نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك:",
+                "items": {
+                    "personal": "تحديد الهوية الشخصية (الاسم، العنوان، وثائق الهوية لـ KYC)",
+                    "contact": "معلومات الاتصال (البريد الإلكتروني، رقم الهاتف)",
+                    "payment": "معلومات الدفع (عنوان الفواتير، سجل المعاملات)",
+                    "activity": "نشاط الحساب (المزايدات، المشتريات، قائمة المراقبة)"
+                }
+            },
+            "usage": {
+                "title": "2. كيف نستخدم معلوماتك",
+                "items": {
+                    "process": "معالجة مزايداتك ومعاملاتك",
+                    "verify": "التحقق من هويتك (الامتثال لـ KYC)",
+                    "communicate": "التواصل حول طلباتك وحسابك",
+                    "promotional": "إرسال مواد ترويجية (بموافقتك)",
+                    "improve": "تحسين خدماتنا ومنع الاحتيال"
+                }
+            },
+            "sharing": {
+                "title": "3. مشاركة المعلومات",
+                "content": "نحن لا نبيع معلوماتك الشخصية. قد نشارك البيانات مع:",
+                "items": {
+                    "logistics": "شركاء الشحن والخدمات اللوجستية (لتسليم مشترياتك)",
+                    "payment": "معالجو الدفع (لإكمال المعاملات)",
+                    "legal": "السلطات القانونية (عند الاقتضاء بموجب القانون)"
+                }
+            },
+            "security": {
+                "title": "4. أمان البيانات",
+                "content": "نطبق تدابير أمنية متوافقة مع معايير الصناعة بما في ذلك التشفير، والخوادم الآمنة، وتدقيقات الأمان المنتظمة. ومع ذلك، لا توجد وسيلة نقل عبر الإنترنت آمنة بنسبة 100٪."
+            },
+            "cookies": {
+                "title": "5. ملفات تعريف الارتباط",
+                "content": "نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك، وتحليل حركة المرور في الموقع، وتخصيص المحتوى. يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات المتصفح الخاص بك."
+            },
+            "rights": {
+                "title": "6. حقوقك",
+                "content": "اعتمادًا على موقعك، قد يكون لديك الحق في:",
+                "items": {
+                    "access": "الوصول إلى بياناتك الشخصية",
+                    "correction": "طلب تصحيح البيانات غير الدقيقة",
+                    "deletion": "طلب حذف بياناتك",
+                    "optout": "إلغاء الاشتراك في الاتصالات التسويقية"
+                }
+            },
+            "contact": {
+                "title": "7. اتصل بنا",
+                "content": "للاستفسارات المتعلقة بالخصوصية، يرجى الاتصال بـ:",
+                "emailLabel": "البريد الإلكتروني:",
+                "addressLabel": "العنوان:",
+                "address": "1-2-3 ميناتو ميراي، نيشي-كو، يوكوهاما 220-0012، اليابان"
+            }
+        }
+    },
+    "terms": {
+        "title": "شروط الخدمة",
+        "lastUpdated": "آخر تحديث: 1 ديسمبر 2025",
+        "sections": {
+            "acceptance": {
+                "title": "1. قبول الشروط",
+                "content": "من خلال الوصول إلى منصة AWA للمزادات (\"الخدمة\") أو استخدامها، توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، فلا يجوز لك استخدام خدمتنا."
+            },
+            "registration": {
+                "title": "2. تسجيل المستخدم",
+                "content": "للمشاركة في المزادات، يجب عليك إنشاء حساب وإكمال عملية التحقق من الهوية (KYC). توافق على تقديم معلومات دقيقة والحفاظ على أمان بيانات اعتماد حسابك.",
+                "rules": {
+                    "age": "يجب أن يكون عمرك 18 عامًا على الأقل لاستخدام خدمتنا",
+                    "responsibility": "أنت مسؤول عن جميع الأنشطة التي تتم بموجب حسابك",
+                    "security": "يجب عليك إخطارنا فورًا بأي وصول غير مصرح به"
+                }
+            },
+            "auction": {
+                "title": "3. قواعد المزاد",
+                "content": "جميع المزايدات التي يتم وضعها على منصتنا ملزمة. بوضع مزايدة، توافق على شراء العنصر بسعر مزايدتك إذا كنت الفائز.",
+                "rules": {
+                    "retraction": "لا يمكن سحب المزايدات بمجرد وضعها",
+                    "winning": "صاحب أعلى مزايدة عند إغلاق المزاد يفوز",
+                    "fees": "تطبق عمولة المشتري (5٪) على جميع المزايدات الفائزة",
+                    "payment": "يجب إكمال الدفع في غضون 3 أيام عمل"
+                }
+            },
+            "payment": {
+                "title": "4. شروط الدفع",
+                "content": "تشمل طرق الدفع المقبولة التحويل البنكي وبطاقات الائتمان. يجب استلام المبلغ بالكامل قبل بدء الشحن. قد يؤدي عدم الدفع إلى تعليق الحساب."
+            },
+            "shipping": {
+                "title": "5. الشحن والتسليم",
+                "content": "تتولى AWA ترتيب الشحن الدولي نيابة عن المشترين. أسعار الشحن تقديرية وقد تختلف التكاليف النهائية. تنتقل مخاطر الخسارة للمشتري عند المغادرة من اليابان."
+            },
+            "liability": {
+                "title": "6. حدود المسؤولية",
+                "content": "تقدم AWA تقارير الفحص بحسن نية ولكنها لا تضمن دقة جميع المعلومات. يتم تشجيع المشترين على إجراء العناية الواجبة الخاصة بهم. مسؤوليتنا محدودة بمبلغ الرسوم المدفوعة لـ AWA."
+            },
+            "governing": {
+                "title": "7. القانون الحاكم",
+                "content": "تخضع هذه الشروط لقوانين اليابان. يتم حل أي نزاعات في محاكم يوكوهاما، محافظة كاناغاوا."
+            },
+            "contact": {
+                "title": "8. اتصل بنا",
+                "content": "للأسئلة حول هذه الشروط، يرجى الاتصال بنا على:",
+                "emailLabel": "البريد الإلكتروني:",
+                "addressLabel": "العنوان:",
+                "address": "1-2-3 ميناتو ميراي، نيشي-كو، يوكوهاما 220-0012، اليابان"
+            }
+        }
+    },
+    "errors": {
+        "notFound": {
+            "title": "الصفحة غير موجودة",
+            "description": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+            "backHome": "العودة للرئيسية"
+        },
+        "serverError": {
+            "title": "خطأ في الخادم",
+            "description": "عذراً، حدث خطأ من جانبنا.",
+            "tryAgain": "حاول مرة أخرى"
+        }
+    },
+    "languageSwitcher": {
+        "title": "اللغة",
+        "ja": "日本語",
+        "en": "English",
+        "ar": "العربية"
+    }
+}
