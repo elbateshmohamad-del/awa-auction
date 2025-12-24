@@ -5,9 +5,9 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { getAllBikes } from '@/lib/bike-database';
 import BikeImportButton from '@/components/admin/BikeImportButton';
 
-export default function AdminBikesPage() {
+export default async function AdminBikesPage() {
     // Fetch directly on server
-    const bikes = getAllBikes();
+    const bikes = await getAllBikes();
 
     return (
         <div className="space-y-6">
