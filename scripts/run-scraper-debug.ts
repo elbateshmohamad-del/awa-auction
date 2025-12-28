@@ -20,7 +20,7 @@ async function run() {
                     videoUrls: dbBike?.videoUrls,
                     imagesCount: dbBike?.images?.length || 0,
                     grade: dbBike?.overallGrade,
-                    model: dbBike?.model
+                    model: dbBike?.name
                 });
             }
         }
