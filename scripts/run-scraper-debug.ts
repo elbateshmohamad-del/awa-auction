@@ -18,7 +18,7 @@ async function run() {
                 });
                 console.log(`Bike ${bike.id}:`, {
                     videoUrls: dbBike?.videoUrls,
-                    imagesCount: dbBike?.images.length,
+                    imagesCount: dbBike?.images?.length || 0,
                     grade: dbBike?.overallGrade,
                     model: dbBike?.model
                 });
