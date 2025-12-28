@@ -1,4 +1,90 @@
 {
+    "meta": {
+        "home": "Home",
+        "admin": "Admin Panel",
+        "adminLogin": "Admin Login",
+        "auctions": "Auctions",
+        "auctionCalendar": "Auction Calendar",
+        "bikeCatalog": "Bike Catalog",
+        "bikeDetail": "Bike Details",
+        "about": "About Us",
+        "contact": "Contact",
+        "blog": "Blog",
+        "careers": "Careers",
+        "cookies": "Cookie Policy",
+        "fees": "Fees",
+        "financing": "Financing",
+        "help": "Help Center",
+        "helpAuctionTypes": "Auction Types",
+        "helpDeliveryTimes": "Delivery Times",
+        "helpFaq": "FAQ",
+        "helpGettingStarted": "Getting Started",
+        "helpHowToBid": "How to Bid",
+        "helpInspectionReports": "Inspection Reports",
+        "helpPaymentMethods": "Payment Methods",
+        "helpSecurity": "Security",
+        "helpShippingGuide": "Shipping Guide",
+        "helpVerification": "Verification",
+        "helpVideoGuides": "Video Guides",
+        "legal": "Legal",
+        "legalCookies": "Cookie Policy",
+        "legalExport": "Export Regulations",
+        "legalRefunds": "Refund Policy",
+        "news": "News",
+        "partners": "Partners",
+        "privacy": "Privacy Policy",
+        "shipping": "Shipping",
+        "shippingSchedule": "Shipping Schedule",
+        "successStories": "Success Stories",
+        "terms": "Terms of Service",
+        "login": "Login",
+        "register": "Register",
+        "forgotPassword": "Forgot Password",
+        "verifyEmail": "Verify Email",
+        "dashboard": "Dashboard",
+        "dashboardBids": "My Bids",
+        "dashboardDeposit": "Deposit",
+        "dashboardDocuments": "Documents",
+        "dashboardKyc": "KYC Verification",
+        "dashboardOrders": "My Orders",
+        "dashboardProfile": "Profile",
+        "dashboardSettings": "Settings",
+        "dashboardSns": "Social Media",
+        "dashboardSubscription": "Subscription",
+        "dashboardTracking": "Shipment Tracking",
+        "dashboardWatchlist": "Watchlist",
+        "checkout": "Checkout",
+        "checkoutSuccess": "Order Complete",
+        "catalog": "Catalog",
+        "market": "Market Prices",
+        "reservation": "Reservations",
+        "snsCampaign": "SNS Campaign",
+        "subscription": "Subscription",
+        "kycSubmit": "KYC Submission",
+        "guideExport": "Export Guide",
+        "guideHowToBid": "Bidding Guide",
+        "guideHowToBuy": "Buying Guide",
+        "guideShipping": "Shipping Guide",
+        "adminAuctions": "Auction Management",
+        "adminAuctionNew": "Create Auction",
+        "adminBikes": "Bike Management",
+        "adminBikeNew": "Add Bike",
+        "adminBikeEdit": "Edit Bike",
+        "adminContainers": "Container Management",
+        "adminContent": "Content Management",
+        "adminFinance": "Finance",
+        "adminKyc": "KYC Management",
+        "adminNotifications": "Notifications",
+        "adminOrders": "Order Management",
+        "adminPrices": "Price Management",
+        "adminReports": "Reports",
+        "adminSettings": "Settings",
+        "adminSettingsInvoice": "Invoice Settings",
+        "adminSns": "SNS Management",
+        "adminStaff": "Staff Management",
+        "adminUsers": "User Management",
+        "services": "Services"
+    },
     "common": {
         "login": "Log In",
         "signUp": "Sign Up",
@@ -28,6 +114,7 @@
     "header": {
         "navigation": {
             "auctions": "Auctions",
+            "market": "Market Prices",
             "services": "Services",
             "about": "About",
             "shippingSchedule": "Shipping Schedule"
@@ -72,10 +159,69 @@
     },
     "home": {
         "hero": {
-            "title": "Global Trade, Simplified.",
-            "subtitle": "AWA connects the world to Japan's premium motorcycle market through technology, transparency, and trust.",
+            "title": "Global Trade, Simplified",
+            "subtitle": "Your gateway to Japan's premium motorcycles",
             "enterAuction": "Enter Auction Platform",
             "aboutAwa": "About AWA Inc."
+        },
+        "about": {
+            "title": "All World Action",
+            "security": {
+                "title": "Security Center",
+                "subtitle": "Your safety is our top priority.",
+                "features": {
+                    "ssl": {
+                        "title": "SSL Encryption",
+                        "desc": "All communication is encrypted to protect your personal information."
+                    },
+                    "auth": {
+                        "title": "2-Factor Authentication",
+                        "desc": "Robust authentication system to prevent unauthorized access."
+                    },
+                    "data": {
+                        "title": "Data Protection",
+                        "desc": "Data managed under a strict privacy policy."
+                    }
+                }
+            },
+            "description1": "AWA specializes in bringing premium Japanese motorcycles to riders around the globe. We source high-quality bikes, provide comprehensive inspections, and handle every detail from bidding to delivery.",
+            "description2": "With our transparent pricing, secure payment system, and global shipping network, owning your dream Japanese motorcycle has never been easier.",
+            "bikesDelivered": "Bikes Delivered",
+            "countries": "Countries",
+            "satisfactionRate": "Satisfaction Rate"
+        },
+        "howItWorks": {
+            "title": "How AWA Works",
+            "subtitle": "Four simple steps to your dream bike",
+            "step1Title": "Browse",
+            "step1Desc": "Explore our curated selection of premium Japanese motorcycles with detailed photos and inspection reports.",
+            "step2Title": "Bid",
+            "step2Desc": "Place your bid on the motorcycle you want. Our transparent auction system ensures fair pricing.",
+            "step3Title": "Win",
+            "step3Desc": "Secure your motorcycle and complete payment through our secure system with full transparency on all fees.",
+            "step4Title": "Receive",
+            "step4Desc": "Track your bike's journey and receive it at your doorstep with complete documentation and support."
+        },
+        "features": {
+            "title": "Why Choose AWA",
+            "subtitle": "Premium service for every motorcycle purchase",
+            "qualityTitle": "Quality Inspection",
+            "qualityDesc": "Comprehensive vehicle reports and professional inspection for every motorcycle we list.",
+            "shippingTitle": "Global Shipping",
+            "shippingDesc": "Reliable delivery to over 120 countries with full tracking and insurance coverage.",
+            "pricingTitle": "Competitive Pricing",
+            "pricingDesc": "Best value Japanese motorcycles with transparent fees and no hidden costs.",
+            "paymentTitle": "Secure Payments",
+            "paymentDesc": "Bank-level encryption and secure escrow services for complete peace of mind.",
+            "biddingTitle": "Live Bidding",
+            "biddingDesc": "Real-time auction updates and instant notifications to keep you in the game.",
+            "supportTitle": "Full Support",
+            "supportDesc": "24/7 customer service in multiple languages to assist you every step of the way."
+        },
+        "cta": {
+            "title": "Ready to Get Started?",
+            "subtitle": "Join thousands of riders worldwide",
+            "button": "Create Account"
         },
         "news": {
             "title": "Latest News",
@@ -281,11 +427,14 @@
         "documents": "Documents",
         "tracking": {
             "title": "Shipment Tracking",
+            "subtitle": "Track your motorcycle delivery in real-time",
             "trackById": "Track by ID",
             "id": "Tracking ID",
             "destination": "Destination",
             "currentLocation": "Current Location",
             "eta": "Estimated Arrival",
+            "activeShipments": "Active Shipments",
+            "deliveryProcess": "Delivery Process",
             "steps": {
                 "processed": "Processed",
                 "shipped": "Shipped",
@@ -414,7 +563,57 @@
                 "title": "Pending Tasks",
                 "reviewKyc": "Review 3 KYC applications",
                 "confirmPayment": "Confirm payment for Order #1029",
-                "updateRates": "Update exchange rates"
+                "updateRates": "Update exchange rates",
+                "noTasks": "No pending tasks",
+                "loading": "Loading...",
+                "addButton": "+ Add",
+                "confirmComplete": "Mark \"{title}\" as complete?",
+                "myTask": "My Task",
+                "assignedTo": "Assigned: {name}",
+                "unassigned": "Unassigned (Permission group only)",
+                "modal": {
+                    "title": "Add Task",
+                    "labelAssignee": "Assignee (optional)",
+                    "labelTitle": "Title",
+                    "labelDescription": "Description (optional)",
+                    "labelPermission": "Assigned Permission",
+                    "labelType": "Type",
+                    "placeholderTitle": "e.g.: Review KYC application",
+                    "placeholderDescription": "Task details...",
+                    "cancel": "Cancel",
+                    "create": "Create",
+                    "creating": "Creating...",
+                    "permissions": {
+                        "dashboard": "Everyone",
+                        "users": "User Management",
+                        "finance": "Finance",
+                        "auctions": "Auctions",
+                        "orders": "Orders",
+                        "bikes": "Bikes",
+                        "content": "Content"
+                    },
+                    "types": {
+                        "custom": "Custom",
+                        "kyc_review": "KYC Review",
+                        "payment_confirm": "Payment Confirmation",
+                        "rate_update": "Exchange Rate Update",
+                        "inventory_check": "Inventory Check",
+                        "shipping_prep": "Shipping Preparation",
+                        "document_create": "Document Creation",
+                        "customer_support": "Customer Support",
+                        "auction_setup": "Auction Setup",
+                        "bike_inspection": "Bike Inspection",
+                        "container_booking": "Container Booking",
+                        "invoice_issue": "Invoice Issuance",
+                        "refund_process": "Refund Processing",
+                        "system_maintenance": "System Maintenance",
+                        "data_update": "Data Update",
+                        "report_generate": "Report Generation",
+                        "meeting": "Meeting",
+                        "follow_up": "Follow-up",
+                        "reminder": "Reminder"
+                    }
+                }
             },
             "systemStatus": {
                 "title": "System Status",
@@ -432,7 +631,25 @@
             "reviewKyc": "+ Review KYC",
             "backToSite": "Back to Site",
             "signOut": "Sign Out",
-            "superAdmin": "Super Admin"
+            "superAdmin": "Super Admin",
+            "prices": "Market Prices",
+            "administration": "Administration",
+            "staffManagement": "Staff Management",
+            "administrator": "Administrator",
+            "staff": "Staff",
+            "dashboard": "Dashboard",
+            "bikes": "Bikes",
+            "auctions": "Auctions",
+            "users": "Users",
+            "kyc": "KYC Review",
+            "orders": "Orders",
+            "containers": "Containers",
+            "content": "Content",
+            "finance": "Finance",
+            "reports": "Reports",
+            "notifications": "Notifications",
+            "sns": "SNS",
+            "settings": "Settings"
         },
         "common": {
             "loading": "Loading...",
@@ -462,7 +679,12 @@
             "active": "Active",
             "pending": "Pending",
             "verified": "Verified",
-            "suspended": "Suspended"
+            "suspended": "Suspended",
+            "statusBadge": {
+                "sold": "Sold",
+                "archived": "Archived",
+                "active": "Active"
+            }
         },
         "usersPage": {
             "title": "User Management",
@@ -558,6 +780,16 @@
             "internalNotes": "Internal Notes (saved on action, sent to user if rejected)",
             "notesPlaceholder": "Notes will be saved on approve/reject. For rejection, this content will be emailed to user...",
             "preview": "Preview (not implemented)"
+        },
+        "marketPage": {
+            "title": "Market Prices",
+            "subtitle": "Check recent auction results and archived market data.",
+            "searchPlaceholder": "Search models...",
+            "noDataTitle": "No market data available yet.",
+            "noDataDesc": "Historical data will appear here after auctions complete.",
+            "mileage": "Mileage",
+            "grade": "Grade",
+            "soldPrice": "Sold Price (Est)"
         },
         "ordersPage": {
             "title": "Order Management",
@@ -1259,6 +1491,7 @@
             "description": "Learn how to bid on AWA Auction",
             "types": {
                 "title": "Bidding Types",
+                "subtitle": "AWA offers two types of bidding methods",
                 "live": {
                     "title": "Live Bidding",
                     "badge": "Real-time",
@@ -1339,6 +1572,8 @@
         "delivery": {
             "title": "Delivery Times",
             "subtitle": "We ship globally to over 50 countries. Estimated shipping times from Japan port.",
+            "regionTitle": "Delivery Times by Region",
+            "note": "Actual delivery times may vary depending on customs clearance and local conditions.",
             "regions": {
                 "asia": {
                     "name": "Asia",
@@ -1420,200 +1655,248 @@
         "verification": {
             "title": "Account Verification",
             "subtitle": "Complete KYC to unlock full bidding privileges.",
+            "description": "To maintain a safe and trustworthy trading environment, we require all users to complete identity verification (KYC). The process is simple and can be completed in three easy steps.",
             "steps": {
                 "id": "Upload Government ID",
+                "idDesc": "Upload a valid government-issued ID such as passport or driver's license.",
                 "address": "Proof of Address",
-                "submit": "Submit for Review"
-            }
-        },
-        "careers": {
-            "badge": "We are hiring!",
-            "title": "Join the Future of Global Auctions",
-            "subtitle": "Help us build the most transparent and efficient auction platform connecting Japan to the world.",
-            "cta": "View Open Positions",
-            "culture": {
-                "title": "Why AWA Auction?",
-                "description": "We believe in transparency, innovation, and global connection. Join a diverse team passionate about simplifying cross-border trade.",
-                "growth": {
-                    "title": "Fast-Paced Growth",
-                    "desc": "Work in a dynamic environment where your impact is visible every day."
-                },
-                "global": {
-                    "title": "Global Impact",
-                    "desc": "Connect buyers and sellers from over 50 countries around the world."
-                },
-                "innovation": {
-                    "title": "Innovation First",
-                    "desc": "We leverage the latest technology to solve complex logistics and trading problems."
-                }
+                "addressDesc": "Submit a utility bill, bankstatement, or residence certificate showing your current address.",
+                "phone": "Phone Verification",
+                "phoneDesc": "Verify your phone number by entering the authentication code sent via SMS."
             },
-            "positions": {
-                "title": "Open Positions",
-                "apply": "Apply Now",
-                "noOpenings": "There are currently no open positions.",
-                "jobs": [
-                    {
-                        "title": "Senior Full Stack Engineer",
-                        "department": "Engineering",
-                        "location": "Remote (Japan)",
-                        "type": "Full-time",
-                        "description": "We are looking for an experienced Full Stack Engineer to lead our platform development."
-                    },
-                    {
-                        "title": "Product Designer",
-                        "department": "Design",
-                        "location": "Tokyo, Japan",
-                        "type": "Full-time",
-                        "description": "Join our design team to create world-class user experiences for our global auction platform."
-                    },
-                    {
-                        "title": "Customer Success Manager",
-                        "department": "Operations",
-                        "location": "Remote",
-                        "type": "Full-time",
-                        "description": "Help our customers succeed and grow their businesses using the AWA platform."
-                    }
-                ]
-            }
-        },
-        "news": {
-            "title": "News & Updates",
-            "subtitle": "Stay up to date with the latest from AWA.",
-            "loadMore": "Load More Articles",
-            "readMore": "Read More",
-            "categories": {
-                "announcement": "Announcement",
-                "feature": "Feature Update",
-                "partnership": "Partnership",
-                "event": "Event",
-                "milestone": "Milestone"
-            },
-            "items": [
-                {
-                    "date": "December 5, 2025",
-                    "category": "announcement",
-                    "title": "AWA Platform Now Supports 50+ Countries",
-                    "excerpt": "We're excited to announce expanded shipping coverage to new destinations in South America and Africa.",
-                    "featured": true
-                },
-                {
-                    "date": "November 28, 2025",
-                    "category": "feature",
-                    "title": "Real-Time Bidding Engine 2.0 Released",
-                    "excerpt": "Our new bidding system offers faster updates, improved reliability, and a smoother user experience.",
-                    "featured": false
-                },
-                {
-                    "date": "November 15, 2025",
-                    "category": "partnership",
-                    "title": "Strategic Partnership with Leading Inspection Center",
-                    "excerpt": "We've partnered with Japan's top motorcycle inspection facility to enhance our quality assurance.",
-                    "featured": false
-                },
-                {
-                    "date": "October 30, 2025",
-                    "category": "event",
-                    "title": "AWA at Tokyo Motorcycle Show 2025",
-                    "excerpt": "Visit our booth at the Tokyo Motorcycle Show. Meet the team and learn about our services.",
-                    "featured": false
-                },
-                {
-                    "date": "October 10, 2025",
-                    "category": "milestone",
-                    "title": "10,000 Motorcycles Sold!",
-                    "excerpt": "We've reached a major milestone. Thank you to all our buyers and partners worldwide.",
-                    "featured": false
-                }
-            ],
-            "newsletter": {
-                "title": "Subscribe to Our Newsletter",
-                "subtitle": "Get auction alerts, new arrivals, and exclusive offers delivered to your inbox.",
-                "placeholder": "Enter your email",
-                "subscribe": "Subscribe"
+            "whyKyc": {
+                "title": "Why Verification is Required",
+                "security": "Enhanced Security",
+                "securityDesc": "Prevent fraud and identity theft, providing a safe trading environment.",
+                "trust": "Increased Trust",
+                "trustDesc": "All verified users can trade with confidence knowing everyone is authenticated.",
+                "legal": "Legal Compliance",
+                "legalDesc": "Comply with international regulations for money transfers and high-value transactions."
             }
         },
         "security": {
-            "title": "Security & Support",
-            "subtitle": "We protect your data and transactions.",
-            "support": "24/7 Customer Support via Email and Chat."
-        },
-        "export": {
-            "title": "Export Procedures",
-            "description": "Required documents and procedures for export"
-        },
-        "shipping": {
-            "title": "Global Shipping Guide",
-            "methods": {
-                "roro": {
-                    "title": "RoRo Shipping",
-                    "desc": "Roll-on/Roll-off. The most common and cost-effective method for drivable vehicles.",
-                    "benefits": {
-                        "0": "Fast processing",
-                        "1": "Lower cost",
-                        "2": "Vehicle must run"
-                    }
+            "title": "Security Center",
+            "subtitle": "Your safety is our top priority.",
+            "features": {
+                "ssl": {
+                    "title": "SSL Encryption",
+                    "desc": "All communication is encrypted to protect your personal information."
                 },
-                "container": {
-                    "title": "Container Shipping",
-                    "desc": "Secure shipping in 20ft or 40ft containers. Good for multiple bikes or high-value items.",
-                    "benefits": {
-                        "0": "Higher security",
-                        "1": "Can ship parts",
-                        "2": "Flexible loading"
-                    }
+                "auth": {
+                    "title": "2-Factor Authentication",
+                    "desc": "Robust authentication system to prevent unauthorized access."
                 },
-                "air": {
-                    "title": "Air Freight",
-                    "desc": "The fastest option for urgent deliveries. Most expensive.",
-                    "benefits": {
-                        "0": "Fastest delivery",
-                        "1": "High cost",
-                        "2": "Good for prototypes"
-                    }
+                "data": {
+                    "title": "Data Protection",
+                    "desc": "Data managed under a strict privacy policy."
+                }
+            }
+        },
+        "monitoring": {
+            "title": "24/7 Security Monitoring",
+            "description": "Our security experts continuously monitor the system to detect and respond to suspicious activity instantly. We employ the latest security technologies to protect your valuable data.",
+            "realtime": {
+                "title": "Real-time Monitoring",
+                "desc": "Instantly detect unauthorized access"
+            },
+            "response": {
+                "title": "Immediate Response",
+                "desc": "Quickly neutralize threats"
+            },
+            "audit": {
+                "title": "Regular Audits",
+                "desc": "Continuously improve security"
+            }
+        }
+    },
+    "careers": {
+        "badge": "We are hiring!",
+        "title": "Join the Future of Global Auctions",
+        "subtitle": "Help us build the most transparent and efficient auction platform connecting Japan to the world.",
+        "cta": "View Open Positions",
+        "culture": {
+            "title": "Why AWA Auction?",
+            "description": "We believe in transparency, innovation, and global connection. Join a diverse team passionate about simplifying cross-border trade.",
+            "growth": {
+                "title": "Fast-Paced Growth",
+                "desc": "Work in a dynamic environment where your impact is visible every day."
+            },
+            "global": {
+                "title": "Global Impact",
+                "desc": "Connect buyers and sellers from over 50 countries around the world."
+            },
+            "innovation": {
+                "title": "Innovation First",
+                "desc": "We leverage the latest technology to solve complex logistics and trading problems."
+            }
+        },
+        "positions": {
+            "title": "Open Positions",
+            "apply": "Apply Now",
+            "noOpenings": "There are currently no open positions.",
+            "jobs": [
+                {
+                    "title": "Senior Full Stack Engineer",
+                    "department": "Engineering",
+                    "location": "Remote (Japan)",
+                    "type": "Full-time",
+                    "description": "We are looking for an experienced Full Stack Engineer to lead our platform development."
+                },
+                {
+                    "title": "Product Designer",
+                    "department": "Design",
+                    "location": "Tokyo, Japan",
+                    "type": "Full-time",
+                    "description": "Join our design team to create world-class user experiences for our global auction platform."
+                },
+                {
+                    "title": "Customer Success Manager",
+                    "department": "Operations",
+                    "location": "Remote",
+                    "type": "Full-time",
+                    "description": "Help our customers succeed and grow their businesses using the AWA platform."
+                }
+            ]
+        }
+    },
+    "news": {
+        "title": "News & Updates",
+        "subtitle": "Stay up to date with the latest from AWA.",
+        "loadMore": "Load More Articles",
+        "readMore": "Read More",
+        "categories": {
+            "announcement": "Announcement",
+            "feature": "Feature Update",
+            "partnership": "Partnership",
+            "event": "Event",
+            "milestone": "Milestone"
+        },
+        "items": [
+            {
+                "date": "December 5, 2025",
+                "category": "announcement",
+                "title": "AWA Platform Now Supports 50+ Countries",
+                "excerpt": "We're excited to announce expanded shipping coverage to new destinations in South America and Africa.",
+                "featured": true
+            },
+            {
+                "date": "November 28, 2025",
+                "category": "feature",
+                "title": "Real-Time Bidding Engine 2.0 Released",
+                "excerpt": "Our new bidding system offers faster updates, improved reliability, and a smoother user experience.",
+                "featured": false
+            },
+            {
+                "date": "November 15, 2025",
+                "category": "partnership",
+                "title": "Strategic Partnership with Leading Inspection Center",
+                "excerpt": "We've partnered with Japan's top motorcycle inspection facility to enhance our quality assurance.",
+                "featured": false
+            },
+            {
+                "date": "October 30, 2025",
+                "category": "event",
+                "title": "AWA at Tokyo Motorcycle Show 2025",
+                "excerpt": "Visit our booth at the Tokyo Motorcycle Show. Meet the team and learn about our services.",
+                "featured": false
+            },
+            {
+                "date": "October 10, 2025",
+                "category": "milestone",
+                "title": "10,000 Motorcycles Sold!",
+                "excerpt": "We've reached a major milestone. Thank you to all our buyers and partners worldwide.",
+                "featured": false
+            }
+        ],
+        "newsletter": {
+            "title": "Subscribe to Our Newsletter",
+            "subtitle": "Get auction alerts, new arrivals, and exclusive offers delivered to your inbox.",
+            "placeholder": "Enter your email",
+            "subscribe": "Subscribe"
+        }
+    },
+    "security": {
+        "title": "Security & Support",
+        "subtitle": "We protect your data and transactions.",
+        "support": "24/7 Customer Support via Email and Chat."
+    },
+    "export": {
+        "title": "Export Procedures",
+        "description": "Required documents and procedures for export"
+    },
+    "shipping": {
+        "title": "Global Shipping Guide",
+        "methods": {
+            "title": "Shipping Methods",
+            "roro": {
+                "title": "RoRo Shipping",
+                "desc": "Roll-on/Roll-off. The most common and cost-effective method for drivable vehicles.",
+                "benefits": {
+                    "0": "Fast processing",
+                    "1": "Lower cost",
+                    "2": "Vehicle must run"
                 }
             },
-            "rates": {
-                "title": "Estimated Shipping Rates (Motorcycles)",
-                "headers": {
-                    "region": "Region",
-                    "port": "Destination Port",
-                    "time": "Est. Time",
-                    "cost": "Est. Cost (USD)"
-                },
-                "rows": {
-                    "asia": {
-                        "region": "Asia",
-                        "port": "Manila, Phillipines",
-                        "time": "10-15 Days",
-                        "cost": "$300 - $500"
-                    },
-                    "oceania": {
-                        "region": "Oceania",
-                        "port": "Sydney, Australia",
-                        "time": "20-25 Days",
-                        "cost": "$600 - $800"
-                    },
-                    "na": {
-                        "region": "North America",
-                        "port": "Long Beach, USA",
-                        "time": "25-30 Days",
-                        "cost": "$800 - $1,200"
-                    },
-                    "europe": {
-                        "region": "Europe",
-                        "port": "Rotterdam, Netherlands",
-                        "time": "35-45 Days",
-                        "cost": "$900 - $1,300"
-                    },
-                    "africa": {
-                        "region": "Africa",
-                        "port": "Mombasa, Kenya",
-                        "time": "30-40 Days",
-                        "cost": "$700 - $1,000"
-                    }
-                },
-                "disclaimer": "* Rates are estimates and subject to fuel surcharges and seasonal changes."
+            "container": {
+                "title": "Container Shipping",
+                "desc": "Secure shipping in 20ft or 40ft containers. Good for multiple bikes or high-value items.",
+                "benefits": {
+                    "0": "Higher security",
+                    "1": "Can ship parts",
+                    "2": "Flexible loading"
+                }
+            },
+            "air": {
+                "title": "Air Freight",
+                "desc": "The fastest option for urgent deliveries. Most expensive.",
+                "benefits": {
+                    "0": "Fastest delivery",
+                    "1": "High cost",
+                    "2": "Good for prototypes"
+                }
             }
+        },
+        "rates": {
+            "title": "Estimated Shipping Rates (Motorcycles)",
+            "headers": {
+                "region": "Region",
+                "port": "Destination Port",
+                "time": "Est. Time",
+                "cost": "Est. Cost (USD)"
+            },
+            "rows": {
+                "asia": {
+                    "region": "Asia",
+                    "port": "Manila, Phillipines",
+                    "time": "10-15 Days",
+                    "cost": "$300 - $500"
+                },
+                "oceania": {
+                    "region": "Oceania",
+                    "port": "Sydney, Australia",
+                    "time": "20-25 Days",
+                    "cost": "$600 - $800"
+                },
+                "na": {
+                    "region": "North America",
+                    "port": "Long Beach, USA",
+                    "time": "25-30 Days",
+                    "cost": "$800 - $1,200"
+                },
+                "europe": {
+                    "region": "Europe",
+                    "port": "Rotterdam, Netherlands",
+                    "time": "35-45 Days",
+                    "cost": "$900 - $1,300"
+                },
+                "africa": {
+                    "region": "Africa",
+                    "port": "Mombasa, Kenya",
+                    "time": "30-40 Days",
+                    "cost": "$700 - $1,000"
+                }
+            },
+            "disclaimer": "* Rates are estimates and subject to fuel surcharges and seasonal changes."
         }
     },
     "help": {
@@ -1995,10 +2278,612 @@
             "tryAgain": "Try Again"
         }
     },
+    "aboutPage": {
+        "title": "About AWA",
+        "subtitle": "Our journey and mission",
+        "story": {
+            "title": "🏍️ Our Story",
+            "text1": "AWA (All World Action) was founded with a simple mission: to connect motorcycle enthusiasts worldwide with the finest Japanese motorcycles. What started as a passion project has grown into a trusted platform serving riders in over 120 countries.",
+            "text2": "Based in Japan, we have direct access to premium auctions and exclusive inventory, allowing us to offer bikes that are difficult to find elsewhere at competitive prices."
+        },
+        "mission": {
+            "title": "🎯 Our Mission",
+            "text": "To make owning a quality Japanese motorcycle accessible to riders everywhere, with complete transparency, professional service, and unwavering commitment to customer satisfaction."
+        },
+        "values": {
+            "title": "💎 Our Values",
+            "transparency": {
+                "title": "Transparency",
+                "desc": "Honest inspections, clear pricing, no hidden fees"
+            },
+            "quality": {
+                "title": "Quality",
+                "desc": "Only the best motorcycles make it to our platform"
+            },
+            "trust": {
+                "title": "Trust",
+                "desc": "Building lasting relationships with our customers"
+            },
+            "globalReach": {
+                "title": "Global Reach",
+                "desc": "Serving riders in 120+ countries worldwide"
+            }
+        },
+        "stats": {
+            "title": "📈 By the Numbers",
+            "bikesDelivered": "Bikes Delivered",
+            "countriesServed": "Countries Served",
+            "satisfactionRate": "Satisfaction Rate",
+            "supportAvailable": "Support Available"
+        },
+        "whyChoose": {
+            "title": "🏆 Why Choose AWA?",
+            "directAccess": "Direct Japan Access:",
+            "directAccessDesc": "We source directly from Japanese auctions and dealers",
+            "expertInspection": "Expert Inspection:",
+            "expertInspectionDesc": "Every bike is professionally inspected and documented",
+            "endToEnd": "End-to-End Service:",
+            "endToEndDesc": "From bidding to delivery, we handle everything",
+            "globalNetwork": "Global Network:",
+            "globalNetworkDesc": "Reliable shipping partners worldwide",
+            "multilingualSupport": "Multilingual Support:",
+            "multilingualSupportDesc": "Service in English, Japanese, and Arabic"
+        },
+        "cta": {
+            "title": "Ready to Find Your Dream Bike?",
+            "subtitle": "Join thousands of satisfied customers worldwide.",
+            "button": "Get Started"
+        }
+    },
+    "servicesPage": {
+        "title": "Buyer Services",
+        "subtitle": "Comprehensive support for your motorcycle purchase",
+        "intro": "At AWA, we provide end-to-end support to ensure your motorcycle buying experience is smooth and stress-free.",
+        "inspection": {
+            "title": "Pre-Purchase Inspection",
+            "item1": "Comprehensive condition reports",
+            "item2": "High-resolution photos",
+            "item3": "Video walkthroughs on request",
+            "item4": "Expert condition grading"
+        },
+        "support": {
+            "title": "24/7 Support",
+            "item1": "Live chat assistance",
+            "item2": "Email support",
+            "item3": "Phone consultations",
+            "item4": "Multi-language support"
+        },
+        "documentation": {
+            "title": "Documentation",
+            "item1": "Export certificates",
+            "item2": "Bill of lading",
+            "item3": "Customs clearance docs",
+            "item4": "Title transfer assistance"
+        },
+        "shipping": {
+            "title": "Shipping Coordination",
+            "item1": "Door-to-port service",
+            "item2": "Full tracking",
+            "item3": "Marine insurance",
+            "item4": "Customs broker referrals"
+        },
+        "payment": {
+            "title": "Payment Options",
+            "item1": "Secure bank transfers",
+            "item2": "Multiple currencies",
+            "item3": "Clear invoicing",
+            "item4": "Payment confirmation"
+        },
+        "protection": {
+            "title": "Buyer Protection",
+            "item1": "Transaction security",
+            "item2": "Dispute resolution",
+            "item3": "Shipping insurance",
+            "item4": "Quality guarantee"
+        },
+        "vip": {
+            "title": "⭐ VIP Buyer Program",
+            "subtitle": "Enhanced benefits for our frequent buyers",
+            "priorityAccess": {
+                "title": "Priority Access",
+                "desc": "Early access to new listings before public auction"
+            },
+            "reducedFees": {
+                "title": "Reduced Fees",
+                "desc": "Discounted service and shipping fees"
+            },
+            "dedicatedSupport": {
+                "title": "Dedicated Support",
+                "desc": "Personal account manager for all your needs"
+            },
+            "extendedPayment": {
+                "title": "Extended Payment",
+                "desc": "Flexible payment terms for qualified buyers"
+            }
+        },
+        "cta": {
+            "title": "Ready to Get Started?",
+            "subtitle": "Create your account and experience our premium buyer services.",
+            "button": "Get Started"
+        }
+    },
+    "faqPage": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find answers to common questions",
+        "bidding": {
+            "title": "🏍️ About Bidding",
+            "q1": "How do I place a bid?",
+            "a1": "After creating an account, browse our catalog and click \"Bid\" on any motorcycle. Enter your bid amount (minimum $20 increment) and confirm.",
+            "q2": "What is the minimum bid increment?",
+            "a2": "The minimum bid increment is $20 USD.",
+            "q3": "When do auctions close?",
+            "a3": "Auctions close every Tuesday at 17:00 JST. Check the Auction Calendar for timezone conversions.",
+            "q4": "Can I cancel my bid?",
+            "a4": "Bids are binding and cannot be cancelled."
+        },
+        "payment": {
+            "title": "💳 Payment",
+            "q1": "What payment methods do you accept?",
+            "a1": "Currently we accept bank wire transfers. Credit card and payment plans are coming soon.",
+            "q2": "How long do I have to pay?",
+            "a2": "Payment must be completed within 5 business days of receiving your invoice.",
+            "q3": "What currency do you use?",
+            "a3": "All prices are in USD. We accept payments in USD, EUR, and GBP."
+        },
+        "shippingFaq": {
+            "title": "🚢 Shipping",
+            "q1": "How long does shipping take?",
+            "a1": "Shipping times vary: UAE 3-4 weeks, Egypt 5-6 weeks, UK 6-8 weeks. See Shipping Information.",
+            "q2": "Is shipping insurance included?",
+            "a2": "Yes, all shipments include marine insurance.",
+            "q3": "Do you handle customs clearance?",
+            "a3": "We provide all export documentation. Customs clearance at destination is the buyer's responsibility."
+        },
+        "inspectionFaq": {
+            "title": "🔍 Inspection & Quality",
+            "q1": "How are motorcycles inspected?",
+            "a1": "Every motorcycle undergoes a comprehensive inspection covering visual, mechanical, and electrical systems.",
+            "q2": "What does the condition grade mean?",
+            "a2": "We use grades S (Excellent) to D (Poor). See Inspection Services for details."
+        },
+        "supportFaq": {
+            "title": "📞 Support",
+            "q1": "How can I contact support?",
+            "a1": "Email: info@awa.com | Phone: +1 (800) AWA-BIKE | We offer 24/7 support in English, Japanese, and Arabic."
+        },
+        "stillHaveQuestions": {
+            "title": "Still Have Questions?",
+            "subtitle": "Our support team is here to help.",
+            "button": "Contact Us"
+        }
+    },
+    "contactPage": {
+        "title": "Contact Us",
+        "subtitle": "We're here to help you find your dream bike",
+        "getInTouch": "Get in Touch",
+        "intro": "Have questions about an auction? Need help with shipping? Our team is available 24/7.",
+        "headquarters": {
+            "title": "📍 Headquarters",
+            "line1": "AWA Tower, 15F",
+            "line2": "1-2-3 Minato-ku",
+            "line3": "Tokyo, Japan 105-0000"
+        },
+        "phone": {
+            "title": "📞 Phone",
+            "international": "International:",
+            "internationalNumber": "+81 3-1234-5678",
+            "tollFree": "Toll Free (US):",
+            "tollFreeNumber": "+1 (800) AWA-BIKE"
+        },
+        "email": {
+            "title": "📧 Email",
+            "support": "Support:",
+            "supportEmail": "support@awa.com",
+            "sales": "Sales:",
+            "salesEmail": "sales@awa.com",
+            "partnerships": "Partnerships:",
+            "partnershipsEmail": "partners@awa.com"
+        },
+        "form": {
+            "title": "Send us a Message",
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "subjectOptions": {
+                "general": "General Inquiry",
+                "auction": "Auction Help",
+                "shipping": "Shipping & Logistics",
+                "partnership": "Partnership"
+            },
+            "message": "Message",
+            "submit": "Send Message",
+            "success": "Message sent! We will contact you shortly."
+        }
+    },
+    "inspectionPage": {
+        "title": "Inspection Services",
+        "subtitle": "Professional 80+ point inspection for every motorcycle",
+        "intro": "At AWA, we believe transparency is key. That's why every motorcycle listed on our platform undergoes a rigorous inspection process by certified mechanics.",
+        "process": {
+            "title": "Our Inspection Process",
+            "step1": {
+                "title": "Visual Inspection",
+                "desc": "Detailed check of exterior condition, scratches, rust, and cosmetic damage."
+            },
+            "step2": {
+                "title": "Mechanical Check",
+                "desc": "Engine start test, noise check, oil leak inspection, and transmission test."
+            },
+            "step3": {
+                "title": "Electrical Systems",
+                "desc": "Verification of lights, indicators, horn, and battery voltage."
+            },
+            "step4": {
+                "title": "Frame & Suspension",
+                "desc": "Check for frame damage, fork seals, and suspension functionality."
+            }
+        },
+        "grades": {
+            "title": "Condition Grades Simplified",
+            "s": {
+                "grade": "Grade S",
+                "desc": "Brand new, never used. Showroom condition."
+            },
+            "5": {
+                "grade": "Grade 5",
+                "desc": "Like new. Low mileage, excellent condition."
+            },
+            "4": {
+                "grade": "Grade 4",
+                "desc": "Good condition. Minor scratches or wear consistent with age."
+            },
+            "3": {
+                "grade": "Grade 3",
+                "desc": "Average condition. Noticeable scratches, rust, or repair history."
+            },
+            "2": {
+                "grade": "Grade 2",
+                "desc": "Rough condition. Needs significant repairs or restoration."
+            },
+            "1": {
+                "grade": "Grade 1",
+                "desc": "Salvage / Parts bike. Non-running or major damage."
+            }
+        },
+        "report": {
+            "title": "Comprehensive Report",
+            "desc": "Every listing includes a downloadable inspection sheet detailing every flaw found.",
+            "downloadSample": "Download Sample Report"
+        },
+        "cta": {
+            "title": "Buy with Confidence",
+            "subtitle": "Join thousands of satisfied dealers and riders.",
+            "button": "View Auctions"
+        }
+    },
+    "financingPage": {
+        "title": "Financing Options",
+        "subtitle": "Flexible payment solutions for your business",
+        "intro": "We understand that cash flow is critical for dealers. AWA offers flexible financing and credit terms to help you manage your inventory and grow your business.",
+        "options": {
+            "title": "Our Financing Plans",
+            "plan1": {
+                "title": "Deferred Payment",
+                "desc": "Pay 30% upfront and the remaining 70% upon arrival at your port.",
+                "duration": "Up to 60 days"
+            },
+            "plan2": {
+                "title": "Revolving Credit",
+                "desc": "A continuous line of credit for frequent buyers with established history.",
+                "limit": "Up to $100,000"
+            },
+            "plan3": {
+                "title": "Letter of Credit",
+                "desc": "We accept L/C from major international banks for large volume orders."
+            }
+        },
+        "partners": {
+            "title": "Our Financial Partners",
+            "desc": "We work with leading global banks to ensure secure and smooth transactions."
+        },
+        "calculator": {
+            "title": "Loan Calculator",
+            "subtitle": "Estimate your monthly payments",
+            "amount": "Loan Amount",
+            "duration": "Duration (Months)",
+            "rate": "Interest Rate (%)",
+            "calculate": "Calculate",
+            "result": "Estimated Monthly Payment:"
+        },
+        "cta": {
+            "title": "Apply for Financing",
+            "subtitle": "Contact our finance team to check your eligibility.",
+            "button": "Contact Finance Team"
+        }
+    },
+    "shippingPage": {
+        "title": "Global Shipping",
+        "subtitle": "Safe and reliable delivery to over 120 countries",
+        "intro": "AWA handles the complexities of international logistics so you don't have to. From our yard to your port, we ensure your motorcycles are transported safely and efficiently.",
+        "features": {
+            "title": "Our Logistics Services",
+            "feature1": {
+                "title": "Door-to-Port",
+                "desc": "Seamless value chain from auction house to your nearest international port."
+            },
+            "feature2": {
+                "title": "Container Vanning",
+                "desc": "Professional vanning services to maximize space and ensure safety during transit."
+            },
+            "feature3": {
+                "title": "Documentation",
+                "desc": "Complete export documentation handling including Bill of Lading and Export Certificates."
+            },
+            "feature4": {
+                "title": "Insurance",
+                "desc": "Comprehensive marine insurance coverage included for peace of mind."
+            }
+        },
+        "rates": {
+            "title": "Estimated Shipping Rates",
+            "subtitle": "Typical costs for 40ft container shipping",
+            "region": "Region / Port",
+            "time": "Transit Time",
+            "cost": "Est. Cost",
+            "asia": "Southeast Asia (Bangkok, Manila)",
+            "asiaTime": "10-14 days",
+            "middleEast": "Middle East (Jebel Ali, Jeddah)",
+            "middleEastTime": "20-25 days",
+            "europe": "Europe (Rotterdam, Southampton)",
+            "europeTime": "35-40 days",
+            "africa": "Africa (Mombasa, Durban)",
+            "africaTime": "30-45 days",
+            "oceania": "Oceania (Auckland, Sydney)",
+            "oceaniaTime": "15-20 days",
+            "disclaimer": "*Rates are estimates and subject to change based on fuel surcharges and seasonal availability."
+        },
+        "partners": {
+            "title": "Shipping Partners",
+            "desc": "We partner with major global shipping lines including Maersk, MSC, and ONE."
+        },
+        "cta": {
+            "title": "Get a Shipping Quote",
+            "subtitle": "Need a specific quote for your destination?",
+            "button": "Request Quote"
+        }
+    },
+    "cookiesPage": {
+        "title": "Cookie Policy",
+        "lastUpdated": "Last Updated: December 25, 2024",
+        "intro": "AWA uses cookies to improve your experience, analyze site traffic, and personalize content. This policy explains what cookies are, how we use them, and your choices.",
+        "whatAreCookies": {
+            "title": "What Are Cookies?",
+            "desc": "Cookies are small text files stored on your device when you visit a website. They help the website remember your actions and preferences over a period of time."
+        },
+        "howWeUse": {
+            "title": "How We Use Cookies",
+            "essential": {
+                "title": "Essential Cookies",
+                "desc": "Necessary for the website to function properly. Includes login sessions and security features."
+            },
+            "analytics": {
+                "title": "Analytics Cookies",
+                "desc": "Help us understand how visitors interact with our website by collecting and reporting information anonymously."
+            },
+            "marketing": {
+                "title": "Marketing Cookies",
+                "desc": "Used to track visitors across websites to display relevant ads."
+            }
+        },
+        "manage": {
+            "title": "Managing Cookies",
+            "desc": "You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed."
+        }
+    },
+    "videoGuidesPage": {
+        "title": "Video Guides",
+        "subtitle": "Learn how to use AWA Auction effectively",
+        "intro": "Watch our step-by-step tutorials to master the AWA platform. From bidding strategies to understanding inspection reports, we've got you covered.",
+        "categories": {
+            "gettingStarted": "Getting Started",
+            "bidding": "Bidding & Buying",
+            "logistics": "Shipping & Logistics"
+        },
+        "guides": {
+            "guide1": {
+                "title": "How to Register",
+                "desc": "A quick walkthrough of the registration and verification process."
+            },
+            "guide2": {
+                "title": "Placing Your First Bid",
+                "desc": "Learn how to search for bikes and place bids in real-time."
+            },
+            "guide3": {
+                "title": "Reading Inspection Reports",
+                "desc": "Understand our grading system and how to interpret inspection sheets."
+            },
+            "guide4": {
+                "title": "Shipping Process Explained",
+                "desc": "What happens after you win? A guide to payments and shipping."
+            }
+        },
+        "cta": {
+            "title": "Need More Help?",
+            "subtitle": "Check our FAQ or contact support.",
+            "button": "Visit FAQ"
+        }
+    },
+    "successStoriesPage": {
+        "title": "Success Stories",
+        "subtitle": "See how dealers around the world grow with AWA",
+        "stories": {
+            "story1": {
+                "name": "MotoWorld UK",
+                "location": "London, UK",
+                "quote": "AWA's inspection reports are so detailed, I feel like I'm inspecting the bike myself. Our sales have increased by 40% since switching.",
+                "image": "dealer1"
+            },
+            "story2": {
+                "name": "Dublin Bikes",
+                "location": "Dublin, Ireland",
+                "quote": "The shipping support is phenomenal. Door-to-port service saves us countless hours of logistics work.",
+                "image": "dealer2"
+            },
+            "story3": {
+                "name": "Desert Riders",
+                "location": "Dubai, UAE",
+                "quote": "Finding high-quality vintage Japanese bikes was hard until we found AWA. Their inventory is unmatched.",
+                "image": "dealer3"
+            }
+        },
+        "stats": {
+            "dealers": "5,000+ Dealers",
+            "countries": "120+ Countries",
+            "satisfaction": "98% Satisfaction"
+        },
+        "cta": {
+            "title": "Start Your Story",
+            "subtitle": "Join our global network of successful motorcycle dealers.",
+            "button": "Register Now"
+        }
+    },
+    "calendarPage": {
+        "title": "Auction Calendar",
+        "subtitle": "Upcoming live auctions and special events",
+        "events": {
+            "title": "Upcoming Events",
+            "weekly": "Regular Weekly Auction",
+            "time": "Every Tuesday & Friday, 10:00 AM JST",
+            "desc": "Our standard auction featuring a wide variety of motorcycles from all major manufacturers."
+        },
+        "specialEvents": {
+            "title": "Special Events",
+            "event1": {
+                "title": "Vintage Bike Showcase",
+                "date": "January 15, 2025",
+                "desc": "A curated collection of rare vintage motorcycles."
+            },
+            "event2": {
+                "title": "Ducati Special Auction",
+                "date": "February 1, 2025",
+                "desc": "Exclusive auction featuring premium Ducati models."
+            }
+        },
+        "cta": {
+            "title": "Don't Miss Out",
+            "subtitle": "Sign up for calendar alerts.",
+            "button": "Get Alerts"
+        }
+    },
+    "catalogPage": {
+        "title": "Bike Catalog",
+        "subtitle": "Explore our comprehensive archive of motorcycle specifications",
+        "search": {
+            "placeholder": "Search by make, model, or year...",
+            "button": "Search Catalog"
+        },
+        "manufacturers": {
+            "honda": "Honda",
+            "yamaha": "Yamaha",
+            "suzuki": "Suzuki",
+            "kawasaki": "Kawasaki",
+            "ducati": "Ducati",
+            "bmw": "BMW",
+            "harley": "Harley-Davidson",
+            "triumph": "Triumph"
+        },
+        "featured": {
+            "title": "Featured Models",
+            "viewSpecs": "View Specs"
+        },
+        "cta": {
+            "title": "Looking for a specific bike?",
+            "subtitle": "Our team can help you find it at auction.",
+            "button": "Contact Sales"
+        }
+    },
     "languageSwitcher": {
         "title": "Language",
         "ja": "日本語",
         "en": "English",
         "ar": "العربية"
+    },
+    "security_center": {
+        "badge": "Security",
+        "title": "Security Center",
+        "subtitle": "Your safety is our top priority.",
+        "features_title": "Security Features",
+        "features_subtitle": "Latest technologies to protect your information",
+        "features": {
+            "ssl": {
+                "title": "SSL Encryption",
+                "desc": "All communication is encrypted to protect your personal information."
+            },
+            "auth": {
+                "title": "2-Factor Authentication",
+                "desc": "Robust authentication system to prevent unauthorized access."
+            },
+            "data": {
+                "title": "Data Protection",
+                "desc": "Data managed under a strict privacy policy."
+            }
+        },
+        "monitoring": {
+            "title": "24/7 Security Monitoring",
+            "description": "Our security experts continuously monitor the system to detect and respond to suspicious activity instantly. We employ the latest security technologies to protect your valuable data.",
+            "realtime": {
+                "title": "Real-time Monitoring",
+                "desc": "Instantly detect unauthorized access"
+            },
+            "response": {
+                "title": "Immediate Response",
+                "desc": "Quickly neutralize threats"
+            },
+            "audit": {
+                "title": "Regular Audits",
+                "desc": "Continuously improve security"
+            }
+        }
+    },
+    "contact_redesign": {
+        "hero": {
+            "badge": "Contact Us",
+            "title": "How Can We Help?",
+            "subtitle": "If you have any questions or need assistance, please feel free to reach out."
+        },
+        "info": {
+            "title": "Get In Touch",
+            "description": "Our expert staff is here to help with auction processes, shipping, payments, and more.",
+            "headquarters": {
+                "title": "Headquarters",
+                "address": "15F AWA Tower, 1-2-3 Minato-ku, Tokyo 105-0000"
+            },
+            "phone": {
+                "title": "Phone",
+                "international": "International",
+                "tollFree": "Toll Free (Domestic)"
+            },
+            "email": {
+                "title": "Email",
+                "support": "Customer Support",
+                "sales": "Sales & Partnerships"
+            }
+        },
+        "form": {
+            "title": "Send a Message",
+            "name": "Name",
+            "email": "Email Address",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "Send Message",
+            "submitting": "Sending...",
+            "success": "Message sent successfully. A representative will contact you shortly.",
+            "subjects": {
+                "general": "General Inquiry",
+                "auction": "About Auctions",
+                "shipping": "Shipping & Logistics",
+                "partnership": "Partnerships"
+            }
+        }
     }
 }

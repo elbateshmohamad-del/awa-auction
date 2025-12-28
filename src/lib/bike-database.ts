@@ -1,11 +1,10 @@
-
 /**
  * Bike Database Library (Prisma Version)
  * Handles storage and retrieval of bikes using SQLite/PostgreSQL
  */
 
 import { prisma } from '@/lib/prisma';
-import type { Bike } from '../generated/client';
+import { PrismaClient, type Bike } from '@prisma/client';
 
 export type { Bike };
 
@@ -46,9 +45,21 @@ function parseBike(bike: any) {
     };
 }
 
-export async function getAllBikes() {
+export async function getAllBikes(options?: { status?: string | string[] }) {
+    const where: any = {};
+
+    if (options?.status) {
+        if (Array.isArray(options.status)) {
+            where.status = { in: options.status };
+        } else if (options.status !== 'all') {
+            where.status = options.status;
+        }
+    } else {
+        where.status = 'active'; // Default behavior
+    }
+
     const bikes = await prisma.bike.findMany({
-        where: { status: 'active' },
+        where,
         orderBy: { importedAt: 'desc' }
     });
     return bikes.map(parseBike);
@@ -114,10 +125,40 @@ export async function addBikes(bikes: any[]) {
     // In a real high-throughput scenario, createMany would be better but we need JSON parsing logic
     const results = [];
     for (const bike of bikes) {
-        // Double check existance to be safe
-        const existing = await getBikeByBdsId(bike.bdsId);
-        if (!existing) {
+        try {
+            // Check for potential collision
+            const existing = await prisma.bike.findUnique({
+                where: { bdsId: bike.bdsId }
+            });
+
+            if (existing) {
+                // Check if it's the same bike (same name and auction date)
+                // If so, update the existing record instead of archiving/creating new
+                const isSameBike = existing.name === bike.name &&
+                    (!bike.auctionDate || existing.auctionDate === bike.auctionDate);
+
+                if (isSameBike) {
+                    console.log(`Updating existing bike ${existing.bdsId} (ID: ${existing.id})`);
+                    // Update existing record
+                    results.push(await updateBike(existing.id, bike));
+                    continue; // Skip the create step
+                } else {
+                    // Different bike reusing the same ID (e.g. next week's auction)
+                    // Archive the old one
+                    const newBdsId = `${existing.bdsId}_archived_${new Date().getTime()} `;
+                    console.log(`Archiving old bike ${existing.bdsId} (ID: ${existing.id}) to ${newBdsId} `);
+
+                    await prisma.bike.update({
+                        where: { id: existing.id },
+                        data: { bdsId: newBdsId, status: 'archived' }
+                    });
+                }
+            }
+
+            // Now safely add the new bike (if we didn't update above)
             results.push(await addBike(bike));
+        } catch (e) {
+            console.error(`Failed to add / update bike ${bike.bdsId}: `, e);
         }
     }
     return results;
@@ -125,8 +166,17 @@ export async function addBikes(bikes: any[]) {
 
 // TODO: Create ImportLog model in schema.prisma for persistent logging
 export async function addImportLog(log: any) {
-    console.log('[Import Log]', JSON.stringify(log, null, 2));
-    // For now, just logging to console. Return dummy object.
-    return { ...log, id: 'dummy-log' };
+    // Stringify errors if needed
+    const logData = {
+        timestamp: new Date().toISOString(),
+        bikesImported: log.bikesImported || 0,
+        errors: JSON.stringify(log.errors || [])
+    };
+
+    const result = await prisma.importLog.create({
+        data: logData
+    });
+
+    return { ...log, id: result.id };
 }
 

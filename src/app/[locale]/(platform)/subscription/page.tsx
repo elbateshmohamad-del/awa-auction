@@ -20,146 +20,154 @@ export default function SubscriptionPage() {
     const t = useTranslations();
 
     return (
-        <div className="bg-gray-50 min-h-screen py-20 px-4">
-            <div className="container mx-auto max-w-7xl">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <Badge className="mb-4">{t('subscription.title')}</Badge>
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('subscription.subtitle')}</h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <div className="bg-white text-[#1D1D1F]">
+            {/* Hero Section */}
+            <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#F5F5F7] to-[#FFFFFF]">
+                <div className="text-center max-w-[1200px] px-6">
+                    <Badge className="mb-6">{t('subscription.title')}</Badge>
+                    <h1 className="text-[40px] md:text-[56px] lg:text-[72px] font-bold leading-[1.1] tracking-[-2px] mb-6 whitespace-nowrap">{t('subscription.subtitle')}</h1>
+                    <p className="text-[18px] md:text-[22px] text-[#86868B] whitespace-nowrap">
                         {t('about.vision.description')}
                     </p>
                 </div>
+            </section>
 
-                {/* Plans Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {plans.map((plan) => {
-                        const features = t.raw(`subscription.${plan.key}.features`) as string[];
-                        const planName = t(`subscription.${plan.key}.name`);
+            {/* Plans Section */}
+            <section className="min-h-screen flex items-center bg-[#FFFFFF] py-8">
+                <div className="container mx-auto max-w-6xl px-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {plans.map((plan) => {
+                            const features = t.raw(`subscription.${plan.key}.features`) as string[];
+                            const planName = t(`subscription.${plan.key}.name`);
 
-                        return (
-                            <div
-                                key={plan.key}
-                                className={`bg-white rounded-2xl p-6 relative flex flex-col ${plan.popular
-                                    ? 'border-2 border-[#0F4C81] shadow-xl'
-                                    : 'border border-gray-200'
-                                    }`}
-                            >
-                                {plan.popular && (
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                                        <span className="bg-[#0F4C81] text-white text-xs font-bold px-4 py-1 rounded-full">
-                                            ⭐ {t('subscription.mostPopular')}
-                                        </span>
+                            return (
+                                <div
+                                    key={plan.key}
+                                    className={`bg-white rounded-2xl p-6 relative flex flex-col transition-all hover:-translate-y-2 hover:shadow-2xl ${plan.popular
+                                        ? 'border-2 border-[#007AFF] shadow-xl'
+                                        : 'border border-[#D2D2D7] shadow-lg'
+                                        }`}
+                                >
+                                    {plan.popular && (
+                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                                            <span className="bg-[#007AFF] text-white text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
+                                                ⭐ {t('subscription.mostPopular')}
+                                            </span>
+                                        </div>
+                                    )}
+
+                                    <div className="mb-4 pt-1">
+                                        <h3 className="text-2xl font-bold text-[#1D1D1F] mb-2">
+                                            {planName}
+                                        </h3>
+                                        <div>
+                                            <span className="text-4xl font-black text-[#007AFF]">
+                                                ${plan.price}
+                                            </span>
+                                            <span className="text-[#86868B] text-base">/{t('subscription.monthly').toLowerCase()}</span>
+                                        </div>
                                     </div>
-                                )}
 
-                                <div className="mb-4">
-                                    <h3 className="text-2xl font-bold text-gray-900">
-                                        {planName}
-                                    </h3>
-                                    <div className="mt-2">
-                                        <span className="text-4xl font-black text-[#0F4C81]">
-                                            ${plan.price}
-                                        </span>
-                                        <span className="text-gray-500">/{t('subscription.monthly').toLowerCase()}</span>
+                                    <div className="flex gap-3 mb-4">
+                                        <div className="flex-1 p-3 rounded-xl bg-[#F5F5F7] text-center">
+                                            <div className="text-xs text-[#86868B] mb-0.5">{t('subscription.shippingDiscount')}</div>
+                                            <div className="text-lg font-bold text-[#007AFF]">{plan.discount}</div>
+                                        </div>
+                                        <div className="flex-1 p-3 rounded-xl bg-[#F5F5F7] text-center">
+                                            <div className="text-xs text-[#86868B] mb-0.5">SNS倍率</div>
+                                            <div className="text-lg font-bold text-[#007AFF]">{plan.snsMultiplier}</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="mb-4 p-3 rounded-lg bg-blue-50">
-                                    <div className="text-sm font-bold text-[#0F4C81]">
-                                        {t('subscription.shippingDiscount')}: {plan.discount}
-                                    </div>
-                                    <div className="text-xs text-gray-500">
-                                        {t('subscription.snsMultiplier')}: {plan.snsMultiplier}
-                                    </div>
-                                </div>
+                                    <ul className="space-y-2 mb-6 flex-grow">
+                                        {features.map((feature, i) => (
+                                            <li key={i} className="flex items-center gap-2 text-sm text-[#1D1D1F]">
+                                                <span className="text-green-500">✓</span>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
 
-                                <ul className="space-y-3 mb-6 flex-grow">
-                                    {features.map((feature, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                                            <span className="text-green-500">✓</span>
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                {plan.price === 0 ? (
-                                    <Button className="w-full" variant="secondary">
-                                        {t('subscription.currentPlan')}
-                                    </Button>
-                                ) : (
-                                    <Link href={`/subscription/checkout?plan=${plan.key}`}>
-                                        <Button
-                                            className={`w-full ${plan.popular ? 'bg-[#0F4C81] hover:bg-[#0d3d66] text-white' : ''}`}
-                                            variant={plan.popular ? 'primary' : 'secondary'}
-                                        >
-                                            {t('subscription.selectPlan')}
+                                    {plan.price === 0 ? (
+                                        <Button className="w-full py-3" variant="secondary">
+                                            {t('subscription.currentPlan')}
                                         </Button>
-                                    </Link>
-                                )}
-                            </div>
-                        );
-                    })}
+                                    ) : (
+                                        <Link href={`/subscription/checkout?plan=${plan.key}`}>
+                                            <Button
+                                                className={`w-full py-3 ${plan.popular ? 'bg-[#007AFF] hover:bg-[#0056b3] text-white' : ''}`}
+                                                variant={plan.popular ? 'primary' : 'secondary'}
+                                            >
+                                                {t('subscription.selectPlan')}
+                                            </Button>
+                                        </Link>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
+            </section>
 
-                {/* Comparison Table */}
-                <div className="mt-20">
-                    <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">{t('subscription.featureComparison')}</h2>
-                    <div className="overflow-x-auto bg-white rounded-2xl shadow-sm">
-                        <table className="w-full text-sm">
+            {/* Comparison Table Section */}
+            <section className="min-h-screen flex items-center justify-center bg-[#F5F5F7] py-16">
+                <div className="container mx-auto max-w-6xl px-6">
+                    <h2 className="text-[36px] md:text-[56px] font-bold text-[#1D1D1F] text-center mb-12">{t('subscription.featureComparison')}</h2>
+                    <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                        <table className="w-full text-lg">
                             <thead>
-                                <tr className="bg-gray-100">
-                                    <th className="text-left p-4 font-bold text-gray-900">Feature</th>
-                                    <th className="text-center p-4 font-bold text-gray-900">{t('subscription.free.name')}</th>
-                                    <th className="text-center p-4 font-bold text-gray-900">{t('subscription.starter.name')}</th>
-                                    <th className="text-center p-4 font-bold text-gray-900">{t('subscription.bronze.name')}</th>
-                                    <th className="text-center p-4 font-bold text-[#0F4C81] bg-blue-50">{t('subscription.silver.name')} ⭐</th>
-                                    <th className="text-center p-4 font-bold text-gray-900">{t('subscription.gold.name')}</th>
-                                    <th className="text-center p-4 font-bold text-gray-900">{t('subscription.platinum.name')}</th>
+                                <tr className="bg-[#007AFF] text-white">
+                                    <th className="text-left p-6 font-bold text-lg">機能</th>
+                                    <th className="text-center p-6 font-bold text-lg">{t('subscription.free.name')}</th>
+                                    <th className="text-center p-6 font-bold text-lg">{t('subscription.starter.name')}</th>
+                                    <th className="text-center p-6 font-bold text-lg">{t('subscription.bronze.name')}</th>
+                                    <th className="text-center p-6 font-bold text-lg bg-[#0056b3]">{t('subscription.silver.name')} ⭐</th>
+                                    <th className="text-center p-6 font-bold text-lg">{t('subscription.gold.name')}</th>
+                                    <th className="text-center p-6 font-bold text-lg">{t('subscription.platinum.name')}</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-200">
-                                <tr>
-                                    <td className="p-4 text-gray-800">{t('subscription.monthly')}</td>
-                                    <td className="text-center p-4">$0</td>
-                                    <td className="text-center p-4">$9</td>
-                                    <td className="text-center p-4">$19</td>
-                                    <td className="text-center p-4 bg-blue-50 font-bold text-[#0F4C81]">$39</td>
-                                    <td className="text-center p-4">$99</td>
-                                    <td className="text-center p-4">$499</td>
+                            <tbody>
+                                <tr className="border-b border-[#E5E5E5]">
+                                    <td className="p-6 text-[#1D1D1F] font-bold bg-[#F9F9F9]">{t('subscription.monthly')}</td>
+                                    <td className="text-center p-6 text-2xl font-bold">$0</td>
+                                    <td className="text-center p-6 text-2xl font-bold">$9</td>
+                                    <td className="text-center p-6 text-2xl font-bold">$19</td>
+                                    <td className="text-center p-6 text-2xl font-bold text-[#007AFF] bg-blue-50">$39</td>
+                                    <td className="text-center p-6 text-2xl font-bold">$99</td>
+                                    <td className="text-center p-6 text-2xl font-bold">$499</td>
+                                </tr>
+                                <tr className="border-b border-[#E5E5E5]">
+                                    <td className="p-6 text-[#1D1D1F] font-bold bg-[#F9F9F9]">{t('subscription.shippingDiscount')}</td>
+                                    <td className="text-center p-6 text-xl">—</td>
+                                    <td className="text-center p-6 text-xl text-green-600 font-bold">5%</td>
+                                    <td className="text-center p-6 text-xl text-green-600 font-bold">8%</td>
+                                    <td className="text-center p-6 text-xl text-[#007AFF] font-bold bg-blue-50">12%</td>
+                                    <td className="text-center p-6 text-xl text-green-600 font-bold">20%</td>
+                                    <td className="text-center p-6 text-xl text-green-600 font-bold">30%</td>
+                                </tr>
+                                <tr className="border-b border-[#E5E5E5]">
+                                    <td className="p-6 text-[#1D1D1F] font-bold bg-[#F9F9F9]">SNS報酬倍率</td>
+                                    <td className="text-center p-6 text-xl">1.0x</td>
+                                    <td className="text-center p-6 text-xl">1.0x</td>
+                                    <td className="text-center p-6 text-xl">1.0x</td>
+                                    <td className="text-center p-6 text-xl text-[#007AFF] font-bold bg-blue-50">1.5x</td>
+                                    <td className="text-center p-6 text-xl">2.0x</td>
+                                    <td className="text-center p-6 text-xl">3.0x</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 text-gray-800">{t('subscription.shippingDiscount')}</td>
-                                    <td className="text-center p-4">0%</td>
-                                    <td className="text-center p-4">5%</td>
-                                    <td className="text-center p-4">8%</td>
-                                    <td className="text-center p-4 bg-blue-50 font-bold text-[#0F4C81]">12%</td>
-                                    <td className="text-center p-4">20%</td>
-                                    <td className="text-center p-4">30%</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 text-gray-800">{t('subscription.snsMultiplier')}</td>
-                                    <td className="text-center p-4">1.0x</td>
-                                    <td className="text-center p-4">1.0x</td>
-                                    <td className="text-center p-4">1.0x</td>
-                                    <td className="text-center p-4 bg-blue-50 font-bold text-[#0F4C81]">1.5x</td>
-                                    <td className="text-center p-4">2.0x</td>
-                                    <td className="text-center p-4">3.0x</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-4 text-gray-800">{t('subscription.packaging')}</td>
-                                    <td className="text-center p-4">—</td>
-                                    <td className="text-center p-4">Shrink</td>
-                                    <td className="text-center p-4">+Rust</td>
-                                    <td className="text-center p-4 bg-blue-50 font-bold text-[#0F4C81]">+Parts</td>
-                                    <td className="text-center p-4">Full</td>
-                                    <td className="text-center p-4">Full+</td>
+                                    <td className="p-6 text-[#1D1D1F] font-bold bg-[#F9F9F9]">{t('subscription.packaging')}</td>
+                                    <td className="text-center p-6 text-lg">—</td>
+                                    <td className="text-center p-6 text-lg">シュリンク</td>
+                                    <td className="text-center p-6 text-lg">+防錆</td>
+                                    <td className="text-center p-6 text-lg text-[#007AFF] font-bold bg-blue-50">+パーツ</td>
+                                    <td className="text-center p-6 text-lg">フル梱包</td>
+                                    <td className="text-center p-6 text-lg">フル梱包+</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }

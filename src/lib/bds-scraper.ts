@@ -6,25 +6,51 @@
  */
 
 import { Bike, getAllBikes, addBike, updateBike, ImportLog, BikeInspectionDetail, convertGradeToAWA } from './bike-database';
+import { getCurrentExchangeRates } from './currency';
 import { detectMaker } from './maker-detection';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as https from 'https';
 import * as crypto from 'crypto';
+import puppeteer from 'puppeteer-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+import { Browser, Page } from 'puppeteer';
 
-interface MakerDetectionResult {
-    maker: string;
-    confidence: 'high' | 'medium' | 'low';
-}
+puppeteer.use(StealthPlugin());
 
-// ... (rest of imports/interfaces)
-
-// Create an agent that allows legacy server connect (renegotiation)
+// Create an agent that allows legacy server connect (renegotiation) - Keep for video downloads
 const httpsAgent = new https.Agent({
     secureOptions: crypto.constants.SSL_OP_LEGACY_SERVER_CONNECT || 0x4,
     rejectUnauthorized: false
 });
+
+// Helper: Random delay between min and max seconds
+const waitRandom = async (minSeconds: number, maxSeconds: number) => {
+    const ms = Math.floor(Math.random() * (maxSeconds - minSeconds + 1) * 1000) + minSeconds * 1000;
+    await new Promise(resolve => setTimeout(resolve, ms));
+};
+
+// Helper: Auto-scroll to bottom of page to trigger lazy loads
+async function autoScroll(page: Page) {
+    await page.evaluate(async () => {
+        await new Promise<void>((resolve) => {
+            let totalHeight = 0;
+            const distance = 100;
+            const timer = setInterval(() => {
+                const scrollHeight = document.body.scrollHeight;
+                window.scrollBy(0, distance);
+                totalHeight += distance;
+
+                if (totalHeight >= scrollHeight - window.innerHeight) {
+                    clearInterval(timer);
+                    resolve();
+                }
+            }, 100);
+        });
+    });
+}
+
 
 
 export const SETTINGS_FILE = path.join(process.cwd(), 'data', 'bds-settings.json');
@@ -86,101 +112,20 @@ interface ScrapedBikeData {
 }
 
 // Custom request helper to handle legacy SSL and Redirects
-export async function requestBDS(initialUrl: string, options: any = {}): Promise<{ text: () => Promise<string>, status: number, headers: any, finalCookies: string }> {
-    const DEBUG_LOG = path.join(process.cwd(), 'data', 'bds-debug.log');
+// requestBDS removed - replaced by Puppeteer logic
 
-    // Default headers similar to GAS script
-    const defaultHeaders = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8'
-    };
 
-    let currentUrl = initialUrl;
-    let method = options.method || 'GET';
-    let requestHeaders = { ...defaultHeaders, ...(options.headers || {}) };
-    let requestBody = options.body;
+// Use Prisma instead of file reading
+import { prisma } from '@/lib/prisma';
 
-    const maxRedirects = 5;
-
-    for (let hop = 0; hop < maxRedirects; hop++) {
-        try {
-            const result = await new Promise<{ text: () => Promise<string>, status: number, headers: any, bodyAttr: string, finalCookies: string }>((resolve, reject) => {
-                const urlObj = new URL(currentUrl);
-                const reqOptions = {
-                    method: method,
-                    headers: requestHeaders,
-                    agent: httpsAgent,
-                    rejectUnauthorized: false
-                };
-
-                const req = https.request(currentUrl, reqOptions, (res) => {
-                    const chunks: any[] = [];
-                    res.on('data', (d) => chunks.push(d));
-                    res.on('end', () => {
-                        const body = Buffer.concat(chunks).toString();
-                        resolve({
-                            status: res.statusCode || 0,
-                            headers: res.headers,
-                            text: async () => body,
-                            bodyAttr: body,
-                            finalCookies: ''
-                        });
-                    });
-                });
-
-                req.on('error', (e) => reject(e));
-
-                if (requestBody) {
-                    req.write(requestBody.toString());
-                }
-                req.end();
-            });
-
-            // Handle Redirects
-            if (result.status >= 300 && result.status < 400 && result.headers.location) {
-                // Update URL
-                const location = result.headers.location;
-                currentUrl = new URL(location, currentUrl).href;
-
-                // Update cookies if present (simple merge)
-                if (result.headers['set-cookie']) {
-                    const newCookies = result.headers['set-cookie'].map((c: string) => c.split(';')[0]).join('; ');
-                    const existingCookie = requestHeaders['Cookie'] || requestHeaders['cookie'] || '';
-                    requestHeaders['Cookie'] = existingCookie ? `${existingCookie}; ${newCookies}` : newCookies;
-                }
-
-                // Redirects change POST to GET usually (301, 302, 303)
-                if (result.status === 301 || result.status === 302 || result.status === 303) {
-                    method = 'GET';
-                    requestBody = undefined;
-                    // Remove Content-Type/Length for GET
-                    delete requestHeaders['Content-Type'];
-                    delete requestHeaders['Content-Length'];
-                    delete requestHeaders['content-type'];
-                    delete requestHeaders['content-length'];
-                }
-
-                fs.appendFileSync(DEBUG_LOG, `Redirecting [${result.status}] to: ${currentUrl}\n`);
-                continue;
-            }
-
-            // Return result with final cookies
-            result.finalCookies = requestHeaders['Cookie'] || requestHeaders['cookie'] || '';
-            return result;
-
-        } catch (error) {
-            throw error;
-        }
-    }
-
-    throw new Error(`Too many redirects (${maxRedirects})`);
-}
-
-export function getSettings(): BDSSettings | null {
+export async function getSettings(): Promise<BDSSettings | null> {
     try {
-        if (fs.existsSync(SETTINGS_FILE)) {
-            const data = JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf-8'));
+        const setting = await prisma.systemSetting.findUnique({
+            where: { key: 'bds' }
+        });
+
+        if (setting) {
+            const data = JSON.parse(setting.value);
             if (data.username && data.password) {
                 return {
                     username: data.username,
@@ -189,7 +134,7 @@ export function getSettings(): BDSSettings | null {
             }
         }
     } catch (e) {
-        console.error('Failed to read BDS settings:', e);
+        console.error('Failed to read BDS settings from DB:', e);
     }
     return null;
 }
@@ -197,106 +142,89 @@ export function getSettings(): BDSSettings | null {
 /**
  * Login to BDS and get session cookies
  */
-export async function loginToBDS(settings: BDSSettings): Promise<string | null> {
+/**
+ * Login to BDS using Puppeteer
+ */
+export async function loginToBDS(page: Page, settings: BDSSettings): Promise<boolean> {
     const DEBUG_LOG = path.join(process.cwd(), 'data', 'bds-debug.log');
 
     try {
-        fs.writeFileSync(DEBUG_LOG, `Thinking... Fetching root page: ${BDS_BASE_URL}\n`);
+        fs.appendFileSync(DEBUG_LOG, `Navigating to login page: ${BDS_BASE_URL}\n`);
 
-        // 1. Get root page to extract token and cookies
-        const rootResponse = await requestBDS(BDS_BASE_URL);
-        const rootHtml = await rootResponse.text();
+        // Go to login page
+        await page.goto(BDS_BASE_URL, { waitUntil: 'networkidle2' });
 
-        // Initial cookies might be needed (AntiCipher etc)
-        const initialCookies = rootResponse.headers['set-cookie'];
-        const cookieHeader = initialCookies ? initialCookies.join('; ') : '';
-
-        const $ = cheerio.load(rootHtml);
-
-        fs.writeFileSync(path.join(process.cwd(), 'data', 'bds-root.html'), rootHtml);
-        fs.appendFileSync(DEBUG_LOG, `Saved root HTML to data/bds-root.html\n`);
-
-        const tokenInput = $('input[name="__RequestVerificationToken"]');
-        fs.appendFileSync(DEBUG_LOG, `Token Input found: ${tokenInput.length}\n`);
-
-        const token = tokenInput.val() || '';
-
-        fs.appendFileSync(DEBUG_LOG, `Token found: ${token ? 'YES' : 'NO'}\n`);
-        fs.appendFileSync(DEBUG_LOG, `Initial Cookies: ${cookieHeader}\n`);
-
-        if (!token) {
-            console.error('BDS login failed: No verification token found');
-            return null;
+        // Check if we are already logged in (look for logout button or similar)
+        const isLoggedIn = await page.evaluate(() => document.body.innerText.includes('ログアウト'));
+        if (isLoggedIn) {
+            fs.appendFileSync(DEBUG_LOG, `Already logged in.\n`);
+            return true;
         }
 
-        // 2. Perform login request
-        fs.appendFileSync(DEBUG_LOG, `Attempting login POST to ${BDS_BASE_URL} with user ${settings.username}\n`);
+        // Fill Form
+        await page.type('input[name="member"]', settings.username, { delay: 100 }); // Slow typing
+        await page.type('input[name="pas"]', settings.password, { delay: 100 });
 
-        const loginData = new URLSearchParams({
-            member: settings.username,
-            pas: settings.password,
-            __RequestVerificationToken: token as string
-        }).toString();
+        // Click Login
+        // Selector might need adjustment based on actual page, assuming simple button or input submit
+        // Looking at previous code, it submitted to / with POST.
+        // We'll try to find the submit button.
+        const submitBtn = await page.$('input[type="submit"], button[type="submit"], .btn-login');
 
-        const loginResponse = await requestBDS(BDS_BASE_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Cookie': cookieHeader
-            },
-            body: loginData
-        });
-
-        fs.appendFileSync(DEBUG_LOG, `Login Status: ${loginResponse.status}\n`);
-
-        // 3. Extract session cookie
-        // Prioritize finalCookies which contains the accumulated cookies from redirects
-        if (loginResponse.finalCookies && loginResponse.finalCookies.length > 0) {
-            fs.appendFileSync(DEBUG_LOG, `Login successful. Using accumulated cookies.\n`);
-            return loginResponse.finalCookies;
+        if (submitBtn) {
+            await Promise.all([
+                page.waitForNavigation({ waitUntil: 'networkidle2' }),
+                submitBtn.click()
+            ]);
+        } else {
+            // Fallback: Submit form via enter key
+            await page.keyboard.press('Enter');
+            await page.waitForNavigation({ waitUntil: 'networkidle2' });
         }
 
-        const setCookieHeaders = loginResponse.headers['set-cookie'];
-        if (!setCookieHeaders) {
-            fs.appendFileSync(DEBUG_LOG, `Login failed: No Set-Cookie received and no accumulated cookies.\n`);
-            return null;
+        // Verify login
+        const content = await page.content();
+        if (content.includes('パスワードまたは会員IDに誤りがあります') || content.includes('ログイン認証に失敗しました')) {
+            console.error('BDS login failed: Invalid credentials');
+            return false;
         }
 
-        const newCookies = setCookieHeaders.join('; ');
-        fs.appendFileSync(DEBUG_LOG, `Login Response Cookies: ${newCookies.substring(0, 50)}...\n`);
-
-        // Merge cookies
-        let mergedCookies = cookieHeader;
-        if (mergedCookies && !mergedCookies.endsWith('; ')) mergedCookies += '; ';
-        mergedCookies += newCookies;
-
-        fs.appendFileSync(DEBUG_LOG, `Merged Cookies: ${mergedCookies.substring(0, 50)}...\n`);
-
-        return mergedCookies;
+        fs.appendFileSync(DEBUG_LOG, `Login successful via Puppeteer.\n`);
+        return true;
 
     } catch (error) {
-        fs.appendFileSync(DEBUG_LOG, `ERROR: ${error}\n`);
+        fs.appendFileSync(DEBUG_LOG, `ERROR in loginToBDS: ${error}\n`);
         console.error('BDS login failed:', error);
-        return null;
+        return false;
     }
 }
 
 /**
  * Fetch bike list page from BDS
  */
-export async function fetchBikeListPage(settings: BDSSettings, sessionCookie: string): Promise<BDSBikeListItem[]> {
+/**
+ * Fetch bike list page from BDS using Puppeteer
+ */
+export async function fetchBikeListPage(page: Page): Promise<BDSBikeListItem[]> {
     const DEBUG_LOG = path.join(process.cwd(), 'data', 'bds-debug.log');
 
     try {
-        // Fetch Search Page
+        // Navigate to list
         const listUrl = `${BDS_BASE_URL}/NJP20/NJP20202`;
         fs.appendFileSync(DEBUG_LOG, `Fetching search page from: ${listUrl}\n`);
 
-        const response = await requestBDS(listUrl, {
-            headers: { 'Cookie': sessionCookie },
-        });
+        await page.goto(listUrl, { waitUntil: 'networkidle2' });
 
-        const html = await response.text();
+        // Wait for table to load
+        try {
+            await page.waitForSelector('tbody tr', { timeout: 10000 });
+        } catch (e) {
+            console.warn('Timeout waiting for tbody tr, maybe no results or different structure.');
+        }
+
+        const html = await page.content();
+        // [DEBUG] Save snapshot for analysis
+        fs.writeFileSync(path.join(process.cwd(), 'bds-detail-debug.html'), html);
         fs.writeFileSync(path.join(process.cwd(), 'data', 'bds-search.html'), html);
 
         const $ = cheerio.load(html);
@@ -374,7 +302,8 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
             getText('.h1 .text-truncate span:last-child');
 
         // If name contains ｵｼﾗｾ (Announcement), return null to skip
-        if (name.includes('ｵｼﾗｾ') || name.includes('お知らせ')) {
+        if (name.includes('ｵｼﾗｾ') || name.includes('お知らせ') || name.trim() === '') {
+            console.log(`Skipping announcement/empty item: ${name}`);
             return null;
         }
 
@@ -391,9 +320,13 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
                 if (!src.startsWith('http')) {
                     fullUrl = `${BDS_BASE_URL}${src.startsWith('/') ? '' : '/'}${src}`;
                 }
-                if (!seenImages.has(fullUrl)) {
+
+                // Dedup by BASENAME to avoid high/low res duplicates
+                const basename = fullUrl.substring(fullUrl.lastIndexOf('/') + 1);
+
+                if (!seenImages.has(basename)) {
                     images.push(fullUrl);
-                    seenImages.add(fullUrl);
+                    seenImages.add(basename);
                 }
             }
         };
@@ -407,14 +340,15 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
         // 2. Swiper Slide images
         $('.swiper-slide img').each((_, img) => {
             const $img = $(img);
-            // Try all possible source attributes including lazy loaded ones
-            const src = $img.attr('data-pswp-src') || $img.attr('data-src') || $img.attr('src') || $img.attr('data-lazy');
+            // Try all possible source attributes including lazy loaded ones - PRIORITY CHANGED
+            const src = $img.attr('data-pswp-src') || $img.attr('data-src') || $img.attr('data-lazy') || $img.attr('src');
             if (src) addImage(src);
         });
 
         // 3. Any other large images in the gallery container
         $('.gallery img, .photos img, figure img').each((_, img) => {
             const $img = $(img);
+            // PRIORITY CHANGED: data-src first
             const src = $img.attr('data-src') || $img.attr('src');
             if (src) addImage(src);
         });
@@ -427,6 +361,15 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
                 if ($(a).parents('.container, .main, #main').length) {
                     addImage(href);
                 }
+            }
+        });
+
+        // 5. [Fallback] Capture ALL auction images in the page to ensure nothing is missed
+        $('img').each((_, img) => {
+            // PRIORITY CHANGED: data-src first
+            const src = $(img).attr('data-src') || $(img).attr('src');
+            if (src && src.includes('/auctiondata/') && !src.includes('icon')) {
+                addImage(src);
             }
         });
 
@@ -482,9 +425,10 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
                         inspectionImages[matchedKey as keyof typeof inspectionImages].push(fullUrl);
 
                         // Also add to main gallery if not present (User wanted "all images")
-                        if (!seenImages.has(fullUrl)) {
+                        const basename = fullUrl.substring(fullUrl.lastIndexOf('/') + 1);
+                        if (!seenImages.has(basename)) {
                             images.push(fullUrl);
-                            seenImages.add(fullUrl);
+                            seenImages.add(basename);
                         }
                     }
                 });
@@ -513,7 +457,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
         });
 
         // --- Video Extraction ---
-        const videoUrls = extractVideoUrls(html);
+        const videoUrls: string[] = [];
 
         // Parse Grades
         // Table ID: link-to-hyouka
@@ -526,16 +470,41 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
             }
         });
 
-        // Parse Details table
+        // Parse Details table - GENERIC SCAN
         const details: Record<string, string> = {};
-        $('table.njp20120-table-detail tr').each((_, row) => {
-            const $row = $(row);
-            const label = $row.find('th').text().trim();
-            const value = $row.find('td').text().trim();
+        $('th').each((_, el) => {
+            const label = $(el).text().trim();
+            const value = $(el).next('td').text().trim();
             if (label && value) {
                 details[label] = value;
             }
         });
+
+        // --- Video Extraction (Improved) ---
+        // 0. Extract from lazy-load script (var node = "...")
+        const scriptRegex = /var\s+node\s*=\s*"((?:[^"\\]|\\.)*)"/i;
+        const scriptMatch = html.match(scriptRegex);
+        if (scriptMatch && scriptMatch[1]) {
+            // Unescape JS string
+            let innerHtml = scriptMatch[1].replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\//g, '/');
+
+            // Match src with single or double quotes
+            const videoMatches = innerHtml.match(/src\s*=["']([^"']+\.mp4)["']/g);
+            if (videoMatches) {
+                videoMatches.forEach(match => {
+                    // Extract just the URL using a capture group regex
+                    const urlMatch = match.match(/src\s*=["']([^"']+\.mp4)["']/);
+                    const url = urlMatch ? urlMatch[1] : null;
+
+                    if (url) {
+                        const absUrl = url.startsWith('http') ? url : `${BDS_BASE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
+                        if (!videoUrls.includes(absUrl)) {
+                            videoUrls.push(absUrl);
+                        }
+                    }
+                });
+            }
+        }
 
         // Inspection Details (structured comments)
         const inspectionDetails: BikeInspectionDetail = {
@@ -573,11 +542,17 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
             }
         });
 
+        // Helper to sanitise text (BDS -> AWA)
+        const sanitiseText = (text: string) => {
+            if (!text) return '';
+            return text.replace(/BDS/g, 'AWA').replace(/ＢＤＳ/g, 'AWA');
+        };
+
         const scrapedData: ScrapedBikeData = {
             lane: getText('.badge-lane-a').replace('A', '') || getByLabel('レーン') || '',
             auctionNumber: getText('.h1 span:contains("A") + span') || getByLabel('出品番号') || '',
             auctionDate: getText('.h1 td.text-right').split('（')[0].trim() || getByLabel('オークション日') || auctionDate, // 2024年...
-            name,
+            name: sanitiseText(name),
             region: getText('.badge-outline-dark') || getByLabel('地域'),
             listingType: getText('.badge-secondary:first') || getByLabel('出品種別'),
             inspectionStatus: getText('.badge-lane-b') || getByLabel('検査状態'),
@@ -593,7 +568,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
             hasParts: details['パーツ有無'] || getByLabel('パーツ有無') || 'なし',
             registrationNumber: details['登録番号'] || getByLabel('登録番号') || '',
             startPrice: parsePrice(details['ｽﾀｰﾄ価格'] || details['スタート価格'] || getByLabel('ｽﾀｰﾄ価格')),
-            result: getText('.icon-result') || getByLabel('結果') || '', // Often dynamically loaded, might be empty
+            result: getText('.icon-result') || getByLabel('結果') || '',
 
             // Grades
             overallGrade: parseGrade(grades['総合']),
@@ -606,13 +581,13 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
 
             // Details & Reports
             inspectionDetails,
-            bdsReport: getText('.row:contains("BDS報告") + .row .col-sm:first p') || $('h2:contains("BDS報告")').next('p').text().trim(),
-            sellerDeclaration: getText('.row:contains("出品店申告") p') || $('h2:contains("出品店申告")').next('p').text().trim(),
+            bdsReport: sanitiseText(getText('.row:contains("BDS報告") + .row .col-sm:first p') || $('h2:contains("BDS報告")').next('p').text().trim()),
+            sellerDeclaration: sanitiseText(getText('.row:contains("出品店申告") p') || $('h2:contains("出品店申告")').next('p').text().trim()),
 
             images,
-            inspectionImages, // Added categorized images
+            inspectionImages,
             videoUrls,
-            remarks: [], // Populated below
+            remarks: [],
         };
 
         // Populate remarks with any other text sections found
@@ -628,8 +603,8 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
 
             // Get content
             const content = $(el).next().text().trim();
-            if (content && content.length > 2 && content.length < 1000) { // Reasonable length limits
-                scrapedData.remarks?.push({ title, content });
+            if (content && content.length > 2 && content.length < 1000) {
+                scrapedData.remarks?.push({ title: sanitiseText(title), content: sanitiseText(content) });
             }
         });
 
@@ -646,12 +621,38 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
 /**
  * Convert scraped data to Bike object
  */
-function convertToBike(bdsId: string, scraped: ScrapedBikeData): Bike {
+function convertToBike(bdsId: string, scraped: ScrapedBikeData, rates: any = {}): Bike {
     const makerResult = detectMaker(scraped.name);
+
+    // Determine status and historical rates
+    let status = 'active';
+    let historicalRates = '{}';
+
+    if (scraped.result && (scraped.result.includes('成約') || scraped.result.includes('Sold'))) {
+        status = 'sold';
+        historicalRates = JSON.stringify(rates);
+    } else if (scraped.result && (scraped.result.includes('流札') || scraped.result.includes('Passed'))) {
+        status = 'archived';
+        historicalRates = JSON.stringify(rates);
+    }
+
+    // Generate unique BDS ID if date and number exist
+    // Format: YYYYMMDD-Number (e.g. 20251217-0005)
+    let uniqueBdsId = bdsId;
+    if (scraped.auctionDate && scraped.auctionNumber) {
+        // Extract YYYY, MM, DD from "2025年12月17日"
+        const dateMatch = scraped.auctionDate.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+        if (dateMatch) {
+            const yyyy = dateMatch[1];
+            const mm = dateMatch[2].padStart(2, '0');
+            const dd = dateMatch[3].padStart(2, '0');
+            uniqueBdsId = `${yyyy}${mm}${dd}-${scraped.auctionNumber}`;
+        }
+    }
 
     return {
         id: `awa-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-        bdsId,
+        bdsId: uniqueBdsId,
         lane: scraped.lane,
         auctionNumber: scraped.auctionNumber,
         auctionDate: scraped.auctionDate,
@@ -682,14 +683,16 @@ function convertToBike(bdsId: string, scraped: ScrapedBikeData): Bike {
         electricGrade: scraped.electricGrade,
         frameGrade: scraped.frameGrade,
         awaGrade: convertGradeToAWA(scraped.overallGrade),
-        inspectionDetails: JSON.stringify(scraped.inspectionDetails),
+        inspectionDetails: scraped.inspectionDetails, // Pass object directly, let addBike stringify
         awaReport: scraped.bdsReport,
         sellerDeclaration: scraped.sellerDeclaration,
-        remarks: JSON.stringify(scraped.remarks || []),
-        images: JSON.stringify(scraped.images),
-        videoUrls: JSON.stringify(scraped.videoUrls),
+        remarks: scraped.remarks || [],               // Pass array directly
+        images: scraped.images,                       // Pass array directly
+        videoUrls: scraped.videoUrls,                 // Pass array directly
         importedAt: new Date(),
-        status: 'active',
+        importedAt: new Date(),
+        status: status,
+        historicalRates: historicalRates,
         currentPrice: 0,
         updatedAt: new Date(),
     } as unknown as Bike;
@@ -786,28 +789,48 @@ export function extractVideoUrls(html: string): string[] {
     if (scriptMatch && scriptMatch[1]) {
         // Unescape JS string (simple unescape might be enough for typical HTML in JS)
         let innerHtml = scriptMatch[1].replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\//g, '/');
-        // Handle unicode escapes if any (though usually not present in this specific pattern)
-        // innerHtml = innerHtml.replace(/\\u[\dA-F]{4}/gi, (match) => String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16)));
 
         console.log('[VideoDebug] Found lazy-load script content, parsing inner HTML...');
-        const $inner = cheerio.load(innerHtml);
 
-        $inner('h3').each((_, el) => {
-            const text = $inner(el).text().trim();
-            if (text.includes('エンジン音')) {
-                const container = $inner(el).closest('.col-sm, .col');
-                const videoEl = container.find('video[src], source[src], a[href*=".mp4"]').first();
-                const src = videoEl.attr('src') || videoEl.attr('data-src') || videoEl.attr('href');
+        // Use strong regex to find all .mp4 URLs in the unescaped string
+        const videoMatches = innerHtml.match(/src=['"]([^'"]+\.mp4)['"]/g);
+        if (videoMatches) {
+            videoMatches.forEach(match => {
+                const url = match.replace(/^src=['"]/, '').replace(/['"]$/, '');
+                if (url) {
+                    const absUrl = normalizeUrl(url);
+                    console.log(`[VideoDebug] Found video via Script extraction (Regex): ${absUrl}`);
 
-                if (src) {
-                    const absUrl = normalizeUrl(src);
-                    console.log(`[VideoDebug] Found video via Script extraction for "${text}": ${absUrl}`);
-                    if (text.includes('右')) rightVideo = absUrl;
-                    else if (text.includes('左')) leftVideo = absUrl;
+                    // Simple heuristic for Left/Right based on proximity to text (hard to do with pure regex on string)
+                    // But we can check if the unescaped HTML contains headers
+                    // For now, just add to unique list.
+                    // The original logic tried to pair with H3 headers. We can try to keep that if possible,
+                    // but the primary goal is "Get the video".
+
                     urls.add(absUrl);
                 }
-            }
-        });
+            });
+        }
+
+        // Also try Cheerio on innerHtml for structure (if regex missed context)
+        try {
+            const $inner = cheerio.load(innerHtml);
+            $inner('h3').each((_, el) => {
+                const text = $inner(el).text().trim();
+                if (text.includes('エンジン音')) {
+                    const container = $inner(el).closest('.col-sm, .col');
+                    const videoEl = container.find('video[src], source[src], a[href*=".mp4"]').first();
+                    const src = videoEl.attr('src') || videoEl.attr('data-src') || videoEl.attr('href');
+                    if (src) {
+                        const absUrl = normalizeUrl(src);
+                        if (text.includes('右')) rightVideo = absUrl;
+                        else if (text.includes('左')) leftVideo = absUrl;
+                    }
+                }
+            });
+        } catch (e) {
+            console.warn('Failed to parse inner HTML with Cheerio, relying on Regex results.');
+        }
     }
 
     // 1. Context-based extraction (Right/Left) from main HTML (fallback)
@@ -903,17 +926,25 @@ export function extractVideoUrls(html: string): string[] {
  * Main import function - scrapes BDS and returns bikes
  * @param maxBikes Maximum number of bikes to import (default 5 for testing)
  */
+/**
+ * Main import function - scrapes BDS and returns bikes using Puppeteer
+ * @param maxBikes Maximum number of bikes to import (default 10)
+ */
 export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportResult> {
     const DEBUG_LOG = path.join(process.cwd(), 'data', 'bds-debug.log');
-    try { fs.appendFileSync(DEBUG_LOG, "DEBUG: importBikesFromBDS called\n"); } catch { }
+    try { fs.appendFileSync(DEBUG_LOG, "DEBUG: importBikesFromBDS (Puppeteer) called\n"); } catch { }
 
-    const settings = getSettings();
+    // Fetch exchange rates once for this batch
+    const exchangeRates = await getCurrentExchangeRates();
+
+
+    const settings = await getSettings();
     if (!settings || !settings.username || !settings.password) {
         return {
             success: false,
             imported: [],
             skipped: 0,
-            errors: ['BDS設定が見つかりません。管理画面の設定ページで接続情報を入力してください。'],
+            errors: ['AWA設定が見つかりません。管理画面の設定ページで接続情報を入力してください。'],
         };
     }
 
@@ -924,19 +955,37 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
         errors: [],
     };
 
+    let browser: Browser | null = null;
+    let page: Page | null = null;
+
     try {
-        const sessionCookie = await loginToBDS(settings);
-        if (!sessionCookie) {
+        // Launch Puppeteer with Stealth
+        browser = await puppeteer.launch({
+            headless: true, // Production mode (no visible browser)
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+
+        page = await browser.newPage();
+        await page.setViewport({ width: 1366, height: 768 });
+
+        // Login
+        const loggedIn = await loginToBDS(page, settings);
+        if (!loggedIn) {
+            if (browser) await browser.close();
             return {
                 success: false,
                 imported: [],
                 skipped: 0,
-                errors: ['BDSへのログインに失敗しました。認証情報を確認してください。'],
+                errors: ['ログインに失敗しました。認証情報を確認してください。'],
             };
         }
 
-        const bikeList = await fetchBikeListPage(settings, sessionCookie);
+        // Fetch List
+        await waitRandom(2, 5); // Wait a bit after login
+        const bikeList = await fetchBikeListPage(page);
+
         if (bikeList.length === 0) {
+            if (browser) await browser.close();
             return {
                 success: true,
                 imported: [],
@@ -946,73 +995,67 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
         }
 
         const bikesToImport = bikeList.slice(0, maxBikes);
+        const listUrl = page.url(); // Capture current URL for Referer
+
+        // Extract cookies for video download
+        const cookies = await page.cookies();
+        const cookieString = cookies.map(c => `${c.name}=${c.value}`).join('; ');
 
         for (let i = 0; i < bikesToImport.length; i++) {
             const bikeItem = bikesToImport[i];
 
             try {
+                // Random Wait between pages
+                console.log(`Waiting before accessing bike ${bikeItem.id}...`);
+                await waitRandom(5, 15);
+
                 const detailUrl = bikeItem.detailUrl.startsWith('http')
                     ? bikeItem.detailUrl
                     : `${BDS_BASE_URL}${bikeItem.detailUrl}`;
 
-                const response = await requestBDS(detailUrl, {
-                    headers: { 'Cookie': sessionCookie }
+                // Navigate with Referer
+                await page.goto(detailUrl, {
+                    waitUntil: 'networkidle2',
+                    referer: listUrl
                 });
-                const html = await response.text();
+
+                // Auto Scroll to mimic human reading and trigger lazy loaded images
+                await autoScroll(page);
+
+                const html = await page.content();
 
                 if (i === 0) {
-                    fs.writeFileSync(path.join(process.cwd(), 'data', 'bds-detail-debug.html'), html);
+                    // [DEBUG] Save detail page snapshot
+                    fs.writeFileSync(path.join(process.cwd(), 'bds-detail-debug.html'), html);
+                    console.log('Saved bds-detail-debug.html');
                 }
 
+                // Use existing parsing logic
                 const scraped = parseBikeDetailPage(html);
 
                 if (scraped) {
-                    const bike = convertToBike(bikeItem.id, scraped);
+                    const bike = convertToBike(bikeItem.id, scraped, exchangeRates);
                     if (!bike.name && bikeItem.name) bike.name = bikeItem.name;
 
                     const makerDetection = detectMaker(bike.name);
                     bike.maker = makerDetection.maker;
                     bike.makerConfirmed = makerDetection.confidence === 'high';
 
-                    // --- VIDEO PROCESSING START ---
+                    // --- VIDEO PROCESSING ---
+                    // Store BDS URLs directly (will be streamed via /api/proxy-video)
                     const rawVideoUrls = extractVideoUrls(html);
                     if (rawVideoUrls.length > 0) {
                         fs.appendFileSync(DEBUG_LOG, `Found ${rawVideoUrls.length} videos for bike ${bike.id}\n`);
-
-                        const videoDir = path.join(process.cwd(), 'public', 'videos', bike.id);
-                        if (!fs.existsSync(videoDir)) {
-                            fs.mkdirSync(videoDir, { recursive: true });
-                        }
-
-                        const localVideoPaths: string[] = [];
-
-                        // Limit to max 2 videos as requested
-                        const videosToProcess = rawVideoUrls.slice(0, 2);
-
-                        for (let v = 0; v < videosToProcess.length; v++) {
-                            const vUrl = videosToProcess[v];
-                            // Determine extension
-                            const ext = vUrl.split('.').pop()?.split(/[?#]/)[0] || 'mp4';
-                            const filename = `video_${v + 1}.${ext}`;
-                            const destPath = path.join(videoDir, filename);
-
-                            fs.appendFileSync(DEBUG_LOG, `Downloading video: ${vUrl} -> ${destPath}\n`);
-                            const success = await downloadBDSFile(vUrl, destPath, sessionCookie);
-
-                            if (success) {
-                                localVideoPaths.push(`/videos/${bike.id}/${filename}`);
-                            }
-                        }
-
-                        bike.videoUrls = JSON.stringify(localVideoPaths);
+                        // Store up to 2 video URLs directly (no download, use proxy)
+                        const videosToStore = rawVideoUrls.slice(0, 2);
+                        bike.videoUrls = videosToStore; // Will be JSON.stringify'd in addBike
+                        fs.appendFileSync(DEBUG_LOG, `Stored video URLs: ${JSON.stringify(videosToStore)}\n`);
                     }
-                    // --- VIDEO PROCESSING END ---
-                    // --- VIDEO PROCESSING END ---
 
                     // Add to result
                     result.imported.push(bike);
 
-                    // Add to DB
+                    // DB Ops
                     const existingBikes = await getAllBikes();
                     if (!existingBikes.some(b => b.bdsId === bike.bdsId)) {
                         addBike(bike);
@@ -1023,8 +1066,6 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
                         }
                     }
 
-                    // Sleep to be nice
-                    await new Promise(r => setTimeout(r, 1000));
                 } else {
                     console.warn(`Failed to parse detail for bike ${bikeItem.id}`);
                     result.skipped++;
@@ -1047,6 +1088,10 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
             skipped: 0,
             errors: [`取り込み処理中にエラーが発生しました: ${error}`],
         };
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
     }
 }
 

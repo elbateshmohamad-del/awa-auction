@@ -184,6 +184,7 @@ exports.Prisma.BikeScalarFieldEnum = {
   startPrice: 'startPrice',
   currentPrice: 'currentPrice',
   result: 'result',
+  historicalRates: 'historicalRates',
   overallGrade: 'overallGrade',
   engineGrade: 'engineGrade',
   frontGrade: 'frontGrade',
@@ -226,6 +227,59 @@ exports.Prisma.BidScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.ContainerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  type: 'type',
+  status: 'status',
+  destination: 'destination',
+  capacity: 'capacity',
+  filled: 'filled',
+  etd: 'etd',
+  eta: 'eta',
+  price: 'price',
+  features: 'features',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ReservationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  containerId: 'containerId',
+  bikeIds: 'bikeIds',
+  shippingAddress: 'shippingAddress',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.SystemSettingScalarFieldEnum = {
+  key: 'key',
+  value: 'value',
+  description: 'description',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ImportLogScalarFieldEnum = {
+  id: 'id',
+  timestamp: 'timestamp',
+  bikesImported: 'bikesImported',
+  errors: 'errors'
+};
+
+exports.Prisma.AdminTaskScalarFieldEnum = {
+  id: 'id',
+  type: 'type',
+  title: 'title',
+  description: 'description',
+  permissionId: 'permissionId',
+  completed: 'completed',
+  createdAt: 'createdAt',
+  dueDate: 'dueDate',
+  assignedToName: 'assignedToName'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -248,7 +302,12 @@ exports.Prisma.ModelName = {
   KycDocument: 'KycDocument',
   Bike: 'Bike',
   Order: 'Order',
-  Bid: 'Bid'
+  Bid: 'Bid',
+  Container: 'Container',
+  Reservation: 'Reservation',
+  SystemSetting: 'SystemSetting',
+  ImportLog: 'ImportLog',
+  AdminTask: 'AdminTask'
 };
 
 /**

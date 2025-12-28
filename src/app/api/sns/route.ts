@@ -1,19 +1,23 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { getAuthFromCookie } from '@/lib/auth';
 
 export async function POST(request: Request) {
     try {
         const body = await request.json();
         const { platform, postUrl, bikeId } = body;
-        console.log("API RECEIVED:", body); // DEBUG
+
+        // Auth Check
+        const session = await getAuthFromCookie();
+        if (!session || !session.userId) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+        const userId = session.userId;
 
         // Basic Validation
         if (!platform || !postUrl || !bikeId) {
-            console.log("VALIDATION FAILED", { platform, postUrl, bikeId });
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
-
-        const userId = "MOCK-USER-123"; // TODO: Get from session
 
         // Duplicate Check
         const existing = await prisma.snsSubmission.findFirst({

@@ -1,11 +1,16 @@
 import Link from 'next/link';
+import { createPageMetadata } from '@/lib/metadata';
+import { blogPosts } from '@/data/blogPosts';
 
-export const metadata = {
-    title: 'Blog | AWA Auction',
-    description: 'Latest news, guides, and insights about Japanese motorcycle auctions and exports.',
+type Props = {
+    params: Promise<{ locale: string }>;
 };
 
-import { blogPosts } from '@/data/blogPosts';
+export async function generateMetadata({ params }: Props) {
+    const { locale } = await params;
+    return createPageMetadata(locale, 'blog');
+}
+
 
 const categories = ['All', 'Guide', 'News', 'Market Report', 'Announcement', 'Tips'];
 

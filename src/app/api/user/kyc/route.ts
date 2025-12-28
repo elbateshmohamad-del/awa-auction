@@ -5,14 +5,23 @@ import { writeFile } from 'fs/promises';
 import { join } from 'path';
 import { mkdir } from 'fs/promises';
 
+import { getAuthFromCookie } from '@/lib/auth';
+
 export async function POST(request: Request) {
     try {
+        // Auth Check
+        const session = await getAuthFromCookie();
+        if (!session || !session.userId) {
+            return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+        }
+        const userId = session.userId; // Enforce session user ID
+
         const formData = await request.formData();
-        const userId = formData.get('userId') as string;
+        // const userId = formData.get('userId') as string; // INSECURE: Ignore form data user ID
         const type = formData.get('type') as string;
         const file = formData.get('file') as File;
 
-        if (!userId || !type || !file) {
+        if (!type || !file) {
             return NextResponse.json(
                 { success: false, error: 'Missing required fields' },
                 { status: 400 }
@@ -97,14 +106,45 @@ export async function POST(request: Request) {
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
-    const userId = searchParams.get('userId');
+    const targetUserId = searchParams.get('userId');
 
-    if (!userId) {
-        return NextResponse.json(
-            { success: false, error: 'User ID is required' },
-            { status: 400 }
-        );
+    // Auth Check
+    const session = await getAuthFromCookie();
+    if (!session || !session.userId) {
+        return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
+
+    // RBAC: Allow if Admin/Staff OR requesting own data
+    const isStaff = session.role === 'ADMIN' || session.role === 'STAFF';
+    const isOwnData = session.userId === targetUserId;
+
+    if (!targetUserId) {
+        // If no user ID provided, return own data
+        // ... Logic might need adjustment if original code always expected userId param
+        // Original code returned error. Let's redirect to own data if missing? 
+        // Or keep error. But better to allow get /api/user/kyc -> own kyc
+    }
+
+    // Determine effective user ID
+    let finalUserId = targetUserId;
+    if (!finalUserId) {
+        finalUserId = session.userId;
+    } else {
+        // If requesting specific user, must be authorized
+        if (!isStaff && !isOwnData) {
+            return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 });
+        }
+    }
+
+    // Use finalUserId for query... (requires reading further down to replace `userId`)
+    // I will rewrite the query part in next chunk or include here.
+    const userId = finalUserId; // Variable reuse implies I should overwrite original logic block completely.
+
+    // ... continue to existing logic ... 
+    // Wait, replacing logic block to 107.
+    // I need to return userId or set it.
+    // The original code uses `userId` variable later.
+
 
     try {
         const user = await prisma.user.findUnique({

@@ -25,6 +25,7 @@ export function Header() {
 
     const navigation = [
         { name: t('header.navigation.auctions'), href: '/auctions' },
+        { name: t('header.navigation.market'), href: '/market' },
         { name: t('header.navigation.services'), href: '/services' },
         { name: t('header.navigation.shippingSchedule'), href: '/shipping-schedule' },
         { name: t('header.navigation.about'), href: '/about' },

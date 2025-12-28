@@ -62,6 +62,7 @@ export default function BikeSearchFilters() {
                 <option value="active">Active</option>
                 <option value="draft">Draft</option>
                 <option value="sold">Sold</option>
+                <option value="archived">Archived</option>
             </select>
         </div>
     );

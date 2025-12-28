@@ -121,7 +121,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     // Fetch live exchange rate with safety margin when currency changes
     useEffect(() => {
         fetchExchangeRate(selectedCurrency).then(rate => {
-            const rateWithMargin = applyMargin(rate, 3); // 3% safety margin
+            const rateWithMargin = applyMargin(rate); // Fixed 3 yen margin
             setExchangeRate(rateWithMargin);
         });
     }, [selectedCurrency]);
@@ -266,12 +266,13 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     }
 
     // Clean up the name
-    const cleanName = bike.name.replace(/\s+/g, ' ').trim();
+    const cleanName = bike.name ? bike.name.replace(/\s+/g, ' ').trim() : 'Unknown';
 
-    // Extract images
-    const mainGalleryImages = getMainGalleryImages(bike.images);
-    const inspectionImages = extractInspectionImages(bike.images);
-    const videoUrls = bike.videoUrls || [];
+    // Extract images - defensivly
+    const safeImages = Array.isArray(bike.images) ? bike.images : [];
+    const mainGalleryImages = getMainGalleryImages(safeImages);
+    const inspectionImages = extractInspectionImages(safeImages);
+    const videoUrls = Array.isArray(bike.videoUrls) ? bike.videoUrls : [];
 
     // Inspection categories (omitted for brevity, assume unchanged logic)
     const inspectionCategories = [
@@ -536,10 +537,10 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         </CardContent>
                     </Card>
 
-                    {/* BDS Grades */}
+                    {/* AWA Grades */}
                     <Card>
                         <CardHeader className="pb-3">
-                            <CardTitle>BDS評価点 (1-10)</CardTitle>
+                            <CardTitle>AWA評価点 (1-10)</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="flex items-center justify-between mb-6 p-3 bg-gray-50 rounded-lg">
@@ -586,7 +587,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     {bike.awaReport && (
                         <Card className="bg-yellow-50/50 border-yellow-100">
                             <CardContent className="p-4">
-                                <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">BDS報告</h3>
+                                <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">AWA報告</h3>
                                 <p className="text-sm text-gray-900 leading-relaxed font-medium">
                                     {bike.awaReport}
                                 </p>
@@ -687,7 +688,7 @@ function InspectionBlock({
                                 onClick={() => onImageClick(images, i)}
                             >
                                 <img
-                                    src={`/api/proxy-image?url=${encodeURIComponent(img)}`}
+                                    src={img ? `/api/proxy-image?url=${encodeURIComponent(img)}` : ''}
                                     className="w-full h-full object-cover"
                                     alt={`${title} ${i + 1}`}
                                 />

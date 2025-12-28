@@ -119,7 +119,7 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
     // Fetch live exchange rate with safety margin when currency changes
     useEffect(() => {
         fetchExchangeRate(selectedCurrency).then(rate => {
-            const rateWithMargin = applyMargin(rate, 3); // 3% safety margin
+            const rateWithMargin = applyMargin(rate); // Fixed 3 yen margin
             setExchangeRate(rateWithMargin);
         });
     }, [selectedCurrency]);
@@ -229,12 +229,13 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
     }
 
     // Clean up the name
-    const cleanName = bike.name.replace(/\s+/g, ' ').trim();
+    const cleanName = bike.name ? bike.name.replace(/\s+/g, ' ').trim() : 'Unknown';
 
-    // Extract images
-    const mainGalleryImages = getMainGalleryImages(bike.images);
-    const inspectionImages = extractInspectionImages(bike.images);
-    const videoUrls = bike.videoUrls || [];
+    // Extract images - defensivly
+    const safeImages = Array.isArray(bike.images) ? bike.images : [];
+    const mainGalleryImages = getMainGalleryImages(safeImages);
+    const inspectionImages = extractInspectionImages(safeImages);
+    const videoUrls = Array.isArray(bike.videoUrls) ? bike.videoUrls : [];
 
     // Inspection categories with grades and icons
     const inspectionCategories = [
@@ -334,7 +335,7 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-white text-[#0F4C81] border-2 border-[#0F4C81] hover:bg-gray-50 focus:ring-[#0F4C81] px-4 py-2.5 text-base"
                     >
-                        View on BDS
+                        View Source
                     </a>
                     <Link href={`/${locale}/admin/bikes/${bikeId}/edit`}>
                         <Button variant="primary">Edit Listing</Button>
@@ -378,19 +379,19 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
                         </div>
                     </Card>
 
-                    {/* Dual Video Section */}
-                    {videoUrls.length > 0 && (
-                        <Card className="border-gray-200 shadow-sm">
-                            <CardHeader className="border-b border-gray-100 bg-gray-50/50">
-                                <CardTitle className="flex items-center gap-2 text-lg">
-                                    <svg className="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    エンジン音動画
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-6">
+                    {/* Dual Video Section - Always visible */}
+                    <Card className="border-gray-200 shadow-sm">
+                        <CardHeader className="border-b border-gray-100 bg-gray-50/50">
+                            <CardTitle className="flex items-center gap-2 text-lg">
+                                <svg className="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                エンジン音動画
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="p-6">
+                            {videoUrls.length > 0 ? (
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {videoUrls.slice(0, 2).map((url, idx) => (
                                         <div key={idx} className="space-y-2">
@@ -414,9 +415,17 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
                                         </div>
                                     ))}
                                 </div>
-                            </CardContent>
-                        </Card>
-                    )}
+                            ) : (
+                                <div className="flex flex-col items-center justify-center py-12 text-gray-400">
+                                    <svg className="w-16 h-16 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                    <p className="text-lg font-medium">動画データがありません</p>
+                                    <p className="text-sm mt-1">この車両のエンジン音動画は登録されていません</p>
+                                </div>
+                            )}
+                        </CardContent>
+                    </Card>
 
                     {/* Inspection Details */}
                     <div className="space-y-4">
@@ -472,10 +481,10 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
                         </CardContent>
                     </Card>
 
-                    {/* BDS Grades */}
+                    {/* AWA Grades */}
                     <Card>
                         <CardHeader className="pb-3">
-                            <CardTitle>BDS評価点 (1-10)</CardTitle>
+                            <CardTitle>AWA評価点 (1-10)</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="flex items-center justify-between mb-6 p-3 bg-gray-50 rounded-lg">
@@ -522,7 +531,7 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
                     {bike.awaReport && (
                         <Card className="bg-yellow-50/50 border-yellow-100">
                             <CardContent className="p-4">
-                                <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">BDS報告</h3>
+                                <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">AWA報告</h3>
                                 <p className="text-sm text-gray-900 leading-relaxed font-medium">
                                     {bike.awaReport}
                                 </p>
@@ -543,7 +552,7 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
                     )}
 
                     {/* Remarks / Additional Notes from Scraper */}
-                    {bike.remarks && bike.remarks.length > 0 && (
+                    {Array.isArray(bike.remarks) && bike.remarks.length > 0 && (
                         <Card className="bg-gray-50 border-gray-200">
                             <CardHeader className="pb-2">
                                 <CardTitle className="text-sm text-gray-700">備考</CardTitle>

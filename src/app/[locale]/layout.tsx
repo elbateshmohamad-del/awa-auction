@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     keywords: ['motorcycle auction', 'japanese used bikes', 'kawasaki ninja', 'yamaha r1', 'export bikes'],
     authors: [{ name: 'AWA Platform' }],
     creator: 'AWA Platform',
+    icons: {
+        icon: '/favicon.png',
+        apple: '/favicon.png',
+    },
     metadataBase: new URL('http://localhost:3000'),
     openGraph: {
         title: 'AWA Auction - Premium Japanese Motorcycle Auction',

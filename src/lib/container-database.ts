@@ -1,83 +1,64 @@
 /**
- * Container Database Library
- * Handles storage and retrieval of shipping containers using JSON file storage
+ * Container Database Library (Prisma Version)
+ * Handles storage and retrieval of shipping containers using PostgreSQL
  */
 
-import fs from 'fs';
-import path from 'path';
+import { prisma } from '@/lib/prisma';
+import { PrismaClient } from '@prisma/client';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const CONTAINERS_FILE = path.join(DATA_DIR, 'containers.json');
+export type { Container };
 
-export interface Container {
-    id: string;
-    name: string; // e.g. TH-BKK-001
-    type: '20ft' | '40ft';
-    status: 'open' | 'closingSoon' | 'scheduled' | 'closed';
-    destination: string; // e.g. "bangkok, thailand"
-    capacity: number;
-    filled: number;
-    etd: string;
-    eta: string;
-    price: string;
-    features: string[];
+// Helper to parse JSON fields
+function parseContainer(container: any) {
+    if (!container) return null;
+    return {
+        ...container,
+        features: container.features ? JSON.parse(container.features) : []
+    };
 }
 
-function ensureDataDir() {
-    if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
+export async function getAllContainers() {
+    const containers = await prisma.container.findMany({
+        orderBy: { createdAt: 'desc' }
+    });
+    return containers.map(parseContainer);
 }
 
-function readContainersFile(): Container[] {
-    ensureDataDir();
-    if (fs.existsSync(CONTAINERS_FILE)) {
-        const data = fs.readFileSync(CONTAINERS_FILE, 'utf-8');
-        try {
-            return JSON.parse(data);
-        } catch (e) {
-            console.error('Failed to parse containers.json:', e);
-            return [];
+export async function getContainerById(id: string) {
+    const container = await prisma.container.findUnique({
+        where: { id }
+    });
+    return parseContainer(container);
+}
+
+export async function createContainer(data: any) {
+    const container = await prisma.container.create({
+        data: {
+            ...data,
+            features: JSON.stringify(data.features || [])
         }
+    });
+    return parseContainer(container);
+}
+
+export async function updateContainer(id: string, updates: any) {
+    const data: any = { ...updates };
+    if (data.features) data.features = JSON.stringify(data.features);
+
+    const container = await prisma.container.update({
+        where: { id },
+        data
+    });
+    return parseContainer(container);
+}
+
+export async function deleteContainer(id: string) {
+    try {
+        await prisma.container.delete({
+            where: { id }
+        });
+        return true;
+    } catch (error) {
+        return false;
     }
-    return [];
-}
-
-function writeContainersFile(data: Container[]) {
-    ensureDataDir();
-    fs.writeFileSync(CONTAINERS_FILE, JSON.stringify(data, null, 2));
-}
-
-export function getAllContainers(): Container[] {
-    return readContainersFile();
-}
-
-export function getContainerById(id: string): Container | undefined {
-    const containers = readContainersFile();
-    return containers.find(c => c.id === id);
-}
-
-export function createContainer(container: Container): Container {
-    const containers = readContainersFile();
-    containers.push(container);
-    writeContainersFile(containers);
-    return container;
-}
-
-export function updateContainer(id: string, updates: Partial<Container>): Container | null {
-    const containers = readContainersFile();
-    const index = containers.findIndex(c => c.id === id);
-    if (index === -1) return null;
-    containers[index] = { ...containers[index], ...updates };
-    writeContainersFile(containers);
-    return containers[index];
-}
-
-export function deleteContainer(id: string): boolean {
-    const containers = readContainersFile();
-    const index = containers.findIndex(c => c.id === id);
-    if (index === -1) return false;
-    containers.splice(index, 1);
-    writeContainersFile(containers);
-    return true;
 }

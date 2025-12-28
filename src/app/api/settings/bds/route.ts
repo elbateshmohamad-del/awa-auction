@@ -1,24 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { prisma } from '@/lib/prisma';
 
-const SETTINGS_FILE = path.join(process.cwd(), 'data', 'bds-settings.json');
-
-// Ensure data directory exists
-function ensureDataDir() {
-    const dataDir = path.dirname(SETTINGS_FILE);
-    if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-    }
-}
+const SETTING_KEY = 'bds';
 
 export async function GET() {
     try {
-        ensureDataDir();
-        if (fs.existsSync(SETTINGS_FILE)) {
-            const data = fs.readFileSync(SETTINGS_FILE, 'utf-8');
-            const settings = JSON.parse(data);
-            // Don't return password in plain text for security
+        const setting = await prisma.systemSetting.findUnique({
+            where: { key: SETTING_KEY }
+        });
+
+        if (setting) {
+            const settings = JSON.parse(setting.value);
             return NextResponse.json({
                 settings: {
                     ...settings,
@@ -35,27 +27,36 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
     try {
-        ensureDataDir();
         const body = await request.json();
 
-        // Load existing settings
+        // Get existing to handle password retention
+        const existing = await prisma.systemSetting.findUnique({
+            where: { key: SETTING_KEY }
+        });
+
         let existingSettings: Record<string, string> = {};
-        if (fs.existsSync(SETTINGS_FILE)) {
-            existingSettings = JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf-8'));
+        if (existing) {
+            existingSettings = JSON.parse(existing.value);
         }
 
-        // Build new settings
-        console.log('Saving BDS settings...', { username: body.username, hasPassword: !!body.password, keepPassword: body.keepPassword });
         const settings = {
             username: body.username || '',
             password: body.keepPassword ? existingSettings.password : (body.password || ''),
         };
-        console.log('Writing settings to file:', SETTINGS_FILE);
-        fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2));
-        console.log('Settings saved successfully');
+
+        await prisma.systemSetting.upsert({
+            where: { key: SETTING_KEY },
+            update: { value: JSON.stringify(settings) },
+            create: {
+                key: SETTING_KEY,
+                value: JSON.stringify(settings),
+                description: 'BDS Scraper Credentials'
+            }
+        });
+
         return NextResponse.json({ success: true });
     } catch (error) {
-        console.error('Failed to save BDS settings (Detailed):', error);
+        console.error('Failed to save BDS settings:', error);
         return NextResponse.json({ error: `Failed to save settings: ${error}` }, { status: 500 });
     }
 }

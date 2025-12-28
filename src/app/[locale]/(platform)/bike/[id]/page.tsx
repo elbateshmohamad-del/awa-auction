@@ -9,7 +9,7 @@ type Props = {
 
 // Fetch real bike data for metadata
 async function getBikeData(id: string) {
-    const bike = getBikeById(id);
+    const bike = await getBikeById(id);
     if (!bike) {
         return {
             id,

@@ -19,7 +19,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        const newContainer: Container = {
+        const newContainer = {
             id: body.id || `CONT-${Math.floor(Math.random() * 10000)}`,
             name: body.name,
             type: body.type,

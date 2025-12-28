@@ -26,10 +26,8 @@ interface SnsSubmission {
 }
 
 // MOCK DATA
-const initialSubmissions: SnsSubmission[] = [
-    { id: 1, userId: 'AWA-8888', user: 'Taro Yamada', platform: 'YouTube', postUrl: 'https://youtube.com/watch?v=demo1', status: 'Pending', submittedAt: '2025/12/20' },
-    { id: 2, userId: 'AWA-5555', user: 'Hanako Suzuki', platform: 'Instagram', postUrl: 'https://instagram.com/p/demo2', status: 'Approved', verifiedViews: 500, verifiedLikes: 100, verifiedComments: 10, rewardGranted: '¥1,500 Points', submittedAt: '2025/12/19' },
-];
+// Initial state
+const initialSubmissions: SnsSubmission[] = []; // Data will be fetched from API in future implementation
 
 export default function AdminSnsPage() {
     const t = useTranslations('admin.snsPage');

@@ -123,63 +123,73 @@ export function useAuction(bikeId: string | undefined, initialPrice: number, end
     }, [endTime]);
 
     // Place a Bid (Direct Bid)
-    const placeBid = useCallback((amount: number) => {
+    // Place a Bid (Real API)
+    const placeBid = useCallback(async (amount: number) => {
         if (state.status === 'ENDED') return false;
-        if (amount < state.minBid) return false;
 
-        const newBid: Bid = {
-            id: Math.random().toString(36).substr(2, 9),
-            bidder: 'You',
-            amount: amount,
-            timestamp: new Date(),
-            isMine: true
-        };
+        // Optimistic check
+        if (amount < state.minBid) {
+            alert(`Bid must be at least ¥${state.minBid.toLocaleString()}`);
+            return false;
+        }
 
-        setState(prev => ({
-            ...prev,
-            currentPrice: amount,
-            minBid: amount + 10000,
-            bids: [newBid, ...prev.bids]
-        }));
+        try {
+            const res = await fetch('/api/auctions/place-bid', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ bikeId, amount })
+            });
 
-        return true;
-    }, [state.minBid, state.status]);
+            const data = await res.json();
 
-    // Competitor Logic (Simulates an opponent)
-    useEffect(() => {
-        if (!SIMULATION_ENABLED || state.status === 'ENDED') return;
-
-        const interval = setInterval(() => {
-            // Competitor only bids if:
-            // 1. User is winning
-            // 2. Current price is within competitor budget
-            // 3. Random chance to make it feel organic
-            const isUserWinning = state.bids.length > 0 && state.bids[0].isMine;
-
-            if (isUserWinning && state.currentPrice < COMPETITOR_MAX_BUDGET) {
-                if (Math.random() > 0.6) { // 40% chance to bid tick
-                    // Competitor bids min increment (Directly raising price)
-                    const newPrice = state.currentPrice + 10000;
-                    const mockBid: Bid = {
-                        id: Math.random().toString(36).substr(2, 9),
-                        bidder: `Competitor`,
-                        amount: newPrice,
-                        timestamp: new Date(),
-                        isMine: false
-                    };
-
-                    setState(prev => ({
-                        ...prev,
-                        currentPrice: newPrice,
-                        minBid: newPrice + 10000,
-                        bids: [mockBid, ...prev.bids]
-                    }));
-                }
+            if (!res.ok) {
+                alert(data.error || "Failed to place bid");
+                return false;
             }
-        }, 3000); // Check every 3 seconds
 
-        return () => clearInterval(interval);
-    }, [state.bids, state.currentPrice, state.minBid, state.status]);
+            // Update State with Success
+            const newBid: Bid = {
+                id: data.bidId || Math.random().toString(36).substr(2, 9),
+                bidder: 'You',
+                amount: amount,
+                timestamp: new Date(),
+                isMine: true
+            };
+
+            setState(prev => ({
+                ...prev,
+                currentPrice: amount,
+                minBid: amount + 1000, // Small increment for next
+                bids: [newBid, ...prev.bids]
+            }));
+
+            return true;
+        } catch (error) {
+            console.error(error);
+            alert("Network error occurred");
+            return false;
+        }
+    }, [bikeId, state.minBid, state.status]);
+
+    // Competitor Bot - REMOVED for Real Implementation
+    // The previous useEffect block for simulation is deleted.
+
+    // Polling for Updates (Optional - simple sync)
+    // To see other people's bids in real-time without WS, we could poll.
+    // For now, definition of done only requires "reload maintains state".
+    // I entered a simple poll in previous steps, let's keep or refine it.
+    // The previous code had a timer logic but no data fetching poll.
+    // Let's add simple data fetching poll every 5s if LIVE.
+    /*
+        useEffect(() => {
+            if (state.status === 'ENDED' || state.status === 'PAUSED') return;
+            const interval = setInterval(async () => {
+                 // In real app: Fetch latest price from API
+                 // For this step: I will implement just the bidding action first.
+            }, 5000);
+            return () => clearInterval(interval);
+        }, [state.status]);
+    */
 
     return {
         ...state,

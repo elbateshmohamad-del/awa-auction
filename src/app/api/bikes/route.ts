@@ -5,11 +5,17 @@ import { detectMaker } from '@/lib/maker-detection';
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const maker = searchParams.get('maker');
+    const statusParam = searchParams.get('status');
 
-    let bikes = await getAllBikes();
+    let bikes = await getAllBikes({
+        status: statusParam ? statusParam.split(',').map(s => s.trim()) : undefined
+    });
+
+    // Filter by maker if provided
     if (maker) {
         bikes = bikes.filter(bike => bike.maker.toLowerCase() === maker.toLowerCase());
     }
+
 
     return NextResponse.json({
         success: true,

@@ -1,4 +1,90 @@
 {
+  "meta": {
+    "home": "ホーム",
+    "admin": "管理画面",
+    "adminLogin": "管理者ログイン",
+    "auctions": "オークション",
+    "auctionCalendar": "オークションカレンダー",
+    "bikeCatalog": "バイクカタログ",
+    "bikeDetail": "バイク詳細",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "blog": "ブログ",
+    "careers": "採用情報",
+    "cookies": "クッキーポリシー",
+    "fees": "料金",
+    "financing": "ファイナンス",
+    "help": "ヘルプセンター",
+    "helpAuctionTypes": "オークションの種類",
+    "helpDeliveryTimes": "配送時間",
+    "helpFaq": "よくある質問",
+    "helpGettingStarted": "はじめに",
+    "helpHowToBid": "入札方法",
+    "helpInspectionReports": "検査レポート",
+    "helpPaymentMethods": "支払い方法",
+    "helpSecurity": "セキュリティ",
+    "helpShippingGuide": "配送ガイド",
+    "helpVerification": "本人確認",
+    "helpVideoGuides": "動画ガイド",
+    "legal": "法務情報",
+    "legalCookies": "クッキーポリシー",
+    "legalExport": "輸出規制",
+    "legalRefunds": "返金ポリシー",
+    "news": "ニュース",
+    "partners": "パートナー",
+    "privacy": "プライバシーポリシー",
+    "shipping": "配送情報",
+    "shippingSchedule": "配送スケジュール",
+    "successStories": "成功事例",
+    "terms": "利用規約",
+    "login": "ログイン",
+    "register": "新規登録",
+    "forgotPassword": "パスワードをお忘れですか",
+    "verifyEmail": "メール確認",
+    "dashboard": "ダッシュボード",
+    "dashboardBids": "入札履歴",
+    "dashboardDeposit": "デポジット",
+    "dashboardDocuments": "書類",
+    "dashboardKyc": "本人確認",
+    "dashboardOrders": "注文履歴",
+    "dashboardProfile": "プロフィール",
+    "dashboardSettings": "設定",
+    "dashboardSns": "SNS連携",
+    "dashboardSubscription": "サブスクリプション",
+    "dashboardTracking": "配送追跡",
+    "dashboardWatchlist": "ウォッチリスト",
+    "checkout": "チェックアウト",
+    "checkoutSuccess": "注文完了",
+    "catalog": "カタログ",
+    "market": "市場相場",
+    "reservation": "予約",
+    "snsCampaign": "SNSキャンペーン",
+    "subscription": "サブスクリプション",
+    "kycSubmit": "本人確認書類提出",
+    "guideExport": "輸出ガイド",
+    "guideHowToBid": "入札ガイド",
+    "guideHowToBuy": "購入ガイド",
+    "guideShipping": "配送ガイド",
+    "adminAuctions": "オークション管理",
+    "adminAuctionNew": "オークション作成",
+    "adminBikes": "バイク管理",
+    "adminBikeNew": "バイク登録",
+    "adminBikeEdit": "バイク編集",
+    "adminContainers": "コンテナ管理",
+    "adminContent": "コンテンツ管理",
+    "adminFinance": "財務管理",
+    "adminKyc": "KYC管理",
+    "adminNotifications": "通知管理",
+    "adminOrders": "注文管理",
+    "adminPrices": "価格管理",
+    "adminReports": "レポート",
+    "adminSettings": "設定",
+    "adminSettingsInvoice": "請求書設定",
+    "adminSns": "SNS管理",
+    "adminStaff": "スタッフ管理",
+    "adminUsers": "ユーザー管理",
+    "services": "サービス"
+  },
   "common": {
     "login": "ログイン",
     "signUp": "新規登録",
@@ -31,6 +117,7 @@
   "header": {
     "navigation": {
       "auctions": "オークション",
+      "market": "相場情報",
       "services": "サービス",
       "about": "会社概要",
       "shippingSchedule": "配送スケジュール"
@@ -59,11 +146,14 @@
     },
     "tracking": {
       "title": "配送状況の確認",
+      "subtitle": "ご注文のバイクの配送状況をリアルタイムで追跡",
       "trackById": "IDで検索",
       "id": "追跡ID",
       "destination": "目的地",
       "currentLocation": "現在地",
       "eta": "到着予定日",
+      "activeShipments": "配送中のバイク",
+      "deliveryProcess": "配送プロセス",
       "steps": {
         "processed": "手続き完了",
         "shipped": "発送済み",
@@ -96,10 +186,52 @@
   },
   "home": {
     "hero": {
-      "title": "グローバル貿易を、シンプルに。",
-      "subtitle": "AWAは、テクノロジー、透明性、信頼を通じて、日本のプレミアムバイク市場を世界に繋げます。",
+      "title": "グローバル貿易を、シンプルに",
+      "subtitle": "日本のプレミアムバイクを、世界へ",
       "enterAuction": "オークションプラットフォームへ",
       "aboutAwa": "AWA Inc.について"
+    },
+    "about": {
+      "title": "All World Action",
+      "subtitle": "世界中のライダーと日本最高のバイクを繋ぐ",
+      "description1": "AWAは、世界中のライダーに日本のプレミアムバイクをお届けすることを専門としています。高品質なバイクを厳選し、包括的な検査を行い、入札から配送まであらゆる詳細に対応します。",
+      "description2": "透明な価格設定、安全な決済システム、グローバルな配送ネットワークにより、夢のジャパニーズバイクを所有することがこれまでになく簡単になりました。",
+      "bikesDelivered": "納車実績",
+      "countries": "対応国数",
+      "satisfactionRate": "満足度"
+    },
+    "howItWorks": {
+      "title": "AWAの仕組み",
+      "subtitle": "夢のバイクまで4つのシンプルなステップ",
+      "step1Title": "閲覧",
+      "step1Desc": "詳細な写真と検査レポート付きのプレミアムジャパニーズバイクを閲覧できます。",
+      "step2Title": "入札",
+      "step2Desc": "お気に入りのバイクに入札してください。透明なオークションシステムで公正な価格を保証します。",
+      "step3Title": "落札",
+      "step3Desc": "バイクを落札し、すべての手数料が明確な安全なシステムで決済を完了します。",
+      "step4Title": "受取",
+      "step4Desc": "バイクの配送を追跡し、完全な書類とサポート付きでお届けします。"
+    },
+    "features": {
+      "title": "AWAが選ばれる理由",
+      "subtitle": "すべてのバイク購入にプレミアムなサービスを",
+      "qualityTitle": "品質検査",
+      "qualityDesc": "すべてのバイクに包括的な車両レポートとプロフェッショナルな検査を実施。",
+      "shippingTitle": "グローバル配送",
+      "shippingDesc": "120カ国以上への配送、完全な追跡と保険付き。",
+      "pricingTitle": "競争力のある価格",
+      "pricingDesc": "透明な手数料と隠れたコストなしで、最高のバリューを提供。",
+      "paymentTitle": "安全な決済",
+      "paymentDesc": "銀行レベルの暗号化とセキュアなエスクローサービスで安心。",
+      "biddingTitle": "ライブ入札",
+      "biddingDesc": "リアルタイムのオークション更新と即座の通知でチャンスを逃しません。",
+      "supportTitle": "完全サポート",
+      "supportDesc": "24時間365日、多言語でのカスタマーサービスがすべてのステップをサポート。"
+    },
+    "cta": {
+      "title": "今すぐ始めましょう",
+      "subtitle": "世界中の数千人のライダーに加わろう",
+      "button": "アカウント作成"
     },
     "news": {
       "title": "最新ニュース",
@@ -315,11 +447,14 @@
     "documents": "書類",
     "tracking": {
       "title": "配送状況の確認",
+      "subtitle": "ご注文のバイクの配送状況をリアルタイムで追跡",
       "trackById": "IDで検索",
       "id": "追跡ID",
       "destination": "目的地",
       "currentLocation": "現在地",
       "eta": "到着予定日",
+      "activeShipments": "配送中のバイク",
+      "deliveryProcess": "配送プロセス",
       "steps": {
         "processed": "手続き完了",
         "shipped": "発送済み",
@@ -448,7 +583,57 @@
         "title": "保留中のタスク",
         "reviewKyc": "KYC申請を3件確認する",
         "confirmPayment": "注文 #1029 の支払いを確認する",
-        "updateRates": "為替レートを更新する"
+        "updateRates": "為替レートを更新する",
+        "noTasks": "保留中のタスクはありません",
+        "loading": "読み込み中...",
+        "addButton": "+ 追加",
+        "confirmComplete": "「{title}」を完了としてマークしますか？",
+        "myTask": "自分担当",
+        "assignedTo": "担当: {name}",
+        "unassigned": "未割当（権限グループのみ）",
+        "modal": {
+          "title": "タスクを追加",
+          "labelAssignee": "担当者（任意）",
+          "labelTitle": "タイトル",
+          "labelDescription": "説明（任意）",
+          "labelPermission": "担当権限",
+          "labelType": "種類",
+          "placeholderTitle": "例: KYC申請を確認する",
+          "placeholderDescription": "タスクの詳細...",
+          "cancel": "キャンセル",
+          "create": "作成",
+          "creating": "作成中...",
+          "permissions": {
+            "dashboard": "全員",
+            "users": "ユーザー管理",
+            "finance": "財務",
+            "auctions": "オークション",
+            "orders": "注文",
+            "bikes": "バイク",
+            "content": "コンテンツ"
+          },
+          "types": {
+            "custom": "カスタム",
+            "kyc_review": "KYC審査",
+            "payment_confirm": "支払い確認",
+            "rate_update": "為替レート更新",
+            "inventory_check": "在庫確認",
+            "shipping_prep": "発送準備",
+            "document_create": "書類作成",
+            "customer_support": "カスタマーサポート",
+            "auction_setup": "オークション設定",
+            "bike_inspection": "バイク検査",
+            "container_booking": "コンテナ予約",
+            "invoice_issue": "請求書発行",
+            "refund_process": "返金処理",
+            "system_maintenance": "システムメンテナンス",
+            "data_update": "データ更新",
+            "report_generate": "レポート作成",
+            "meeting": "ミーティング",
+            "follow_up": "フォローアップ",
+            "reminder": "リマインダー"
+          }
+        }
       },
       "systemStatus": {
         "title": "システムステータス",
@@ -466,7 +651,25 @@
       "reviewKyc": "+ KYC審査",
       "backToSite": "サイトに戻る",
       "signOut": "ログアウト",
-      "superAdmin": "スーパー管理者"
+      "superAdmin": "スーパー管理者",
+      "prices": "相場情報",
+      "administration": "管理者設定",
+      "staffManagement": "スタッフ管理",
+      "administrator": "管理者",
+      "staff": "スタッフ",
+      "dashboard": "ダッシュボード",
+      "bikes": "バイク管理",
+      "auctions": "オークション",
+      "users": "ユーザー管理",
+      "kyc": "KYC審査",
+      "orders": "注文管理",
+      "containers": "コンテナ管理",
+      "content": "コンテンツ",
+      "finance": "財務",
+      "reports": "レポート",
+      "notifications": "通知",
+      "sns": "SNS管理",
+      "settings": "設定"
     },
     "common": {
       "loading": "読み込み中...",
@@ -496,7 +699,12 @@
       "active": "有効",
       "pending": "保留中",
       "verified": "認証済み",
-      "suspended": "停止中"
+      "suspended": "停止中",
+      "statusBadge": {
+        "sold": "成約済",
+        "archived": "終了",
+        "active": "出品中"
+      }
     },
     "usersPage": {
       "title": "ユーザー管理",
@@ -592,6 +800,16 @@
       "internalNotes": "社内メモ（審査時に保存・却下時にユーザーへ通知）",
       "notesPlaceholder": "承認/却下時に保存されます。却下の場合はこの内容がメールで送信されます...",
       "preview": "プレビュー（未実装）"
+    },
+    "marketPage": {
+      "title": "相場情報",
+      "subtitle": "過去のオークション結果や市場データを閲覧できます。",
+      "searchPlaceholder": "モデルを検索...",
+      "noDataTitle": "まだデータがありません。",
+      "noDataDesc": "オークション終了後に過去データが表示されます。",
+      "mileage": "走行距離",
+      "grade": "評価点",
+      "soldPrice": "落札価格 (推定)"
     },
     "ordersPage": {
       "title": "注文管理",
@@ -1294,6 +1512,7 @@
       "description": "AWAオークションでの入札方法について",
       "types": {
         "title": "入札の種類",
+        "subtitle": "AWAでは2種類の入札方法をご用意しています",
         "live": {
           "title": "ライブ入札",
           "badge": "リアルタイム",
@@ -1374,6 +1593,8 @@
     "delivery": {
       "title": "配送日数",
       "subtitle": "世界50カ国以上へ配送可能です。日本国内の港からの推定配送期間です。",
+      "regionTitle": "配送地域別所要時間",
+      "note": "実際の配送日数は、通関手続きや現地の状況により異なる場合があります。",
       "regions": {
         "asia": {
           "name": "アジア",
@@ -1455,8 +1676,57 @@
     "verification": {
       "title": "本人確認",
       "subtitle": "すべての入札権限を解除するにはKYCを完了してください。",
+      "description": "安全で信頼性の高い取引環境を維持するため、すべてのユーザー様に本人確認(KYC)の完了をお願いしております。以下の3つのステップで簡単に完了できます。",
       "steps": {
-        "id": "身分証明書のアップロード"
+        "id": "身分証明書のアップロード",
+        "idDesc": "パスポートまたは運転免許証などの有効な身分証明書をアップロードしてください。",
+        "address": "住所確認書類の提出",
+        "addressDesc": "公共料金の請求書や住民票など、現住所が確認できる書類を提出してください。",
+        "phone": "電話番号認証",
+        "phoneDesc": "SMSで送信される認証コードを入力して、電話番号を確認します。"
+      },
+      "whyKyc": {
+        "title": "本人確認が必要な理由",
+        "security": "セキュリティ強化",
+        "securityDesc": "不正利用やなりすましを防ぎ、安全な取引環境を提供します。",
+        "trust": "信頼性の向上",
+        "trustDesc": "すべてのユーザーが本人確認済みであることで、安心して取引できます。",
+        "legal": "法令遵守",
+        "legalDesc": "国際送金や高額取引に関する法規制に準拠しています。"
+      }
+    },
+    "security": {
+      "title": "セキュリティセンター",
+      "subtitle": "お客様の安全は私たちの最優先事項です。",
+      "features": {
+        "ssl": {
+          "title": "SSL暗号化通信",
+          "desc": "すべての通信は暗号化され、個人情報を保護します。"
+        },
+        "auth": {
+          "title": "2段階認証",
+          "desc": "アカウントの不正アクセスを防ぐ強固な認証システム。"
+        },
+        "data": {
+          "title": "データ保護",
+          "desc": "厳格なプライバシーポリシーに基づきデータを管理。"
+        }
+      },
+      "monitoring": {
+        "title": "24時間365日の監視体制",
+        "description": "セキュリティ専門チームが常時システムを監視し、不審なアクティビティを即座に検知・対応します。最新のセキュリティ技術を導入し、お客様の大切なデータを守ります。",
+        "realtime": {
+          "title": "リアルタイム監視",
+          "desc": "不正アクセスを即座に検知"
+        },
+        "response": {
+          "title": "即座の対応",
+          "desc": "脅威を迅速に無効化"
+        },
+        "audit": {
+          "title": "定期的な監査",
+          "desc": "セキュリティ体制を常に改善"
+        }
       }
     },
     "careers": {
@@ -1577,6 +1847,7 @@
     "shipping": {
       "title": "国際配送ガイド",
       "methods": {
+        "title": "配送方法",
         "roro": {
           "title": "RoRo船（自動車専用船）",
           "desc": "ロールオン・ロールオフ方式。自走可能な車両にとって最も一般的で費用対効果の高い方法です。",
@@ -2028,10 +2299,612 @@
       "tryAgain": "再試行"
     }
   },
+  "aboutPage": {
+    "title": "AWAについて",
+    "subtitle": "私たちの歩みとミッション",
+    "story": {
+      "title": "🏍️ 私たちのストーリー",
+      "text1": "AWA（All World Action）は、世界中のバイク愛好家と日本最高品質のバイクをつなぐというシンプルなミッションのもと設立されました。情熱から始まったプロジェクトは、120カ国以上のライダーにサービスを提供する信頼のプラットフォームへと成長しました。",
+      "text2": "日本を拠点とし、プレミアムオークションや独占在庫への直接アクセスを持つ私たちは、他では見つけにくいバイクを競争力のある価格で提供することができます。"
+    },
+    "mission": {
+      "title": "🎯 私たちのミッション",
+      "text": "完全な透明性、プロフェッショナルなサービス、そして顧客満足への揺るぎないコミットメントにより、世界中のライダーが高品質な日本製バイクを所有できるようにすること。"
+    },
+    "values": {
+      "title": "💎 私たちの価値観",
+      "transparency": {
+        "title": "透明性",
+        "desc": "正直な検査、明確な価格設定、隠れた手数料なし"
+      },
+      "quality": {
+        "title": "品質",
+        "desc": "最高品質のバイクのみをプラットフォームに掲載"
+      },
+      "trust": {
+        "title": "信頼",
+        "desc": "お客様との長期的な関係構築"
+      },
+      "globalReach": {
+        "title": "グローバルリーチ",
+        "desc": "120カ国以上のライダーにサービス提供"
+      }
+    },
+    "stats": {
+      "title": "📈 数字で見るAWA",
+      "bikesDelivered": "納車実績",
+      "countriesServed": "対応国数",
+      "satisfactionRate": "顧客満足度",
+      "supportAvailable": "サポート対応"
+    },
+    "whyChoose": {
+      "title": "🏆 AWAが選ばれる理由",
+      "directAccess": "日本への直接アクセス：",
+      "directAccessDesc": "日本のオークションとディーラーから直接仕入れ",
+      "expertInspection": "専門家による検査：",
+      "expertInspectionDesc": "すべてのバイクをプロが検査・記録",
+      "endToEnd": "エンドツーエンドサービス：",
+      "endToEndDesc": "入札から配送まですべてを対応",
+      "globalNetwork": "グローバルネットワーク：",
+      "globalNetworkDesc": "世界中の信頼できる配送パートナー",
+      "multilingualSupport": "多言語サポート：",
+      "multilingualSupportDesc": "日本語、英語、アラビア語でサービス提供"
+    },
+    "cta": {
+      "title": "夢のバイクを見つける準備はできましたか？",
+      "subtitle": "世界中の数千人のお客様に加わりましょう。",
+      "button": "始める"
+    }
+  },
+  "servicesPage": {
+    "title": "バイヤーサービス",
+    "subtitle": "バイク購入を包括的にサポート",
+    "intro": "AWAでは、バイク購入体験がスムーズでストレスフリーになるよう、エンドツーエンドのサポートを提供しています。",
+    "inspection": {
+      "title": "購入前検査",
+      "item1": "包括的なコンディションレポート",
+      "item2": "高解像度写真",
+      "item3": "リクエストに応じたビデオウォークスルー",
+      "item4": "専門家によるコンディション評価"
+    },
+    "support": {
+      "title": "24時間365日サポート",
+      "item1": "ライブチャットサポート",
+      "item2": "メールサポート",
+      "item3": "電話相談",
+      "item4": "多言語サポート"
+    },
+    "documentation": {
+      "title": "書類サポート",
+      "item1": "輸出証明書",
+      "item2": "船荷証券",
+      "item3": "通関書類",
+      "item4": "名義変更サポート"
+    },
+    "shipping": {
+      "title": "配送コーディネート",
+      "item1": "ドアツーポートサービス",
+      "item2": "完全追跡",
+      "item3": "海上保険",
+      "item4": "通関業者紹介"
+    },
+    "payment": {
+      "title": "お支払いオプション",
+      "item1": "安全な銀行振込",
+      "item2": "複数通貨対応",
+      "item3": "明確な請求書",
+      "item4": "支払い確認"
+    },
+    "protection": {
+      "title": "バイヤー保護",
+      "item1": "取引セキュリティ",
+      "item2": "紛争解決",
+      "item3": "配送保険",
+      "item4": "品質保証"
+    },
+    "vip": {
+      "title": "⭐ VIPバイヤープログラム",
+      "subtitle": "リピーター向けの特別特典",
+      "priorityAccess": {
+        "title": "優先アクセス",
+        "desc": "公開オークション前に新着リストに早期アクセス"
+      },
+      "reducedFees": {
+        "title": "手数料割引",
+        "desc": "サービス料と配送料の割引"
+      },
+      "dedicatedSupport": {
+        "title": "専任サポート",
+        "desc": "すべてのニーズに対応するパーソナルアカウントマネージャー"
+      },
+      "extendedPayment": {
+        "title": "支払い延長",
+        "desc": "資格のある購入者向けの柔軟な支払い条件"
+      }
+    },
+    "cta": {
+      "title": "始める準備はできましたか？",
+      "subtitle": "アカウントを作成して、プレミアムバイヤーサービスを体験してください。",
+      "button": "始める"
+    }
+  },
+  "faqPage": {
+    "title": "よくある質問",
+    "subtitle": "一般的な質問への回答をご覧ください",
+    "bidding": {
+      "title": "🏍️ 入札について",
+      "q1": "入札方法を教えてください。",
+      "a1": "アカウント作成後、カタログを閲覧し、任意のバイクの「入札」をクリックしてください。入札金額（最低$20刻み）を入力して確認します。",
+      "q2": "最低入札金額の刻みはいくらですか？",
+      "a2": "最低入札金額の刻みは$20 USDです。",
+      "q3": "オークションはいつ終了しますか？",
+      "a3": "オークションは毎週火曜日の17:00 JSTに終了します。タイムゾーン変換についてはオークションカレンダーをご確認ください。",
+      "q4": "入札をキャンセルできますか？",
+      "a4": "入札は拘束力があり、キャンセルできません。"
+    },
+    "payment": {
+      "title": "💳 お支払い",
+      "q1": "どのような支払い方法に対応していますか？",
+      "a1": "現在、銀行振込に対応しています。クレジットカードと分割払いは近日対応予定です。",
+      "q2": "支払い期限はいつまでですか？",
+      "a2": "請求書受領後5営業日以内にお支払いを完了してください。",
+      "q3": "どの通貨を使用していますか？",
+      "a3": "すべての価格はUSDで表示されます。USD、EUR、GBPでのお支払いを受け付けています。"
+    },
+    "shippingFaq": {
+      "title": "🚢 配送",
+      "q1": "配送にはどのくらい時間がかかりますか？",
+      "a1": "配送期間は地域によって異なります：UAE 3-4週間、エジプト 5-6週間、イギリス 6-8週間。詳細は配送情報をご覧ください。",
+      "q2": "配送保険は含まれていますか？",
+      "a2": "はい、すべての配送に海上保険が含まれています。",
+      "q3": "通関手続きは対応していますか？",
+      "a3": "すべての輸出書類を提供します。到着地での通関手続きは購入者の責任となります。"
+    },
+    "inspectionFaq": {
+      "title": "🔍 検査と品質",
+      "q1": "バイクはどのように検査されますか？",
+      "a1": "すべてのバイクは、外観、機械系統、電装系統をカバーする包括的な検査を受けます。",
+      "q2": "コンディショングレードの意味は？",
+      "a2": "S（優秀）からD（不良）までのグレードを使用しています。詳細は検査サービスをご覧ください。"
+    },
+    "supportFaq": {
+      "title": "📞 サポート",
+      "q1": "サポートへの連絡方法は？",
+      "a1": "メール：info@awa.com | 電話：+1 (800) AWA-BIKE | 日本語、英語、アラビア語で24時間365日サポートを提供しています。"
+    },
+    "stillHaveQuestions": {
+      "title": "まだ質問がありますか？",
+      "subtitle": "サポートチームがお手伝いします。",
+      "button": "お問い合わせ"
+    }
+  },
+  "contactPage": {
+    "title": "お問い合わせ",
+    "subtitle": "夢のバイクを見つけるお手伝いをします",
+    "getInTouch": "お問い合わせ",
+    "intro": "オークションについての質問や配送のサポートが必要ですか？私たちのチームは24時間対応しています。",
+    "headquarters": {
+      "title": "📍 本社",
+      "line1": "AWAタワー 15F",
+      "line2": "港区1-2-3",
+      "line3": "東京都 105-0000"
+    },
+    "phone": {
+      "title": "📞 電話",
+      "international": "国際電話：",
+      "internationalNumber": "+81 3-1234-5678",
+      "tollFree": "フリーダイヤル（米国）：",
+      "tollFreeNumber": "+1 (800) AWA-BIKE"
+    },
+    "email": {
+      "title": "📧 メール",
+      "support": "サポート：",
+      "supportEmail": "support@awa.com",
+      "sales": "営業：",
+      "salesEmail": "sales@awa.com",
+      "partnerships": "パートナーシップ：",
+      "partnershipsEmail": "partners@awa.com"
+    },
+    "form": {
+      "title": "メッセージを送信",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "subjectOptions": {
+        "general": "一般的なお問い合わせ",
+        "auction": "オークションに関するヘルプ",
+        "shipping": "配送・物流",
+        "partnership": "パートナーシップ"
+      },
+      "message": "メッセージ",
+      "submit": "メッセージを送信",
+      "success": "メッセージが送信されました！近日中にご連絡いたします。"
+    }
+  },
+  "inspectionPage": {
+    "title": "検査サービス",
+    "subtitle": "全車両対象のプロフェッショナルによる80項目以上の徹底検査",
+    "intro": "AWAでは、透明性こそが最も重要だと考えています。そのため、プラットフォームに出品されるすべてのバイクは、認定メカニックによる厳格な検査プロセスを経ています。",
+    "process": {
+      "title": "AWAの検査プロセス",
+      "step1": {
+        "title": "外装検査",
+        "desc": "外装の状態、傷、錆、外観上の損傷を詳細にチェックします。"
+      },
+      "step2": {
+        "title": "機関チェック",
+        "desc": "エンジンの始動テスト、異音チェック、オイル漏れの確認、トランスミッションの動作テストを行います。"
+      },
+      "step3": {
+        "title": "電装系チェック",
+        "desc": "ライト、ウィンカー、ホーン、バッテリー電圧の動作確認を行います。"
+      },
+      "step4": {
+        "title": "フレーム・足回り",
+        "desc": "フレームの損傷、フォークシールの状態、サスペンションの機能を確認します。"
+      }
+    },
+    "grades": {
+      "title": "コンディション評価基準",
+      "s": {
+        "grade": "評価 S",
+        "desc": "新車同様、未使用車。ショールームコンディション。"
+      },
+      "5": {
+        "grade": "評価 5",
+        "desc": "極上車。低走行、素晴らしいコンディション。"
+      },
+      "4": {
+        "grade": "評価 4",
+        "desc": "良質車。年式相応の小傷や摩耗が見られる程度。"
+      },
+      "3": {
+        "grade": "評価 3",
+        "desc": "並行車。目立つ傷や錆、補修歴がある場合あり。"
+      },
+      "2": {
+        "grade": "評価 2",
+        "desc": "要整備車。大幅な修理やレストアが必要。"
+      },
+      "1": {
+        "grade": "評価 1",
+        "desc": "部品取り車/不動車。エンジン不動または大きな損傷あり。"
+      }
+    },
+    "report": {
+      "title": "包括的な検査レポート",
+      "desc": "すべての出品車両には、見つかったすべての不具合を詳細に記した検査シートが添付され、ダウンロード可能です。",
+      "downloadSample": "サンプルレポートをダウンロード"
+    },
+    "cta": {
+      "title": "安心して購入できます",
+      "subtitle": "世界中の満足したディーラーやライダーの仲間入りをしましょう。",
+      "button": "オークションを見る"
+    }
+  },
+  "financingPage": {
+    "title": "ファイナンスオプション",
+    "subtitle": "ビジネスのための柔軟な支払いソリューション",
+    "intro": "ディーラーにとってキャッシュフローが重要であることを私たちは理解しています。AWAは、在庫管理とビジネスの成長を支援するために、柔軟なファイナンスとクレジット条件を提供します。",
+    "options": {
+      "title": "ファイナンスプラン",
+      "plan1": {
+        "title": "後払い決済",
+        "desc": "頭金30%をお支払いいただき、残りの70%は港への到着時にお支払いいただけます。",
+        "duration": "最大60日間"
+      },
+      "plan2": {
+        "title": "リボルビングクレジット",
+        "desc": "実績のある頻繁なバイヤー向けの継続的な与信枠。",
+        "limit": "最大10万ドル"
+      },
+      "plan3": {
+        "title": "信用状（L/C）",
+        "desc": "大口注文については、主要国際銀行からの信用状を受け付けています。"
+      }
+    },
+    "partners": {
+      "title": "金融パートナー",
+      "desc": "安全でスムーズな取引を保証するために、世界的な主要銀行と提携しています。"
+    },
+    "calculator": {
+      "title": "ローン計算機",
+      "subtitle": "月々の支払額を見積もる",
+      "amount": "借入金額",
+      "duration": "期間（月）",
+      "rate": "金利（%）",
+      "calculate": "計算する",
+      "result": "月々の支払目安："
+    },
+    "cta": {
+      "title": "ファイナンスを申し込む",
+      "subtitle": "利用資格について、ファイナンスチームにお問い合わせください。",
+      "button": "ファイナンスチームに連絡"
+    }
+  },
+  "shippingPage": {
+    "title": "グローバル配送",
+    "subtitle": "120カ国以上への安全で信頼性の高い配送",
+    "intro": "AWAは、国際物流の複雑さをお客様に代わって処理します。私たちのヤードからお客様の港まで、バイクが安全かつ効率的に輸送されることを保証します。",
+    "features": {
+      "title": "私たちの物流サービス",
+      "feature1": {
+        "title": "ドア・ツー・ポート",
+        "desc": "オークション会場から最寄りの国際港まで、シームレスなバリューチェーンを提供します。"
+      },
+      "feature2": {
+        "title": "コンテナ積み込み",
+        "desc": "輸送中の最大限のスペースと安全性を確保するためのプロフェッショナルな積み込みサービス。"
+      },
+      "feature3": {
+        "title": "ドキュメンテーション",
+        "desc": "船荷証券（B/L）や輸出証明書を含む、完全な輸出書類の取り扱い。"
+      },
+      "feature4": {
+        "title": "保険",
+        "desc": "安心のための包括的な海上保険が含まれています。"
+      }
+    },
+    "rates": {
+      "title": "推定配送料金",
+      "subtitle": "40フィートコンテナ輸送の標準的なコスト",
+      "region": "地域 / 港",
+      "time": "輸送期間",
+      "cost": "推定コスト",
+      "asia": "東南アジア（バンコク、マニラ）",
+      "asiaTime": "10-14日",
+      "middleEast": "中東（ジェベル・アリ、ジッダ）",
+      "middleEastTime": "20-25日",
+      "europe": "ヨーロッパ（ロッテルダム、サウサンプトン）",
+      "europeTime": "35-40日",
+      "africa": "アフリカ（モンバサ、ダーバン）",
+      "africaTime": "30-45日",
+      "oceania": "オセアニア（オークランド、シドニー）",
+      "oceaniaTime": "15-20日",
+      "disclaimer": "*料金は推定であり、燃料サーチャージや季節的な空き状況により変更される場合があります。"
+    },
+    "partners": {
+      "title": "配送パートナー",
+      "desc": "Maersk、MSC、ONEなどの主要な国際海運会社と提携しています。"
+    },
+    "cta": {
+      "title": "見積もりを取得",
+      "subtitle": "特定の目的地への見積もりが必要ですか？",
+      "button": "見積もりを依頼"
+    }
+  },
+  "cookiesPage": {
+    "title": "クッキーポリシー",
+    "lastUpdated": "最終更新日：2024年12月25日",
+    "intro": "AWAは、お客様の体験を向上させ、サイトのトラフィックを分析し、コンテンツをパーソナライズするためにクッキーを使用しています。このポリシーでは、クッキーとは何か、私たちがそれらをどのように使用するか、およびお客様の選択肢について説明します。",
+    "whatAreCookies": {
+      "title": "クッキーとは何ですか？",
+      "desc": "クッキーは、ウェブサイトにアクセスした際にお使いのデバイスに保存される小さなテキストファイルです。これらは、ウェブサイトが一定期間、お客様の行動や設定を記憶するのに役立ちます。"
+    },
+    "howWeUse": {
+      "title": "クッキーの使用方法",
+      "essential": {
+        "title": "必須クッキー",
+        "desc": "ウェブサイトが適切に機能するために必要です。ログインセッションやセキュリティ機能が含まれます。"
+      },
+      "analytics": {
+        "title": "分析クッキー",
+        "desc": "訪問者が当社のウェブサイトをどのように利用しているかを理解するために、情報を匿名で収集し報告します。"
+      },
+      "marketing": {
+        "title": "マーケティングクッキー",
+        "desc": "関連性の高い広告を表示するために、ウェブサイト全体で訪問者を追跡するために使用されます。"
+      }
+    },
+    "manage": {
+      "title": "クッキーの管理",
+      "desc": "お客様は、クッキーを自由に管理および/または削除することができます。お使いのコンピュータにすでに保存されているすべてのクッキーを削除することができ、ほとんどのブラウザでそれらが配置されないように設定することができます。"
+    }
+  },
+  "videoGuidesPage": {
+    "title": "ビデオガイド",
+    "subtitle": "AWAオークションを効果的に活用する方法を学ぶ",
+    "intro": "AWAプラットフォームを使いこなすためのステップバイステップのチュートリアルをご覧ください。入札戦略から検査レポートの理解まで、幅広くカバーしています。",
+    "categories": {
+      "gettingStarted": "はじめに",
+      "bidding": "入札と購入",
+      "logistics": "配送と物流"
+    },
+    "guides": {
+      "guide1": {
+        "title": "登録方法",
+        "desc": "登録と本人確認プロセスのクイックウォークスルー。"
+      },
+      "guide2": {
+        "title": "最初の入札",
+        "desc": "バイクの検索方法とリアルタイムでの入札方法を学びます。"
+      },
+      "guide3": {
+        "title": "検査レポートの読み方",
+        "desc": "評価システムと検査シートの解釈方法を理解します。"
+      },
+      "guide4": {
+        "title": "配送プロセスの解説",
+        "desc": "落札後の流れは？支払いと配送についてのガイド。"
+      }
+    },
+    "cta": {
+      "title": "さらにヘルプが必要ですか？",
+      "subtitle": "よくある質問を確認するか、サポートにお問い合わせください。",
+      "button": "FAQを見る"
+    }
+  },
+  "successStoriesPage": {
+    "title": "成功事例",
+    "subtitle": "世界中のディーラーがAWAと共にどのように成長しているかをご覧ください",
+    "stories": {
+      "story1": {
+        "name": "MotoWorld UK",
+        "location": "イギリス、ロンドン",
+        "quote": "AWAの検査レポートは非常に詳細で、自分でバイクを検査しているような気分になります。切り替えてから売上が40％増加しました。",
+        "image": "dealer1"
+      },
+      "story2": {
+        "name": "Dublin Bikes",
+        "location": "アイルランド、ダブリン",
+        "quote": "配送サポートが素晴らしいです。ドア・ツー・ポートサービスにより、物流業務に費やす膨大な時間を節約できています。",
+        "image": "dealer2"
+      },
+      "story3": {
+        "name": "Desert Riders",
+        "location": "UAE、ドバイ",
+        "quote": "AWAを見つけるまで、高品質のヴィンテージ日本車を見つけるのは困難でした。彼らの在庫は比類のないものです。",
+        "image": "dealer3"
+      }
+    },
+    "stats": {
+      "dealers": "5,000+ ディーラー",
+      "countries": "120+ カ国",
+      "satisfaction": "98% 満足度"
+    },
+    "cta": {
+      "title": "あなたのストーリーを始めましょう",
+      "subtitle": "成功したオートバイディーラーのグローバルネットワークに参加しましょう。",
+      "button": "今すぐ登録"
+    }
+  },
+  "calendarPage": {
+    "title": "オークションカレンダー",
+    "subtitle": "今後のライブオークションと特別イベント",
+    "events": {
+      "title": "今後のイベント",
+      "weekly": "定期ウィークリーオークション",
+      "time": "毎週火曜日・金曜日、午前10:00 JST",
+      "desc": "すべての主要メーカーの幅広いバイクを取り扱うスタンダードオークションです。"
+    },
+    "specialEvents": {
+      "title": "特別イベント",
+      "event1": {
+        "title": "ヴィンテージバイクショーケース",
+        "date": "2025年1月15日",
+        "desc": "希少なヴィンテージバイクの厳選コレクション。"
+      },
+      "event2": {
+        "title": "ドゥカティ特別オークション",
+        "date": "2025年2月1日",
+        "desc": "プレミアムなドゥカティモデルをフィーチャーした限定オークション。"
+      }
+    },
+    "cta": {
+      "title": "見逃さないでください",
+      "subtitle": "カレンダーアラートに登録しましょう。",
+      "button": "アラートを受け取る"
+    }
+  },
+  "catalogPage": {
+    "title": "バイクカタログ",
+    "subtitle": "二輪車スペックの包括的なアーカイブを探索する",
+    "search": {
+      "placeholder": "メーカー、モデル、または年式で検索...",
+      "button": "カタログを検索"
+    },
+    "manufacturers": {
+      "honda": "ホンダ",
+      "yamaha": "ヤマハ",
+      "suzuki": "スズキ",
+      "kawasaki": "カワサキ",
+      "ducati": "ドゥカティ",
+      "bmw": "BMW",
+      "harley": "ハーレーダビッドソン",
+      "triumph": "トライアンフ"
+    },
+    "featured": {
+      "title": "注目のモデル",
+      "viewSpecs": "スペックを見る"
+    },
+    "cta": {
+      "title": "特定のバイクをお探しですか？",
+      "subtitle": "私たちのチームがオークションで見つけるお手伝いをします。",
+      "button": "営業チームに連絡"
+    }
+  },
   "languageSwitcher": {
     "title": "言語",
     "ja": "日本語",
     "en": "English",
     "ar": "العربية"
+  },
+  "security_center": {
+    "badge": "セキュリティ",
+    "title": "セキュリティセンター",
+    "subtitle": "お客様の安全は私たちの最優先事項です。",
+    "features_title": "セキュリティ機能",
+    "features_subtitle": "お客様の情報を守るための最新技術",
+    "features": {
+      "ssl": {
+        "title": "SSL暗号化通信",
+        "desc": "すべての通信は暗号化され、個人情報を保護します。"
+      },
+      "auth": {
+        "title": "2段階認証",
+        "desc": "アカウントの不正アクセスを防ぐ強固な認証システム。"
+      },
+      "data": {
+        "title": "データ保護",
+        "desc": "厳格なプライバシーポリシーに基づきデータを管理。"
+      }
+    },
+    "monitoring": {
+      "title": "24時間365日の監視体制",
+      "description": "セキュリティ専門チームが常時システムを監視し、不審なアクティビティを即座に検知・対応します。最新のセキュリティ技術を導入し、お客様の大切なデータを守ります。",
+      "realtime": {
+        "title": "リアルタイム監視",
+        "desc": "不正アクセスを即座に検知"
+      },
+      "response": {
+        "title": "即座の対応",
+        "desc": "脅威を迅速に無効化"
+      },
+      "audit": {
+        "title": "定期的な監査",
+        "desc": "セキュリティ体制を常に改善"
+      }
+    }
+  },
+  "contact_redesign": {
+    "hero": {
+      "badge": "お問い合わせ",
+      "title": "お手伝いしましょうか？",
+      "subtitle": "ご質問やご相談がございましたら、お気軽にお問い合わせください。"
+    },
+    "info": {
+      "title": "ご連絡先",
+      "description": "オークションのプロセス、配送、お支払いなど、専門スタッフがサポートいたします。",
+      "headquarters": {
+        "title": "本社",
+        "address": "〒105-0000 東京都港区1-2-3 AWAタワー 15F"
+      },
+      "phone": {
+        "title": "お電話",
+        "international": "国際電話",
+        "tollFree": "フリーダイヤル (国内)"
+      },
+      "email": {
+        "title": "メール",
+        "support": "カスタマーサポート",
+        "sales": "営業・パートナーシップ"
+      }
+    },
+    "form": {
+      "title": "メッセージを送る",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "submit": "送信する",
+      "submitting": "送信中...",
+      "success": "メッセージを送信しました。担当者より近日中にご連絡いたします。",
+      "subjects": {
+        "general": "総合的なお問い合わせ",
+        "auction": "オークションについて",
+        "shipping": "配送・物流について",
+        "partnership": "パートナーシップ"
+      }
+    }
   }
 }

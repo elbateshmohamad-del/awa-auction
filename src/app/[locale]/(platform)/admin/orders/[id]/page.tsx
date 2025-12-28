@@ -125,7 +125,7 @@ export default function AdminOrderDetailPage({ params }: { params: Promise<{ id:
     const handlePrintInvoice = async () => {
         try {
             const rawRate = await fetchExchangeRate(currency);
-            const finalRate = applyMargin(rawRate, 3);
+            const finalRate = applyMargin(rawRate); // Fixed 3 margin
             const blob = generateInvoicePDF(order, finalRate, currency);
             const url = window.URL.createObjectURL(blob);
             setInvoicePreviewUrl(url);

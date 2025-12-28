@@ -87,3 +87,1000 @@ Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/mov
 Found 2 videos for bike awa-1765862412457-6ibzeq5ud
 Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/001020251217_r.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862412457-6ibzeq5ud\video_1.mp4
 Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251217/movie_engine/001020251217_l.mp4 -> C:\Users\81809\Saved Games\awa-auction\public\videos\awa-1765862412457-6ibzeq5ud\video_2.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - CBR250R-3(ｼｮﾙｲﾅｼ)
+Found Bike: 0003 - ﾌｭｰｼﾞｮﾝ-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0004 - ｽｶｲｳｪｲﾌﾞ250M(ｼｮﾙｲﾅｼ)
+Found Bike: 0005 - ｲﾝﾄﾙｰﾀﾞｰ750(ｼｮﾙｲﾅｼ)
+Found Bike: 0006 - CB400SF(ｼｮﾙｲﾅｼ)
+Found Bike: 0007 - SRX250-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0008 - SR400-2(ｼｮﾙｲﾅｼ)
+Found Bike: 0009 - ｼｸﾞﾅｽGT(ｼｮﾙｲﾅｼ)
+Found Bike: 0010 - 250TR(ｼｮﾙｲﾅｼ)
+Found Bike: 0011 - GSX400E(ﾂｳｶﾝｼｮ)
+Found Bike: 0012 - GSX250E(ｼｮﾙｲﾅｼ)
+Found Bike: 0013 - GS750(ﾂｳｶﾝｼｮ)
+Found Bike: 0014 - CB900F(ﾂｳｶﾝｼｮ)
+Found Bike: 0015 - ZEPHYR750(ﾂｳｶﾝｼｮ)
+Found Bike: 0016 - CB400N(ﾂｳｶﾝｼｮ)
+Found Bike: 0017 - ﾄﾘｹｼ
+Found Bike: 0018 - XJ550(ﾂｳｶﾝｼｮ)
+Found Bike: 0019 - XJ550(ｼｮﾙｲﾅｼ)
+Found Bike: 0020 - BMWR45(ｼｮﾙｲﾅｼ)
+Found Bike: 0021 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0022 - FZR400-1(ｼｮﾅｼ
+Found Bike: 0023 - GSX400F(ﾂｳｶﾝｼｮ)
+Found Bike: 0024 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0025 - TRX850(ｼｮﾙｲﾅｼ)
+Found Bike: 0026 - ﾄﾘｯｶｰ(ｼｮﾙｲﾅｼ)
+Found Bike: 0101 - ｵｼﾗｾ
+Found Bike: 0102 - ﾌｫﾙﾂｧZ-2
+Found Bike: 0103 - ﾍﾞｸｽﾀｰ150
+Found Bike: 0104 - VINO
+Found Bike: 0105 - ﾄｩﾃﾞｲ
+Found Bike: 0106 - ｼﾞｮﾙﾉ-2
+Found Bike: 0107 - ﾏｼﾞｪｽﾃｨ250-3
+Found Bike: 0108 - ｼﾞｮﾙﾉ
+Found Bike: 0109 - ﾌｫﾙﾂｧZ
+Found Bike: 0110 - ﾘﾄﾙｶﾌﾞ-E
+Found Bike: 0111 - ｼﾞｸｻ-250SF
+Found Bike: 0112 - ﾏｸﾞﾅ50
+Found Bike: 0113 - GSX-R1100-1
+Found Bike: 0114 - RG400ｶﾞﾝﾏ
+Found Bike: 0115 - ZRX1200R
+Found Bike: 0116 - ﾓﾝｷｰ
+Found Bike: 0117 - C110-3
+Found Bike: 0118 - YZF-R25
+Found Bike: 0119 - ｲﾝﾄﾙｰﾀﾞｰ400
+Found Bike: 0120 - CBR400R
+Found Bike: 0121 - NINJA250
+Found Bike: 0122 - ﾏｼﾞｪｽﾃｨ250-2
+Found Bike: 0123 - C50
+Found Bike: 0124 - ﾏｼﾞｪｽﾃｨ250
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - CBR250R-3(ｼｮﾙｲﾅｼ)
+Found Bike: 0003 - ﾌｭｰｼﾞｮﾝ-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0004 - ｽｶｲｳｪｲﾌﾞ250M(ｼｮﾙｲﾅｼ)
+Found Bike: 0005 - ｲﾝﾄﾙｰﾀﾞｰ750(ｼｮﾙｲﾅｼ)
+Found Bike: 0006 - CB400SF(ｼｮﾙｲﾅｼ)
+Found Bike: 0007 - SRX250-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0008 - SR400-2(ｼｮﾙｲﾅｼ)
+Found Bike: 0009 - ｼｸﾞﾅｽGT(ｼｮﾙｲﾅｼ)
+Found Bike: 0010 - 250TR(ｼｮﾙｲﾅｼ)
+Found Bike: 0011 - GSX400E(ﾂｳｶﾝｼｮ)
+Found Bike: 0012 - GSX250E(ｼｮﾙｲﾅｼ)
+Found Bike: 0013 - GS750(ﾂｳｶﾝｼｮ)
+Found Bike: 0014 - CB900F(ﾂｳｶﾝｼｮ)
+Found Bike: 0015 - ZEPHYR750(ﾂｳｶﾝｼｮ)
+Found Bike: 0016 - CB400N(ﾂｳｶﾝｼｮ)
+Found Bike: 0017 - ﾄﾘｹｼ
+Found Bike: 0018 - XJ550(ﾂｳｶﾝｼｮ)
+Found Bike: 0019 - XJ550(ｼｮﾙｲﾅｼ)
+Found Bike: 0020 - BMWR45(ｼｮﾙｲﾅｼ)
+Found Bike: 0021 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0022 - FZR400-1(ｼｮﾅｼ
+Found Bike: 0023 - GSX400F(ﾂｳｶﾝｼｮ)
+Found Bike: 0024 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0025 - TRX850(ｼｮﾙｲﾅｼ)
+Found Bike: 0026 - ﾄﾘｯｶｰ(ｼｮﾙｲﾅｼ)
+Found Bike: 0101 - ｵｼﾗｾ
+Found Bike: 0102 - ﾌｫﾙﾂｧZ-2
+Found Bike: 0103 - ﾍﾞｸｽﾀｰ150
+Found Bike: 0104 - VINO
+Found Bike: 0105 - ﾄｩﾃﾞｲ
+Found Bike: 0106 - ｼﾞｮﾙﾉ-2
+Found Bike: 0107 - ﾏｼﾞｪｽﾃｨ250-3
+Found Bike: 0108 - ｼﾞｮﾙﾉ
+Found Bike: 0109 - ﾌｫﾙﾂｧZ
+Found Bike: 0110 - ﾘﾄﾙｶﾌﾞ-E
+Found Bike: 0111 - ｼﾞｸｻ-250SF
+Found Bike: 0112 - ﾏｸﾞﾅ50
+Found Bike: 0113 - GSX-R1100-1
+Found Bike: 0114 - RG400ｶﾞﾝﾏ
+Found Bike: 0115 - ZRX1200R
+Found Bike: 0116 - ﾓﾝｷｰ
+Found Bike: 0117 - C110-3
+Found Bike: 0118 - YZF-R25
+Found Bike: 0119 - ｲﾝﾄﾙｰﾀﾞｰ400
+Found Bike: 0120 - CBR400R
+Found Bike: 0121 - NINJA250
+Found Bike: 0122 - ﾏｼﾞｪｽﾃｨ250-2
+Found Bike: 0123 - C50
+Found Bike: 0124 - ﾏｼﾞｪｽﾃｨ250
+Found 2 videos for bike awa-1766707516234-w30cwhjhh
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - CBR250R-3(ｼｮﾙｲﾅｼ)
+Found Bike: 0003 - ﾌｭｰｼﾞｮﾝ-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0004 - ｽｶｲｳｪｲﾌﾞ250M(ｼｮﾙｲﾅｼ)
+Found Bike: 0005 - ｲﾝﾄﾙｰﾀﾞｰ750(ｼｮﾙｲﾅｼ)
+Found Bike: 0006 - CB400SF(ｼｮﾙｲﾅｼ)
+Found Bike: 0007 - SRX250-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0008 - SR400-2(ｼｮﾙｲﾅｼ)
+Found Bike: 0009 - ｼｸﾞﾅｽGT(ｼｮﾙｲﾅｼ)
+Found Bike: 0010 - 250TR(ｼｮﾙｲﾅｼ)
+Found Bike: 0011 - GSX400E(ﾂｳｶﾝｼｮ)
+Found Bike: 0012 - GSX250E(ｼｮﾙｲﾅｼ)
+Found Bike: 0013 - GS750(ﾂｳｶﾝｼｮ)
+Found Bike: 0014 - CB900F(ﾂｳｶﾝｼｮ)
+Found Bike: 0015 - ZEPHYR750(ﾂｳｶﾝｼｮ)
+Found Bike: 0016 - CB400N(ﾂｳｶﾝｼｮ)
+Found Bike: 0017 - ﾄﾘｹｼ
+Found Bike: 0018 - XJ550(ﾂｳｶﾝｼｮ)
+Found Bike: 0019 - XJ550(ｼｮﾙｲﾅｼ)
+Found Bike: 0020 - BMWR45(ｼｮﾙｲﾅｼ)
+Found Bike: 0021 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0022 - FZR400-1(ｼｮﾅｼ
+Found Bike: 0023 - GSX400F(ﾂｳｶﾝｼｮ)
+Found Bike: 0024 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0025 - TRX850(ｼｮﾙｲﾅｼ)
+Found Bike: 0026 - ﾄﾘｯｶｰ(ｼｮﾙｲﾅｼ)
+Found Bike: 0101 - ｵｼﾗｾ
+Found Bike: 0102 - ﾌｫﾙﾂｧZ-2
+Found Bike: 0103 - ﾍﾞｸｽﾀｰ150
+Found Bike: 0104 - VINO
+Found Bike: 0105 - ﾄｩﾃﾞｲ
+Found Bike: 0106 - ｼﾞｮﾙﾉ-2
+Found Bike: 0107 - ﾏｼﾞｪｽﾃｨ250-3
+Found Bike: 0108 - ｼﾞｮﾙﾉ
+Found Bike: 0109 - ﾌｫﾙﾂｧZ
+Found Bike: 0110 - ﾘﾄﾙｶﾌﾞ-E
+Found Bike: 0111 - ｼﾞｸｻ-250SF
+Found Bike: 0112 - ﾏｸﾞﾅ50
+Found Bike: 0113 - GSX-R1100-1
+Found Bike: 0114 - RG400ｶﾞﾝﾏ
+Found Bike: 0115 - ZRX1200R
+Found Bike: 0116 - ﾓﾝｷｰ
+Found Bike: 0117 - C110-3
+Found Bike: 0118 - YZF-R25
+Found Bike: 0119 - ｲﾝﾄﾙｰﾀﾞｰ400
+Found Bike: 0120 - CBR400R
+Found Bike: 0121 - NINJA250
+Found Bike: 0122 - ﾏｼﾞｪｽﾃｨ250-2
+Found Bike: 0123 - C50
+Found Bike: 0124 - ﾏｼﾞｪｽﾃｨ250
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - CBR250R-3(ｼｮﾙｲﾅｼ)
+Found Bike: 0003 - ﾌｭｰｼﾞｮﾝ-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0004 - ｽｶｲｳｪｲﾌﾞ250M(ｼｮﾙｲﾅｼ)
+Found Bike: 0005 - ｲﾝﾄﾙｰﾀﾞｰ750(ｼｮﾙｲﾅｼ)
+Found Bike: 0006 - CB400SF(ｼｮﾙｲﾅｼ)
+Found Bike: 0007 - SRX250-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0008 - SR400-2(ｼｮﾙｲﾅｼ)
+Found Bike: 0009 - ｼｸﾞﾅｽGT(ｼｮﾙｲﾅｼ)
+Found Bike: 0010 - 250TR(ｼｮﾙｲﾅｼ)
+Found Bike: 0011 - GSX400E(ﾂｳｶﾝｼｮ)
+Found Bike: 0012 - GSX250E(ｼｮﾙｲﾅｼ)
+Found Bike: 0013 - GS750(ﾂｳｶﾝｼｮ)
+Found Bike: 0014 - CB900F(ﾂｳｶﾝｼｮ)
+Found Bike: 0015 - ZEPHYR750(ﾂｳｶﾝｼｮ)
+Found Bike: 0016 - CB400N(ﾂｳｶﾝｼｮ)
+Found Bike: 0017 - ﾄﾘｹｼ
+Found Bike: 0018 - XJ550(ﾂｳｶﾝｼｮ)
+Found Bike: 0019 - XJ550(ｼｮﾙｲﾅｼ)
+Found Bike: 0020 - BMWR45(ｼｮﾙｲﾅｼ)
+Found Bike: 0021 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0022 - FZR400-1(ｼｮﾅｼ
+Found Bike: 0023 - GSX400F(ﾂｳｶﾝｼｮ)
+Found Bike: 0024 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0025 - TRX850(ｼｮﾙｲﾅｼ)
+Found Bike: 0026 - ﾄﾘｯｶｰ(ｼｮﾙｲﾅｼ)
+Found Bike: 0101 - ｵｼﾗｾ
+Found Bike: 0102 - ﾌｫﾙﾂｧZ-2
+Found Bike: 0103 - ﾍﾞｸｽﾀｰ150
+Found Bike: 0104 - VINO
+Found Bike: 0105 - ﾄｩﾃﾞｲ
+Found Bike: 0106 - ｼﾞｮﾙﾉ-2
+Found Bike: 0107 - ﾏｼﾞｪｽﾃｨ250-3
+Found Bike: 0108 - ｼﾞｮﾙﾉ
+Found Bike: 0109 - ﾌｫﾙﾂｧZ
+Found Bike: 0110 - ﾘﾄﾙｶﾌﾞ-E
+Found Bike: 0111 - ｼﾞｸｻ-250SF
+Found Bike: 0112 - ﾏｸﾞﾅ50
+Found Bike: 0113 - GSX-R1100-1
+Found Bike: 0114 - RG400ｶﾞﾝﾏ
+Found Bike: 0115 - ZRX1200R
+Found Bike: 0116 - ﾓﾝｷｰ
+Found Bike: 0117 - C110-3
+Found Bike: 0118 - YZF-R25
+Found Bike: 0119 - ｲﾝﾄﾙｰﾀﾞｰ400
+Found Bike: 0120 - CBR400R
+Found Bike: 0121 - NINJA250
+Found Bike: 0122 - ﾏｼﾞｪｽﾃｨ250-2
+Found Bike: 0123 - C50
+Found Bike: 0124 - ﾏｼﾞｪｽﾃｨ250
+Found 2 videos for bike awa-1766709293633-1zdvs9061
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Found 2 videos for bike awa-1766709304346-moam1k0h5
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_l.mp4
+Found 2 videos for bike awa-1766709322095-6v166yr4z
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_l.mp4
+Found 2 videos for bike awa-1766709335880-rimsxooa3
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_l.mp4
+Found 2 videos for bike awa-1766709353958-d4dts0xnk
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_l.mp4
+Found 2 videos for bike awa-1766709367241-jo7e6gdp9
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_l.mp4
+Found 2 videos for bike awa-1766709377241-4l9iw70i2
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_l.mp4
+Found 2 videos for bike awa-1766709390456-ptg6imsrm
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_l.mp4
+Found 2 videos for bike awa-1766709408830-n1ufznve5
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - CBR250R-3(ｼｮﾙｲﾅｼ)
+Found Bike: 0003 - ﾌｭｰｼﾞｮﾝ-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0004 - ｽｶｲｳｪｲﾌﾞ250M(ｼｮﾙｲﾅｼ)
+Found Bike: 0005 - ｲﾝﾄﾙｰﾀﾞｰ750(ｼｮﾙｲﾅｼ)
+Found Bike: 0006 - CB400SF(ｼｮﾙｲﾅｼ)
+Found Bike: 0007 - SRX250-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0008 - SR400-2(ｼｮﾙｲﾅｼ)
+Found Bike: 0009 - ｼｸﾞﾅｽGT(ｼｮﾙｲﾅｼ)
+Found Bike: 0010 - 250TR(ｼｮﾙｲﾅｼ)
+Found Bike: 0011 - GSX400E(ﾂｳｶﾝｼｮ)
+Found Bike: 0012 - GSX250E(ｼｮﾙｲﾅｼ)
+Found Bike: 0013 - GS750(ﾂｳｶﾝｼｮ)
+Found Bike: 0014 - CB900F(ﾂｳｶﾝｼｮ)
+Found Bike: 0015 - ZEPHYR750(ﾂｳｶﾝｼｮ)
+Found Bike: 0016 - CB400N(ﾂｳｶﾝｼｮ)
+Found Bike: 0017 - ﾄﾘｹｼ
+Found Bike: 0018 - XJ550(ﾂｳｶﾝｼｮ)
+Found Bike: 0019 - XJ550(ｼｮﾙｲﾅｼ)
+Found Bike: 0020 - BMWR45(ｼｮﾙｲﾅｼ)
+Found Bike: 0021 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0022 - FZR400-1(ｼｮﾅｼ
+Found Bike: 0023 - GSX400F(ﾂｳｶﾝｼｮ)
+Found Bike: 0024 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0025 - TRX850(ｼｮﾙｲﾅｼ)
+Found Bike: 0026 - ﾄﾘｯｶｰ(ｼｮﾙｲﾅｼ)
+Found Bike: 0101 - ｵｼﾗｾ
+Found Bike: 0102 - ﾌｫﾙﾂｧZ-2
+Found Bike: 0103 - ﾍﾞｸｽﾀｰ150
+Found Bike: 0104 - VINO
+Found Bike: 0105 - ﾄｩﾃﾞｲ
+Found Bike: 0106 - ｼﾞｮﾙﾉ-2
+Found Bike: 0107 - ﾏｼﾞｪｽﾃｨ250-3
+Found Bike: 0108 - ｼﾞｮﾙﾉ
+Found Bike: 0109 - ﾌｫﾙﾂｧZ
+Found Bike: 0110 - ﾘﾄﾙｶﾌﾞ-E
+Found Bike: 0111 - ｼﾞｸｻ-250SF
+Found Bike: 0112 - ﾏｸﾞﾅ50
+Found Bike: 0113 - GSX-R1100-1
+Found Bike: 0114 - RG400ｶﾞﾝﾏ
+Found Bike: 0115 - ZRX1200R
+Found Bike: 0116 - ﾓﾝｷｰ
+Found Bike: 0117 - C110-3
+Found Bike: 0118 - YZF-R25
+Found Bike: 0119 - ｲﾝﾄﾙｰﾀﾞｰ400
+Found Bike: 0120 - CBR400R
+Found Bike: 0121 - NINJA250
+Found Bike: 0122 - ﾏｼﾞｪｽﾃｨ250-2
+Found Bike: 0123 - C50
+Found Bike: 0124 - ﾏｼﾞｪｽﾃｨ250
+Found 2 videos for bike awa-1766710117115-zmu30ytjl
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Found 2 videos for bike awa-1766710130635-vkmskey8z
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_l.mp4
+Found 2 videos for bike awa-1766710147361-049qhecss
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000420251226_l.mp4
+Found 2 videos for bike awa-1766710156374-2hor4y6fr
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000520251226_l.mp4
+Found 2 videos for bike awa-1766710167239-22mrjz5qr
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000620251226_l.mp4
+Found 2 videos for bike awa-1766710183385-5wuqwuva1
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000720251226_l.mp4
+Found 2 videos for bike awa-1766710191175-u140vwxpm
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000820251226_l.mp4
+Found 2 videos for bike awa-1766710205953-7lqfs5rt2
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000920251226_l.mp4
+Found 2 videos for bike awa-1766710220866-ru4ipdcrc
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/001020251226_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0001 - ｵｼﾗｾ
+Found Bike: 0002 - CBR250R-3(ｼｮﾙｲﾅｼ)
+Found Bike: 0003 - ﾌｭｰｼﾞｮﾝ-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0004 - ｽｶｲｳｪｲﾌﾞ250M(ｼｮﾙｲﾅｼ)
+Found Bike: 0005 - ｲﾝﾄﾙｰﾀﾞｰ750(ｼｮﾙｲﾅｼ)
+Found Bike: 0006 - CB400SF(ｼｮﾙｲﾅｼ)
+Found Bike: 0007 - SRX250-1(ｼｮﾙｲﾅｼ)
+Found Bike: 0008 - SR400-2(ｼｮﾙｲﾅｼ)
+Found Bike: 0009 - ｼｸﾞﾅｽGT(ｼｮﾙｲﾅｼ)
+Found Bike: 0010 - 250TR(ｼｮﾙｲﾅｼ)
+Found Bike: 0011 - GSX400E(ﾂｳｶﾝｼｮ)
+Found Bike: 0012 - GSX250E(ｼｮﾙｲﾅｼ)
+Found Bike: 0013 - GS750(ﾂｳｶﾝｼｮ)
+Found Bike: 0014 - CB900F(ﾂｳｶﾝｼｮ)
+Found Bike: 0015 - ZEPHYR750(ﾂｳｶﾝｼｮ)
+Found Bike: 0016 - CB400N(ﾂｳｶﾝｼｮ)
+Found Bike: 0017 - ﾄﾘｹｼ
+Found Bike: 0018 - XJ550(ﾂｳｶﾝｼｮ)
+Found Bike: 0019 - XJ550(ｼｮﾙｲﾅｼ)
+Found Bike: 0020 - BMWR45(ｼｮﾙｲﾅｼ)
+Found Bike: 0021 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0022 - FZR400-1(ｼｮﾅｼ
+Found Bike: 0023 - GSX400F(ﾂｳｶﾝｼｮ)
+Found Bike: 0024 - GS1000(ﾂｳｶﾝｼｮ)
+Found Bike: 0025 - TRX850(ｼｮﾙｲﾅｼ)
+Found Bike: 0026 - ﾄﾘｯｶｰ(ｼｮﾙｲﾅｼ)
+Found Bike: 0101 - ｵｼﾗｾ
+Found Bike: 0102 - ﾌｫﾙﾂｧZ-2
+Found Bike: 0103 - ﾍﾞｸｽﾀｰ150
+Found Bike: 0104 - VINO
+Found Bike: 0105 - ﾄｩﾃﾞｲ
+Found Bike: 0106 - ｼﾞｮﾙﾉ-2
+Found Bike: 0107 - ﾏｼﾞｪｽﾃｨ250-3
+Found Bike: 0108 - ｼﾞｮﾙﾉ
+Found Bike: 0109 - ﾌｫﾙﾂｧZ
+Found Bike: 0110 - ﾘﾄﾙｶﾌﾞ-E
+Found Bike: 0111 - ｼﾞｸｻ-250SF
+Found Bike: 0112 - ﾏｸﾞﾅ50
+Found Bike: 0113 - GSX-R1100-1
+Found Bike: 0114 - RG400ｶﾞﾝﾏ
+Found Bike: 0115 - ZRX1200R
+Found Bike: 0116 - ﾓﾝｷｰ
+Found Bike: 0117 - C110-3
+Found Bike: 0118 - YZF-R25
+Found Bike: 0119 - ｲﾝﾄﾙｰﾀﾞｰ400
+Found Bike: 0120 - CBR400R
+Found Bike: 0121 - NINJA250
+Found Bike: 0122 - ﾏｼﾞｪｽﾃｨ250-2
+Found Bike: 0123 - C50
+Found Bike: 0124 - ﾏｼﾞｪｽﾃｨ250
+Found 2 videos for bike awa-1766714952152-8qel57ikg
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000220251226_l.mp4
+Found 2 videos for bike awa-1766714969022-srryumvk8
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_r.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_l.mp4
+Download failed: 404 for https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20251226/movie_engine/000320251226_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766829779118-gss1nraxi
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4
+Found 2 videos for bike awa-1766829792765-je23qxp17
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4
+Found 2 videos for bike awa-1766829807319-3hy8gdek5
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4
+Found 2 videos for bike awa-1766829830337-df5ve1mko
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4
+Found 2 videos for bike awa-1766829844992-1ojuiswa3
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_l.mp4
+Found 2 videos for bike awa-1766829862320-tiu9bprhr
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_l.mp4
+Found 2 videos for bike awa-1766829881766-te501anhg
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_l.mp4
+Found 2 videos for bike awa-1766829899726-9vy23xll5
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_l.mp4
+Found 2 videos for bike awa-1766829920500-bnaxmwlwn
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766836316317-5bpjuzznz
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4
+Found 2 videos for bike awa-1766836335697-js3is2k6g
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4
+Found 2 videos for bike awa-1766836357615-ghw8xi9ju
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4
+Found 2 videos for bike awa-1766836377806-buuluuhle
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4
+Found 2 videos for bike awa-1766836399323-jega6gjel
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_l.mp4
+Found 2 videos for bike awa-1766836421900-3jnrvvfsa
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_l.mp4
+Found 2 videos for bike awa-1766836441274-7ea65goje
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_l.mp4
+Found 2 videos for bike awa-1766836461758-2o8an5eb7
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_l.mp4
+Found 2 videos for bike awa-1766836475065-huyin5ov3
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766836736018-mtxwq3mzo
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4
+Found 2 videos for bike awa-1766836776070-x27ah33mz
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4
+Found 2 videos for bike awa-1766836800883-avftwe1wf
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4
+Found 2 videos for bike awa-1766836848210-h05ckj74j
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766837282258-spk36w02a
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4
+Found 2 videos for bike awa-1766837364548-r9azu7tne
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4
+Found 2 videos for bike awa-1766837383097-oec1hk8on
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4
+Found 2 videos for bike awa-1766837403872-v6mrekzlq
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4
+Downloading video: https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766839450498-q8qsplw9e
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4"]
+Found 2 videos for bike awa-1766839468448-n8849gtvl
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4"]
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766841246537-d16u5gb3n
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4"]
+Found 2 videos for bike awa-1766841256954-v536fwxpq
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4"]
+Found 2 videos for bike awa-1766841277115-ze9ilaw79
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4"]
+Found 2 videos for bike awa-1766841290249-i6wmxhbds
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4"]
+Found 2 videos for bike awa-1766841309332-ouis4rami
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_l.mp4"]
+Found 2 videos for bike awa-1766841323788-rd20a8lqb
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_l.mp4"]
+Found 2 videos for bike awa-1766841336002-nqs4w87du
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_l.mp4"]
+Found 2 videos for bike awa-1766841351067-rwjfy91vp
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_l.mp4"]
+Found 2 videos for bike awa-1766841361545-vxno4pbf4
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_l.mp4"]
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766884947931-rj16q5zlh
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4"]
+Found 2 videos for bike awa-1766884961290-uulj0j6qa
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4"]
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Found 2 videos for bike awa-1766884982715-wicyl0wdu
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4"]
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1766885001063-gxpafhn9r
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4"]
+Found 2 videos for bike awa-1766885020771-di3964gna
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_l.mp4"]
+Found 2 videos for bike awa-1766885029165-q1hb8glv1
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4"]
+Found 2 videos for bike awa-1766885039901-so0lfm3n4
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_l.mp4"]
+Found 2 videos for bike awa-1766885051984-bhlxkpkyn
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4"]
+Found 2 videos for bike awa-1766885056806-5gu60qsm1
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_l.mp4"]
+Found 2 videos for bike awa-1766885064181-xzmsk30mm
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4"]
+Found 2 videos for bike awa-1766885074952-sxl8rx1p5
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_l.mp4"]
+Found 2 videos for bike awa-1766885081123-94s3xwbsv
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4"]
+Found 2 videos for bike awa-1766885090910-sgwvweoii
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_l.mp4"]
+Found 2 videos for bike awa-1766885099059-olkbhi5dy
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_l.mp4"]
+Found 2 videos for bike awa-1766885121623-beosatn1e
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_l.mp4"]
+Found 2 videos for bike awa-1766885137128-uqpt2h7zt
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_l.mp4"]
+Found 2 videos for bike awa-1766885152615-41x8m0xg1
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_l.mp4"]
+Found 2 videos for bike awa-1766885174497-flnsrx6r5
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_l.mp4"]

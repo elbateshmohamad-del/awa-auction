@@ -46,7 +46,7 @@ export default function BikeImportButton() {
                 className="bg-purple-600 hover:bg-purple-700 text-white"
                 disabled={isLoading}
             >
-                {isLoading ? 'Importing...' : 'Run BDS Scraper'}
+                {isLoading ? 'Importing...' : 'AWAスクレイパー実行'}
             </Button>
         </div>
     );

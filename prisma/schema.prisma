@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/client"
 }
 
 datasource db {
@@ -110,6 +109,7 @@ model Bike {
   startPrice        Int      @default(0)
   currentPrice      Int      @default(0) // For auction state
   result            String?
+  historicalRates   String?  @default("{}") // JSON: { "USD": 145.50, "EUR": 158.20 } - Rates at time of sale (1 Unit = X JPY)
 
   // Grades (0-10 scale)
   overallGrade      Float?
@@ -172,4 +172,59 @@ model Bid {
   status          String   @default("ACTIVE") // ACTIVE, LOST, WON
   
   createdAt       DateTime @default(now())
+}
+
+model Container {
+  id          String   @id @default(uuid())
+  name        String
+  type        String   // 20ft, 40ft
+  status      String   // open, closingSoon, scheduled, closed
+  destination String
+  capacity    Int
+  filled      Int
+  etd         String?
+  eta         String?
+  price       String?
+  features    String   @default("[]") // JSON array
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Reservation {
+  id              String   @id @default(uuid())
+  userId          String
+  containerId     String
+  bikeIds         String   @default("[]") // JSON array of bike IDs
+  shippingAddress String   // JSON: { type: '...', details: '...' }
+  status          String   @default("pending")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model SystemSetting {
+  key         String   @id
+  value       String   // JSON value
+  description String?
+  updatedAt   DateTime @updatedAt
+}
+
+model ImportLog {
+  id            String   @id @default(uuid())
+  timestamp     DateTime @default(now())
+  bikesImported Int
+  errors        String   @default("[]") // JSON array of error messages
+}
+
+model AdminTask {
+  id           String    @id @default(uuid())
+  type         String    @default("custom") // "kyc_review", "payment_confirm", "rate_update", "custom"
+  title        String
+  description  String?
+  permissionId String    @default("dashboard") // "users", "finance", "auctions" など
+  completed    Boolean   @default(false)
+  createdAt    DateTime  @default(now())
+  dueDate      DateTime?
+  
+  // 担当者名（自由入力テキスト）
+  assignedToName String?
 }

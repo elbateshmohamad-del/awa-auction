@@ -5,8 +5,20 @@ import { Input } from '@/components/ui/Input';
 import { Card, CardContent } from '@/components/ui/Card';
 import { getAllBikes } from '@/lib/bike-database';
 import BikeImportButton from '@/components/admin/BikeImportButton';
+import { createPageMetadata } from '@/lib/metadata';
 
 import BikeSearchFilters from '@/components/admin/BikeSearchFilters';
+
+type Props = {
+    params: Promise<{ locale: string }>;
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+    const { locale } = await params;
+    return createPageMetadata(locale, 'adminBikes');
+}
+
 
 export default async function AdminBikesPage(props: {
     params: Promise<{ locale: string }>,
@@ -20,11 +32,12 @@ export default async function AdminBikesPage(props: {
     const tCommon = await getTranslations('admin.common');
 
     // Fetch directly on server
-    let bikes = await getAllBikes();
+    const status = typeof searchParams.status === 'string' ? searchParams.status.toLowerCase() : '';
+    let bikes = await getAllBikes({ status: status || 'active' });
 
     // Filter Logic
     const q = typeof searchParams.q === 'string' ? searchParams.q.toLowerCase() : '';
-    const status = typeof searchParams.status === 'string' ? searchParams.status.toLowerCase() : '';
+    // Status is handled in getAllBikes query
 
     if (q) {
         bikes = bikes.filter(bike =>
@@ -34,9 +47,29 @@ export default async function AdminBikesPage(props: {
         );
     }
 
-    if (status) {
-        bikes = bikes.filter(bike => bike.status.toLowerCase() === status);
-    }
+    // Sort by auctionNumber (Lot) ascending
+    bikes = bikes.sort((a, b) => {
+        const lotA = parseInt(a.auctionNumber || '0', 10);
+        const lotB = parseInt(b.auctionNumber || '0', 10);
+        return lotA - lotB;
+    });
+
+    // Pagination
+    const perPage = parseInt(typeof searchParams.perPage === 'string' ? searchParams.perPage : '10', 10);
+    const page = parseInt(typeof searchParams.page === 'string' ? searchParams.page : '1', 10);
+    const totalBikes = bikes.length;
+    const totalPages = Math.ceil(totalBikes / perPage);
+    const paginatedBikes = bikes.slice((page - 1) * perPage, page * perPage);
+
+    // Build query string helper
+    const buildQuery = (newParams: Record<string, string | number>) => {
+        const params = new URLSearchParams();
+        if (q) params.set('q', q);
+        if (status) params.set('status', status);
+        params.set('perPage', String(newParams.perPage ?? perPage));
+        params.set('page', String(newParams.page ?? page));
+        return params.toString();
+    };
 
     return (
         <div className="space-y-6">
@@ -75,7 +108,7 @@ export default async function AdminBikesPage(props: {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-100">
-                                {bikes.map((bike) => (
+                                {paginatedBikes.map((bike) => (
                                     <tr key={bike.id} className="hover:bg-blue-50/50 transition-colors group">
                                         <td className="px-6 py-4">
                                             <Link href={`/${locale}/admin/bikes/${bike.id}`}>
@@ -132,10 +165,10 @@ export default async function AdminBikesPage(props: {
                                         </td>
                                     </tr>
                                 ))}
-                                {bikes.length === 0 && (
+                                {paginatedBikes.length === 0 && (
                                     <tr>
                                         <td colSpan={7} className="px-6 py-8 text-center text-gray-500">
-                                            No bikes found. Click "Run BDS Scraper" to import data.
+                                            No bikes found. Click "AWAスクレイパー実行" to import data.
                                         </td>
                                     </tr>
                                 )}
@@ -143,8 +176,40 @@ export default async function AdminBikesPage(props: {
                         </table>
                     </div>
 
-                    <div className="p-4 border-t border-gray-100 flex justify-center">
-                        <Button variant="ghost" size="sm" className="text-gray-500">Load More</Button>
+                    {/* Pagination Controls */}
+                    <div className="p-4 border-t border-gray-100 flex justify-between items-center">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <span>表示件数:</span>
+                            <div className="flex gap-1">
+                                {[10, 50, 100].map(num => (
+                                    <Link
+                                        key={num}
+                                        href={`/${locale}/admin/bikes?${buildQuery({ perPage: num, page: 1 })}`}
+                                        className={`px-3 py-1 rounded border ${perPage === num ? 'bg-[#0F4C81] text-white border-[#0F4C81]' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
+                                    >
+                                        {num}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 text-sm">
+                            <span className="text-gray-500">
+                                {totalBikes}件中 {(page - 1) * perPage + 1}-{Math.min(page * perPage, totalBikes)}件を表示
+                            </span>
+                            <div className="flex gap-1">
+                                {page > 1 && (
+                                    <Link href={`/${locale}/admin/bikes?${buildQuery({ page: page - 1 })}`}>
+                                        <Button variant="ghost" size="sm">← 前へ</Button>
+                                    </Link>
+                                )}
+                                {page < totalPages && (
+                                    <Link href={`/${locale}/admin/bikes?${buildQuery({ page: page + 1 })}`}>
+                                        <Button variant="ghost" size="sm">次へ →</Button>
+                                    </Link>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </CardContent>
             </Card>

@@ -21,14 +21,9 @@ export async function POST(request: NextRequest) {
         const importedBikes = result.imported;
         const errors = result.errors;
 
-        // Filter out already imported bikes
-        const newBikes = importedBikes.filter(bike => !getBikeByBdsId(bike.bdsId));
+        // Save new bikes to database (addBikes handles deduplication)
+        const newBikes = await addBikes(importedBikes);
         const skippedCount = result.skipped + (importedBikes.length - newBikes.length);
-
-        // Save new bikes to database
-        if (newBikes.length > 0) {
-            addBikes(newBikes);
-        }
 
         // Log the import
         const importLog = {

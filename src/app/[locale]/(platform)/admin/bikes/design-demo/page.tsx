@@ -345,10 +345,10 @@ export default function DesignDemoPage() {
                         </CardContent>
                     </Card>
 
-                    {/* BDS Grades Radar/Grid - UNCHANGED */}
+                    {/* AWA Grades Radar/Grid - UNCHANGED */}
                     <Card>
                         <CardHeader className="pb-3">
-                            <CardTitle>BDS Grades (1-10)</CardTitle>
+                            <CardTitle>AWA Grades (1-10)</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="flex items-center justify-between mb-6 p-3 bg-gray-50 rounded-lg">

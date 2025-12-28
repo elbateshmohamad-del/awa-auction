@@ -1,25 +1,17 @@
 
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { prisma } from '@/lib/prisma';
 
-const SETTINGS_FILE = path.join(process.cwd(), 'data', 'invoice-settings.json');
-
-// Ensure data directory exists
-function ensureDataDir() {
-    const dataDir = path.dirname(SETTINGS_FILE);
-    if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-    }
-}
+const SETTING_KEY = 'invoice';
 
 export async function GET() {
     try {
-        ensureDataDir();
-        if (fs.existsSync(SETTINGS_FILE)) {
-            const data = fs.readFileSync(SETTINGS_FILE, 'utf-8');
-            const settings = JSON.parse(data);
-            return NextResponse.json({ settings });
+        const setting = await prisma.systemSetting.findUnique({
+            where: { key: SETTING_KEY }
+        });
+
+        if (setting) {
+            return NextResponse.json({ settings: JSON.parse(setting.value) });
         }
         return NextResponse.json({ settings: null });
     } catch (error) {
@@ -30,13 +22,18 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
     try {
-        ensureDataDir();
         const body = await request.json();
 
-        console.log('Saving Invoice settings...');
-        fs.writeFileSync(SETTINGS_FILE, JSON.stringify(body, null, 2));
+        await prisma.systemSetting.upsert({
+            where: { key: SETTING_KEY },
+            update: { value: JSON.stringify(body) },
+            create: {
+                key: SETTING_KEY,
+                value: JSON.stringify(body),
+                description: 'Invoice configuration'
+            }
+        });
 
-        console.log('Invoice Settings saved successfully to:', SETTINGS_FILE);
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error('Failed to save Invoice settings:', error);

@@ -1,10 +1,15 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata = {
-    title: 'Legal Information',
-    description: 'AWA Auction Platform legal information including specified commercial transactions, company details, and regulatory compliance.',
+type Props = {
+    params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+    const { locale } = await params;
+    return createPageMetadata(locale, 'legal');
+}
 
 export default function LegalPage() {
     return (

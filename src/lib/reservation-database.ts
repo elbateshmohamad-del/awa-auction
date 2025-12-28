@@ -1,59 +1,37 @@
 /**
- * Reservation Database Library
- * Handles storage and retrieval of reservations using JSON file storage
+ * Reservation Database Library (Prisma Version)
+ * Handles storage and retrieval of reservations using PostgreSQL
  */
 
-import fs from 'fs';
-import path from 'path';
+import { prisma } from '@/lib/prisma';
+import { PrismaClient } from '@prisma/client';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const RESERVATIONS_FILE = path.join(DATA_DIR, 'reservations.json');
+export type { Reservation };
 
-export interface Reservation {
-    id: string;
-    userId: string;
-    containerId: string;
-    bikeIds: string[];
-    shippingAddress: {
-        type: 'registered' | 'new';
-        details: string; // "City, Country" or "123 St, City, Country"
+// Helper to parse JSON fields
+function parseReservation(res: any) {
+    if (!res) return null;
+    return {
+        ...res,
+        bikeIds: res.bikeIds ? JSON.parse(res.bikeIds) : [],
+        shippingAddress: res.shippingAddress ? JSON.parse(res.shippingAddress) : { type: 'unknown', details: '' }
     };
-    status: 'pending' | 'confirmed';
-    createdAt: string;
 }
 
-function ensureDataDir() {
-    if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
+export async function getAllReservations() {
+    const reservations = await prisma.reservation.findMany({
+        orderBy: { createdAt: 'desc' }
+    });
+    return reservations.map(parseReservation);
 }
 
-function readReservationsFile(): Reservation[] {
-    ensureDataDir();
-    if (fs.existsSync(RESERVATIONS_FILE)) {
-        const data = fs.readFileSync(RESERVATIONS_FILE, 'utf-8');
-        try {
-            return JSON.parse(data);
-        } catch (e) {
-            console.error('Failed to parse reservations.json:', e);
-            return [];
+export async function createReservation(data: any) {
+    const reservation = await prisma.reservation.create({
+        data: {
+            ...data,
+            bikeIds: JSON.stringify(data.bikeIds || []),
+            shippingAddress: JSON.stringify(data.shippingAddress || {})
         }
-    }
-    return [];
-}
-
-function writeReservationsFile(data: Reservation[]) {
-    ensureDataDir();
-    fs.writeFileSync(RESERVATIONS_FILE, JSON.stringify(data, null, 2));
-}
-
-export function getAllReservations(): Reservation[] {
-    return readReservationsFile();
-}
-
-export function createReservation(reservation: Reservation): Reservation {
-    const data = readReservationsFile();
-    data.push(reservation);
-    writeReservationsFile(data);
-    return reservation;
+    });
+    return parseReservation(reservation);
 }

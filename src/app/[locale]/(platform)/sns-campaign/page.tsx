@@ -44,13 +44,16 @@ export default function SnsCampaignPage() {
     // Fetch user bikes on mount (if authenticated)
     useEffect(() => {
         if (isAuthenticated) {
-            // TODO: Replace with actual API call to /api/user/bikes
             setIsLoadingBikes(true);
-            setTimeout(() => {
-                // Currently returning empty list to avoid confusing dummy data
-                setPurchasedBikes([]);
-                setIsLoadingBikes(false);
-            }, 500);
+            fetch('/api/user/bikes')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        setPurchasedBikes(data.bikes);
+                    }
+                })
+                .catch(err => console.error(err))
+                .finally(() => setIsLoadingBikes(false));
         }
     }, [isAuthenticated]);
 

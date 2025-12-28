@@ -1,64 +1,127 @@
-export type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'EGP' | 'JPY';
 
-export const fetchExchangeRate = async (fromCurrency: CurrencyCode): Promise<number> => {
-    // 1 JPY is always 1 JPY
-    if (fromCurrency === 'JPY') return 1;
+// Simple currency service to get exchange rates
+// Base currency is always JPY for this application
 
+export interface ExchangeRates {
+    [currency: string]: number; // 1 Unit = X JPY (e.g. USD = 145.5) or 1 JPY = X Unit?
+    // Wait, usually we want "1 JPY = 0.006 USD" or "1 USD = 145 JPY".
+    // For price conversion: PriceInJPY / (JPY per Unit)? No.
+    // PriceInJPY * (Unit per JPY).
+    // Or PriceInJPY / (JPY per Unit).
+    // If USD = 150 JPY. 15000 JPY = 100 USD.
+    // 15000 / 150 = 100.
+    // So we need "JPY per Unit" (e.g. USD returns 150).
+}
+
+// Fallback rates if API fails
+const FALLBACK_RATES: ExchangeRates = {
+    JPY: 1,
+    USD: 145.50,
+    EUR: 158.20,
+    GBP: 185.30,
+    PHP: 2.55,
+    AED: 39.50,
+    EGP: 0.30
+};
+
+export type CurrencyCode = 'JPY' | 'USD' | 'EUR' | 'GBP' | 'PHP' | 'AED' | 'EGP';
+
+export async function getCurrentExchangeRates(): Promise<ExchangeRates> {
     try {
-        // Using Exchangerate-API (Free, supports EGP)
-        // Fetches all rates relative to USD in a single call (lightweight JSON)
-        const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-        if (!res.ok) throw new Error('Failed to fetch rates');
-        const data = await res.json();
+        // Try to fetch from a free API (e.g., exchangerate-api)
+        // Note: Check if we can use a free endpoint. 
+        // Often https://open.er-api.com/v6/latest/JPY gives 1 JPY = X USD.
+        // If we get 1 JPY = 0.0068 USD.
+        // To get "USD = 145 JPY", we take 1 / 0.0068.
 
-        const usdToJpy = data.rates.JPY;
-        const usdToFrom = data.rates[fromCurrency]; // e.g., Rate for EGP
+        const response = await fetch('https://open.er-api.com/v6/latest/JPY', { next: { revalidate: 3600 } });
+        if (!response.ok) throw new Error('Failed to fetch rates');
 
-        if (!usdToJpy || !usdToFrom) throw new Error('Currency not found in API');
+        const data = await response.json();
+        const rates: ExchangeRates = { JPY: 1 };
 
-        // Calculate Cross Rate: How many JPY for 1 unit of foreign currency?
-        // 1 Foreign = (1 / usdToForeign) USD
-        // = (1 / usdToForeign) * usdToJpy JPY
+        // Convert "1 JPY = X Currency" to "1 Currency = Y JPY"
+        // Because we usually store "How many JPY is 1 USD" for easy mental math in Japan, 
+        // OR we store the multiplier.
+        // Let's verify how we want to store it. 
+        // Plan said: "{ "USD": 145.50 }" -> 1 USD = 145.50 JPY.
+        // API returns: "USD": 0.0068 (1 JPY = 0.0068 USD).
+        // So we calculate 1 / rate.
 
-        return usdToJpy / usdToFrom;
+        const targetCurrencies = ['USD', 'EUR', 'GBP', 'PHP', 'AED'];
+
+        targetCurrencies.forEach(code => {
+            if (data.rates[code]) {
+                const rateInForeign = data.rates[code];
+                // Avoid division by zero
+                if (rateInForeign > 0) {
+                    rates[code] = 1 / rateInForeign;
+                }
+            }
+        });
+
+        // Merge with fallback in case some are missing
+        return { ...FALLBACK_RATES, ...rates };
 
     } catch (error) {
-        console.error('Error fetching exchange rate:', error);
-        // Fallback rates (Approximate)
-        switch (fromCurrency) {
-            case 'USD': return 150.0;
-            case 'EUR': return 160.0;
-            case 'GBP': return 190.0;
-            case 'EGP': return 3.2;
-            default: return 1.0;
-        }
+        console.error('Error fetching exchange rates:', error);
+        return FALLBACK_RATES;
     }
-};
+}
 
-export const applyMargin = (rate: number, percentMargin: number = 3): number => {
-    // Apply a percentage margin to "Cheapen" the rate (User pays more foreign currency).
-    // If rate is 150 JPY/USD. "3% margin" -> 150 * 0.97 = 145.5.
-    // If rate is 3.2 JPY/EGP. "3% margin" -> 3.2 * 0.97 = 3.104.
-    // This is safe even for low-value currencies.
+export function formatCurrency(amountInJPY: number, currency: string, rates: ExchangeRates): string {
+    if (currency === 'JPY') {
+        return `¥${amountInJPY.toLocaleString()}`;
+    }
 
-    // Safety check for JPY (no margin needed for self)
-    if (rate === 1) return 1;
+    const rate = rates[currency];
+    if (!rate) {
+        // Fallback to JPY if rate unknown
+        return `¥${amountInJPY.toLocaleString()}`;
+    }
 
-    return rate * (1 - (percentMargin / 100));
-};
+    const value = amountInJPY / rate;
 
-export const convertToCurrency = (jpyAmount: number, rate: number): number => {
-    if (rate === 0) return jpyAmount;
-    return jpyAmount / rate;
-};
+    // Formatting options
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        maximumFractionDigits: 0
+    }).format(value);
+}
 
-export const getCurrencySymbol = (code: string): string => {
-    switch (code) {
+// -- Legacy/Compatibility Exports and Helpers --
+
+export async function fetchExchangeRate(currency: CurrencyCode): Promise<number> {
+    // If JPY, rate is 1? Or undefined. 
+    // In auctions/page.tsx: `const rate = await fetchExchangeRate(selectedCurrency);`
+    // `const rateWithMargin = selectedCurrency === 'JPY' ? 1 : applyMargin(rate);`
+    // So if JPY, it returns something, maybe 1.
+    if (currency === 'JPY') return 1;
+
+    const rates = await getCurrentExchangeRates();
+    return rates[currency] || 1;
+}
+
+export function applyMargin(rate: number): number {
+    // Apply 2% margin to cover exchange fees/volatility for user estimates
+    // rate is JPY per Unit (e.g. 145).
+    // If we want to show a SAFE price to user, we want Price / Rate_With_Margin.
+    // Price / (Rate * 0.98) -> Price / LowerRate -> Higher calculated USD Price.
+    // This assumes "Buying". 
+    // If we are showing "Cost", higher is safer.
+    return rate * 0.98;
+}
+
+export function getCurrencySymbol(currency: string): string {
+    switch (currency) {
         case 'USD': return '$';
         case 'EUR': return '€';
         case 'GBP': return '£';
-        case 'EGP': return 'E£';
         case 'JPY': return '¥';
-        default: return code;
+        case 'PHP': return '₱';
+        case 'AED': return 'Dh';
+        case 'EGP': return 'E£';
+        default: return currency;
     }
-};
+}

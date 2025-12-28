@@ -1,28 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-    --color-navy: #0F4C81;
-    --color-blue: #2563EB;
-    --color-sky: #E0F2FE;
-    --font-inter: Inter, sans-serif;
-    --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
+  /* BKB-ified Colors */
+  --color-navy: #1D1D1F;
+  /* Was #0F4C81 (Navy) -> BKB Black */
+  --color-blue: #007AFF;
+  /* Was #2563EB (Blue) -> BKB Key Blue */
+  --color-sky: #F5F5F7;
+  /* Was #E0F2FE (Sky) -> BKB Light Gray */
+  --font-inter: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
 }
 
-/* AWA Design System - Pattern 5a (Sporty Dynamic) */
+/* AWA Design System - Pattern 5a (Sporty Dynamic) -> Adapted to BKB */
 
 :root {
-    --color-navy: #0F4C81;
-    --color-blue: #2563EB;
-    --color-sky: #E0F2FE;
+  /* BKB Colors Mapping */
+  --color-navy: #1D1D1F;
+  --color-blue: #007AFF;
+  --color-sky: #F5F5F7;
 }
 
 body {
-    background-color: white;
-    color: #111827;
-    /* gray-900 */
-    font-family: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: #111827;
+  /* gray-900 */
+  font-family: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -31,53 +36,264 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--color-navy);
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 /* Dynamic Skew Utilities - Using standard CSS classes for portability */
 .skew-bg-primary {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .skew-bg-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -10%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(120deg, var(--color-navy), #1e5faf);
-    transform: skewX(-20deg);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, var(--color-navy), #1e5faf);
+  transform: skewX(-20deg);
+  z-index: 0;
 }
 
 /* Thin Accent Lines */
 .accent-line-diagonal {
-    position: absolute;
-    background-color: var(--color-blue);
-    width: 2px;
-    height: 150%;
-    transform: rotate(20deg);
-    opacity: 0.1;
+  position: absolute;
+  background-color: var(--color-blue);
+  width: 2px;
+  height: 150%;
+  transform: rotate(20deg);
+  opacity: 0.1;
 }
 
 .text-shadow-sm {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Custom Component Overrides */
 .awa-button-primary {
-    @apply bg-[#0F4C81] text-white px-8 py-4 font-bold text-lg uppercase tracking-wider transition-all duration-300 transform skew-x-[-10deg] hover:bg-[#0D3D68] hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center;
+  @apply bg-[#0F4C81] text-white px-8 py-4 font-bold text-lg uppercase tracking-wider transition-all duration-300 transform skew-x-[-10deg] hover:bg-[#0D3D68] hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center;
 }
 
 .awa-button-primary span {
-    @apply block transform skew-x-[10deg];
-    /* Text un-skew */
+  @apply block transform skew-x-[10deg];
+  /* Text un-skew */
 }
 
 .awa-card {
-    @apply bg-white border-l-4 border-[#0F4C81] shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+  @apply bg-white border-l-4 border-[#0F4C81] shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+}
+
+/* ==========================================================================
+   BKB Design System (Migrated)
+   ========================================================================== */
+
+:root {
+  /* BKB Colors */
+  --bkb-primary-white: #FFFFFF;
+  --bkb-key-blue: #007AFF;
+  --bkb-secondary-black: #1D1D1F;
+  --bkb-light-gray: #F5F5F7;
+  --bkb-medium-gray: #86868B;
+  --bkb-border-gray: #D2D2D7;
+
+  /* BKB Params */
+  --bkb-container-width: 1200px;
+  --bkb-transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* BKB Utilities */
+.bkb-container {
+  max-width: var(--bkb-container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .bkb-container {
+    padding: 0 20px;
+  }
+}
+
+/* BKB Buttons */
+.bkb-btn-primary,
+.bkb-btn-secondary,
+.bkb-btn-primary-large {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--bkb-transition-smooth);
+  border-radius: 980px;
+  cursor: pointer;
+}
+
+.bkb-btn-primary {
+  background: var(--bkb-key-blue);
+  color: var(--bkb-primary-white);
+  padding: 16px 40px;
+  font-size: 17px;
+  border: none;
+}
+
+.bkb-btn-primary:hover {
+  background: #0051D5;
+  transform: translateY(-2px);
+}
+
+.bkb-btn-secondary {
+  background: transparent;
+  color: var(--bkb-key-blue);
+  padding: 16px 40px;
+  font-size: 17px;
+  border: 2px solid var(--bkb-key-blue);
+}
+
+.bkb-btn-secondary:hover {
+  background: var(--bkb-key-blue);
+  color: var(--bkb-primary-white);
+}
+
+.bkb-btn-primary-large {
+  background: var(--bkb-key-blue);
+  color: var(--bkb-primary-white);
+  padding: 18px 50px;
+  font-size: 19px;
+  border: none;
+}
+
+.bkb-btn-primary-large:hover {
+  background: #0051D5;
+  transform: translateY(-2px);
+}
+
+/* BKB Section Headers */
+.bkb-section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.bkb-section-header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+  color: var(--bkb-secondary-black);
+}
+
+.bkb-subtitle {
+  font-size: 21px;
+  color: var(--bkb-medium-gray);
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .bkb-section-header h2 {
+    font-size: 36px;
+  }
+
+  .bkb-subtitle {
+    font-size: 17px;
+  }
+}
+
+/* BKB FAQ Styles */
+.faq-categories {
+  margin-bottom: 60px;
+}
+
+.faq-category {
+  margin-bottom: 50px;
+}
+
+.faq-category h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--bkb-key-blue);
+  color: var(--bkb-secondary-black);
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--bkb-secondary-black);
+}
+
+.faq-item p {
+  color: var(--bkb-medium-gray);
+  line-height: 1.7;
+}
+
+.still-have-questions {
+  text-align: center;
+  background: var(--bkb-light-gray);
+  padding: 60px;
+  border-radius: 30px;
+  margin-top: 60px;
+}
+
+.still-have-questions h2 {
+  margin-bottom: 15px;
+  font-size: 32px;
+  color: var(--bkb-secondary-black);
+}
+
+.still-have-questions p {
+  margin-bottom: 25px;
+  color: var(--bkb-medium-gray);
+}
+
+/* Splash Screen Animations */
+@keyframes splashFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes splashFloatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.99);
+    filter: blur(10px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.02);
+    filter: blur(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.05);
+    filter: blur(15px);
+  }
+}
+
+.splash-overlay {
+  animation: splashFadeOut 7s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+.splash-text {
+  animation: splashFloatUp 7s cubic-bezier(0.2, 0, 0.3, 1) forwards !important;
 }

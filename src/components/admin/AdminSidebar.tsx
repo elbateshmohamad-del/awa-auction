@@ -13,6 +13,7 @@ import { LogOut } from 'lucide-react';
 const adminNavItems = [
     { href: '/admin', labelKey: 'dashboard', icon: '📊', permissionId: 'dashboard' },
     { href: '/admin/bikes', labelKey: 'bikes', icon: '🏍️', permissionId: 'bikes' },
+    { href: '/admin/prices', labelKey: 'prices', icon: '💹', permissionId: 'bikes' }, // Market prices
     { href: '/admin/auctions', labelKey: 'auctions', icon: '🔨', permissionId: 'auctions' },
     { href: '/admin/users', labelKey: 'users', icon: '👥', permissionId: 'users' },
     { href: '/admin/kyc', labelKey: 'kyc', icon: '📋', permissionId: 'users' }, // Grouped with users
@@ -94,7 +95,7 @@ export function AdminSidebar() {
                         {user?.role === 'ADMIN' && (
                             <>
                                 <div className="my-4 border-t border-gray-800"></div>
-                                <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Administration</p>
+                                <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">{tSidebar('administration')}</p>
                                 <Link href={`/${locale}/admin/staff`}>
                                     <span className={cn(
                                         "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
@@ -103,7 +104,7 @@ export function AdminSidebar() {
                                             : "text-gray-400 hover:bg-gray-800 hover:text-white"
                                     )}>
                                         <span className="text-lg">🛡️</span>
-                                        Staff Management
+                                        {tSidebar('staffManagement')}
                                     </span>
                                 </Link>
                             </>
@@ -123,7 +124,7 @@ export function AdminSidebar() {
                             {user?.name || 'Admin User'}
                         </p>
                         <p className="text-xs text-gray-400 truncate capitalize">
-                            {user?.role === 'ADMIN' ? 'Administrator' : user?.role?.toLowerCase() || 'Staff'}
+                            {user?.role === 'ADMIN' ? tSidebar('administrator') : user?.role?.toLowerCase() || tSidebar('staff')}
                         </p>
                     </div>
                 </div>
@@ -134,7 +135,7 @@ export function AdminSidebar() {
                     title="Sign Out"
                 >
                     <LogOut className="w-5 h-5 mr-2" />
-                    <span>ログアウト</span>
+                    <span>{tSidebar('signOut')}</span>
                 </Button>
             </div>
         </aside>
