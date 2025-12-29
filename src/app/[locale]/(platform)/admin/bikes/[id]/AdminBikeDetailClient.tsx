@@ -14,7 +14,9 @@ const CURRENCY_SYMBOLS: Record<CurrencyCode, string> = {
     EUR: '€',
     GBP: '£',
     EGP: 'E£',
-    JPY: '¥'
+    JPY: '¥',
+    AED: 'د.إ',
+    SAR: '﷼'
 };
 
 // Bike interface matching the database schema
