@@ -713,53 +713,8 @@ export interface ImportResult {
  * Download a file from BDS to local path
  */
 async function downloadBDSFile(url: string, destPath: string, sessionCookie: string): Promise<boolean> {
-    const DEBUG_LOG = path.join(process.cwd(), 'data', 'bds-debug.log');
-
-    return new Promise((resolve, reject) => {
-        try {
-            const file = fs.createWriteStream(destPath);
-            const urlObj = new URL(url);
-
-            const options = {
-                method: 'GET',
-                headers: {
-                    'Cookie': sessionCookie,
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-                },
-                agent: httpsAgent,
-                rejectUnauthorized: false
-            };
-
-            const req = https.request(url, options, (res) => {
-                if (res.statusCode && res.statusCode >= 400) {
-                    fs.appendFileSync(DEBUG_LOG, `Download failed: ${res.statusCode} for ${url}\n`);
-                    file.close();
-                    fs.unlink(destPath, () => { }); // Delete partial file
-                    resolve(false);
-                    return;
-                }
-
-                res.pipe(file);
-
-                file.on('finish', () => {
-                    file.close();
-                    resolve(true);
-                });
-            });
-
-            req.on('error', (err) => {
-                fs.appendFileSync(DEBUG_LOG, `Download error: ${err.message} for ${url}\n`);
-                fs.unlink(destPath, () => { });
-                resolve(false);
-            });
-
-            req.end();
-
-        } catch (error) {
-            fs.appendFileSync(DEBUG_LOG, `Download exception: ${error} for ${url}\n`);
-            resolve(false);
-        }
-    });
+    // DISABLED video download to save disk space
+    return Promise.resolve(false);
 }
 
 /**
@@ -1047,7 +1002,7 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
                         fs.appendFileSync(DEBUG_LOG, `Found ${rawVideoUrls.length} videos for bike ${bike.id}\n`);
                         // Store up to 2 video URLs directly (no download, use proxy)
                         const videosToStore = rawVideoUrls.slice(0, 2);
-                        bike.videoUrls = JSON.stringify(videosToStore); // Fix: Stringify array
+                        (bike as any).videoUrls = videosToStore; // Fix: Pass array, let addBike stringify it
                         fs.appendFileSync(DEBUG_LOG, `Stored video URLs: ${JSON.stringify(videosToStore)}\n`);
                     }
 

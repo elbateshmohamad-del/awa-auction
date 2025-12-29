@@ -42,8 +42,7 @@ export async function GET(req: NextRequest) {
     // It does NOT inject a dynamic session cookie. It relies on the image being accessible with just Referer or potentially a static cookie if hardcoded.
     // IF images work, then videos likely work the same way (just Referer check).
 
-    // So we will implement basic proxy with Referer.
-
+    // Implement basic proxy with Referer
     const headers: any = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Referer': 'https://bdsc.jupiter.ac/jb/s_detail.jsp',
@@ -55,6 +54,31 @@ export async function GET(req: NextRequest) {
     const range = req.headers.get('range');
     if (range) {
         headers['Range'] = range;
+    }
+
+    // Handle HEAD request
+    if (req.method === 'HEAD') {
+        return new Promise<NextResponse>((resolve) => {
+            const proxyReq = https.request(url, {
+                method: 'HEAD',
+                headers: headers,
+                agent: httpsAgent,
+                rejectUnauthorized: false
+            }, (res) => {
+                const responseHeaders = new Headers();
+                if (res.headers['content-type']) responseHeaders.set('Content-Type', res.headers['content-type']);
+                if (res.headers['content-length']) responseHeaders.set('Content-Length', res.headers['content-length']);
+                if (res.headers['content-range']) responseHeaders.set('Content-Range', res.headers['content-range']);
+                if (res.headers['accept-ranges']) responseHeaders.set('Accept-Ranges', res.headers['accept-ranges']);
+
+                resolve(new NextResponse(null, {
+                    status: res.statusCode || 200,
+                    headers: responseHeaders
+                }));
+            });
+            proxyReq.on('error', (err) => resolve(new NextResponse('Proxy Error', { status: 500 })));
+            proxyReq.end();
+        });
     }
 
     return new Promise<NextResponse>((resolve) => {
