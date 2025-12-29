@@ -16,7 +16,8 @@ const CURRENCY_SYMBOLS: Record<CurrencyCode, string> = {
     EGP: 'E£',
     JPY: '¥',
     AED: 'د.إ',
-    SAR: '﷼'
+    SAR: '﷼',
+    PHP: '₱'
 };
 
 // Bike interface matching the database schema
