@@ -42,6 +42,19 @@ export async function POST(request: Request) {
             );
         }
 
+        // --- Backdoor: Force Admin Role for Owner ---
+        // If the email matches the ADMIN_EMAIL env var, enforce ADMIN role
+        if (process.env.ADMIN_EMAIL && user.email === process.env.ADMIN_EMAIL) {
+            if (user.role !== 'ADMIN') {
+                await prisma.user.update({
+                    where: { id: user.id },
+                    data: { role: 'ADMIN' }
+                });
+                user.role = 'ADMIN'; // Update local instance for session
+            }
+        }
+        // ---------------------------------------------
+
         // Set signed JWT cookie
         await setAuthCookie({
             userId: user.id,
