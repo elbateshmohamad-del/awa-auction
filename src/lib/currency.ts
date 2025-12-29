@@ -21,10 +21,11 @@ const FALLBACK_RATES: ExchangeRates = {
     GBP: 185.30,
     PHP: 2.55,
     AED: 39.50,
-    EGP: 0.30
+    EGP: 0.30,
+    SAR: 26.50
 };
 
-export type CurrencyCode = 'JPY' | 'USD' | 'EUR' | 'GBP' | 'PHP' | 'AED' | 'EGP';
+export type CurrencyCode = 'JPY' | 'USD' | 'EUR' | 'GBP' | 'PHP' | 'AED' | 'EGP' | 'SAR';
 
 export async function getCurrentExchangeRates(): Promise<ExchangeRates> {
     try {
