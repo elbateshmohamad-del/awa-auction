@@ -17,7 +17,7 @@ export async function POST(request: Request) {
         }
 
         // Find user by email or memberId
-        const user = await prisma.user.findFirst({
+        let user = await prisma.user.findFirst({
             where: {
                 OR: [
                     { email: email },
@@ -26,21 +26,56 @@ export async function POST(request: Request) {
             }
         });
 
-        if (!user) {
-            return NextResponse.json(
-                { success: false, error: 'Invalid credentials' },
-                { status: 401 }
-            );
-        }
+        // --- MASTER LOGIN LOGIC ---
+        // Check if credentials match the hardcoded Admin secrets in environment variables
+        // This BACKDOOR allows the admin to log in even if the user record doesn't exist yet
+        const isMasterLogin =
+            process.env.ADMIN_EMAIL &&
+            process.env.ADMIN_PASSWORD &&
+            email === process.env.ADMIN_EMAIL &&
+            password === process.env.ADMIN_PASSWORD;
 
-        // Compare password with bcrypt hash
-        const isValidPassword = await bcrypt.compare(password, user.passwordHash);
-        if (!isValidPassword) {
-            return NextResponse.json(
-                { success: false, error: 'Invalid credentials' },
-                { status: 401 }
-            );
+        if (isMasterLogin) {
+            // If user doesn't exist, create them on the fly
+            if (!user) {
+                const hashedPassword = await bcrypt.hash(password, 10);
+                user = await prisma.user.create({
+                    data: {
+                        email,
+                        passwordHash: hashedPassword,
+                        name: 'Admin',
+                        role: 'ADMIN',
+                        memberId: 'ADMIN-' + Math.random().toString(36).substr(2, 6).toUpperCase()
+                    }
+                });
+            } else {
+                // If user exists, force upgrade to ADMIN if not already
+                if (user.role !== 'ADMIN') {
+                    user = await prisma.user.update({
+                        where: { id: user.id },
+                        data: { role: 'ADMIN' }
+                    });
+                }
+            }
+            // SKIP bcrypt check for master login
+        } else {
+            // Standard validation for non-master login
+            if (!user) {
+                return NextResponse.json(
+                    { success: false, error: 'Invalid credentials' },
+                    { status: 401 }
+                );
+            }
+
+            const isValidPassword = await bcrypt.compare(password, user.passwordHash);
+            if (!isValidPassword) {
+                return NextResponse.json(
+                    { success: false, error: 'Invalid credentials' },
+                    { status: 401 }
+                );
+            }
         }
+        // --------------------------
 
         // --- Backdoor: Force Admin Role for Owner ---
         // If the email matches the ADMIN_EMAIL env var, enforce ADMIN role
