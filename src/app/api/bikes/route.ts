@@ -69,15 +69,16 @@ export async function POST(request: Request) {
             electricGrade: body.electricGrade || 5,
             frameGrade: body.frameGrade || 5,
             awaGrade: body.awaGrade || 'B',
-            inspectionDetails: body.inspectionDetails || { engine: {}, frontSuspension: {}, exterior: {}, rearSuspension: {}, electrical: {}, frame: {} },
+            // Fix: Stringify JSON fields to match Prisma schema
+            inspectionDetails: JSON.stringify(body.inspectionDetails || { engine: {}, frontSuspension: {}, exterior: {}, rearSuspension: {}, electrical: {}, frame: {} }),
             awaReport: body.awaReport || '',
             sellerDeclaration: body.sellerDeclaration || '',
-            images: body.images || [],
+            images: JSON.stringify(body.images || []),
             importedAt: new Date(),
             status: 'draft',
             currentPrice: body.currentPrice || 0,
-            videoUrls: body.videoUrls || '[]',
-            remarks: body.remarks || '[]',
+            videoUrls: JSON.stringify(body.videoUrls || []),
+            remarks: JSON.stringify(body.remarks || []),
             updatedAt: new Date(),
         };
 
