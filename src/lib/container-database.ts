@@ -4,7 +4,7 @@
  */
 
 import { prisma } from '@/lib/prisma';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, type Container } from '@prisma/client';
 
 export type { Container };
 

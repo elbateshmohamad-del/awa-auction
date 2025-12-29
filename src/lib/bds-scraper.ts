@@ -690,7 +690,6 @@ function convertToBike(bdsId: string, scraped: ScrapedBikeData, rates: any = {})
         images: scraped.images,                       // Pass array directly
         videoUrls: scraped.videoUrls,                 // Pass array directly
         importedAt: new Date(),
-        importedAt: new Date(),
         status: status,
         historicalRates: historicalRates,
         currentPrice: 0,
@@ -1048,7 +1047,7 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
                         fs.appendFileSync(DEBUG_LOG, `Found ${rawVideoUrls.length} videos for bike ${bike.id}\n`);
                         // Store up to 2 video URLs directly (no download, use proxy)
                         const videosToStore = rawVideoUrls.slice(0, 2);
-                        bike.videoUrls = videosToStore; // Will be JSON.stringify'd in addBike
+                        bike.videoUrls = JSON.stringify(videosToStore); // Fix: Stringify array
                         fs.appendFileSync(DEBUG_LOG, `Stored video URLs: ${JSON.stringify(videosToStore)}\n`);
                     }
 
@@ -1142,48 +1141,27 @@ export function generateMockBikes(count: number = 10): Bike[] {
             electricGrade: Math.min(8, (mock.overallGrade || 5) + 1),
             frameGrade: mock.overallGrade || 5,
             awaGrade: convertGradeToAWA(mock.overallGrade || 5),
-            inspectionDetails: {
+            inspectionDetails: JSON.stringify({
                 engine: {},
                 frontSuspension: {},
                 exterior: {},
                 rearSuspension: {},
                 electrical: {},
                 frame: {},
-            },
+            }),
             awaReport: 'AWAシステムにより取り込み',
             sellerDeclaration: '',
-            remarks: [
+            remarks: JSON.stringify([
                 { title: '特記事項', content: '（モック）社外マフラー、フェンダーレスキット装着。ノーマルパーツあり。' },
                 { title: '整備備考', content: '（モック）バッテリー交換推奨。タイヤ溝あり。' }
-            ],
-            inspectionImages: {
-                engine: [
-                    'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=400&q=80',
-                    'https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&w=400&q=80'
-                ],
-                frontSuspension: [
-                    'https://images.unsplash.com/photo-1558980394-4c7c92998a42?auto=format&fit=crop&w=400&q=80'
-                ],
-                exterior: [
-                    'https://images.unsplash.com/photo-1558981806-ec527fa84f3d?auto=format&fit=crop&w=400&q=80',
-                    'https://images.unsplash.com/photo-1558981822-641589ffadce?auto=format&fit=crop&w=400&q=80',
-                    'https://images.unsplash.com/photo-1558981359-21a163152a5c?auto=format&fit=crop&w=400&q=80'
-                ],
-                rearSuspension: [
-                    'https://images.unsplash.com/photo-1558981408-db0ecd84c36c?auto=format&fit=crop&w=400&q=80'
-                ],
-                electrical: [
-                    'https://images.unsplash.com/photo-1558980336-b0930dc96f43?auto=format&fit=crop&w=400&q=80'
-                ],
-                frame: [
-                    'https://images.unsplash.com/photo-1558980394-0a06c4631733?auto=format&fit=crop&w=400&q=80'
-                ]
-            },
-            images: [],
+            ]),
+            // inspectionImages removed as it's not in Bike type
+            images: '[]',
             importedAt: new Date(),
             status: 'active' as const,
             currentPrice: 0,
             videoUrls: '[]',
+            historicalRates: '{}',
             updatedAt: new Date(),
         } as unknown as Bike;
     });

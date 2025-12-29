@@ -6,7 +6,7 @@ import * as cheerio from 'cheerio';
 const BDS_BASE_URL = 'https://bdsc.jupiter.ac';
 
 // Copy of extractVideoUrls from bds-scraper.ts for testing
-function extractVideoUrls($: cheerio.CheerioAPI): string[] {
+function extractVideoUrls($: any): string[] {
     const urls = new Set<string>();
 
     const normalizeUrl = (url: string): string => {
@@ -16,7 +16,7 @@ function extractVideoUrls($: cheerio.CheerioAPI): string[] {
     };
 
     // Method 1: Direct video/source tags
-    $('video source, source[type="video/mp4"]').each((_, el) => {
+    $('video source, source[type="video/mp4"]').each((_: any, el: any) => {
         const src = $(el).attr('src');
         if (src && src.includes('.mp4')) {
             const absUrl = normalizeUrl(src);
@@ -25,7 +25,7 @@ function extractVideoUrls($: cheerio.CheerioAPI): string[] {
         }
     });
 
-    $('video[src]').each((_, el) => {
+    $('video[src]').each((_: any, el: any) => {
         const src = $(el).attr('src');
         if (src && src.includes('.mp4')) {
             const absUrl = normalizeUrl(src);
@@ -35,7 +35,7 @@ function extractVideoUrls($: cheerio.CheerioAPI): string[] {
     });
 
     // Method 2: Lazy-loaded script content
-    $('script').each((_, el) => {
+    $('script').each((_: any, el: any) => {
         const scriptContent = $(el).html();
         if (!scriptContent) return;
 
@@ -49,7 +49,7 @@ function extractVideoUrls($: cheerio.CheerioAPI): string[] {
             const movieMatches = scriptContent.match(moviePathRegex);
 
             if (movieMatches) {
-                movieMatches.forEach(url => {
+                movieMatches.forEach((url: any) => {
                     const absUrl = normalizeUrl(url);
                     console.log(`[VideoDebug] Found video via movie_engine path: ${absUrl}`);
                     urls.add(absUrl);
@@ -60,7 +60,7 @@ function extractVideoUrls($: cheerio.CheerioAPI): string[] {
             const mp4PathRegex = /\/auctiondata\/[^'"\\]+\.mp4/g;
             const mp4Matches = scriptContent.match(mp4PathRegex);
             if (mp4Matches) {
-                mp4Matches.forEach(url => {
+                mp4Matches.forEach((url: any) => {
                     const absUrl = normalizeUrl(url);
                     if (!urls.has(absUrl)) {
                         console.log(`[VideoDebug] Found video via mp4 path: ${absUrl}`);
@@ -130,7 +130,7 @@ function testImageExtraction(html: string) {
     };
 
     // Swiper slides - prioritize data-pswp-src, data-src over src
-    $('.swiper-slide img').each((_, el) => {
+    $('.swiper-slide img').each((_: any, el: any) => {
         const dataPswpSrc = $(el).attr('data-pswp-src');
         const dataSrc = $(el).attr('data-src');
         const dataLazy = $(el).attr('data-lazy');
@@ -150,7 +150,7 @@ function testImageExtraction(html: string) {
 
     console.log(`\n=== Image Result ===`);
     console.log(`Total images: ${images.length}`);
-    images.forEach((img, i) => console.log(`  ${i + 1}. ${img}`));
+    images.forEach((img: any, i: any) => console.log(`  ${i + 1}. ${img}`));
 
     return images;
 }

@@ -35,7 +35,7 @@ async function main() {
 
     // Check parsing
     try {
-        const parsedImages = JSON.parse(bike.images);
+        const parsedImages = JSON.parse(bike.images || '[]');
         console.log(`\nParsed Images Count: ${Array.isArray(parsedImages) ? parsedImages.length : 'Not Array'}`);
     } catch (e) {
         console.log('\nError parsing images JSON');

@@ -61,6 +61,7 @@ export async function POST(request: Request) {
             registrationNumber: body.registrationNumber || '',
             startPrice: body.startPrice,
             result: body.result || '',
+            historicalRates: '{}', // Add missing field
             overallGrade: body.overallGrade || 5,
             engineGrade: body.engineGrade || 5,
             frontGrade: body.frontGrade || 5,
