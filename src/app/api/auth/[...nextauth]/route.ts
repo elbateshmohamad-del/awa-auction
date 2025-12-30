@@ -26,7 +26,7 @@ const handler = NextAuth({
             data: {
               email: user.email,
               name: user.name || 'Google User',
-              password: '', // No password for OAuth users
+              passwordHash: '', // No password for OAuth users
               role: 'USER',
             }
           });
