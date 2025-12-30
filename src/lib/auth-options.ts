@@ -55,14 +55,9 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
     async redirect({ url, baseUrl }) {
-      // After Google login, redirect to our custom callback to set auth_token cookie
-      if (url.includes('/api/auth/callback/google')) {
-        return `${baseUrl}/api/auth/google-callback`;
-      }
-      // Default behavior for other redirects
-      if (url.startsWith('/')) return `${baseUrl}${url}`;
-      if (url.startsWith(baseUrl)) return url;
-      return baseUrl;
+      // Always redirect to our custom callback to set auth_token cookie after Google login
+      // Since NextAuth is currently only used for Google, this is safe.
+      return `${baseUrl}/api/auth/google-callback`;
     }
   }
 };
