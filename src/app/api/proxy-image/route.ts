@@ -38,6 +38,7 @@ export async function GET(request: NextRequest) {
                 const responseHeaders = new Headers();
                 const contentType = res.headers['content-type'];
                 if (contentType) responseHeaders.set('Content-Type', contentType);
+                // Aggressive caching: Public, 1 year, immutable (never changes)
                 responseHeaders.set('Cache-Control', 'public, max-age=31536000, immutable');
 
                 resolve(new NextResponse(buffer, {

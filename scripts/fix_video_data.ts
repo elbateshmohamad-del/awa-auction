@@ -5,8 +5,8 @@ import { prisma } from '../src/lib/prisma';
 async function main() {
     console.log('Starting single bike re-scrape to fix video URLs...');
 
-    // Import 5 bikes to ensure we get valid ones
-    const result = await importBikesFromBDS(5);
+    // Import 50 bikes to update recent inventory
+    const result = await importBikesFromBDS(50);
 
     console.log('Import result:', JSON.stringify(result, null, 2));
 

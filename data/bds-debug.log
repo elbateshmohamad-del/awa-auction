@@ -1334,3 +1334,153 @@ Found 2 videos for bike awa-1767050969237-nhd5yvgmm
 Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4"]
 Found 2 videos for bike awa-1767050985645-ioc3pimca
 Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4"]
+DEBUG: importBikesFromBDS (Puppeteer) called
+Navigating to login page: https://bdsc.jupiter.ac
+Login successful via Puppeteer.
+Fetching search page from: https://bdsc.jupiter.ac/NJP20/NJP20202
+Found Bike: 0002 - ｵｼﾗｾ
+Found Bike: 0003 - ﾄﾞｶﾃｨ750SS
+Found Bike: 0004 - DIO ZX-2
+Found Bike: 0005 - BMWR67/2ｻｲﾄﾞｶｰ
+Found Bike: 0006 - GSX-R1100-1
+Found Bike: 0007 - CBM72
+Found Bike: 0008 - ﾎｰｸ2
+Found Bike: 0009 - CB750
+Found Bike: 0010 - ﾀｸﾄ
+Found Bike: 0011 - ﾊｰﾚｰFXS1200
+Found Bike: 0012 - Z1000R
+Found Bike: 0013 - XL250R
+Found Bike: 0014 - CB1100F
+Found Bike: 0015 - CBR400Fｴﾝﾃﾞ-1
+Found Bike: 0016 - YSR80
+Found Bike: 0017 - CB750
+Found Bike: 0018 - Z1000
+Found Bike: 0019 - CBX550F
+Found Bike: 0020 - FZR750R
+Found Bike: 0021 - ﾊｰﾚｰFXS1340
+Found Bike: 0022 - ﾄﾞｶﾃｨ900SDﾀﾞｰﾏ
+Found Bike: 0023 - W1SA
+Found Bike: 0024 - GSX1100Sｶﾀﾅ
+Found Bike: 0025 - CBX1000
+Found Bike: 0026 - CB400ﾌｫｱ
+Found Bike: 0027 - Z750FX-1
+Found Bike: 0028 - YZF-R7
+Found Bike: 0029 - RVF750
+Found Bike: 0030 - ﾄﾞｶﾃｨﾊﾟﾆｶﾞｰﾚV4ﾜｰﾙﾄﾞﾁ
+Found Bike: 0031 - CB400
+Found Bike: 0032 - XJ400
+Found Bike: 0033 - RG500ｶﾞﾝﾏ
+Found Bike: 0034 - NS-1-2
+Found Bike: 0035 - Z900
+Found Bike: 0036 - GT380
+Found Bike: 0037 - TZM50R
+Found Bike: 0038 - C50
+Found Bike: 0039 - Z1000
+Found Bike: 0040 - CBX750F
+Found Bike: 0041 - Z2
+Found Bike: 0042 - ﾓﾄｸﾞｯﾁ850ﾙﾏﾝ
+Found Bike: 0043 - CBX400F
+Found Bike: 0044 - ｷｯﾄﾊﾞｲｸ1200
+Found Bike: 0045 - SR500-1
+Found Bike: 0100 - ｵｼﾗｾ
+Found Bike: 0101 - ﾄﾞｶﾃｨﾑﾙﾃｨｽﾄﾗｰﾀﾞV4ﾗﾘｰ
+Found Bike: 0102 - CRF250L-2
+Found Bike: 0103 - CB1300SF-3SP
+Found Bike: 0104 - CRF250L-2
+Found Bike: 0105 - ﾄﾞｶﾃｨｽﾄﾘｰﾄﾌｧｲﾀｰV2
+Found 2 videos for bike awa-1767052199496-qipm0o8o6
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000320260107_l.mp4"]
+Found 2 videos for bike awa-1767052217348-yazqm2kvl
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000420260107_l.mp4"]
+Found 2 videos for bike awa-1767052233282-31i6k0m2f
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000520260107_l.mp4"]
+Found 2 videos for bike awa-1767052253083-ql6p78bnc
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000620260107_l.mp4"]
+Found 2 videos for bike awa-1767052266813-fc94l0d28
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000720260107_l.mp4"]
+Found 2 videos for bike awa-1767052284426-p86oe903g
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000820260107_l.mp4"]
+Found 2 videos for bike awa-1767052299543-m1sp1ty7p
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/000920260107_l.mp4"]
+Found 2 videos for bike awa-1767052318369-oueqz4njb
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001020260107_l.mp4"]
+Found 2 videos for bike awa-1767052337216-z2oh7ijta
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001120260107_l.mp4"]
+Found 2 videos for bike awa-1767052351094-tiob7awdi
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001220260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001220260107_l.mp4"]
+Found 2 videos for bike awa-1767052362560-6p0th1keb
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001320260107_l.mp4"]
+Found 2 videos for bike awa-1767052376426-9azsodgv9
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001420260107_l.mp4"]
+Found 2 videos for bike awa-1767052389199-9hd8naebh
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001520260107_l.mp4"]
+Found 2 videos for bike awa-1767052409516-tnhu2kfbj
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001620260107_l.mp4"]
+Found 2 videos for bike awa-1767052423115-h0q5eav4c
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001720260107_l.mp4"]
+Found 2 videos for bike awa-1767052440827-cl4jiwcz2
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001820260107_l.mp4"]
+Found 2 videos for bike awa-1767052458807-2hw5b4cvx
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/001920260107_l.mp4"]
+Found 2 videos for bike awa-1767052475006-2jsfhtf9b
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002020260107_l.mp4"]
+Found 2 videos for bike awa-1767052491850-02w3dftr9
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002120260107_l.mp4"]
+Found 2 videos for bike awa-1767052510588-j7rofvqje
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002220260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002220260107_l.mp4"]
+Found 2 videos for bike awa-1767052520032-o2u63wyjv
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002320260107_l.mp4"]
+Found 2 videos for bike awa-1767052539368-mltmrvjti
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002420260107_l.mp4"]
+Found 2 videos for bike awa-1767052554169-o5a7qv6kg
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002520260107_l.mp4"]
+Found 2 videos for bike awa-1767052573575-sugs9b25q
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002620260107_l.mp4"]
+Found 2 videos for bike awa-1767052593603-6n0o715va
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002720260107_l.mp4"]
+Found 2 videos for bike awa-1767052604666-9lubtgrs9
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002820260107_l.mp4"]
+Found 2 videos for bike awa-1767052622681-h3s5ep685
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/002920260107_l.mp4"]
+Found 2 videos for bike awa-1767052642995-3mtncif2p
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003020260107_l.mp4"]
+Found 2 videos for bike awa-1767052654125-o2nz7kh9j
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003120260107_l.mp4"]
+Found 2 videos for bike awa-1767052672639-ebwxr18bk
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003220260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003220260107_l.mp4"]
+Found 2 videos for bike awa-1767052682909-ji0qylgjr
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003320260107_l.mp4"]
+Found 2 videos for bike awa-1767052700173-suk3vrco7
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003420260107_l.mp4"]
+Found 2 videos for bike awa-1767052714954-6p0x18gyc
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003520260107_l.mp4"]
+Found 2 videos for bike awa-1767052726253-67jas9kvr
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003620260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003620260107_l.mp4"]
+Found 2 videos for bike awa-1767052743098-7l2lp8dfz
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003720260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003720260107_l.mp4"]
+Found 2 videos for bike awa-1767052760097-vr6c3pods
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003820260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003820260107_l.mp4"]
+Found 2 videos for bike awa-1767052772717-slivdad6f
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003920260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/003920260107_l.mp4"]
+Found 2 videos for bike awa-1767052787646-o5in69l4g
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004020260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004020260107_l.mp4"]
+Found 2 videos for bike awa-1767052802258-0j7nurq5i
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004120260107_l.mp4"]
+Found 2 videos for bike awa-1767052822840-4wvgbcf1a
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004220260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004220260107_l.mp4"]
+Found 2 videos for bike awa-1767052836361-c6fgp6ul0
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004320260107_l.mp4"]
+Found 2 videos for bike awa-1767052847003-0qkypr1ln
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004420260107_l.mp4"]
+Found 2 videos for bike awa-1767052859764-xzzvb5kvo
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/004520260107_l.mp4"]
+Found 2 videos for bike awa-1767052885439-dh2n4t63v
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010120260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010120260107_l.mp4"]
+Found 2 videos for bike awa-1767052906720-kjz8agkgc
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010220260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010220260107_l.mp4"]
+Found 2 videos for bike awa-1767052925086-w68bdmibs
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010320260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010320260107_l.mp4"]
+Found 2 videos for bike awa-1767052940052-xi0gcw153
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010420260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010420260107_l.mp4"]
+Found 2 videos for bike awa-1767052953517-xrt514vn2
+Stored video URLs: ["https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010520260107_r.mp4","https://bdsc.jupiter.ac/auctiondata/bds/disp/bds/20260107/movie_engine/010520260107_l.mp4"]

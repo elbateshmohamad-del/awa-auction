@@ -71,6 +71,9 @@ export async function GET(req: NextRequest) {
                 if (res.headers['content-range']) responseHeaders.set('Content-Range', res.headers['content-range']);
                 if (res.headers['accept-ranges']) responseHeaders.set('Accept-Ranges', res.headers['accept-ranges']);
 
+                // Cache video metadata
+                responseHeaders.set('Cache-Control', 'public, max-age=31536000, immutable');
+
                 resolve(new NextResponse(null, {
                     status: res.statusCode || 200,
                     headers: responseHeaders
@@ -96,6 +99,9 @@ export async function GET(req: NextRequest) {
             if (res.headers['content-length']) responseHeaders.set('Content-Length', res.headers['content-length']);
             if (res.headers['content-range']) responseHeaders.set('Content-Range', res.headers['content-range']);
             if (res.headers['accept-ranges']) responseHeaders.set('Accept-Ranges', res.headers['accept-ranges']);
+
+            // Cache video for 1 year (immutable)
+            responseHeaders.set('Cache-Control', 'public, max-age=31536000, immutable');
 
             // Create a ReadableStream from the node response stream
             const iterator = res[Symbol.asyncIterator]();
