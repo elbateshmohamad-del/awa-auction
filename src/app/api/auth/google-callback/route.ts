@@ -18,9 +18,14 @@ export async function GET(request: NextRequest) {
         console.log('[GoogleCallback] Session retrieved:', JSON.stringify(session, null, 2));
 
         if (!session?.user?.email) {
-            console.log('[GoogleCallback] No session or email found, redirecting to login');
-            // No NextAuth session, redirect to login
-            return NextResponse.redirect(new URL('/login', request.url));
+            console.log('[GoogleCallback] No session or email found');
+            // Return visible error for debugging
+            return NextResponse.json({
+                error: 'No session found',
+                message: 'getServerSession returned null or no email',
+                session: session,
+                cookies: request.cookies.getAll()
+            }, { status: 401 });
         }
 
         // Find user in database
@@ -30,8 +35,11 @@ export async function GET(request: NextRequest) {
         console.log('[GoogleCallback] Database user lookup:', user ? `Found user ${user.id}` : 'User not found');
 
         if (!user) {
-            // User not found, redirect to login
-            return NextResponse.redirect(new URL('/login', request.url));
+            console.log('[GoogleCallback] User not found in DB');
+            return NextResponse.json({
+                error: 'User not found in API',
+                email: session.user.email
+            }, { status: 404 });
         }
 
         // Create the same JWT token that email/password login creates
@@ -58,8 +66,12 @@ export async function GET(request: NextRequest) {
         });
 
         return response;
-    } catch (error) {
+    } catch (error: any) {
         console.error('[GoogleCallback] Error:', error);
-        return NextResponse.redirect(new URL('/login?error=callback', request.url));
+        return NextResponse.json({
+            error: 'Callback Exception',
+            message: error.message,
+            stack: error.stack
+        }, { status: 500 });
     }
 }
