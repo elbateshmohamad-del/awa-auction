@@ -61,6 +61,7 @@ type Props = {
 import { AuthProvider } from '@/context/AuthContext';
 
 import { WatchlistProvider } from '@/context/WatchlistContext';
+import { AuthSessionProvider } from '@/components/providers/SessionProvider';
 
 export default async function LocaleLayout({ children, params }: Props) {
     const { locale } = await params;
@@ -82,11 +83,13 @@ export default async function LocaleLayout({ children, params }: Props) {
                 className={`${inter.variable} ${notoSansJP.variable} ${notoSansArabic.variable} font-sans antialiased bg-white text-gray-900`}
             >
                 <NextIntlClientProvider messages={messages}>
-                    <AuthProvider>
-                        <WatchlistProvider>
-                            {children}
-                        </WatchlistProvider>
-                    </AuthProvider>
+                    <AuthSessionProvider>
+                        <AuthProvider>
+                            <WatchlistProvider>
+                                {children}
+                            </WatchlistProvider>
+                        </AuthProvider>
+                    </AuthSessionProvider>
                 </NextIntlClientProvider>
             </body>
         </html>
