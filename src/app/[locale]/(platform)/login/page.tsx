@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
@@ -14,10 +15,25 @@ import { signIn } from 'next-auth/react';
 export default function LoginPage() {
     const t = useTranslations('auth.loginPage');
     const router = useRouter();
+    const searchParams = useSearchParams();
     const { login } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+
+    // Check for OAuth errors in URL
+    useEffect(() => {
+        const errorParam = searchParams.get('error');
+        if (errorParam) {
+            if (errorParam === 'google') {
+                setError('Googleログインに失敗しました。もう一度お試しください。');
+            } else if (errorParam === 'callback') {
+                setError('認証処理中にエラーが発生しました。');
+            } else {
+                setError('ログインに失敗しました。');
+            }
+        }
+    }, [searchParams]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -134,7 +150,7 @@ export default function LoginPage() {
                                 <div className="mt-6">
                                     <Button
                                         variant="secondary"
-                                        className="w-full flex items-center justify-center gap-2"
+                                        className="w-full flex items-center justify-center gap-2 cursor-pointer"
                                         type="button"
                                         onClick={() => signIn('google', { callbackUrl: '/api/auth/google-callback' })}
                                     >
