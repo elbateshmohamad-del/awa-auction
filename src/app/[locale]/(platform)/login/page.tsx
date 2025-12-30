@@ -147,6 +147,7 @@ export default function LoginPage() {
                                         <span>Googleでログイン</span>
                                     </Button>
                                 </div>
+                            </div>
                         </CardContent>
                     </Card>
 
