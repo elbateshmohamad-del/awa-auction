@@ -180,37 +180,61 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [lightboxOpen, closeLightbox, nextImage, prevImage]);
 
-    // Calculate auction end time - Next Tuesday 12:00 JST
-    const auctionEndTime = useMemo(() => {
+    // Calculate auction status and target date (JST)
+    const { status: auctionWindowStatus, targetDate: auctionTargetDate } = useMemo(() => {
         const now = new Date();
         const jstOffset = 9 * 60; // JST is UTC+9
         const nowUTC = now.getTime() + now.getTimezoneOffset() * 60000;
         const nowJST = new Date(nowUTC + jstOffset * 60000);
+        const day = nowJST.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+        const hour = nowJST.getHours();
 
-        // Find next Tuesday 12:00 JST
-        const nextTuesday = new Date(nowJST);
-        const currentDay = nowJST.getDay();
-        const daysUntilTuesday = (2 - currentDay + 7) % 7 || 7; // Tuesday is day 2
-        nextTuesday.setDate(nowJST.getDate() + daysUntilTuesday);
-        nextTuesday.setHours(12, 0, 0, 0);
+        // Live Window: Thursday (4) 00:00 to Tuesday (2) 12:00
+        // Waiting Window: Tuesday 12:00 to Thursday 00:00
 
-        // If it's Tuesday and before 12:00, use today
-        if (currentDay === 2 && nowJST.getHours() < 12) {
-            nextTuesday.setDate(nowJST.getDate());
+        let isLive = false;
+        let targetDate = new Date(nowJST);
+
+        if (day === 4 || day === 5 || day === 6 || day === 0 || day === 1) {
+            isLive = true;
+        } else if (day === 2) {
+            isLive = hour < 12;
+        } else {
+            // Wednesday (3) or Tuesday PM
+            isLive = false;
         }
 
-        // Convert back to local time for the Date object
-        const nextTuesdayUTC = nextTuesday.getTime() - jstOffset * 60000;
-        return new Date(nextTuesdayUTC - now.getTimezoneOffset() * 60000);
+        if (isLive) {
+            // Target is NEXT Tuesday 12:00
+            const daysUntilTuesday = (2 - day + 7) % 7;
+            targetDate.setDate(nowJST.getDate() + daysUntilTuesday);
+            targetDate.setHours(12, 0, 0, 0);
+
+            // If calculation lands on today but we are past start/end logic check, adjust.
+            // If today is Tue (2) < 12, diff is 0. Correct.
+        } else {
+            // WAITING. Target is NEXT Thursday 00:00 (Start of next auction)
+            const daysUntilThursday = (4 - day + 7) % 7;
+            targetDate.setDate(nowJST.getDate() + daysUntilThursday);
+            targetDate.setHours(0, 0, 0, 0);
+        }
+
+        // Convert back to local time for the Date object to work with useAuction
+        const targetDateUTC = targetDate.getTime() - jstOffset * 60000;
+        const localTargetDate = new Date(targetDateUTC - now.getTimezoneOffset() * 60000);
+
+        return { status: isLive ? 'LIVE' : 'WAITING', targetDate: localTargetDate };
     }, []);
 
     // Use Real-time Auction Hook
-    const { currentPrice, bids, timeLeft, placeBid, status } = useAuction(bikeId, bike?.startPrice || 0, auctionEndTime); // Get status
+    const { currentPrice, bids, timeLeft, placeBid, status } = useAuction(bikeId, bike?.startPrice || 0, auctionTargetDate);
     const { isInWatchlist, toggleWatchlist } = useWatchlist();
     const router = useRouter();
 
     const [bidSuccess, setBidSuccess] = useState<{ amount: number } | null>(null);
-    const isAuctionEnded = status === 'ENDED' || timeLeft === "FINISHED";
+
+    // Disable bidding if auction is ended OR if we are in the WAITING window
+    const isAuctionEnded = status === 'ENDED' || timeLeft === "FINISHED" || auctionWindowStatus === 'WAITING';
 
     const handleBid = async (amount: number) => {
         if (!user) {

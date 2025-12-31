@@ -329,13 +329,28 @@ export default function AuctionsPage() {
             return false;
         }
 
+        // Region Filter
+        if (filters.regions.length > 0 && !filters.regions.includes(bike.region)) {
+            return false;
+        }
+
+        // Color Filter (Approximate string matching if needed, but exact for now)
+        if (filters.colors.length > 0 && bike.color && !filters.colors.includes(bike.color)) {
+            return false;
+        }
+
         // Grade Filter
         if (filters.grades.length > 0 && !filters.grades.includes(bike.awaGrade)) {
             return false;
         }
 
+        // Inspection Filter
+        if (filters.inspection && (!bike.inspection || bike.inspection.length === 0)) {
+            return false;
+        }
+
         // Price Filter
-        const price = bike.startPrice;
+        const price = bike.currentPrice || bike.startPrice;
         if (filters.minPrice) {
             const minPriceJPY = Number(filters.minPrice) * exchangeRate;
             if (price < minPriceJPY) return false;
@@ -344,6 +359,49 @@ export default function AuctionsPage() {
             const maxPriceJPY = Number(filters.maxPrice) * exchangeRate;
             if (price > maxPriceJPY) return false;
         }
+
+        // Year Filter
+        // Parse year from firstRegistration
+        let year = 0;
+        if (bike.firstRegistration) {
+            const match = bike.firstRegistration.match(/R\s*(\d+)/);
+            if (match) year = 2018 + parseInt(match[1]);
+            else {
+                const match4 = bike.firstRegistration.match(/(\d{4})/);
+                if (match4) year = parseInt(match4[1]);
+            }
+        }
+        if (filters.minYear && year < Number(filters.minYear)) return false;
+        if (filters.maxYear && year > Number(filters.maxYear)) return false;
+
+        // Mileage Filter
+        let mileage = 0;
+        if (bike.mileage) {
+            mileage = parseInt(bike.mileage.replace(/[^0-9]/g, '')) || 0;
+        }
+        if (filters.maxMileage && mileage > Number(filters.maxMileage)) return false;
+
+        // Displacement Filter
+        if (filters.displacement.length > 0) {
+            let userDisp = 0;
+            if (bike.displacement) {
+                userDisp = parseInt(bike.displacement.replace(/[^0-9]/g, '')) || 0;
+            }
+            const inRange = filters.displacement.some(range => {
+                if (range === '50cc') return userDisp <= 50;
+                if (range === '125cc') return userDisp > 50 && userDisp <= 125;
+                if (range === '250cc') return userDisp > 125 && userDisp <= 250;
+                if (range === '400cc') return userDisp > 250 && userDisp <= 400;
+                if (range === 'over400cc') return userDisp > 400;
+                return false;
+            });
+            if (!inRange) return false;
+        }
+
+        // Detailed Scores Filter
+        if (filters.minScore.engine && (bike.engineGrade || 0) < Number(filters.minScore.engine)) return false;
+        if (filters.minScore.frame && (bike.frameGrade || 0) < Number(filters.minScore.frame)) return false;
+        if (filters.minScore.exterior && (bike.exteriorGrade || 0) < Number(filters.minScore.exterior)) return false;
 
         return true;
     });
@@ -386,7 +444,15 @@ export default function AuctionsPage() {
         grades: bikesForCounts.reduce((acc, bike) => {
             acc[bike.awaGrade] = (acc[bike.awaGrade] || 0) + 1;
             return acc;
-        }, {} as Record<string, number>)
+        }, {} as Record<string, number>),
+        regions: bikesForCounts.reduce((acc, bike) => {
+            if (bike.region) acc[bike.region] = (acc[bike.region] || 0) + 1;
+            return acc;
+        }, {} as Record<string, number>),
+        colors: bikesForCounts.reduce((acc, bike) => {
+            if (bike.color) acc[bike.color] = (acc[bike.color] || 0) + 1;
+            return acc;
+        }, {} as Record<string, number>),
     };
 
     const totalItems = sortedBikes.length;

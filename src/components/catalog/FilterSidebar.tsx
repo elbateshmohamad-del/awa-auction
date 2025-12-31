@@ -9,14 +9,29 @@ import { Input } from '@/components/ui/Input';
 export interface FilterState {
     makers: string[];
     grades: string[];
+    regions: string[];
+    colors: string[];
     minPrice: string;
     maxPrice: string;
+    minYear: string;
+    maxYear: string;
+    maxMileage: string;
+    displacement: string[]; // ['50cc', '125cc', '250cc', '400cc', 'over400cc']
+    inspection: boolean;
+    minScore: {
+        overall: string;
+        engine: string;
+        frame: string;
+        exterior: string;
+    };
 }
 
 interface FilterSidebarProps {
     counts: {
         makers: Record<string, number>;
         grades: Record<string, number>;
+        regions: Record<string, number>;
+        colors: Record<string, number>;
     };
     filters: FilterState;
     onFilterChange: (newFilters: FilterState) => void;
@@ -27,13 +42,28 @@ interface FilterSidebarProps {
 const defaultFilters: FilterState = {
     makers: [],
     grades: [],
+    regions: [],
+    colors: [],
     minPrice: '',
-    maxPrice: ''
+    maxPrice: '',
+    minYear: '',
+    maxYear: '',
+    maxMileage: '',
+    displacement: [],
+    inspection: false,
+    minScore: {
+        overall: '',
+        engine: '',
+        frame: '',
+        exterior: ''
+    }
 };
 
 const defaultCounts = {
     makers: {},
-    grades: {}
+    grades: {},
+    regions: {},
+    colors: {}
 };
 
 export function FilterSidebar({
@@ -61,17 +91,40 @@ export function FilterSidebar({
         safeOnFilterChange({ ...filters, grades: newGrades });
     };
 
-    const handlePriceChange = (field: 'minPrice' | 'maxPrice', value: string) => {
+    const handleRegionToggle = (region: string) => {
+        const newRegions = filters.regions.includes(region)
+            ? filters.regions.filter(r => r !== region)
+            : [...filters.regions, region];
+        safeOnFilterChange({ ...filters, regions: newRegions });
+    };
+
+    const handleColorToggle = (color: string) => {
+        const newColors = filters.colors.includes(color)
+            ? filters.colors.filter(c => c !== color)
+            : [...filters.colors, color];
+        safeOnFilterChange({ ...filters, colors: newColors });
+    };
+
+    const handleDisplacementToggle = (disp: string) => {
+        const newDisp = filters.displacement.includes(disp)
+            ? filters.displacement.filter(d => d !== disp)
+            : [...filters.displacement, disp];
+        safeOnFilterChange({ ...filters, displacement: newDisp });
+    };
+
+    const handleInputChange = (field: keyof FilterState, value: string | boolean | any) => {
         safeOnFilterChange({ ...filters, [field]: value });
     };
 
-    const clearAll = () => {
+    const handleScoreChange = (field: keyof typeof filters.minScore, value: string) => {
         safeOnFilterChange({
-            makers: [],
-            grades: [],
-            minPrice: '',
-            maxPrice: ''
+            ...filters,
+            minScore: { ...filters.minScore, [field]: value }
         });
+    };
+
+    const clearAll = () => {
+        safeOnFilterChange(defaultFilters);
     };
 
     // Get sorted makers by count descending
@@ -96,7 +149,7 @@ export function FilterSidebar({
                     {/* Makers */}
                     <div>
                         <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.make')}</h4>
-                        <div className="space-y-2 max-h-60 overflow-y-auto pr-2">
+                        <div className="space-y-2 max-h-48 overflow-y-auto pr-2">
                             {sortedMakers.length > 0 ? sortedMakers.map((maker) => (
                                 <label key={maker} className="flex items-center gap-2 cursor-pointer group">
                                     <div className="relative flex items-center">
@@ -118,9 +171,167 @@ export function FilterSidebar({
 
                     <div className="h-px bg-gray-100" />
 
-                    {/* Inspection Grade */}
+                    {/* Region */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('bike.condition')}</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">Region</h4>
+                        <div className="space-y-2 max-h-32 overflow-y-auto pr-2">
+                            {Object.keys(counts.regions).map((region) => (
+                                <label key={region} className="flex items-center gap-2 cursor-pointer group">
+                                    <input
+                                        type="checkbox"
+                                        checked={filters.regions.includes(region)}
+                                        onChange={() => handleRegionToggle(region)}
+                                        className="w-4 h-4 border-2 border-gray-300 rounded text-[#0F4C81] focus:ring-[#0F4C81]"
+                                    />
+                                    <span className="text-sm text-gray-600 group-hover:text-gray-900">{region || 'Unknown'}</span>
+                                    <span className="text-xs text-gray-400 ml-auto">({counts.regions[region]})</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Displacement */}
+                    <div>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">Displacement</h4>
+                        <div className="space-y-2">
+                            {['50cc', '125cc', '250cc', '400cc', 'over400cc'].map((disp) => (
+                                <label key={disp} className="flex items-center gap-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        checked={filters.displacement.includes(disp)}
+                                        onChange={() => handleDisplacementToggle(disp)}
+                                        className="w-4 h-4 border-2 border-gray-300 rounded text-[#0F4C81]"
+                                    />
+                                    <span className="text-sm text-gray-600">
+                                        {disp === 'over400cc' ? '> 400cc' : `~ ${disp}`}
+                                    </span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Year Range */}
+                    <div>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">Year</h4>
+                        <div className="flex items-center gap-2">
+                            <Input
+                                type="number"
+                                placeholder="Min"
+                                className="h-9 text-sm"
+                                value={filters.minYear}
+                                onChange={(e) => handleInputChange('minYear', e.target.value)}
+                            />
+                            <span className="text-gray-400">-</span>
+                            <Input
+                                type="number"
+                                placeholder="Max"
+                                className="h-9 text-sm"
+                                value={filters.maxYear}
+                                onChange={(e) => handleInputChange('maxYear', e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Mileage */}
+                    <div>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">Mileage</h4>
+                        <div className="flex items-center gap-2">
+                            <Input
+                                type="number"
+                                placeholder="Max km"
+                                className="h-9 text-sm w-full"
+                                value={filters.maxMileage}
+                                onChange={(e) => handleInputChange('maxMileage', e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Color */}
+                    <div>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">Color</h4>
+                        <div className="flex flex-wrap gap-2">
+                            {Object.keys(counts.colors).filter(c => c).map((color) => (
+                                <label key={color} className="flex items-center gap-2 cursor-pointer border px-2 py-1 rounded text-xs hover:bg-gray-50">
+                                    <input
+                                        type="checkbox"
+                                        checked={filters.colors.includes(color)}
+                                        onChange={() => handleColorToggle(color)}
+                                        className="w-3 h-3 border-gray-300 rounded text-[#0F4C81]"
+                                    />
+                                    <span className="text-gray-600 truncate max-w-[80px]">{color}</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Inspection */}
+                    <div className="flex items-center gap-2">
+                        <input
+                            type="checkbox"
+                            checked={filters.inspection}
+                            onChange={(e) => handleInputChange('inspection', e.target.checked)}
+                            className="w-4 h-4 border-2 border-gray-300 rounded text-[#0F4C81]"
+                        />
+                        <span className="text-sm font-bold text-gray-900">With Inspection (Shaken)</span>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Scores */}
+                    <div>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">Minimum Scores</h4>
+                        <div className="space-y-2">
+                            <div className="grid grid-cols-2 gap-2 items-center">
+                                <span className="text-xs text-gray-600">Engine</span>
+                                <Input
+                                    type="number"
+                                    min="0" max="10"
+                                    placeholder="0"
+                                    className="h-8 text-xs"
+                                    value={filters.minScore.engine}
+                                    onChange={(e) => handleScoreChange('engine', e.target.value)}
+                                />
+                            </div>
+                            <div className="grid grid-cols-2 gap-2 items-center">
+                                <span className="text-xs text-gray-600">Exterior</span>
+                                <Input
+                                    type="number"
+                                    min="0" max="10"
+                                    placeholder="0"
+                                    className="h-8 text-xs"
+                                    value={filters.minScore.exterior}
+                                    onChange={(e) => handleScoreChange('exterior', e.target.value)}
+                                />
+                            </div>
+                            <div className="grid grid-cols-2 gap-2 items-center">
+                                <span className="text-xs text-gray-600">Frame</span>
+                                <Input
+                                    type="number"
+                                    min="0" max="10"
+                                    placeholder="0"
+                                    className="h-8 text-xs"
+                                    value={filters.minScore.frame}
+                                    onChange={(e) => handleScoreChange('frame', e.target.value)}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-px bg-gray-100" />
+
+                    {/* Inspection Grade (AWA) */}
+                    <div>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('bike.condition')} (AWA)</h4>
                         <div className="grid grid-cols-3 gap-2">
                             {['S', 'A', 'B', 'C', 'D', 'E'].map((grade) => (
                                 <label key={grade} className="cursor-pointer">
@@ -155,7 +366,7 @@ export function FilterSidebar({
                                 placeholder="Min"
                                 className="h-9 text-sm"
                                 value={filters.minPrice}
-                                onChange={(e) => handlePriceChange('minPrice', e.target.value)}
+                                onChange={(e) => handleInputChange('minPrice', e.target.value)}
                             />
                             <span className="text-gray-400">-</span>
                             <Input
@@ -163,7 +374,7 @@ export function FilterSidebar({
                                 placeholder="Max"
                                 className="h-9 text-sm"
                                 value={filters.maxPrice}
-                                onChange={(e) => handlePriceChange('maxPrice', e.target.value)}
+                                onChange={(e) => handleInputChange('maxPrice', e.target.value)}
                             />
                         </div>
                     </div>
