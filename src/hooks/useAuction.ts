@@ -43,7 +43,7 @@ export function useAuction(bikeId: string | undefined, initialPrice: number, end
         currentPrice: initialPrice,
         minBid: initialPrice + 10000,
         bids: [],
-        status: new Date() > endTime ? 'LIVE' : 'ENDED',
+        status: new Date() < endTime ? 'LIVE' : 'ENDED',
         endTime: endTime,
         timeLeft: "" // Empty initially to prevent hydration mismatch
     });
