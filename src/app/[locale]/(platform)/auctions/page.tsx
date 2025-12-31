@@ -30,6 +30,10 @@ interface Bike {
     color?: string;
     bidCount?: number;
     currentPrice?: number;
+    inspection?: string;
+    engineGrade?: number;
+    frameGrade?: number;
+    exteriorGrade?: number;
 }
 
 // Helper to get current auction status and target date (JST)
