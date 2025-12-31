@@ -37,11 +37,26 @@ export async function middleware(request: NextRequest) {
 
     // --- Domain-based Access Control ---
     const isPublicDomain = hostname.includes('awa.auction');
+    const isVercelDomain = hostname.includes('vercel.app');
+    const isLocalhost = hostname.includes('localhost');
 
+    // 1. Block Admin Access on Public Domain (awa.auction)
     if (isPublicDomain) {
-        // Strictly block Admin Portal and Admin Login on public domain
         if (pathWithoutLocale.startsWith('/admin') || pathWithoutLocale === '/admin-login') {
             return NextResponse.rewrite(new URL('/404', request.url));
+        }
+    }
+
+    // 2. Redirect Public Traffic from Vercel Domain to Public Domain
+    // Allow admin routes on Vercel domain, but redirect everything else to awa.auction
+    if (isVercelDomain && !isLocalhost) {
+        const isAdminRoute = pathWithoutLocale.startsWith('/admin') || pathWithoutLocale === '/admin-login';
+
+        if (!isAdminRoute) {
+            // Redirect to the same path on the public domain
+            const newUrl = new URL(request.url);
+            newUrl.hostname = 'awa.auction';
+            return NextResponse.redirect(newUrl);
         }
     }
     // -----------------------------------
