@@ -106,7 +106,9 @@ export function BikeCard({
 
     // Use auction hook to get live/persisted price
     // Pass undefined bikeId initially to prevent hook logic causing mismatch
-    const { currentPrice, timeLeft, bids: liveBids } = useAuction(isMounted ? String(id) : undefined, price, auctionEndTime);
+    const { currentPrice, timeLeft, bids: liveBids, status } = useAuction(isMounted ? String(id) : undefined, price, auctionEndTime);
+
+    const isEnded = status === 'ENDED' || timeLeft === "FINISHED";
 
     const effectivePrice = currentPrice > price ? currentPrice : price;
     const effectiveBids = liveBids.length > 0 ? liveBids.length : bids;
@@ -120,6 +122,8 @@ export function BikeCard({
 
     // Determine timer color
     const getTimerColor = () => {
+        if (isEnded) return 'bg-gray-400';
+
         const now = new Date();
         const diff = auctionEndTime.getTime() - now.getTime();
         const hoursLeft = diff / (1000 * 60 * 60);
@@ -192,7 +196,7 @@ export function BikeCard({
                 {/* Status Row: Timer & Bids */}
                 <div className="flex items-center gap-3 mb-4">
                     <span className={`text-xs font-bold px-2 py-1 rounded text-white flex items-center gap-1 ${timerColor}`}>
-                        ⏱ {timeLeft || endsIn}
+                        ⏱ {isEnded ? 'FINISHED' : (timeLeft || endsIn)}
                     </span>
                     <span className="text-xs text-gray-500 flex items-center gap-1">
                         📢 {effectiveBids} {t('auctions.bids')}
@@ -211,13 +215,14 @@ export function BikeCard({
                     <Button
                         size="sm"
                         variant="secondary"
-                        className="hover:bg-[#0F4C81] hover:text-white transition-colors z-10"
+                        className={`hover:bg-[#0F4C81] hover:text-white transition-colors z-10 ${isEnded ? 'opacity-50 cursor-not-allowed bg-gray-100 text-gray-400 hover:bg-gray-100 hover:text-gray-400' : ''}`}
                         onClick={(e) => {
                             e.stopPropagation();
-                            handleCardClick(); // Or specific bid logic
+                            handleCardClick();
                         }}
+                        disabled={isEnded}
                     >
-                        {t('auctions.placeBid')}
+                        {isEnded ? 'Ended' : t('auctions.placeBid')}
                     </Button>
                 </div>
             </CardContent>
