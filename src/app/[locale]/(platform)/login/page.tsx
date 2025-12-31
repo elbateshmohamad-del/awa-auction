@@ -152,11 +152,27 @@ export default function LoginPage() {
                                         variant="secondary"
                                         className="w-full flex items-center justify-center gap-2 cursor-pointer"
                                         type="button"
-                                        onClick={() => {
+                                        onClick={async () => {
                                             console.log('Initiating Google login...');
-                                            signIn('google', { callbackUrl: '/api/auth/google-callback' })
-                                                .then(result => console.log('Google login info:', result))
-                                                .catch(err => console.error('Google login error:', err));
+                                            try {
+                                                const result = await signIn('google', {
+                                                    callbackUrl: '/api/auth/google-callback',
+                                                    redirect: false
+                                                });
+                                                console.log('Google login result:', result);
+
+                                                if (result?.error) {
+                                                    console.error('Login error:', result.error);
+                                                    alert('Login failed: ' + result.error);
+                                                } else if (result?.url) {
+                                                    console.log('Redirecting to:', result.url);
+                                                    window.location.href = result.url;
+                                                } else {
+                                                    console.error('No URL in result:', result);
+                                                }
+                                            } catch (err) {
+                                                console.error('Google login exception:', err);
+                                            }
                                         }}
                                     >
                                         <svg className="w-5 h-5" viewBox="0 0 24 24">
