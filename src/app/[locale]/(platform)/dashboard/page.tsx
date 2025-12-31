@@ -98,7 +98,7 @@ export default function DashboardPage() {
                     {/* Account Status */}
                     <Card className="bg-[#0F4C81] text-white border-none">
                         <CardContent className="p-6">
-                            <h3 className="font-bold text-lg mb-2">{t('dashboard.profile')}</h3>
+                            <h3 className="font-bold text-lg mb-2 text-white">{t('dashboard.profile')}</h3>
                             {user?.memberId && (
                                 <div className="text-sm text-blue-200 mb-2 font-mono">
                                     ID: {user.memberId}
@@ -106,7 +106,7 @@ export default function DashboardPage() {
                             )}
                             <div className="flex items-center gap-2 mb-4">
                                 <Badge className="bg-green-500 text-white border-none">{t('kyc.status.approved')}</Badge>
-                                <span className="text-sm text-blue-200">{t('subscription.free.name')}</span>
+                                <span className="text-sm text-blue-100">{t('subscription.free.name')}</span>
                             </div>
                             <p className="text-sm text-blue-100 mb-4">
                                 {t('subscription.subtitle')}
