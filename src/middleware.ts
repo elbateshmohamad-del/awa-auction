@@ -28,11 +28,23 @@ async function verifyTokenEdge(token: string): Promise<AuthPayload | null> {
 
 export async function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
+    const hostname = request.headers.get('host') || '';
 
-    // Check if this is a locale-prefixed path
+    // Parse path to check for admin routes properly
     const localeMatch = pathname.match(/^\/(ja|en|ar)(\/|$)/);
     const locale = localeMatch ? localeMatch[1] : 'ja';
     const pathWithoutLocale = localeMatch ? pathname.replace(/^\/(ja|en|ar)/, '') || '/' : pathname;
+
+    // --- Domain-based Access Control ---
+    const isPublicDomain = hostname.includes('awa.auction');
+
+    if (isPublicDomain) {
+        // Strictly block Admin Portal and Admin Login on public domain
+        if (pathWithoutLocale.startsWith('/admin') || pathWithoutLocale === '/admin-login') {
+            return NextResponse.rewrite(new URL('/404', request.url));
+        }
+    }
+    // -----------------------------------
 
     // Check Authentication with JWT verification
     const authToken = request.cookies.get('auth_token')?.value;
