@@ -101,13 +101,19 @@ function getTimeRemaining(targetDate: Date): { days: number; hours: number; minu
 
 // Transform database bike to BikeCard props
 function transformBikeForCard(bike: Bike, countdown: { days: number; hours: number; minutes: number }, auctionTargetDate: Date, isLive: boolean) {
-    // Extract year from firstRegistration (e.g., "R2" -> 2020, "R7" -> 2025) or default
-    let year = new Date().getFullYear();
+    // Extract year from firstRegistration (e.g., "R2" -> 2020, "R7" -> 2025)
+    let year: number | undefined;
     if (bike.firstRegistration) {
         const match = bike.firstRegistration.match(/R\s*(\d+)/);
         if (match) {
             const reiwaYear = parseInt(match[1]);
             year = 2018 + reiwaYear; // Reiwa 1 = 2019
+        } else {
+            // Try 4 digits
+            const match4 = bike.firstRegistration.match(/(\d{4})/);
+            if (match4) {
+                year = parseInt(match4[1]);
+            }
         }
     }
 

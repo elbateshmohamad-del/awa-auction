@@ -25,7 +25,7 @@ const getCurrencySymbol = (code: string) => {
 interface BikeCardProps {
     id: string | number;
     name: string;
-    year: number;
+    year?: number;
     price: number;
     grade: 'S' | 'A' | 'B' | 'C' | 'D';
     image: string;
@@ -180,10 +180,16 @@ export function BikeCard({
             </div>
 
             <CardContent className="p-4">
-                <h3 className="font-bold text-lg leading-tight mb-2 truncate group-hover:text-[#0F4C81] transition-colors">{year} {name}</h3>
+                <h3 className="font-bold text-lg leading-tight mb-2 truncate group-hover:text-[#0F4C81] transition-colors">{name}</h3>
 
                 {/* Specs Row */}
                 <div className="text-xs text-gray-500 mb-3 flex flex-wrap gap-x-2">
+                    {year && (
+                        <>
+                            <span className="font-semibold text-gray-700">{year}年</span>
+                            <span className="text-gray-300">|</span>
+                        </>
+                    )}
                     <span>{displacement}</span>
                     <span className="text-gray-300">|</span>
                     <span>{mileage}</span>
