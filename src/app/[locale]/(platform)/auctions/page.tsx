@@ -212,8 +212,20 @@ export default function AuctionsPage() {
     const [filters, setFilters] = useState({
         makers: [] as string[],
         grades: [] as string[],
+        regions: [] as string[],
+        colors: [] as string[],
         minPrice: '',
-        maxPrice: ''
+        maxPrice: '',
+        minYear: '',
+        maxYear: '',
+        maxMileage: '',
+        displacement: [] as string[],
+        inspection: false,
+        minScore: {
+            engine: 0,
+            frame: 0,
+            exterior: 0
+        }
     });
 
     // Reset pagination when filters change
