@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { signOut } from 'next-auth/react';
 
 // Renaming to avoid potential conflict if any, but likely just fine to export.
 export interface AuthUser {
@@ -66,6 +67,55 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setIsLoading(false);
     }, []);
 
+    // Auto-logout on inactivity (1 hour)
+    useEffect(() => {
+        if (!isAuthenticated) return;
+
+        const TIMEOUT_MS = 3600000; // 1 hour
+        const CHECK_INTERVAL_MS = 60000; // 1 minute
+        let isActivityDetected = false;
+
+        const updateActivityFlag = () => {
+            isActivityDetected = true;
+        };
+
+        // Events to monitor
+        const events = ['mousedown', 'keydown', 'touchstart', 'scroll', 'mousemove'];
+        events.forEach(event => {
+            window.addEventListener(event, updateActivityFlag, { passive: true });
+        });
+
+        // Initialize last activity if not set
+        if (!localStorage.getItem('awa_last_activity')) {
+            localStorage.setItem('awa_last_activity', Date.now().toString());
+        }
+
+        const checkInterval = setInterval(() => {
+            const now = Date.now();
+
+            // If activity was detected in this interval, update the storage
+            if (isActivityDetected) {
+                localStorage.setItem('awa_last_activity', now.toString());
+                isActivityDetected = false;
+            }
+
+            // Check for timeout
+            const lastActivity = parseInt(localStorage.getItem('awa_last_activity') || now.toString());
+            if (now - lastActivity > TIMEOUT_MS) {
+                console.log('Session timed out by inactivity');
+                // Call logout but don't loop if it updates state
+                logout();
+            }
+        }, CHECK_INTERVAL_MS);
+
+        return () => {
+            events.forEach(event => {
+                window.removeEventListener(event, updateActivityFlag);
+            });
+            clearInterval(checkInterval);
+        };
+    }, [isAuthenticated]);
+
     const login = async (email?: string, password?: string) => {
         if (!email || !password) {
             throw new Error("Email and password required");
@@ -94,14 +144,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const logout = async () => {
         try {
+            // Clear app-specific cookie
             await fetch('/api/auth/logout', { method: 'POST' });
+
+            // Clear NextAuth session (Google)
+            // redirect: false allows us to handle the state cleanup below without page reload interruption
+            await signOut({ redirect: false });
         } catch (error) {
             console.error('Logout API failed:', error);
         }
 
         localStorage.removeItem('user');
-        localStorage.removeItem('awa_active_bids'); // Clear bids on logout? Or keep?
-        // Usually clearing is safer for shared computers.
+        localStorage.removeItem('awa_active_bids');
         setUser(null);
         setActiveBids([]);
         setIsAuthenticated(false);
