@@ -26,7 +26,7 @@ export async function GET() {
                 email: user.email,
                 name: user.name,
                 role: user.role,
-                image: user.image, // Ensure image is included if available in schema
+                // image: user.image, // Removed as it does not exist on Prisma User type yet
                 // Add other necessary fields
                 memberType: user.memberType,
                 phoneNumber: user.phoneNumber,
