@@ -34,6 +34,7 @@ interface Bike {
     engineGrade?: number;
     frameGrade?: number;
     exteriorGrade?: number;
+    overallGrade?: number;
 }
 
 // Helper to get current auction status and target date (JST)
@@ -226,9 +227,10 @@ export default function AuctionsPage() {
         displacement: [] as string[],
         inspection: false,
         minScore: {
-            engine: 0,
-            frame: 0,
-            exterior: 0
+            overall: '',
+            engine: '',
+            frame: '',
+            exterior: ''
         }
     });
 
@@ -418,6 +420,7 @@ export default function AuctionsPage() {
         if (filters.minScore.engine && (bike.engineGrade || 0) < Number(filters.minScore.engine)) return false;
         if (filters.minScore.frame && (bike.frameGrade || 0) < Number(filters.minScore.frame)) return false;
         if (filters.minScore.exterior && (bike.exteriorGrade || 0) < Number(filters.minScore.exterior)) return false;
+        if (filters.minScore.overall && (bike.overallGrade || 0) < Number(filters.minScore.overall)) return false;
 
         return true;
     });
