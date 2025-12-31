@@ -7,38 +7,7 @@ import { Link } from '@/i18n/navigation';
 
 export default function DashboardOrdersPage() {
     // Mock data with images
-    const orders = [
-        {
-            id: "ORD-8821",
-            item: "2018 Yamaha MT-07",
-            amount: "¥ 680,000",
-            status: "Processing",
-            date: "2023-11-01",
-            location: "Yokohama Port",
-            eta: "Dec 20, 2023",
-            image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=400&h=300"
-        },
-        {
-            id: "ORD-7743",
-            item: "2020 Kawasaki Ninja 400",
-            amount: "¥ 550,000",
-            status: "Shipped",
-            date: "2023-10-15",
-            location: "En Route",
-            eta: "Nov 25, 2023",
-            image: "https://images.unsplash.com/photo-1558981806-ec527fa84f3d?auto=format&fit=crop&q=80&w=400&h=300"
-        },
-        {
-            id: "ORD-6629",
-            item: "2015 Honda Rebel 250",
-            amount: "¥ 320,000",
-            status: "Delivered",
-            date: "2023-09-20",
-            location: "Delivered",
-            eta: "Arrived",
-            image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=400&h=300"
-        },
-    ];
+    const orders: any[] = [];
 
     const getStatusVariant = (status: string) => {
         switch (status) {
