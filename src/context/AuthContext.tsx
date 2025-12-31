@@ -45,26 +45,51 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const [activeBids, setActiveBids] = useState<ActiveBid[]>([]);
 
     useEffect(() => {
-        const storedUser = localStorage.getItem('user');
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
-            setIsAuthenticated(true);
-        }
-
-        // Load active bids
-        const storedBids = localStorage.getItem('awa_active_bids');
-        if (storedBids) {
-            try {
-                const bids: ActiveBid[] = JSON.parse(storedBids);
-                const now = new Date();
-                const valid = bids.filter(b => new Date(b.endTime) > now);
-                setActiveBids(valid);
-            } catch (e) {
-                console.error("Failed to parse active bids", e);
+        const checkAuth = async () => {
+            // 1. Try to recover from localStorage first (fastest)
+            const storedUser = localStorage.getItem('user');
+            if (storedUser) {
+                try {
+                    setUser(JSON.parse(storedUser));
+                    setIsAuthenticated(true);
+                } catch (e) {
+                    console.error('Failed to parse user from localStorage', e);
+                    localStorage.removeItem('user');
+                }
             }
-        }
 
-        setIsLoading(false);
+            // 2. Always verify with server (single source of truth) or fetch if missing
+            try {
+                const res = await fetch('/api/auth/me');
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.authenticated && data.user) {
+                        setUser(data.user);
+                        setIsAuthenticated(true);
+                        // Update localStorage to keep it fresh
+                        localStorage.setItem('user', JSON.stringify(data.user));
+                    }
+                } else {
+                    // If server says unauthorized, clear client state
+                    // But only if we are seemingly authenticated? 
+                    // No, let's trust server. If server says 401, we are logged out.
+                    if (res.status === 401) {
+                        // Only clear if we thought we were logged in/or just ensure clean state
+                        // However, be careful not to flicker. 
+                        // If localStorage had data but server says 401, server wins.
+                        localStorage.removeItem('user');
+                        setUser(null);
+                        setIsAuthenticated(false);
+                    }
+                }
+            } catch (error) {
+                console.error('Auth check failed:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        checkAuth();
     }, []);
 
     // Auto-logout on inactivity (1 hour)
