@@ -244,7 +244,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
 
         const success = await placeBid(amount);
         if (success && registerBid) {
-            registerBid(bikeId, auctionEndTime);
+            registerBid(bikeId, auctionTargetDate);
 
             // Show success feedback
             setBidSuccess({ amount });
