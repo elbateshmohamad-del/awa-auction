@@ -205,11 +205,12 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     }, []);
 
     // Use Real-time Auction Hook
-    const { currentPrice, bids, timeLeft, placeBid } = useAuction(bikeId, bike?.startPrice || 0, auctionEndTime);
+    const { currentPrice, bids, timeLeft, placeBid, status } = useAuction(bikeId, bike?.startPrice || 0, auctionEndTime); // Get status
     const { isInWatchlist, toggleWatchlist } = useWatchlist();
     const router = useRouter();
 
     const [bidSuccess, setBidSuccess] = useState<{ amount: number } | null>(null);
+    const isAuctionEnded = status === 'ENDED' || timeLeft === "FINISHED";
 
     const handleBid = async (amount: number) => {
         if (!user) {
@@ -516,6 +517,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         exchangeRate={exchangeRate}
                         currencyCode={selectedCurrency}
                         isFirstBid={!bids.some(b => b.isMine)}
+                        isEnded={isAuctionEnded}
                     />
 
                     {/* Price Card */}

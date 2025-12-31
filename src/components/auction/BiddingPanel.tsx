@@ -16,6 +16,7 @@ interface BiddingPanelProps {
     exchangeRate?: number;
     currencyCode?: string;
     isFirstBid?: boolean;
+    isEnded?: boolean;
 }
 
 export function BiddingPanel({
@@ -28,7 +29,8 @@ export function BiddingPanel({
     currencySymbol = '¥',
     exchangeRate = 1,
     currencyCode = 'JPY',
-    isFirstBid = false
+    isFirstBid = false,
+    isEnded = false
 }: BiddingPanelProps) {
     // Initialize bid amount to next valid bid when currentPrice changes
     const nextMinBid = currentPrice + minIncrement;
@@ -60,6 +62,8 @@ export function BiddingPanel({
     };
 
     const handleBid = () => {
+        if (isEnded) return; // Prevent bidding if ended
+
         if (bidAmount < nextMinBid) {
             alert(`入札金額が低すぎます。最低 ${currencySymbol}${toDisplayCurrency(nextMinBid).toLocaleString()} 必要です。`);
             return;
@@ -82,12 +86,17 @@ export function BiddingPanel({
             <CardContent className="p-6">
 
                 {/* Status Indicator */}
-                {isWinning && (
+                {isEnded && (
+                    <div className="mb-4 bg-gray-600 text-white px-3 py-2 rounded-md font-bold text-center">
+                        ⚠️ オークション終了
+                    </div>
+                )}
+                {!isEnded && isWinning && (
                     <div className="mb-4 bg-green-100 text-green-800 px-3 py-2 rounded-md font-bold text-center animate-in slide-in-from-top-2">
                         🎉 あなたが現在トップです
                     </div>
                 )}
-                {!isWinning && bidCount > 0 && (
+                {!isEnded && !isWinning && bidCount > 0 && (
                     <div className="mb-4 bg-gray-100 text-gray-600 px-3 py-2 rounded-md font-bold text-center">
                         現在 {bidCount} 件の入札
                     </div>
@@ -110,8 +119,8 @@ export function BiddingPanel({
                 </div>
 
                 <div className="space-y-6">
-                    <div className="bg-red-50 text-red-700 px-4 py-3 rounded-lg flex items-center justify-center font-bold">
-                        ⏱ 残り時間: {endsIn}
+                    <div className={`px-4 py-3 rounded-lg flex items-center justify-center font-bold ${isEnded ? 'bg-gray-200 text-gray-500' : 'bg-red-50 text-red-700'}`}>
+                        ⏱ 残り時間: {isEnded ? '終了' : endsIn}
                     </div>
 
                     <div>
@@ -132,15 +141,17 @@ export function BiddingPanel({
                                         setBidAmount(jpyValue);
                                     }}
                                     className="pl-8 text-lg font-bold"
+                                    disabled={isEnded}
                                 />
                             </div>
                             <Button
                                 variant="primary"
                                 size="lg"
-                                className="flex-1 shadow-lg shadow-blue-500/30 font-bold"
+                                className={`flex-1 shadow-lg shadow-blue-500/30 font-bold ${isEnded ? 'opacity-50 cursor-not-allowed bg-gray-400 shadow-none' : ''}`}
                                 onClick={handleBid}
+                                disabled={isEnded}
                             >
-                                BID NOW
+                                {isEnded ? '終了' : 'BID NOW'}
                             </Button>
                         </div>
                     </div>
