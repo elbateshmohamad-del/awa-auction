@@ -88,7 +88,7 @@ export function BiddingPanel({
                 {/* Status Indicator */}
                 {isEnded && (
                     <div className="mb-4 bg-gray-600 text-white px-3 py-2 rounded-md font-bold text-center">
-                        ⚠️ オークション終了
+                        ⚠️ オークション終了 (結果をお待ちください)
                     </div>
                 )}
                 {!isEnded && isWinning && (
