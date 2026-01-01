@@ -33,7 +33,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ success: false, error: 'Missing required fields' }, { status: 400 });
         }
 
-        const makerResult = detectMaker(body.name);
+        const makerResult = await detectMaker(body.name);
         const allBikes = getAllBikes();
 
         const newBike: Bike = {

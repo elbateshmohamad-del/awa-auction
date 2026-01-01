@@ -268,7 +268,7 @@ export async function fetchBikeListPage(page: Page): Promise<BDSBikeListItem[]> 
 /**
  * Parse bike detail page HTML
  */
-export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDate: string = ''): ScrapedBikeData | null {
+export async function parseBikeDetailPage(html: string, bdsId: string = '', auctionDate: string = ''): Promise<ScrapedBikeData | null> {
     try {
         const $ = cheerio.load(html);
 
@@ -307,7 +307,7 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
             return null;
         }
 
-        const makerInfo = detectMaker(name);
+        const makerInfo = await detectMaker(name);
 
         // --- Image Extraction ---
         const images: string[] = [];
@@ -621,8 +621,8 @@ export function parseBikeDetailPage(html: string, bdsId: string = '', auctionDat
 /**
  * Convert scraped data to Bike object
  */
-function convertToBike(bdsId: string, scraped: ScrapedBikeData, rates: any = {}): Bike {
-    const makerResult = detectMaker(scraped.name);
+async function convertToBike(bdsId: string, scraped: ScrapedBikeData, rates: any = {}): Promise<Bike> {
+    const makerResult = await detectMaker(scraped.name);
 
     // Determine status and historical rates
     let status = 'active';
@@ -985,13 +985,13 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
                 }
 
                 // Use existing parsing logic
-                const scraped = parseBikeDetailPage(html);
+                const scraped = await parseBikeDetailPage(html);
 
                 if (scraped) {
-                    const bike = convertToBike(bikeItem.id, scraped, exchangeRates);
+                    const bike = await convertToBike(bikeItem.id, scraped, exchangeRates);
                     if (!bike.name && bikeItem.name) bike.name = bikeItem.name;
 
-                    const makerDetection = detectMaker(bike.name);
+                    const makerDetection = await detectMaker(bike.name);
                     bike.maker = makerDetection.maker;
                     bike.makerConfirmed = makerDetection.confidence === 'high';
 
@@ -1052,7 +1052,7 @@ export async function importBikesFromBDS(maxBikes: number = 10): Promise<ImportR
 /**
  * Generate mock bikes for testing when BDS is not accessible
  */
-export function generateMockBikes(count: number = 10): Bike[] {
+export async function generateMockBikes(count: number = 10): Promise<Bike[]> {
     const mockBikes: Partial<Bike>[] = [
         { name: 'NINJA250-2', vin: 'EX250Y-A36161', startPrice: 280000, overallGrade: 7, color: '黒／緑', displacement: '250cc', mileage: '1,644K' },
         { name: 'YZF-R1M', vin: 'RN65-009876', startPrice: 2100000, overallGrade: 8, color: 'シルバー', displacement: '998cc', mileage: '5,230K' },
@@ -1061,8 +1061,8 @@ export function generateMockBikes(count: number = 10): Bike[] {
         { name: 'Panigale V4S', vin: 'ZDM1100-334455', startPrice: 3200000, overallGrade: 8, color: '赤', displacement: '1103cc', mileage: '2,100K' },
     ];
 
-    return mockBikes.slice(0, count).map((mock, index) => {
-        const makerResult = detectMaker(mock.name || '');
+    const results = await Promise.all(mockBikes.slice(0, count).map(async (mock, index) => {
+        const makerResult = await detectMaker(mock.name || '');
         return {
             id: `awa-mock-${Date.now()}-${index}`,
             bdsId: `BDS-${1000 + index}`,
@@ -1119,5 +1119,6 @@ export function generateMockBikes(count: number = 10): Bike[] {
             historicalRates: '{}',
             updatedAt: new Date(),
         } as unknown as Bike;
-    });
+    }));
+    return results;
 }

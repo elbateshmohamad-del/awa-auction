@@ -98,6 +98,7 @@
         "success": "Success",
         "cancel": "Cancel",
         "confirm": "Confirm",
+        "comingSoon": "Coming Soon",
         "save": "Save",
         "delete": "Delete",
         "edit": "Edit",
@@ -2939,10 +2940,22 @@
             "partnership": "Partnership",
             "event": "Event"
         },
+        "noNews": "No announcements at the moment.",
         "newsletter": {
             "title": "Newsletter Subscription",
             "subtitle": "Receive the latest auction information and special offers.",
             "placeholder": "Enter your email address",
+            "subscribe": "Subscribe"
+        }
+    },
+    "blog": {
+        "title": "AWA Blog",
+        "subtitle": "News, guides, and insights about Japanese motorcycle auctions and international exports.",
+        "description": "Our blog is currently under construction. Please check back later for updates on market trends and auction guides.",
+        "newsletter": {
+            "title": "Subscribe to Our Newsletter",
+            "subtitle": "Get the latest auction updates and market insights delivered to your inbox.",
+            "placeholder": "Enter your email",
             "subscribe": "Subscribe"
         }
     }

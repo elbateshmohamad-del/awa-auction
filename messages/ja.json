@@ -10,6 +10,7 @@
     "about": "会社概要",
     "contact": "お問い合わせ",
     "blog": "ブログ",
+    "blogTitle": "AWAブログ",
     "careers": "採用情報",
     "cookies": "クッキーポリシー",
     "fees": "料金",
@@ -98,6 +99,7 @@
     "success": "成功",
     "cancel": "キャンセル",
     "confirm": "確認",
+    "comingSoon": "近日公開",
     "save": "保存",
     "delete": "削除",
     "edit": "編集",
@@ -2960,9 +2962,21 @@
       "partnership": "パートナーシップ",
       "event": "イベント"
     },
+    "noNews": "現在、お知らせはありません。",
     "newsletter": {
       "title": "ニュースレター登録",
       "subtitle": "最新のオークション情報や特別オファーを受け取りましょう。",
+      "placeholder": "メールアドレスを入力",
+      "subscribe": "登録する"
+    }
+  },
+  "blog": {
+    "title": "AWAブログ",
+    "subtitle": "日本のバイクオークションと国際輸出に関するニュース、ガイド、インサイト。",
+    "description": "ブログは現在準備中です。市場動向やオークションガイドの最新情報をお待ちください。",
+    "newsletter": {
+      "title": "ニュースレターに登録",
+      "subtitle": "オークションの最新情報や市場のインサイトを受信トレイにお届けします。",
       "placeholder": "メールアドレスを入力",
       "subscribe": "登録する"
     }

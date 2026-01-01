@@ -80,6 +80,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     return (
         <html lang={locale} dir={dir} suppressHydrationWarning>
             <body
+                suppressHydrationWarning
                 className={`${inter.variable} ${notoSansJP.variable} ${notoSansArabic.variable} font-sans antialiased bg-white text-gray-900`}
             >
                 <NextIntlClientProvider messages={messages}>

@@ -1,13 +1,8 @@
-/**
- * Maker Detection Library
- * Auto-detects motorcycle maker from model name using keyword matching
- */
-
+import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
-// Keyword database for fallback (English & Japanese/Katakana)
-// This serves as initial data and fallback if DB is empty/unreachable
-const FALLBACK_MAKER_KEYWORDS: Record<string, string[]> = {
+// Hardcoded keywords to seed
+const MAKER_KEYWORDS: Record<string, string[]> = {
     'BMW': [
         'R1200', 'R1250', 'S1000', 'F800', 'F900', 'G310', 'K1600', 'R18', 'F750', 'F850', 'C400', 'C650', 'CE', 'BMW',
         'ビーエム', 'K1', 'K100', 'K75', 'R100', 'R80', 'R65'
@@ -63,110 +58,23 @@ const FALLBACK_MAKER_KEYWORDS: Record<string, string[]> = {
     'Italjet': ['DRAGSTER', 'イタルジェット', 'ｲﾀﾙｼﾞｪｯﾄ'],
 };
 
-export interface MakerDetectionResult {
-    maker: string;
-    confidence: 'high' | 'low' | 'unknown';
-    matchedKeyword: string | null;
-}
-
-async function getMakerRules(): Promise<Record<string, string[]>> {
+export async function POST() {
     try {
-        const setting = await prisma.systemSetting.findUnique({
-            where: { key: 'maker_rules' }
+        await prisma.systemSetting.upsert({
+            where: { key: 'maker_rules' },
+            update: {
+                value: JSON.stringify(MAKER_KEYWORDS),
+                description: 'Maker Detection Rules (Auto-generated)'
+            },
+            create: {
+                key: 'maker_rules',
+                value: JSON.stringify(MAKER_KEYWORDS),
+                description: 'Maker Detection Rules (Auto-generated)'
+            }
         });
 
-        if (setting && setting.value) {
-            return JSON.parse(setting.value);
-        }
-    } catch (e) {
-        console.warn('Failed to fetch maker rules from DB, using fallback.', e);
+        return NextResponse.json({ success: true, message: 'Maker rules initialized in DB' });
+    } catch (error) {
+        return NextResponse.json({ success: false, error: String(error) }, { status: 500 });
     }
-    return FALLBACK_MAKER_KEYWORDS;
-}
-
-/**
- * Detect maker from bike name using keyword matching
- */
-export async function detectMaker(bikeName: string): Promise<MakerDetectionResult> {
-    const normalizedName = bikeName.toUpperCase();
-    const rules = await getMakerRules();
-
-    for (const [maker, keywords] of Object.entries(rules)) {
-        for (const keyword of keywords) {
-            if (normalizedName.includes(keyword.toUpperCase())) {
-                return {
-                    maker,
-                    confidence: 'high',
-                    matchedKeyword: keyword,
-                };
-            }
-        }
-    }
-
-    // Try to detect from common patterns
-    // e.g., "NINJA250" -> Kawasaki (NINJA is a Kawasaki model)
-    const patterns = [
-        { pattern: /NINJA/i, maker: 'Kawasaki' },
-        { pattern: /CBR?\d/i, maker: 'Honda' },
-        { pattern: /YZF-?R/i, maker: 'Yamaha' },
-        { pattern: /GSX-?R/i, maker: 'Suzuki' },
-    ];
-
-    for (const { pattern, maker } of patterns) {
-        if (pattern.test(bikeName)) {
-            return {
-                maker,
-                confidence: 'low',
-                matchedKeyword: pattern.source,
-            };
-        }
-    }
-
-    return {
-        maker: 'Unknown',
-        confidence: 'unknown',
-        matchedKeyword: null,
-    };
-}
-
-/**
- * Get all available makers
- */
-export async function getAllMakers(): Promise<string[]> {
-    const rules = await getMakerRules();
-    return Object.keys(rules);
-}
-
-/**
- * Add a new keyword for a maker (via DB Update)
- */
-export async function addKeyword(maker: string, keyword: string): Promise<boolean> {
-    const rules = await getMakerRules();
-
-    if (!rules[maker]) {
-        rules[maker] = [];
-    }
-
-    // Check duplicates
-    if (!rules[maker].some(k => k.toUpperCase() === keyword.toUpperCase())) {
-        rules[maker].push(keyword);
-
-        // Save back to DB
-        try {
-            await prisma.systemSetting.upsert({
-                where: { key: 'maker_rules' },
-                update: { value: JSON.stringify(rules) },
-                create: {
-                    key: 'maker_rules',
-                    value: JSON.stringify(rules),
-                    description: 'Maker Detection Rules'
-                }
-            });
-            return true;
-        } catch (e) {
-            console.error('Failed to update maker rules in DB:', e);
-            return false;
-        }
-    }
-    return false;
 }

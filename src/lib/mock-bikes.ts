@@ -17,9 +17,9 @@ const MOCK_BIKES_DATA = [
 /**
  * Generate mock bikes for testing when BDS is not accessible
  */
-export function generateMockBikes(count: number = 5): Bike[] {
-    return MOCK_BIKES_DATA.slice(0, count).map((mock, index) => {
-        const makerResult = detectMaker(mock.name);
+export async function generateMockBikes(count: number = 5): Promise<Bike[]> {
+    return Promise.all(MOCK_BIKES_DATA.slice(0, count).map(async (mock, index) => {
+        const makerResult = await detectMaker(mock.name);
         const timestamp = Date.now();
         return {
             id: `awa-mock-${timestamp}-${index}`,
@@ -80,5 +80,5 @@ export function generateMockBikes(count: number = 5): Bike[] {
             remarks: JSON.stringify([]),
             updatedAt: new Date(),
         } as unknown as Bike;
-    });
+    }));
 }
