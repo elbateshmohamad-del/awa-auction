@@ -278,6 +278,9 @@
             "mostBids": "Most Bids"
         },
         "noResults": "No auctions found",
+        "allAuctionsEnded": "This week's auctions have ended. Please check the Market page for results.",
+        "nextAuctionStarts": "Next Auction: {date}",
+        "checkMarket": "Check Market",
         "days": "days",
         "hours": "hours",
         "minutes": "min",
@@ -289,6 +292,8 @@
     "shippingSchedule": {
         "title": "Shipping Schedule",
         "subtitle": "Check our upcoming container schedules and book your space. We offer regular consolidated shipments to major Asian ports.",
+        "comingSoonTitle": "Schedule Coming Soon",
+        "comingSoonDesc": "We are currently preparing the container schedule. Please wait for the update.",
         "capacityUsed": "Capacity Used",
         "almostFull": "Almost Full!",
         "spaceAvailable": "Space Available",
@@ -2884,6 +2889,61 @@
                 "shipping": "Shipping & Logistics",
                 "partnership": "Partnerships"
             }
+        }
+    },
+    "news": {
+        "title": "Latest News",
+        "subtitle": "We bring you the latest information, updates, and industry insights from AWA.",
+        "readMore": "Read More",
+        "loadMore": "Load More",
+        "items": [
+            {
+                "featured": "true",
+                "category": "announcement",
+                "date": "2025.12.01",
+                "title": "Expansion into Southeast Asian market completed",
+                "excerpt": "AWA has started providing services to Thailand, Vietnam, and the Philippines."
+            },
+            {
+                "featured": "false",
+                "category": "feature",
+                "date": "2025.11.15",
+                "title": "AWA reports record Q3 trading volume",
+                "excerpt": "Thanks to everyone, we have achieved the highest trading volume ever."
+            },
+            {
+                "featured": "false",
+                "category": "partnership",
+                "date": "2025.10.20",
+                "title": "Partnership with major logistics partners",
+                "excerpt": "We have signed a new partnership to achieve faster and safer delivery."
+            },
+            {
+                "featured": "false",
+                "category": "event",
+                "date": "2025.09.05",
+                "title": "Exhibited at Tokyo Motorcycle Show",
+                "excerpt": "We participated in the event to introduce our latest services and technologies."
+            },
+            {
+                "featured": "false",
+                "category": "announcement",
+                "date": "2025.08.01",
+                "title": "Release of new feature 'Bid Reservation'",
+                "excerpt": "We have added a pre-bid reservation feature for busy customers."
+            }
+        ],
+        "categories": {
+            "announcement": "Announcement",
+            "feature": "Feature",
+            "partnership": "Partnership",
+            "event": "Event"
+        },
+        "newsletter": {
+            "title": "Newsletter Subscription",
+            "subtitle": "Receive the latest auction information and special offers.",
+            "placeholder": "Enter your email address",
+            "subscribe": "Subscribe"
         }
     }
 }
