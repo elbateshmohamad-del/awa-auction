@@ -8,6 +8,7 @@
 import { Bike, getAllBikes, addBike, updateBike, ImportLog, BikeInspectionDetail, convertGradeToAWA } from './bike-database';
 import { getCurrentExchangeRates } from './currency';
 import { detectMaker } from './maker-detection';
+import { translator } from './translator';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -650,31 +651,89 @@ async function convertToBike(bdsId: string, scraped: ScrapedBikeData, rates: any
         }
     }
 
+    // --- TRANSLATION START ---
+    // Translate primary fields
+    // Keep original Name (JP) as is, but also translate to EN and AR
+    const translatedNameEn = await translator.translate(scraped.name, 'en');
+    const translatedNameAr = await translator.translate(scraped.name, 'ar');
+
+    const translatedRegion = await translator.translate(scraped.region);
+    const translatedListingType = await translator.translate(scraped.listingType);
+    const translatedInspectionStatus = await translator.translate(scraped.inspectionStatus);
+    const translatedColorEn = await translator.translate(scraped.color, 'en');
+    const translatedColorAr = await translator.translate(scraped.color, 'ar');
+    const translatedInspection = await translator.translate(scraped.inspection);
+    const translatedHasParts = await translator.translate(scraped.hasParts);
+    const translatedResult = await translator.translate(scraped.result);
+
+    const awaReport = await translator.translate(scraped.bdsReport);
+    const sellerDeclaration = await translator.translate(scraped.sellerDeclaration);
+
+    // Translate Remarks
+    const remarks = [];
+    if (scraped.remarks) {
+        for (const r of scraped.remarks) {
+            remarks.push({
+                title: await translator.translate(r.title),
+                content: await translator.translate(r.content)
+            });
+        }
+    }
+
+    // Translate Inspection Details
+    // We create a new object to hold translated keys/values
+    const inspectionDetails: BikeInspectionDetail = {
+        engine: {},
+        frontSuspension: {},
+        exterior: {},
+        rearSuspension: {},
+        electrical: {},
+        frame: {}
+    };
+
+    if (scraped.inspectionDetails) {
+        for (const cat of Object.keys(scraped.inspectionDetails) as (keyof BikeInspectionDetail)[]) {
+            const category = scraped.inspectionDetails[cat];
+            if (category) {
+                for (const [key, value] of Object.entries(category)) {
+                    const transKey = await translator.translate(key);
+                    const transValue = await translator.translate(value);
+                    inspectionDetails[cat][transKey] = transValue;
+                }
+            }
+        }
+    }
+    // --- TRANSLATION END ---
+
     return {
         id: `awa-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         bdsId: uniqueBdsId,
         lane: scraped.lane,
         auctionNumber: scraped.auctionNumber,
         auctionDate: scraped.auctionDate,
-        name: scraped.name,
+        name: scraped.name, // Original Japanese
+        nameEn: translatedNameEn,
+        nameAr: translatedNameAr,
         maker: makerResult.maker,
         makerConfirmed: makerResult.confidence === 'high',
-        region: scraped.region,
-        inspectionStatus: scraped.inspectionStatus,
-        listingType: scraped.listingType,
+        region: translatedRegion,
+        inspectionStatus: translatedInspectionStatus,
+        listingType: translatedListingType,
         vin: scraped.vin,
         engineNumber: scraped.engineNumber,
         mileage: scraped.mileage,
         documentMileage: scraped.documentMileage,
         pastMileage: scraped.pastMileage,
         color: scraped.color,
+        colorEn: translatedColorEn,
+        colorAr: translatedColorAr,
         displacement: scraped.displacement,
         firstRegistration: scraped.firstRegistration,
-        inspection: scraped.inspection,
-        hasParts: scraped.hasParts,
+        inspection: translatedInspection,
+        hasParts: translatedHasParts,
         registrationNumber: scraped.registrationNumber,
         startPrice: scraped.startPrice,
-        result: scraped.result,
+        result: translatedResult,
         overallGrade: scraped.overallGrade,
         engineGrade: scraped.engineGrade,
         frontGrade: scraped.frontGrade,
@@ -683,10 +742,10 @@ async function convertToBike(bdsId: string, scraped: ScrapedBikeData, rates: any
         electricGrade: scraped.electricGrade,
         frameGrade: scraped.frameGrade,
         awaGrade: convertGradeToAWA(scraped.overallGrade),
-        inspectionDetails: scraped.inspectionDetails, // Pass object directly, let addBike stringify
-        awaReport: scraped.bdsReport,
-        sellerDeclaration: scraped.sellerDeclaration,
-        remarks: scraped.remarks || [],               // Pass array directly
+        inspectionDetails: inspectionDetails,
+        awaReport: awaReport,
+        sellerDeclaration: sellerDeclaration,
+        remarks: remarks,
         images: scraped.images,                       // Pass array directly
         videoUrls: scraped.videoUrls,                 // Pass array directly
         importedAt: new Date(),

@@ -111,7 +111,8 @@
     "viewAll": "すべて見る",
     "learnMore": "詳しく見る",
     "readMore": "続きを読む",
-    "seeDetails": "詳細を見る"
+    "seeDetails": "詳細を見る",
+    "noData": "データがありません"
   },
   "catalog": {
     "bikesAvailable": "台のバイクが出品中"
@@ -279,7 +280,16 @@
       "priceRange": "価格帯",
       "mileage": "走行距離",
       "condition": "状態",
-      "clearAll": "すべてクリア"
+      "clearAll": "すべてクリア",
+      "region": "地域",
+      "displacement": "排気量",
+      "displacementOver400": "400cc以上",
+      "color": "色",
+      "inspection": "車検付",
+      "minimumScores": "最低評価点",
+      "engine": "エンジン",
+      "exterior": "外装",
+      "frame": "フレーム"
     },
     "sort": {
       "title": "並び替え",
@@ -359,6 +369,66 @@
     "color": "カラー",
     "transmission": "ミッション",
     "fuelType": "燃料タイプ"
+  },
+  "bikeDetail": {
+    "notFound": "バイクが見つかりません",
+    "notFoundDesc": "お探しのバイクは存在しません。",
+    "browseAuctions": "オークションを見る",
+    "bidSuccess": "入札が完了しました！",
+    "bidPlaced": "¥{amount} で入札しました",
+    "backToAuctions": "← オークションに戻る",
+    "clickToExpand": "クリックで拡大",
+    "engineVideo": "エンジン音動画",
+    "rightEngine": "右側エンジン音",
+    "leftEngine": "左側エンジン音",
+    "inspectionInfo": "検査情報",
+    "startPrice": "スタート価格",
+    "awaGrade": "AWA評価点 (1-10)",
+    "overallGrade": "総合評価",
+    "vehicleInfo": "車両情報",
+    "awaReport": "AWA報告",
+    "sellerDeclaration": "出品者申告",
+    "noIssues": "問題なし ✓",
+    "images": "枚",
+    "specs": {
+      "maker": "メーカー",
+      "vin": "車台番号",
+      "engine": "エンジン型式",
+      "displacement": "排気量",
+      "mileage": "走行距離",
+      "docMileage": "書類距離",
+      "color": "色",
+      "firstReg": "初年度",
+      "inspection": "車検",
+      "parts": "パーツ"
+    },
+    "inspection": {
+      "engine": "E/G（エンジン）",
+      "frontSuspension": "F足（フロント）",
+      "exterior": "外装",
+      "rearSuspension": "R足（リア）",
+      "electrical": "電/保",
+      "frame": "車台"
+    }
+  },
+  "bidding": {
+    "auctionEnded": "オークション終了 (結果をお待ちください)",
+    "youAreWinning": "🎉 あなたが現在トップです",
+    "currentBids": "現在 {count} 件の入札",
+    "currentPrice": "現在の価格",
+    "bidCount": "入札件数",
+    "timeRemaining": "残り時間",
+    "ended": "終了",
+    "enterBidAmount": "入札価格を入力",
+    "minimum": "最低",
+    "bidNow": "入札する",
+    "quickBid": "クイック入札",
+    "estimatedShipping": "送料",
+    "auctionFee": "オークション手数料",
+    "estimatedTotal": "総額目安",
+    "bidTooLow": "入札金額が低すぎます。最低 {min} 必要です。",
+    "confirmBid": "{amount} ({jpyAmount}) で入札しますか？",
+    "confirmFirstBid": "【重要】初回入札の確認\n\n選択した通貨: {currency}\n入札後は通貨を変更できません。\n\n{amount} ({jpyAmount}) で入札しますか？"
   },
   "auth": {
     "login": {

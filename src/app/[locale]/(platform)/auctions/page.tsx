@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
-import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { Link, useRouter, usePathname } from '@/i18n/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 import { FilterSidebar } from '@/components/catalog/FilterSidebar';
 import { BikeCard } from '@/components/catalog/BikeCard';
 import { Button } from '@/components/ui/Button';
@@ -17,6 +17,8 @@ interface Bike {
     id: string;
     bdsId: string;
     name: string;
+    nameEn?: string;
+    nameAr?: string;
     maker: string;
     region: string;
     mileage: string;
@@ -28,6 +30,8 @@ interface Bike {
     importedAt?: string;
     displacement?: string;
     color?: string;
+    colorEn?: string;
+    colorAr?: string;
     bidCount?: number;
     currentPrice?: number;
     inspection?: string;
@@ -105,7 +109,7 @@ function getTimeRemaining(targetDate: Date): { days: number; hours: number; minu
 }
 
 // Transform database bike to BikeCard props
-function transformBikeForCard(bike: Bike, countdown: { days: number; hours: number; minutes: number }, auctionTargetDate: Date, isLive: boolean) {
+function transformBikeForCard(bike: Bike, countdown: { days: number; hours: number; minutes: number }, auctionTargetDate: Date, isLive: boolean, locale: string) {
     // Extract year from firstRegistration (e.g., "R2" -> 2020, "R7" -> 2025)
     let year: number | undefined;
     if (bike.firstRegistration) {
@@ -122,8 +126,21 @@ function transformBikeForCard(bike: Bike, countdown: { days: number; hours: numb
         }
     }
 
+    // Determine Name based on Locale
+    let displayName = bike.name;
+    let displayColor = bike.color || '-';
+
+    if (locale === 'en') {
+        if (bike.nameEn) displayName = bike.nameEn;
+        if (bike.colorEn) displayColor = bike.colorEn;
+    }
+    else if (locale === 'ar') {
+        if (bike.nameAr) displayName = bike.nameAr;
+        if (bike.colorAr) displayColor = bike.colorAr;
+    }
+
     // Clean up the name (remove extra spaces)
-    const cleanName = bike.name.replace(/\s+/g, ' ').trim();
+    const cleanName = displayName.replace(/\s+/g, ' ').trim();
 
     // Format remaining time
     let endsIn = '';
@@ -148,7 +165,7 @@ function transformBikeForCard(bike: Bike, countdown: { days: number; hours: numb
         bids: bike.bidCount || 0,
         auctionEndDate: auctionTargetDate.toISOString(), // Use the target date for consistency
         displacement: bike.displacement || 'Unknown',
-        color: bike.color || '-'
+        color: displayColor
     };
 }
 
@@ -188,6 +205,7 @@ type SortType = 'all' | 'ending' | 'new' | 'popular' | 'price_asc' | 'price_desc
 
 export default function AuctionsPage() {
     const t = useTranslations();
+    const locale = useLocale();
     const { isAuthenticated, isLoading: isAuthLoading, user } = useAuth();
     const [sortBy, setSortBy] = useState<SortType>('all');
     const [searchQuery, setSearchQuery] = useState('');
@@ -244,7 +262,8 @@ export default function AuctionsPage() {
     useEffect(() => {
         async function fetchBikes() {
             try {
-                const response = await fetch('/api/bikes');
+                // Pass locale to API to get backend-translated fields
+                const response = await fetch(`/api/bikes?locale=${locale}`);
                 const data = await response.json();
                 if (data.success) {
                     // Safe price parsing helper
@@ -300,7 +319,7 @@ export default function AuctionsPage() {
             }
         }
         fetchBikes();
-    }, []);
+    }, [locale]); // Add locale dependency
 
     useEffect(() => {
         // Initial calculation
@@ -352,9 +371,13 @@ export default function AuctionsPage() {
             return false;
         }
 
-        // Color Filter (Approximate string matching if needed, but exact for now)
-        if (filters.colors.length > 0 && bike.color && !filters.colors.includes(bike.color)) {
-            return false;
+        // Color Filter
+        if (filters.colors.length > 0) {
+            // Because API now returns translated colors, bike.color IS the displayed/filtered string.
+            // No need to check en/ar variants here as they should be ignored/unavailable or consistent.
+            if (bike.color && !filters.colors.includes(bike.color)) {
+                return false;
+            }
         }
 
         // Grade Filter
@@ -469,7 +492,10 @@ export default function AuctionsPage() {
             return acc;
         }, {} as Record<string, number>),
         colors: bikesForCounts.reduce((acc, bike) => {
-            if (bike.color) acc[bike.color] = (acc[bike.color] || 0) + 1;
+            // Simplified: API guarantees translated color
+            const color = bike.color;
+
+            if (color) acc[color] = (acc[color] || 0) + 1;
             return acc;
         }, {} as Record<string, number>),
     };
@@ -656,7 +682,7 @@ export default function AuctionsPage() {
                                         paginatedBikes.map((bike) => (
                                             <BikeCard
                                                 key={bike.id}
-                                                {...transformBikeForCard(bike, countdown, targetDate, auctionStatus === 'LIVE')}
+                                                {...transformBikeForCard(bike, countdown, targetDate, auctionStatus === 'LIVE', locale)}
                                                 price={bike.currentPrice || bike.startPrice} // Display Current Price
                                                 isCurrentPrice={Boolean(bike.bidCount && bike.bidCount > 0)}
                                                 currency={selectedCurrency}

@@ -106,7 +106,12 @@ function getMainGalleryImages(images: string[]) {
     );
 }
 
+import { useLocale } from 'next-intl';
+
+// ... (imports remain)
+
 export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDetailProps) {
+    const locale = useLocale(); // Get current locale
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxImages, setLightboxImages] = useState<string[]>([]);
@@ -119,8 +124,10 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
     // Fetch bike data
     useEffect(() => {
         async function fetchBike() {
+            setLoading(true); // Ensure loading state triggers on re-fetch
             try {
-                const response = await fetch(`/api/bikes/${bikeId}`);
+                // Pass locale to API to get translated values
+                const response = await fetch(`/api/bikes/${bikeId}?locale=${locale}`);
                 const data = await response.json();
                 if (data.success) {
                     setBike(data.data);
@@ -134,7 +141,7 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
             }
         }
         fetchBike();
-    }, [bikeId]);
+    }, [bikeId, locale]); // Add locale to dependency array
 
     // Fetch exchange rate when currency changes (simplified for market view)
     useEffect(() => {
@@ -598,7 +605,17 @@ function InspectionBlock({
     onImageClick: (images: string[], index: number) => void;
 }) {
     const hasIssues = Object.values(data).some(v => v && v.trim() !== '');
-    const issueItems = Object.entries(data).filter(([k, v]) => v && v.trim() !== '');
+    const issueItems = Object.entries(data)
+        .filter(([k, v]) => v && v.trim() !== '')
+        .sort((a, b) => {
+            // Extract number (keys are normalized by API to "N. Text", so \d+ works)
+            const extractNum = (str: string) => {
+                const match = str.match(/^\s*(\d+)/);
+                if (!match) return 999;
+                return parseInt(match[1], 10);
+            };
+            return extractNum(a[0]) - extractNum(b[0]);
+        });
 
     // Get grade color
     let gradeColorClass = 'bg-gray-400';
@@ -648,12 +665,41 @@ function InspectionBlock({
                 {/* Issues or "All Good" */}
                 {hasIssues ? (
                     <ul className="space-y-1">
-                        {issueItems.map(([key, value]) => (
-                            <li key={key} className="text-sm flex justify-between items-start border-b border-gray-100 pb-1 last:border-0 hover:bg-gray-50 p-1 rounded">
-                                <span className="text-gray-700 font-semibold text-xs">{key}</span>
-                                <span className="text-amber-600 font-bold text-right ml-4 text-xs">{value}</span>
-                            </li>
-                        ))}
+                        {issueItems.map(([key, value]) => {
+                            // Simplified Regex: Capture leading digits, then everything else
+                            // Keys are normalized by API to "N. Text", so simple \d+ is sufficient
+                            const match = key.match(/^\s*(\d+)(.*)$/);
+                            let numberPart = '';
+                            let textPart = key;
+
+                            if (match) {
+                                numberPart = match[1];
+                                const rawText = match[2] || '';
+                                // Clean separator from text (remove leading . - space)
+                                textPart = rawText.replace(/^[.\-\)\s]+/, '');
+                            }
+
+                            const displayNumber = numberPart ? `${numberPart}.` : '';
+
+                            return (
+                                <li key={key} className="text-sm flex items-start border-b border-gray-100 pb-1 last:border-0 hover:bg-gray-50 p-1 rounded">
+                                    {/* Number Column */}
+                                    <span className="text-gray-400 font-mono w-8 flex-shrink-0 text-xs pt-0.5">
+                                        {displayNumber}
+                                    </span>
+
+                                    {/* Item Name Column */}
+                                    <span className="text-gray-700 font-semibold text-xs flex-grow pt-0.5 break-words">
+                                        {textPart}
+                                    </span>
+
+                                    {/* Status Column */}
+                                    <span className="text-amber-600 font-bold text-right text-xs ml-2 flex-shrink-0 pt-0.5 max-w-[45%]">
+                                        {value}
+                                    </span>
+                                </li>
+                            );
+                        })}
                     </ul>
                 ) : (
                     <p className="text-sm text-green-600 font-medium">問題なし ✓</p>

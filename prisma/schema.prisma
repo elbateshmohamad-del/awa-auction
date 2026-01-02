@@ -11,174 +11,178 @@ datasource db {
 }
 
 model SnsSubmission {
-  id          Int      @id @default(autoincrement())
-  userId      String   // Authenticated user ID
-  bikeId      String   // Selected vehicle ID
-  platform    String
-  postUrl     String
-  status      String   @default("Pending") // Pending, Reporting, Completed
+  id       Int    @id @default(autoincrement())
+  userId   String // Authenticated user ID
+  bikeId   String // Selected vehicle ID
+  platform String
+  postUrl  String
+  status   String @default("Pending") // Pending, Reporting, Completed
 
   // Initial Metrics (Self-Reported)
-  initialViews Int?    @default(0)
-  initialLikes Int?    @default(0)
-  
+  initialViews Int? @default(0)
+  initialLikes Int? @default(0)
+
   // Verification Data (Updated later)
-  verifiedViews Int?     @default(0)
-  verifiedLikes Int?     @default(0)
+  verifiedViews  Int?    @default(0)
+  verifiedLikes  Int?    @default(0)
   verifiedShares Int?    @default(0)
-  rewardGranted String?
+  rewardGranted  String?
 
   // Platform specific data (optional for expansion)
-  metricsJson   String?  // JSON string for raw metrics (likes, views, comments)
+  metricsJson String? // JSON string for raw metrics (likes, views, comments)
 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model User {
-  id            String    @id @default(uuid())
-  email         String    @unique
-  passwordHash  String
-  name          String?
-  role          String    @default("USER") // USER, ADMIN, STAFF
-  permissions   String?   @default("[]") // JSON string of allowed permissions
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  role         String   @default("USER") // USER, ADMIN, STAFF
+  permissions  String?  @default("[]") // JSON string of allowed permissions
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   // Payment Preferences
   preferredCurrency String @default("USD") // USD, EUR, GBP, EGP
 
   // Profile Info
-  memberType       String    @default("INDIVIDUAL") // INDIVIDUAL, CORPORATE
-  phoneNumber      String?
-  address          String?
-  
+  memberType  String  @default("INDIVIDUAL") // INDIVIDUAL, CORPORATE
+  phoneNumber String?
+  address     String?
+
   // Corporate Defaults (Optional)
-  corporateName    String?
-  corporateRegNum  String? // Corporate Registration Number
-  representative   String? // Representative Name
+  corporateName   String?
+  corporateRegNum String? // Corporate Registration Number
+  representative  String? // Representative Name
 
   // System ID
-  memberId         String?   @unique // Format: XX-XXXXXX (e.g. JP-X9A2M4)
+  memberId String? @unique // Format: XX-XXXXXX (e.g. JP-X9A2M4)
 
   // KYC Info
-  kycStatus        String    @default("NONE") // NONE, PENDING, VERIFIED, REJECTED
-  kycDocuments     KycDocument[]
-  orders           Order[]
-  bids             Bid[]
+  kycStatus    String        @default("NONE") // NONE, PENDING, VERIFIED, REJECTED
+  kycDocuments KycDocument[]
+  orders       Order[]
+  bids         Bid[]
 }
 
 model KycDocument {
-  id          String   @id @default(uuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
-  type        String   // PASSPORT, DRIVERS_LICENSE, ID_CARD, UTILITY_BILL, BANK_STATEMENT, COMPANY_REGISTRATION, POA, OTHER
-  fileUrl     String
-  status      String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  id              String    @id @default(uuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id])
+  type            String // PASSPORT, DRIVERS_LICENSE, ID_CARD, UTILITY_BILL, BANK_STATEMENT, COMPANY_REGISTRATION, POA, OTHER
+  fileUrl         String
+  status          String    @default("PENDING") // PENDING, APPROVED, REJECTED
   rejectionReason String?
-  reviewedBy  String?
-  reviewedAt  DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  reviewedBy      String?
+  reviewedAt      DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 }
 
 model Bike {
-  id                String   @id @default(uuid())
-  bdsId             String   @unique
-  lane              String?
-  auctionNumber     String?
-  auctionDate       String?
-  name              String
-  maker             String?
-  makerConfirmed    Boolean  @default(false)
-  region            String?
-  inspectionStatus  String?
-  listingType       String?
-  vin               String?
-  engineNumber      String?
-  mileage           String?
-  documentMileage   String?
-  pastMileage       String?
-  color             String?
-  displacement      String?
-  firstRegistration String?
-  inspection        String?
-  hasParts          String?
+  id                 String  @id @default(uuid())
+  bdsId              String  @unique
+  lane               String?
+  auctionNumber      String?
+  auctionDate        String?
+  name               String
+  nameEn             String?
+  nameAr             String?
+  maker              String?
+  makerConfirmed     Boolean @default(false)
+  region             String?
+  inspectionStatus   String?
+  listingType        String?
+  vin                String?
+  engineNumber       String?
+  mileage            String?
+  documentMileage    String?
+  pastMileage        String?
+  color              String?
+  colorEn            String?
+  colorAr            String?
+  displacement       String?
+  firstRegistration  String?
+  inspection         String?
+  hasParts           String?
   registrationNumber String?
-  
-  startPrice        Int      @default(0)
-  currentPrice      Int      @default(0) // For auction state
-  result            String?
-  historicalRates   String?  @default("{}") // JSON: { "USD": 145.50, "EUR": 158.20 } - Rates at time of sale (1 Unit = X JPY)
+
+  startPrice      Int     @default(0)
+  currentPrice    Int     @default(0) // For auction state
+  result          String?
+  historicalRates String? @default("{}") // JSON: { "USD": 145.50, "EUR": 158.20 } - Rates at time of sale (1 Unit = X JPY)
 
   // Grades (0-10 scale)
-  overallGrade      Float?
-  engineGrade       Float?
-  frontGrade        Float?
-  exteriorGrade     Float?
-  rearGrade         Float?
-  electricGrade     Float?
-  frameGrade        Float?
-  
+  overallGrade  Float?
+  engineGrade   Float?
+  frontGrade    Float?
+  exteriorGrade Float?
+  rearGrade     Float?
+  electricGrade Float?
+  frameGrade    Float?
+
   // AWA Grade
-  awaGrade          String?  @default("D") // S, A, B, C, D
+  awaGrade String? @default("D") // S, A, B, C, D
 
   // Rich Text / JSON fields
-  inspectionDetails String?  @default("{}") // JSON: { engine: {}, ... }
+  inspectionDetails String? @default("{}") // JSON: { engine: {}, ... }
   awaReport         String?
   sellerDeclaration String?
-  images            String?  @default("[]") // JSON array of URLs
-  videoUrls         String?  @default("[]") // JSON array of URLs
-  remarks           String?  @default("[]") // JSON array of remarks
+  images            String? @default("[]") // JSON array of URLs
+  videoUrls         String? @default("[]") // JSON array of URLs
+  remarks           String? @default("[]") // JSON array of remarks
 
   // Status
-  status            String   @default("active") // pending, active, sold, draft
-  importedAt        DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  status     String   @default("active") // pending, active, sold, draft
+  importedAt DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 
   // Relations
-  orders            Order[]
-  bids              Bid[]
+  orders Order[]
+  bids   Bid[]
 }
 
 model Order {
-  id              String   @id @default(uuid())
-  userId          String
-  user            User     @relation(fields: [userId], references: [id])
-  bikeId          String
-  bike            Bike     @relation(fields: [bikeId], references: [id])
-  
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+  bikeId String
+  bike   Bike   @relation(fields: [bikeId], references: [id])
+
   // Payment Details
-  totalAmount     Int      // In JPY
-  currency        String   @default("JPY")
-  exchangeRate    Float    @default(1.0)
-  
-  paymentMethod   String   @default("BANK") // BANK, CARD
-  status          String   @default("PENDING_PAYMENT") // PENDING_PAYMENT, PAID, SHIPPED, COMPLETED, CANCELLED
-  
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  totalAmount  Int // In JPY
+  currency     String @default("JPY")
+  exchangeRate Float  @default(1.0)
+
+  paymentMethod String @default("BANK") // BANK, CARD
+  status        String @default("PENDING_PAYMENT") // PENDING_PAYMENT, PAID, SHIPPED, COMPLETED, CANCELLED
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Bid {
-  id              String   @id @default(uuid())
-  userId          String
-  user            User     @relation(fields: [userId], references: [id])
-  bikeId          String
-  bike            Bike     @relation(fields: [bikeId], references: [id])
-  
-  amount          Int
-  currency        String   @default("JPY")
-  status          String   @default("ACTIVE") // ACTIVE, LOST, WON
-  
-  createdAt       DateTime @default(now())
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+  bikeId String
+  bike   Bike   @relation(fields: [bikeId], references: [id])
+
+  amount   Int
+  currency String @default("JPY")
+  status   String @default("ACTIVE") // ACTIVE, LOST, WON
+
+  createdAt DateTime @default(now())
 }
 
 model Container {
   id          String   @id @default(uuid())
   name        String
-  type        String   // 20ft, 40ft
-  status      String   // open, closingSoon, scheduled, closed
+  type        String // 20ft, 40ft
+  status      String // open, closingSoon, scheduled, closed
   destination String
   capacity    Int
   filled      Int
@@ -195,7 +199,7 @@ model Reservation {
   userId          String
   containerId     String
   bikeIds         String   @default("[]") // JSON array of bike IDs
-  shippingAddress String   // JSON: { type: '...', details: '...' }
+  shippingAddress String // JSON: { type: '...', details: '...' }
   status          String   @default("pending")
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
@@ -203,7 +207,7 @@ model Reservation {
 
 model SystemSetting {
   key         String   @id
-  value       String   // JSON value
+  value       String // JSON value
   description String?
   updatedAt   DateTime @updatedAt
 }
@@ -224,7 +228,31 @@ model AdminTask {
   completed    Boolean   @default(false)
   createdAt    DateTime  @default(now())
   dueDate      DateTime?
-  
+
   // 担当者名（自由入力テキスト）
   assignedToName String?
+}
+
+model Translation {
+  id             String   @id @default(uuid())
+  originalHash   String // SHA-256 hash
+  originalText   String
+  translatedText String
+  sourceLang     String   @default("ja")
+  targetLang     String   @default("en")
+  method         String // "dictionary", "ai", "cache"
+  model          String? // e.g. "gemini-2.0-flash"
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([originalHash, targetLang])
+}
+
+model Dictionary {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  en        String?
+  ar        String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

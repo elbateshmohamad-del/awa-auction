@@ -110,7 +110,8 @@
         "viewAll": "View All",
         "learnMore": "Learn More",
         "readMore": "Read More",
-        "seeDetails": "See Details"
+        "seeDetails": "See Details",
+        "noData": "No data found"
     },
     "header": {
         "navigation": {
@@ -268,7 +269,16 @@
             "priceRange": "Price Range",
             "mileage": "Mileage",
             "condition": "Condition",
-            "clearAll": "Clear All"
+            "clearAll": "Clear All",
+            "region": "Region",
+            "displacement": "Displacement",
+            "displacementOver400": "> 400cc",
+            "color": "Color",
+            "inspection": "With Inspection",
+            "minimumScores": "Minimum Scores",
+            "engine": "Engine",
+            "exterior": "Exterior",
+            "frame": "Frame"
         },
         "sort": {
             "title": "Sort By",
@@ -338,6 +348,66 @@
         "color": "Color",
         "transmission": "Transmission",
         "fuelType": "Fuel Type"
+    },
+    "bikeDetail": {
+        "notFound": "Bike Not Found",
+        "notFoundDesc": "The bike you are looking for does not exist.",
+        "browseAuctions": "Browse Auctions",
+        "bidSuccess": "Bid placed!",
+        "bidPlaced": "Your bid of ¥{amount} has been placed",
+        "backToAuctions": "← Back to Auctions",
+        "clickToExpand": "Click to Expand",
+        "engineVideo": "Engine Sound Video",
+        "rightEngine": "Right Side",
+        "leftEngine": "Left Side",
+        "inspectionInfo": "Inspection Info",
+        "startPrice": "Start Price",
+        "awaGrade": "AWA Grade (1-10)",
+        "overallGrade": "Overall Grade",
+        "vehicleInfo": "Vehicle Info",
+        "awaReport": "AWA Report",
+        "sellerDeclaration": "Seller Declaration",
+        "noIssues": "No issues ✓",
+        "images": "images",
+        "specs": {
+            "maker": "Manufacturer",
+            "vin": "VIN",
+            "engine": "Engine Type",
+            "displacement": "Displacement",
+            "mileage": "Mileage",
+            "docMileage": "Document Mileage",
+            "color": "Color",
+            "firstReg": "First Registration",
+            "inspection": "Inspection",
+            "parts": "Parts"
+        },
+        "inspection": {
+            "engine": "Engine",
+            "frontSuspension": "Front Suspension",
+            "exterior": "Exterior",
+            "rearSuspension": "Rear Suspension",
+            "electrical": "Electrical",
+            "frame": "Frame"
+        }
+    },
+    "bidding": {
+        "auctionEnded": "Auction Ended (Awaiting Results)",
+        "youAreWinning": "🎉 You're currently the top bidder!",
+        "currentBids": "Currently {count} bids",
+        "currentPrice": "Current Price",
+        "bidCount": "Bids",
+        "timeRemaining": "Time Remaining",
+        "ended": "Ended",
+        "enterBidAmount": "Enter bid amount",
+        "minimum": "Min",
+        "bidNow": "BID NOW",
+        "quickBid": "Quick Bid",
+        "estimatedShipping": "Shipping",
+        "auctionFee": "Auction Fee",
+        "estimatedTotal": "Estimated Total",
+        "bidTooLow": "Bid amount too low. Minimum is {min}.",
+        "confirmBid": "Confirm bid of {amount} ({jpyAmount})?",
+        "confirmFirstBid": "【IMPORTANT】First Bid Confirmation\n\nSelected currency: {currency}\nCurrency cannot be changed after bidding.\n\nConfirm bid of {amount} ({jpyAmount})?"
     },
     "auth": {
         "login": {

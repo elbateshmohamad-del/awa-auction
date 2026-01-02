@@ -2,10 +2,13 @@ import { NextResponse } from 'next/server';
 import { getAllBikes, addBike, Bike } from '@/lib/bike-database';
 import { detectMaker } from '@/lib/maker-detection';
 
+import { translateBrandName, translateModelName, translateGeneral } from '@/lib/normalizer';
+
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const maker = searchParams.get('maker');
     const statusParam = searchParams.get('status');
+    const locale = searchParams.get('locale') as 'ja' | 'en' | 'ar' | null;
 
     let bikes = await getAllBikes({
         status: statusParam ? statusParam.split(',').map(s => s.trim()) : undefined
@@ -16,6 +19,27 @@ export async function GET(request: Request) {
         bikes = bikes.filter(bike => bike.maker.toLowerCase() === maker.toLowerCase());
     }
 
+    // Apply translation based on locale
+    // For 'ja' locale or no locale: minimal changes (brand/model to English)
+    // For 'en'/'ar' locales: full translation
+    if (locale) {
+        bikes = await Promise.all(bikes.map(async (bike) => {
+            const translated = { ...bike };
+
+            // Brand names: Always English
+            translated.maker = await translateBrandName(bike.maker);
+
+            // Model names: Always English (or translate JP to EN)
+            translated.name = await translateModelName(bike.name);
+
+            // General fields: Translate to target locale
+            translated.color = await translateGeneral(bike.color, locale);
+            translated.region = await translateGeneral(bike.region, locale);
+            translated.listingType = await translateGeneral(bike.listingType, locale);
+
+            return translated;
+        }));
+    }
 
     return NextResponse.json({
         success: true,

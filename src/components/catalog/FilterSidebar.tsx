@@ -173,7 +173,7 @@ export function FilterSidebar({
 
                     {/* Region */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">Region</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.region')}</h4>
                         <div className="space-y-2 max-h-32 overflow-y-auto pr-2">
                             {Object.keys(counts.regions).map((region) => (
                                 <label key={region} className="flex items-center gap-2 cursor-pointer group">
@@ -194,7 +194,7 @@ export function FilterSidebar({
 
                     {/* Displacement */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">Displacement</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.displacement')}</h4>
                         <div className="space-y-2">
                             {['50cc', '125cc', '250cc', '400cc', 'over400cc'].map((disp) => (
                                 <label key={disp} className="flex items-center gap-2 cursor-pointer">
@@ -205,7 +205,7 @@ export function FilterSidebar({
                                         className="w-4 h-4 border-2 border-gray-300 rounded text-[#0F4C81]"
                                     />
                                     <span className="text-sm text-gray-600">
-                                        {disp === 'over400cc' ? '> 400cc' : `~ ${disp}`}
+                                        {disp === 'over400cc' ? t('auctions.filters.displacementOver400') : `~ ${disp}`}
                                     </span>
                                 </label>
                             ))}
@@ -216,7 +216,7 @@ export function FilterSidebar({
 
                     {/* Year Range */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">Year</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.year')}</h4>
                         <div className="flex items-center gap-2">
                             <Input
                                 type="number"
@@ -240,7 +240,7 @@ export function FilterSidebar({
 
                     {/* Mileage */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">Mileage</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.mileage')}</h4>
                         <div className="flex items-center gap-2">
                             <Input
                                 type="number"
@@ -256,7 +256,7 @@ export function FilterSidebar({
 
                     {/* Color */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">Color</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.color')}</h4>
                         <div className="flex flex-wrap gap-2">
                             {Object.keys(counts.colors).filter(c => c).map((color) => (
                                 <label key={color} className="flex items-center gap-2 cursor-pointer border px-2 py-1 rounded text-xs hover:bg-gray-50">
@@ -282,17 +282,17 @@ export function FilterSidebar({
                             onChange={(e) => handleInputChange('inspection', e.target.checked)}
                             className="w-4 h-4 border-2 border-gray-300 rounded text-[#0F4C81]"
                         />
-                        <span className="text-sm font-bold text-gray-900">With Inspection (Shaken)</span>
+                        <span className="text-sm font-bold text-gray-900">{t('auctions.filters.inspection')}</span>
                     </div>
 
                     <div className="h-px bg-gray-100" />
 
                     {/* Scores */}
                     <div>
-                        <h4 className="font-bold text-sm text-gray-900 mb-3">Minimum Scores</h4>
+                        <h4 className="font-bold text-sm text-gray-900 mb-3">{t('auctions.filters.minimumScores')}</h4>
                         <div className="space-y-2">
                             <div className="grid grid-cols-2 gap-2 items-center">
-                                <span className="text-xs text-gray-600">Engine</span>
+                                <span className="text-xs text-gray-600">{t('auctions.filters.engine')}</span>
                                 <Input
                                     type="number"
                                     min="0" max="10"
@@ -303,7 +303,7 @@ export function FilterSidebar({
                                 />
                             </div>
                             <div className="grid grid-cols-2 gap-2 items-center">
-                                <span className="text-xs text-gray-600">Exterior</span>
+                                <span className="text-xs text-gray-600">{t('auctions.filters.exterior')}</span>
                                 <Input
                                     type="number"
                                     min="0" max="10"
@@ -314,7 +314,7 @@ export function FilterSidebar({
                                 />
                             </div>
                             <div className="grid grid-cols-2 gap-2 items-center">
-                                <span className="text-xs text-gray-600">Frame</span>
+                                <span className="text-xs text-gray-600">{t('auctions.filters.frame')}</span>
                                 <Input
                                     type="number"
                                     min="0" max="10"

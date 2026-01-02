@@ -11,6 +11,7 @@ import { useAuction } from '@/hooks/useAuction';
 import { useAuth } from '@/context/AuthContext';
 import { useWatchlist } from '@/context/WatchlistContext';
 import { fetchExchangeRate, applyMargin, CurrencyCode } from '@/lib/currency';
+import { useTranslations, useLocale } from 'next-intl';
 
 // Currency symbols map
 const CURRENCY_SYMBOLS: Record<CurrencyCode, string> = {
@@ -117,6 +118,10 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     const [error, setError] = useState<string | null>(null);
     const [exchangeRate, setExchangeRate] = useState(150.00); // Default fallback
 
+    // i18n hooks
+    const t = useTranslations('bikeDetail');
+    const locale = useLocale();
+
     // Get user's preferred currency from auth context
     const { user, registerBid } = useAuth();
     const selectedCurrency: CurrencyCode = (user?.preferredCurrency as CurrencyCode) || 'USD';
@@ -133,7 +138,9 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     useEffect(() => {
         async function fetchBike() {
             try {
-                const response = await fetch(`/api/bikes/${bikeId}`);
+                // Pass locale for server-side translation
+                const localeParam = locale !== 'ja' ? `?locale=${locale}` : '';
+                const response = await fetch(`/api/bikes/${bikeId}${localeParam}`);
                 const data = await response.json();
                 if (data.success) {
                     setBike(data.data);
@@ -147,7 +154,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
             }
         }
         fetchBike();
-    }, [bikeId]);
+    }, [bikeId, locale]);
 
     // Lightbox controls
     const openLightbox = useCallback((images: string[], startIndex: number = 0) => {
@@ -283,10 +290,10 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
             <div className="flex flex-col min-h-screen items-center justify-center pt-24">
                 <div className="text-center">
                     <div className="text-6xl mb-4">🏍️</div>
-                    <h1 className="text-2xl font-bold text-gray-900 mb-2">Bike Not Found</h1>
-                    <p className="text-gray-500 mb-4">{error || 'The bike you are looking for does not exist.'}</p>
+                    <h1 className="text-2xl font-bold text-gray-900 mb-2">{t('notFound')}</h1>
+                    <p className="text-gray-500 mb-4">{error || t('notFoundDesc')}</p>
                     <Link href="/auctions">
-                        <Button>Browse Auctions</Button>
+                        <Button>{t('browseAuctions')}</Button>
                     </Link>
                 </div>
             </div>
@@ -302,14 +309,14 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     const inspectionImages = extractInspectionImages(safeImages);
     const videoUrls = Array.isArray(bike.videoUrls) ? bike.videoUrls : [];
 
-    // Inspection categories (omitted for brevity, assume unchanged logic)
+    // Inspection categories
     const inspectionCategories = [
-        { key: 'engine', title: 'E/G（エンジン）', icon: '⚙️', grade: bike.engineGrade, data: bike.inspectionDetails?.engine || {}, images: inspectionImages.engine },
-        { key: 'frontSuspension', title: 'F足（フロント）', icon: '🔧', grade: bike.frontGrade, data: bike.inspectionDetails?.frontSuspension || {}, images: inspectionImages.frontSuspension },
-        { key: 'exterior', title: '外装', icon: '✨', grade: bike.exteriorGrade, data: bike.inspectionDetails?.exterior || {}, images: inspectionImages.exterior },
-        { key: 'rearSuspension', title: 'R足（リア）', icon: '⛓️', grade: bike.rearGrade, data: bike.inspectionDetails?.rearSuspension || {}, images: inspectionImages.rearSuspension },
-        { key: 'electrical', title: '電/保', icon: '⚡', grade: bike.electricGrade, data: bike.inspectionDetails?.electrical || {}, images: inspectionImages.electrical },
-        { key: 'frame', title: '車台', icon: '🏗️', grade: bike.frameGrade, data: bike.inspectionDetails?.frame || {}, images: inspectionImages.frame },
+        { key: 'engine', title: t('inspection.engine'), icon: '⚙️', grade: bike.engineGrade, data: bike.inspectionDetails?.engine || {}, images: inspectionImages.engine },
+        { key: 'frontSuspension', title: t('inspection.frontSuspension'), icon: '🔧', grade: bike.frontGrade, data: bike.inspectionDetails?.frontSuspension || {}, images: inspectionImages.frontSuspension },
+        { key: 'exterior', title: t('inspection.exterior'), icon: '✨', grade: bike.exteriorGrade, data: bike.inspectionDetails?.exterior || {}, images: inspectionImages.exterior },
+        { key: 'rearSuspension', title: t('inspection.rearSuspension'), icon: '⛓️', grade: bike.rearGrade, data: bike.inspectionDetails?.rearSuspension || {}, images: inspectionImages.rearSuspension },
+        { key: 'electrical', title: t('inspection.electrical'), icon: '⚡', grade: bike.electricGrade, data: bike.inspectionDetails?.electrical || {}, images: inspectionImages.electrical },
+        { key: 'frame', title: t('inspection.frame'), icon: '🏗️', grade: bike.frameGrade, data: bike.inspectionDetails?.frame || {}, images: inspectionImages.frame },
     ];
 
     return (
@@ -322,9 +329,9 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                             <span className="text-2xl">✓</span>
                         </div>
                         <div>
-                            <p className="font-bold">入札が完了しました！</p>
+                            <p className="font-bold">{t('bidSuccess')}</p>
                             <p className="text-green-100 text-sm">
-                                ¥{bidSuccess.amount.toLocaleString()} で入札しました
+                                {t('bidPlaced', { amount: bidSuccess.amount.toLocaleString() })}
                             </p>
                         </div>
                         <button
@@ -425,7 +432,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         <span className="text-xl">{isFavorite ? '❤️' : '🤍'}</span>
                     </button>
                     <Link href="/auctions">
-                        <Button variant="secondary">← Back to Auctions</Button>
+                        <Button variant="secondary">{t('backToAuctions')}</Button>
                     </Link>
                 </div>
             </div>
@@ -447,7 +454,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                             />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                 <span className="opacity-0 group-hover:opacity-100 bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur-sm transition-opacity pointer-events-none">
-                                    Click to Expand
+                                    {t('clickToExpand')}
                                 </span>
                             </div>
                         </div>
@@ -473,7 +480,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    エンジン音動画
+                                    {t('engineVideo')}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="p-6">
@@ -492,7 +499,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                                                 </video>
                                             </div>
                                             <p className="text-sm text-center font-medium text-gray-600">
-                                                {idx === 0 ? '右側' : '左側'}エンジン音
+                                                {idx === 0 ? t('rightEngine') : t('leftEngine')}
                                             </p>
                                         </div>
                                     ))}
@@ -507,19 +514,21 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                             <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
-                            検査情報
+                            {t('inspectionInfo')}
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {inspectionCategories.map((cat) => (
                                 <InspectionBlock
                                     key={cat.key}
-                                    title={`${cat.title} (${cat.grade}点)`}
+                                    title={`${cat.title} (${cat.grade})`}
                                     icon={cat.icon}
                                     grade={cat.grade}
                                     data={cat.data}
                                     images={cat.images}
                                     onImageClick={(images, index) => openLightbox(images, index)}
+                                    imageLabel={t('images')}
+                                    noIssuesLabel={t('noIssues')}
                                 />
                             ))}
                         </div>
@@ -548,7 +557,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     <Card className="bg-gradient-to-br from-[#0F4C81] to-[#1e5c94] text-white border-0 shadow-lg">
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between mb-2">
-                                <p className="text-blue-100 text-sm font-medium">スタート価格</p>
+                                <p className="text-blue-100 text-sm font-medium">{t('startPrice')}</p>
                                 <div className="flex items-center gap-1">
                                     <span className="bg-white/20 text-white text-sm px-2 py-1 rounded">
                                         {selectedCurrency}
@@ -569,11 +578,11 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     {/* AWA Grades */}
                     <Card>
                         <CardHeader className="pb-3">
-                            <CardTitle>AWA評価点 (1-10)</CardTitle>
+                            <CardTitle>{t('awaGrade')}</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="flex items-center justify-between mb-6 p-3 bg-gray-50 rounded-lg">
-                                <span className="text-gray-900 font-bold">総合評価</span>
+                                <span className="text-gray-900 font-bold">{t('overallGrade')}</span>
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-3xl font-black text-gray-900">{bike.overallGrade}</span>
                                     <span className="text-sm text-gray-600 font-bold">/ 10</span>
@@ -581,12 +590,12 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                             </div>
 
                             <div className="grid grid-cols-1 gap-y-4 gap-x-2 text-sm">
-                                <GradeRow label="E/G" score={bike.engineGrade} />
-                                <GradeRow label="F足" score={bike.frontGrade} />
-                                <GradeRow label="外装" score={bike.exteriorGrade} />
-                                <GradeRow label="R足" score={bike.rearGrade} />
-                                <GradeRow label="電/保" score={bike.electricGrade} />
-                                <GradeRow label="車台" score={bike.frameGrade} />
+                                <GradeRow label={t('inspection.engine')} score={bike.engineGrade} />
+                                <GradeRow label={t('inspection.frontSuspension')} score={bike.frontGrade} />
+                                <GradeRow label={t('inspection.exterior')} score={bike.exteriorGrade} />
+                                <GradeRow label={t('inspection.rearSuspension')} score={bike.rearGrade} />
+                                <GradeRow label={t('inspection.electrical')} score={bike.electricGrade} />
+                                <GradeRow label={t('inspection.frame')} score={bike.frameGrade} />
                             </div>
                         </CardContent>
                     </Card>
@@ -594,20 +603,20 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     {/* Specifications */}
                     <Card>
                         <CardHeader>
-                            <CardTitle>車両情報</CardTitle>
+                            <CardTitle>{t('vehicleInfo')}</CardTitle>
                         </CardHeader>
                         <CardContent className="p-0">
                             <div className="divide-y divide-gray-100">
-                                <SpecRow label="メーカー" value={bike.maker || 'Unknown'} />
-                                <SpecRow label="車台番号" value={bike.vin || '-'} />
-                                <SpecRow label="エンジン型式" value={bike.engineNumber || '-'} />
-                                <SpecRow label="排気量" value={bike.displacement || '-'} />
-                                <SpecRow label="走行距離" value={bike.mileage || '-'} />
-                                {bike.documentMileage && <SpecRow label="書類距離" value={bike.documentMileage} />}
-                                <SpecRow label="色" value={bike.color || '-'} />
-                                <SpecRow label="初年度" value={bike.firstRegistration || '-'} />
-                                <SpecRow label="車検" value={bike.inspection || '-'} />
-                                <SpecRow label="パーツ" value={bike.hasParts || '-'} />
+                                <SpecRow label={t('specs.maker')} value={bike.maker || 'Unknown'} />
+                                <SpecRow label={t('specs.vin')} value={bike.vin || '-'} />
+                                <SpecRow label={t('specs.engine')} value={bike.engineNumber || '-'} />
+                                <SpecRow label={t('specs.displacement')} value={bike.displacement || '-'} />
+                                <SpecRow label={t('specs.mileage')} value={bike.mileage || '-'} />
+                                {bike.documentMileage && <SpecRow label={t('specs.docMileage')} value={bike.documentMileage} />}
+                                <SpecRow label={t('specs.color')} value={bike.color || '-'} />
+                                <SpecRow label={t('specs.firstReg')} value={bike.firstRegistration || '-'} />
+                                <SpecRow label={t('specs.inspection')} value={bike.inspection || '-'} />
+                                <SpecRow label={t('specs.parts')} value={bike.hasParts || '-'} />
                             </div>
                         </CardContent>
                     </Card>
@@ -616,7 +625,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     {bike.awaReport && (
                         <Card className="bg-yellow-50/50 border-yellow-100">
                             <CardContent className="p-4">
-                                <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">AWA報告</h3>
+                                <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">{t('awaReport')}</h3>
                                 <p className="text-sm text-gray-900 leading-relaxed font-medium">
                                     {bike.awaReport}
                                 </p>
@@ -628,7 +637,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     {bike.sellerDeclaration && (
                         <Card className="bg-blue-50/50 border-blue-100">
                             <CardContent className="p-4">
-                                <h3 className="text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">出品者申告</h3>
+                                <h3 className="text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">{t('sellerDeclaration')}</h3>
                                 <p className="text-sm text-gray-900 leading-relaxed font-medium">
                                     {bike.sellerDeclaration}
                                 </p>
@@ -670,6 +679,8 @@ function InspectionBlock({
     data,
     images,
     onImageClick,
+    imageLabel,
+    noIssuesLabel,
 }: {
     title: string;
     icon: string;
@@ -677,9 +688,21 @@ function InspectionBlock({
     data: Record<string, string>;
     images: string[];
     onImageClick: (images: string[], index: number) => void;
+    imageLabel: string;
+    noIssuesLabel: string;
 }) {
     const hasIssues = Object.values(data).some(v => v && v.trim() !== '');
-    const issueItems = Object.entries(data).filter(([k, v]) => v && v.trim() !== '');
+    const issueItems = Object.entries(data)
+        .filter(([k, v]) => v && v.trim() !== '')
+        .sort((a, b) => {
+            // Extract number (keys are normalized by API to "N. Text", so simple \d+ works)
+            const extractNum = (str: string) => {
+                const match = str.match(/^\s*(\d+)/);
+                if (!match) return 999;
+                return parseInt(match[1], 10);
+            };
+            return extractNum(a[0]) - extractNum(b[0]);
+        });
 
     // Get grade color
     let gradeColorClass = 'bg-gray-400';
@@ -698,7 +721,7 @@ function InspectionBlock({
                 <div className="flex items-center gap-2">
                     {images.length > 0 && (
                         <span className="text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full font-medium">
-                            {images.length}枚
+                            {images.length} {imageLabel}
                         </span>
                     )}
                     <span className={`w-6 h-6 rounded-full text-white text-xs font-bold flex items-center justify-center ${gradeColorClass}`}>
@@ -729,15 +752,32 @@ function InspectionBlock({
                 {/* Issues or "All Good" */}
                 {hasIssues ? (
                     <ul className="space-y-1">
-                        {issueItems.map(([key, value]) => (
-                            <li key={key} className="text-sm flex justify-between items-start border-b border-gray-100 pb-1 last:border-0 hover:bg-gray-50 p-1 rounded">
-                                <span className="text-gray-700 font-semibold text-xs">{key}</span>
-                                <span className="text-amber-600 font-bold text-right ml-4 text-xs">{value}</span>
-                            </li>
-                        ))}
+                        {issueItems.map(([key, value]) => {
+                            // Split number and text for clean alignment
+                            const match = key.match(/^\s*(\d+)(.*)$/);
+                            let numberPart = '';
+                            let textPart = key;
+
+                            if (match) {
+                                numberPart = match[1];
+                                const rawText = match[2] || '';
+                                // Clean separator from text (remove leading . - space)
+                                textPart = rawText.replace(/^[.\-\)\s]+/, '');
+                            }
+
+                            const displayNumber = numberPart ? `${numberPart}.` : '';
+
+                            return (
+                                <li key={key} className="text-sm flex items-start border-b border-gray-100 pb-1 last:border-0 hover:bg-gray-50 p-1 rounded">
+                                    <span className="text-gray-500 font-mono text-xs w-8 flex-shrink-0 pt-0.5">{displayNumber}</span>
+                                    <span className="text-gray-700 font-semibold text-xs flex-grow pt-0.5">{textPart}</span>
+                                    <span className="text-amber-600 font-bold text-right ml-4 text-xs max-w-[45%] pt-0.5">{value}</span>
+                                </li>
+                            );
+                        })}
                     </ul>
                 ) : (
-                    <p className="text-sm text-green-600 font-medium">問題なし ✓</p>
+                    <p className="text-sm text-green-600 font-medium">{noIssuesLabel}</p>
                 )}
             </div>
         </Card>
