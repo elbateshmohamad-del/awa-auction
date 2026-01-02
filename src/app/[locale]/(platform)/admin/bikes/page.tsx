@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { translator } from '@/lib/translator';
 import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
@@ -59,7 +60,19 @@ export default async function AdminBikesPage(props: {
     const page = parseInt(typeof searchParams.page === 'string' ? searchParams.page : '1', 10);
     const totalBikes = bikes.length;
     const totalPages = Math.ceil(totalBikes / perPage);
-    const paginatedBikes = bikes.slice((page - 1) * perPage, page * perPage);
+    let paginatedBikes = bikes.slice((page - 1) * perPage, page * perPage);
+
+    // Apply translations to paginated items
+    // We do this after pagination to save API calls/processing time
+    paginatedBikes = await Promise.all(paginatedBikes.map(async (bike) => {
+        const translatedMaker = await translator.translateBrandName(bike.maker, locale);
+        const translatedModel = await translator.translateModelName(bike.name, locale);
+        return {
+            ...bike,
+            maker: translatedMaker,
+            name: translatedModel
+        };
+    }));
 
     // Build query string helper
     const buildQuery = (newParams: Record<string, string | number>) => {

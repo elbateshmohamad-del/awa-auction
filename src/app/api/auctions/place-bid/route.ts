@@ -36,14 +36,21 @@ export async function POST(request: Request) {
             }
 
             // Validation: Bid must be higher than current price
-            // (Assuming strict >. Min increment logic could be added here e.g. +1000)
             if (amount <= bike.currentPrice) {
-                throw new Error(`Bid amount must be higher than ¥${bike.currentPrice.toLocaleString()}`);
+                // Return structured error
+                throw new Error(JSON.stringify({
+                    code: 'BID_TOO_LOW',
+                    currentPrice: bike.currentPrice,
+                    minBid: bike.currentPrice + 1000 // Approximate assumption or should be + increment
+                }));
             }
 
             // Also check start price if current is 0?
             if (amount < bike.startPrice) {
-                throw new Error(`Bid amount must be at least start price ¥${bike.startPrice.toLocaleString()}`);
+                throw new Error(JSON.stringify({
+                    code: 'BID_BELOW_START',
+                    startPrice: bike.startPrice
+                }));
             }
 
             // 3. Create Bid
@@ -62,7 +69,6 @@ export async function POST(request: Request) {
                 where: { id: bikeId },
                 data: {
                     currentPrice: amount,
-                    // If we had a bidsCount field, we would increment it here
                 }
             });
 
@@ -77,9 +83,21 @@ export async function POST(request: Request) {
 
     } catch (error: any) {
         console.error('Bidding failed:', error);
-        // Distinguish specific validation errors vs internal server errors
-        const status = error.message.includes('Bid amount') || error.message.includes('Bike not found') ? 400 : 500;
-        // Make sure to return JSON error
-        return NextResponse.json({ error: error.message }, { status });
+
+        let errorData = { code: 'UNKNOWN_ERROR', message: error.message };
+        try {
+            // Try to parse structured error
+            const parsed = JSON.parse(error.message);
+            if (parsed.code) errorData = parsed;
+        } catch (e) {
+            // Not JSON, use message
+            if (error.message.includes('Bike not found')) errorData = { code: 'BIKE_NOT_FOUND', message: 'Bike not found' };
+        }
+
+        return NextResponse.json({
+            success: false,
+            error: errorData.code, // Legacy field
+            errorData: errorData  // New structured field
+        }, { status: 400 });
     }
 }

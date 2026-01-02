@@ -129,8 +129,7 @@ export function useAuction(bikeId: string | undefined, initialPrice: number, end
 
         // Optimistic check
         if (amount < state.minBid) {
-            alert(`Bid must be at least ¥${state.minBid.toLocaleString()}`);
-            return false;
+            return { success: false, error: `Bid must be at least ¥${state.minBid.toLocaleString()}` };
         }
 
         try {
@@ -143,8 +142,7 @@ export function useAuction(bikeId: string | undefined, initialPrice: number, end
             const data = await res.json();
 
             if (!res.ok) {
-                alert(data.error || "Failed to place bid");
-                return false;
+                return { success: false, error: data.error || "Failed to place bid", errorData: data.errorData };
             }
 
             // Update State with Success
@@ -163,11 +161,10 @@ export function useAuction(bikeId: string | undefined, initialPrice: number, end
                 bids: [newBid, ...prev.bids]
             }));
 
-            return true;
+            return { success: true };
         } catch (error) {
             console.error(error);
-            alert("Network error occurred");
-            return false;
+            return { success: false, error: "Network error occurred" };
         }
     }, [bikeId, state.minBid, state.status]);
 

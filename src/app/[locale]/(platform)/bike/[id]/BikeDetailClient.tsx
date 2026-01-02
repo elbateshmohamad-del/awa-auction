@@ -249,8 +249,8 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
             return;
         }
 
-        const success = await placeBid(amount);
-        if (success && registerBid) {
+        const result = await placeBid(amount);
+        if (result.success && registerBid) {
             registerBid(bikeId, auctionTargetDate);
 
             // Show success feedback
@@ -261,6 +261,31 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
 
             // Auto-hide after 5 seconds
             setTimeout(() => setBidSuccess(null), 5000);
+        } else if (!result.success && result.error) {
+            const errorCode = result.error;
+            const errorData = result.errorData || {};
+
+            // Format parameters for translation
+            const params: Record<string, string | number> = {};
+            if (errorData.currentPrice) params.currentPrice = errorData.currentPrice.toLocaleString();
+            if (errorData.minBid) params.minBid = errorData.minBid.toLocaleString();
+            if (errorData.startPrice) params.startPrice = errorData.startPrice.toLocaleString();
+
+            // Try to translate with params
+            // Note: If translation is missing, t() usually returns the key "errors.CODE".
+            const translatedMessage = t(`errors.${errorCode}`, params);
+
+            // Check if translation exists (simple heuristic: if it equals the key, it's missing)
+            // However, next-intl might behave differently depending on config.
+            // But usually we can just show the translated message.
+            // Fallback to server message if standard "errors.CODE" is returned?
+            // Let's just trust the translation or fallback to error code if it looks like a key.
+
+            const messageToShow = translatedMessage === `errors.${errorCode}`
+                ? (errorData.message || result.error)
+                : translatedMessage;
+
+            alert(messageToShow);
         }
     };
 
@@ -551,6 +576,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         currencyCode={selectedCurrency}
                         isFirstBid={!bids.some(b => b.isMine)}
                         isEnded={isAuctionEnded}
+                        endTime={auctionTargetDate}
                     />
 
                     {/* Price Card */}

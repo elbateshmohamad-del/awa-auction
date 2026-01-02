@@ -11,7 +11,7 @@ const initialDictionary = dictionaryRaw as Record<string, DictionaryEntry>;
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GOOGLE_TRANSLATE_API_KEY = process.env.GOOGLE_TRANSLATE_API_KEY;
-const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
+const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
 const MAX_RETRIES = 3;
 const SYNC_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
 
@@ -216,7 +216,7 @@ class Translator {
                 return data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || null;
 
             } catch (e) {
-                console.warn(`[Translator] Gemini attempt ${attempt} failed:`, e);
+                console.warn(`[Translator] Gemini attempt ${attempt} failed: ${e instanceof Error ? e.message : String(e)}`);
                 if (attempt < MAX_RETRIES) {
                     const delay = Math.pow(2, attempt - 1) * 1000;
                     await new Promise(resolve => setTimeout(resolve, delay));
@@ -309,7 +309,7 @@ class Translator {
         if (!apiResult || !isValidTranslation(apiResult, targetLang)) {
             console.log('[Translator] Google Translate failed or invalid, trying Gemini...');
             apiResult = await this.callGeminiWithRetry(result, targetLang);
-            usedModel = 'gemini-2.0-flash-exp';
+            usedModel = 'gemini-1.5-flash';
         }
 
         if (apiResult && isValidTranslation(apiResult, targetLang)) {
@@ -382,6 +382,21 @@ class Translator {
 
         // Use standard translate flow
         return this.translate(text, 'ja');
+    }
+    /**
+     * Translates brand name (Maker).
+     * Currently just uses standard translate, but keeps API consistent with other parts of the app.
+     */
+    async translateBrandName(text: string, targetLang: string): Promise<string> {
+        return this.translate(text, targetLang as TargetLang);
+    }
+
+    /**
+     * Translates model name.
+     * Currently just uses standard translate, but keeps API consistent with other parts of the app.
+     */
+    async translateModelName(text: string, targetLang: string): Promise<string> {
+        return this.translate(text, targetLang as TargetLang);
     }
 }
 

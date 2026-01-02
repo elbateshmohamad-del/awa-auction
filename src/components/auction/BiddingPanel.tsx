@@ -19,6 +19,7 @@ interface BiddingPanelProps {
     currencyCode?: string;
     isFirstBid?: boolean;
     isEnded?: boolean;
+    endTime?: Date;
 }
 
 // Invoice settings types
@@ -43,7 +44,8 @@ export function BiddingPanel({
     exchangeRate = 1,
     currencyCode = 'JPY',
     isFirstBid = false,
-    isEnded = false
+    isEnded = false,
+    endTime
 }: BiddingPanelProps) {
     const t = useTranslations('bidding');
 
@@ -175,6 +177,25 @@ export function BiddingPanel({
         setIsConfirmOpen(false);
     };
 
+    // Calculate urgency color
+    const getTimeColorClass = () => {
+        if (isEnded) return 'bg-gray-200 text-gray-500';
+
+        // If we have an endTime, use logic
+        if (endTime) {
+            const now = new Date();
+            const diff = endTime.getTime() - now.getTime();
+            const hoursLeft = diff / (1000 * 60 * 60);
+
+            if (hoursLeft > 24) return 'bg-blue-50 text-blue-700'; // > 24h: Blue
+            if (hoursLeft > 1) return 'bg-yellow-50 text-yellow-700'; // < 24h: Yellow
+            return 'bg-red-50 text-red-700'; // < 1h: Red
+        }
+
+        // Fallback
+        return 'bg-red-50 text-red-700';
+    };
+
     // Display current price in selected currency
     const displayCurrentPrice = toDisplayCurrency(currentPrice);
     const displayNextMinBid = toDisplayCurrency(nextMinBid);
@@ -223,7 +244,7 @@ export function BiddingPanel({
                 </div>
 
                 <div className="space-y-6">
-                    <div className={`px-4 py-3 rounded-lg flex items-center justify-center font-bold whitespace-nowrap ${isEnded ? 'bg-gray-200 text-gray-500' : 'bg-red-50 text-red-700'}`}>
+                    <div className={`px-4 py-3 rounded-lg flex items-center justify-center font-bold whitespace-nowrap ${getTimeColorClass()}`}>
                         ⏱ {t('timeRemaining')}: {isEnded ? t('ended') : endsIn}
                     </div>
 
@@ -332,4 +353,3 @@ export function BiddingPanel({
         </Card>
     );
 }
-

@@ -131,7 +131,7 @@ export default function AdminBikeDetailClient({ bikeId, locale }: AdminBikeDetai
     useEffect(() => {
         async function fetchBike() {
             try {
-                const response = await fetch(`/api/bikes/${bikeId}`);
+                const response = await fetch(`/api/bikes/${bikeId}?locale=${locale}`);
                 const data = await response.json();
                 if (data.success) {
                     setBike(data.data);

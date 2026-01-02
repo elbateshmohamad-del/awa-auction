@@ -409,6 +409,13 @@
       "rearSuspension": "R足（リア）",
       "electrical": "電/保",
       "frame": "車台"
+    },
+    "errors": {
+      "BID_TOO_LOW": "入札額は現在の価格（¥{currentPrice}）より高くなければなりません",
+      "BID_BELOW_START": "入札額は開始価格（¥{startPrice}）以上でなければなりません",
+      "BIKE_NOT_FOUND": "バイクが見つかりません",
+      "UNAUTHORIZED": "入札するにはログインが必要です",
+      "UNKNOWN_ERROR": "不明なエラーが発生しました"
     }
   },
   "bidding": {

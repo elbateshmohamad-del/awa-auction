@@ -384,6 +384,13 @@
             "rearSuspension": "التعليق الخلفي",
             "electrical": "الكهرباء",
             "frame": "الهيكل"
+        },
+        "errors": {
+            "BID_TOO_LOW": "يجب أن يكون مبلغ العطاء أعلى من ¥{currentPrice}",
+            "BID_BELOW_START": "يجب أن يكون مبلغ العطاء على الأقل سعر البداية ¥{startPrice}",
+            "BIKE_NOT_FOUND": "الدراجة غير موجودة",
+            "UNAUTHORIZED": "مطلوب تسجيل الدخول للمزايدة",
+            "UNKNOWN_ERROR": "حدث خطأ غير معروف"
         }
     },
     "bidding": {

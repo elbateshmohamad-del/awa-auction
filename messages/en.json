@@ -388,6 +388,13 @@
             "rearSuspension": "Rear Suspension",
             "electrical": "Electrical",
             "frame": "Frame"
+        },
+        "errors": {
+            "BID_TOO_LOW": "Bid amount must be higher than ¥{currentPrice}",
+            "BID_BELOW_START": "Bid amount must be at least start price ¥{startPrice}",
+            "BIKE_NOT_FOUND": "Bike not found",
+            "UNAUTHORIZED": "Login required to bid",
+            "UNKNOWN_ERROR": "An unknown error occurred"
         }
     },
     "bidding": {
