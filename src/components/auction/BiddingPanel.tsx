@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card, CardContent } from '@/components/ui/Card';
+import { Modal } from '@/components/ui/Modal';
 import { useTranslations } from 'next-intl';
 
 interface BiddingPanelProps {
@@ -49,6 +50,10 @@ export function BiddingPanel({
     // Initialize bid amount to next valid bid when currentPrice changes
     const nextMinBid = currentPrice + minIncrement;
     const [bidAmount, setBidAmount] = useState<number>(nextMinBid);
+
+    // Modal & Error state
+    const [isConfirmOpen, setIsConfirmOpen] = useState(false);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     // Invoice settings state
     const [invoiceSettings, setInvoiceSettings] = useState<InvoiceSettings | null>(null);
@@ -153,18 +158,21 @@ export function BiddingPanel({
 
     const handleBid = () => {
         if (isEnded) return; // Prevent bidding if ended
+        setErrorMessage(null);
 
         if (bidAmount < nextMinBid) {
             const minStr = `${currencySymbol}${toDisplayCurrency(nextMinBid).toLocaleString()}`;
-            alert(t('bidTooLow', { min: minStr }));
+            setErrorMessage(t('bidTooLow', { min: minStr }));
             return;
         }
 
-        const displayAmount = toDisplayCurrency(bidAmount);
-        const confirmed = window.confirm(buildConfirmMessage(displayAmount, bidAmount));
-        if (confirmed) {
-            onBid(bidAmount);
-        }
+        // Open custom modal instead of window.confirm
+        setIsConfirmOpen(true);
+    };
+
+    const confirmBid = () => {
+        onBid(bidAmount);
+        setIsConfirmOpen(false);
     };
 
     // Display current price in selected currency
@@ -250,6 +258,11 @@ export function BiddingPanel({
                                 {isEnded ? t('ended') : t('bidNow')}
                             </Button>
                         </div>
+                        {errorMessage && (
+                            <p className="text-red-500 text-sm font-bold mt-2 animate-in slide-in-from-top-1 text-center">
+                                ⚠️ {errorMessage}
+                            </p>
+                        )}
                     </div>
 
                     <div className="text-center">
@@ -263,9 +276,9 @@ export function BiddingPanel({
                                     <button
                                         key={inc}
                                         onClick={() => {
-                                            if (window.confirm(buildConfirmMessage(displayAmount, jpyAmount))) {
-                                                onBid(jpyAmount);
-                                            }
+                                            const newBidAmount = currentPrice + inc;
+                                            setBidAmount(newBidAmount);
+                                            setIsConfirmOpen(true);
                                         }}
                                         className="py-2 px-1 text-xs font-bold text-[#0F4C81] bg-blue-50 hover:bg-[#0F4C81] hover:text-white rounded transition-colors"
                                         disabled={isEnded}
@@ -293,6 +306,29 @@ export function BiddingPanel({
                     </div>
                 </div>
             </CardContent>
+            {/* Confirmation Modal */}
+            <Modal isOpen={isConfirmOpen} onClose={() => setIsConfirmOpen(false)} title={t('confirmBidTitle') || 'Confirm Bid'} size="sm">
+                <div className="space-y-6">
+                    <p className="font-medium text-gray-700 whitespace-pre-line leading-relaxed text-lg text-center">
+                        {buildConfirmMessage(toDisplayCurrency(bidAmount), bidAmount)}
+                    </p>
+
+                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <p className="text-xs text-blue-800 text-left whitespace-pre-wrap leading-relaxed">
+                            {t('bidDisclaimer') || 'By placing this bid, you agree to the auction terms and conditions. Bids cannot be retracted.'}
+                        </p>
+                    </div>
+
+                    <div className="flex gap-3 justify-end mt-4">
+                        <Button variant="secondary" onClick={() => setIsConfirmOpen(false)} className="w-full">
+                            {t('cancel') || 'Cancel'}
+                        </Button>
+                        <Button variant="primary" onClick={confirmBid} className="w-full font-bold text-lg">
+                            {t('confirm') || 'Place Bid'}
+                        </Button>
+                    </div>
+                </div>
+            </Modal>
         </Card>
     );
 }

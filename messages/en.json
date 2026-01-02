@@ -407,7 +407,11 @@
         "estimatedTotal": "Estimated Total",
         "bidTooLow": "Bid amount too low. Minimum is {min}.",
         "confirmBid": "Confirm bid of {amount} ({jpyAmount})?",
-        "confirmFirstBid": "【IMPORTANT】First Bid Confirmation\n\nSelected currency: {currency}\nCurrency cannot be changed after bidding.\n\nConfirm bid of {amount} ({jpyAmount})?"
+        "confirmFirstBid": "【IMPORTANT】First Bid Confirmation\n\nSelected currency: {currency}\nCurrency cannot be changed after bidding.\n\nConfirm bid of {amount} ({jpyAmount})?",
+        "confirmBidTitle": "Confirm Bid",
+        "bidDisclaimer": "By placing this bid, you agree to the auction terms and conditions.\n\n• Bids cannot be retracted.\n• A cancellation fee applies to cancellations after winning.\n• Once selected, the payment currency cannot be changed.",
+        "cancel": "Cancel",
+        "confirm": "Confirm Bid"
     },
     "auth": {
         "login": {
