@@ -204,10 +204,10 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
     // Loading state
     if (loading) {
         return (
-            <div className="max-w-7xl mx-auto space-y-8 p-6">
+            <div className="max-w-7xl mx-auto space-y-4 md:space-y-8 p-4 md:p-6">
                 <div className="h-8 bg-gray-200 rounded w-1/2 animate-pulse"></div>
-                <div className="grid lg:grid-cols-3 gap-8">
-                    <div className="lg:col-span-2 space-y-8">
+                <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
+                    <div className="lg:col-span-2 space-y-6 md:space-y-8">
                         <div className="aspect-[4/3] bg-gray-200 rounded-xl animate-pulse"></div>
                     </div>
                     <div className="space-y-6">
@@ -255,7 +255,7 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
     const finalPrice = Math.ceil(displayPrice / exchangeRate);
 
     return (
-        <div className="max-w-7xl mx-auto space-y-6">
+        <div className="max-w-7xl mx-auto space-y-4 md:space-y-6">
 
             {/* Lightbox Modal */}
             {lightboxOpen && (
@@ -282,13 +282,13 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                         {lightboxImages.length > 1 && (
                             <>
                                 <button
-                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl hover:scale-110 transition-transform p-2"
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl hover:scale-110 transition-transform p-2 bg-black/20 rounded-full"
                                     onClick={(e) => { e.stopPropagation(); prevImage(); }}
                                 >
                                     &#8249;
                                 </button>
                                 <button
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl hover:scale-110 transition-transform p-2"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl hover:scale-110 transition-transform p-2 bg-black/20 rounded-full"
                                     onClick={(e) => { e.stopPropagation(); nextImage(); }}
                                 >
                                     &#8250;
@@ -304,7 +304,7 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                                 <img
                                     key={i}
                                     src={`/api/proxy-image?url=${encodeURIComponent(img)}`}
-                                    className={`h-16 w-16 object-cover cursor-pointer border-2 rounded-md ${i === currentImageIndex ? 'border-blue-500' : 'border-transparent opacity-50 hover:opacity-100'}`}
+                                    className={`h-12 w-12 md:h-16 md:w-16 object-cover cursor-pointer border-2 rounded-md ${i === currentImageIndex ? 'border-blue-500' : 'border-transparent opacity-50 hover:opacity-100'}`}
                                     onClick={() => setCurrentImageIndex(i)}
                                     alt={`Thumbnail ${i + 1}`}
                                 />
@@ -315,7 +315,7 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
             )}
 
             {/* Page Header */}
-            <div className="flex flex-col gap-6 border-b border-gray-200 pb-6">
+            <div className="flex flex-col gap-4 md:gap-6 border-b border-gray-200 pb-4 md:pb-6">
                 <Link
                     href="/market"
                     className="inline-flex items-center text-sm text-gray-500 hover:text-blue-600 transition-colors w-fit"
@@ -328,7 +328,7 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
-                        <div className="flex items-center gap-3 mb-2">
+                        <div className="flex items-center gap-2 md:gap-3 mb-2 flex-wrap">
                             <Badge grade={bike.awaGrade} size="md" />
                             <span className={`text-xs font-bold px-2 py-1 rounded ${bike.status === 'sold' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}`}>
                                 {bike.status === 'sold' ? 'SOLD' : bike.status.toUpperCase()}
@@ -337,8 +337,8 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                                 {bike.region}・{bike.listingType}
                             </span>
                         </div>
-                        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">{cleanName}</h1>
-                        <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-gray-600 font-mono">
+                        <h1 className="text-xl md:text-3xl font-bold text-gray-900 tracking-tight leading-tight">{cleanName}</h1>
+                        <div className="flex flex-wrap items-center gap-2 md:gap-4 mt-2 text-xs md:text-sm text-gray-600 font-mono">
                             <span className="bg-gray-100 px-2 py-1 rounded">Lot: {bike.auctionNumber}</span>
                             <span>VIN: {bike.vin}</span>
                             <span>{bike.auctionDate}</span>
@@ -362,9 +362,9 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                 </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
                 {/* LEFT COLUMN - Media (2/3 width) */}
-                <div className="lg:col-span-2 space-y-8">
+                <div className="lg:col-span-2 space-y-6 md:space-y-8">
 
                     {/* Main Gallery */}
                     <Card className="border-0 shadow-lg overflow-hidden">
@@ -385,12 +385,12 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                             )}
 
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                                <span className="opacity-0 group-hover:opacity-100 bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur-sm transition-opacity pointer-events-none">
+                                <span className="opacity-0 group-hover:opacity-100 bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur-sm transition-opacity pointer-events-none text-sm md:text-base">
                                     Click to Expand
                                 </span>
                             </div>
                         </div>
-                        <div className="p-4 flex flex-wrap gap-3 bg-white">
+                        <div className="p-3 md:p-4 flex flex-wrap gap-2 md:gap-3 bg-white">
                             {mainGalleryImages.map((src, i) => (
                                 <SafeThumbnail
                                     key={i}
@@ -406,8 +406,8 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                     {/* Dual Video Section */}
                     {videoUrls.length > 0 && (
                         <Card className="border-gray-200 shadow-sm">
-                            <CardHeader className="border-b border-gray-100 bg-gray-50/50">
-                                <CardTitle className="flex items-center gap-2 text-lg">
+                            <CardHeader className="border-b border-gray-100 bg-gray-50/50 p-4">
+                                <CardTitle className="flex items-center gap-2 text-base md:text-lg">
                                     <svg className="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -415,8 +415,8 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                                     エンジン音動画
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="p-6">
-                                <div className="grid md:grid-cols-2 gap-6">
+                            <CardContent className="p-4 md:p-6">
+                                <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                                     {videoUrls.slice(0, 2).map((url, idx) => (
                                         <div key={idx} className="space-y-2">
                                             <div className="aspect-video bg-black rounded-lg overflow-hidden relative shadow-md">
@@ -442,7 +442,7 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
 
                     {/* Inspection Details */}
                     <div className="space-y-4">
-                        <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        <h2 className="text-lg md:text-xl font-bold text-gray-900 flex items-center gap-2">
                             <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
@@ -473,15 +473,15 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
                         <div className="absolute top-0 right-0 p-4 opacity-10">
                             <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z" /></svg>
                         </div>
-                        <CardContent className="p-6 relative z-10">
+                        <CardContent className="p-4 md:p-6 relative z-10">
                             <div className="flex items-center justify-between mb-2">
-                                <p className="text-blue-100 text-sm font-medium uppercase tracking-wider">Sold Price</p>
+                                <p className="text-blue-100 text-xs md:text-sm font-medium uppercase tracking-wider">Sold Price</p>
                                 <span className="bg-white/20 text-white text-xs px-2 py-1 rounded font-bold">
                                     {currency}
                                 </span>
                             </div>
                             <div className="flex items-baseline gap-2">
-                                <span className="text-4xl font-bold tracking-tight font-mono text-white">
+                                <span className="text-3xl md:text-4xl font-bold tracking-tight font-mono text-white">
                                     {CURRENCY_SYMBOLS[currency]}{finalPrice.toLocaleString()}
                                 </span>
                             </div>
@@ -494,19 +494,19 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
 
                     {/* AWA Grades */}
                     <Card>
-                        <CardHeader className="pb-3">
-                            <CardTitle>AWA評価点 (1-10)</CardTitle>
+                        <CardHeader className="pb-3 p-4 md:p-6">
+                            <CardTitle className="text-base md:text-lg">AWA評価点 (1-10)</CardTitle>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="p-4 md:p-6 pt-0">
                             <div className="flex items-center justify-between mb-6 p-3 bg-gray-50 rounded-lg">
-                                <span className="text-gray-900 font-bold">総合評価</span>
+                                <span className="text-gray-900 font-bold text-sm md:text-base">総合評価</span>
                                 <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl font-black text-gray-900">{bike.overallGrade}</span>
-                                    <span className="text-sm text-gray-600 font-bold">/ 10</span>
+                                    <span className="text-2xl md:text-3xl font-black text-gray-900">{bike.overallGrade}</span>
+                                    <span className="text-xs md:text-sm text-gray-600 font-bold">/ 10</span>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 gap-y-4 gap-x-2 text-sm">
+                            <div className="grid grid-cols-1 gap-y-4 gap-x-2 text-xs md:text-sm">
                                 <GradeRow label="E/G" score={bike.engineGrade} />
                                 <GradeRow label="F足" score={bike.frontGrade} />
                                 <GradeRow label="外装" score={bike.exteriorGrade} />
@@ -519,11 +519,11 @@ export default function MarketBikeDetail({ bikeId, initialData }: MarketBikeDeta
 
                     {/* Specifications */}
                     <Card>
-                        <CardHeader>
-                            <CardTitle>車両情報</CardTitle>
+                        <CardHeader className="p-4 md:p-6 pb-3">
+                            <CardTitle className="text-base md:text-lg">車両情報</CardTitle>
                         </CardHeader>
                         <CardContent className="p-0">
-                            <div className="divide-y divide-gray-100">
+                            <div className="divide-y divide-gray-100 text-sm">
                                 <SpecRow label="メーカー" value={bike.maker || 'Unknown'} />
                                 <SpecRow label="車台番号" value={bike.vin || '-'} />
                                 <SpecRow label="エンジン型式" value={bike.engineNumber || '-'} />
@@ -576,7 +576,7 @@ function SafeThumbnail({ src, alt, isSelected, onClick }: { src: string; alt: st
     return (
         <div
             onClick={onClick}
-            className={`w-16 h-16 md:w-20 md:h-20 rounded-md overflow-hidden cursor-pointer transition-all relative flex-shrink-0 ${isSelected ? 'ring-2 ring-blue-600 ring-offset-2' : 'ring-1 ring-gray-200 hover:opacity-80'}`}
+            className={`w-14 h-14 md:w-20 md:h-20 rounded-md overflow-hidden cursor-pointer transition-all relative flex-shrink-0 ${isSelected ? 'ring-2 ring-blue-600 ring-offset-2' : 'ring-1 ring-gray-200 hover:opacity-80'}`}
         >
             <img
                 src={src}
