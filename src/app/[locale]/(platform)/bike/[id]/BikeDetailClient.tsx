@@ -1,8 +1,8 @@
 "use client";
 
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from '@/i18n/navigation';
@@ -12,6 +12,8 @@ import { useAuth } from '@/context/AuthContext';
 import { useWatchlist } from '@/context/WatchlistContext';
 import { fetchExchangeRate, applyMargin, CurrencyCode } from '@/lib/currency';
 import { useTranslations, useLocale } from 'next-intl';
+import { FixedBottomBar } from '@/components/market/FixedBottomBar';
+import { BiddingSheet } from '@/components/market/BiddingSheet';
 
 // Currency symbols map
 const CURRENCY_SYMBOLS: Record<CurrencyCode, string> = {
@@ -117,6 +119,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [exchangeRate, setExchangeRate] = useState(150.00); // Default fallback
+    const [isBiddingSheetOpen, setIsBiddingSheetOpen] = useState(false);
 
     // i18n hooks
     const t = useTranslations('bikeDetail');
@@ -216,9 +219,6 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
             const daysUntilTuesday = (2 - day + 7) % 7;
             targetDate.setDate(nowJST.getDate() + daysUntilTuesday);
             targetDate.setHours(12, 0, 0, 0);
-
-            // If calculation lands on today but we are past start/end logic check, adjust.
-            // If today is Tue (2) < 12, diff is 0. Correct.
         } else {
             // WAITING. Target is NEXT Thursday 00:00 (Start of next auction)
             const daysUntilThursday = (4 - day + 7) % 7;
@@ -253,35 +253,19 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
         const result = await placeBid(amount);
         if (result.success && registerBid) {
             registerBid(bikeId, auctionTargetDate);
-
-            // Show success feedback
             setBidSuccess({ amount });
-
-            // Refresh the page to show latest data (server-side fetched)
             router.refresh();
-
-            // Auto-hide after 5 seconds
             setTimeout(() => setBidSuccess(null), 5000);
         } else if (!result.success && result.error) {
             const errorCode = result.error;
             const errorData = result.errorData || {};
 
-            // Format parameters for translation
             const params: Record<string, string | number> = {};
             if (errorData.currentPrice) params.currentPrice = errorData.currentPrice.toLocaleString();
             if (errorData.minBid) params.minBid = errorData.minBid.toLocaleString();
             if (errorData.startPrice) params.startPrice = errorData.startPrice.toLocaleString();
 
-            // Try to translate with params
-            // Note: If translation is missing, t() usually returns the key "errors.CODE".
             const translatedMessage = t(`errors.${errorCode}`, params);
-
-            // Check if translation exists (simple heuristic: if it equals the key, it's missing)
-            // However, next-intl might behave differently depending on config.
-            // But usually we can just show the translated message.
-            // Fallback to server message if standard "errors.CODE" is returned?
-            // Let's just trust the translation or fallback to error code if it looks like a key.
-
             const messageToShow = translatedMessage === `errors.${errorCode}`
                 ? (errorData.message || result.error)
                 : translatedMessage;
@@ -300,10 +284,6 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                 <div className="grid lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2 space-y-8">
                         <div className="aspect-[4/3] bg-gray-200 rounded-xl animate-pulse"></div>
-                    </div>
-                    <div className="space-y-6">
-                        <div className="h-32 bg-gray-200 rounded-xl animate-pulse"></div>
-                        <div className="h-64 bg-gray-200 rounded-xl animate-pulse"></div>
                     </div>
                 </div>
             </div>
@@ -346,7 +326,29 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     ];
 
     return (
-        <div className="max-w-7xl mx-auto space-y-8 p-6 pt-24 pb-24">
+        <div className="max-w-7xl mx-auto space-y-6 md:space-y-8 p-4 md:p-6 pt-20 md:pt-24 pb-32 md:pb-24">
+
+            {/* Mobile Bidding Components */}
+            <FixedBottomBar
+                currentPrice={selectedCurrency === 'JPY' ? currentPrice : Math.ceil(currentPrice / exchangeRate)}
+                currencySymbol={CURRENCY_SYMBOLS[selectedCurrency]}
+                onOpenBidding={() => setIsBiddingSheetOpen(true)}
+                isEnded={isAuctionEnded}
+            />
+
+            <BiddingSheet
+                isOpen={isBiddingSheetOpen}
+                onClose={() => setIsBiddingSheetOpen(false)}
+                currentPrice={currentPrice}
+                minIncrement={10000}
+                endsIn={timeLeft}
+                onBid={handleBid}
+                currencySymbol={CURRENCY_SYMBOLS[selectedCurrency]}
+                exchangeRate={exchangeRate}
+                currencyCode={selectedCurrency}
+                isEnded={isAuctionEnded}
+            />
+
             {/* Bid Success Toast */}
             {bidSuccess && (
                 <div className="fixed top-20 right-4 z-50 animate-in slide-in-from-right-5 fade-in duration-300">
@@ -360,12 +362,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                                 {t('bidPlaced', { amount: bidSuccess.amount.toLocaleString() })}
                             </p>
                         </div>
-                        <button
-                            onClick={() => setBidSuccess(null)}
-                            className="ml-4 text-white/70 hover:text-white"
-                        >
-                            ✕
-                        </button>
+                        <button onClick={() => setBidSuccess(null)} className="ml-4 text-white/70 hover:text-white">✕</button>
                     </div>
                 </div>
             )}
@@ -376,10 +373,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm"
                     onClick={closeLightbox}
                 >
-                    <button
-                        className="absolute top-4 right-4 text-white hover:text-gray-300 z-50 p-2"
-                        onClick={closeLightbox}
-                    >
+                    <button className="absolute top-4 right-4 text-white hover:text-gray-300 z-50 p-2" onClick={closeLightbox}>
                         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -430,7 +424,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
             {/* Page Header */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-gray-200 pb-6">
                 <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <Badge grade={bike.awaGrade} size="md" />
                         <span className={`text-xs font-bold px-2 py-1 rounded ${bike.inspectionStatus === '検査済' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
                             {bike.inspectionStatus}
@@ -439,14 +433,15 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                             {bike.region}・{bike.listingType}
                         </span>
                     </div>
-                    <h1 className="text-3xl font-bold text-gray-900 tracking-tight">{cleanName}</h1>
-                    <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-gray-600 font-mono">
+                    {/* Responsive Font Size for Title */}
+                    <h1 className="text-xl md:text-3xl font-bold text-gray-900 tracking-tight leading-snug">{cleanName}</h1>
+                    <div className="flex flex-wrap items-center gap-2 md:gap-4 mt-2 text-xs md:text-sm text-gray-600 font-mono">
                         <span className="bg-gray-100 px-2 py-1 rounded">Lot: {bike.auctionNumber}</span>
                         <span>VIN: {bike.vin}</span>
                         <span>{bike.auctionDate}</span>
                     </div>
                 </div>
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center w-full md:w-auto">
                     <button
                         onClick={() => toggleWatchlist(bikeId)}
                         className={`p-2 rounded-full border transition-all duration-300 active:scale-75 hover:scale-110 cursor-pointer ${isFavorite
@@ -457,8 +452,8 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                     >
                         <span className="text-xl">{isFavorite ? '❤️' : '🤍'}</span>
                     </button>
-                    <Link href="/auctions">
-                        <Button variant="secondary">{t('backToAuctions')}</Button>
+                    <Link href="/auctions" className="flex-1 md:flex-none">
+                        <Button variant="secondary" className="w-full md:w-auto text-sm">{t('backToAuctions')}</Button>
                     </Link>
                 </div>
             </div>
@@ -496,6 +491,79 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                             ))}
                         </div>
                     </Card>
+
+                    {/* MOBILE ORDER: Grades, Specs, Reports (md:hidden) */}
+                    <div className="md:hidden space-y-6">
+                        {/* AWA Grades (Mobile) */}
+                        <Card>
+                            <CardHeader className="pb-3">
+                                <CardTitle>{t('awaGrade')}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="flex items-center justify-between mb-6 p-3 bg-gray-50 rounded-lg">
+                                    <span className="text-gray-900 font-bold">{t('overallGrade')}</span>
+                                    <div className="flex items-baseline gap-1">
+                                        <span className="text-3xl font-black text-gray-900">{bike.overallGrade}</span>
+                                        <span className="text-sm text-gray-600 font-bold">/ 10</span>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 gap-y-4 gap-x-2 text-sm">
+                                    <GradeRow label={t('inspection.engine')} score={bike.engineGrade} />
+                                    <GradeRow label={t('inspection.frontSuspension')} score={bike.frontGrade} />
+                                    <GradeRow label={t('inspection.exterior')} score={bike.exteriorGrade} />
+                                    <GradeRow label={t('inspection.rearSuspension')} score={bike.rearGrade} />
+                                    <GradeRow label={t('inspection.electrical')} score={bike.electricGrade} />
+                                    <GradeRow label={t('inspection.frame')} score={bike.frameGrade} />
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Specifications (Mobile) */}
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>{t('vehicleInfo')}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-0">
+                                <div className="divide-y divide-gray-100">
+                                    <SpecRow label={t('specs.maker')} value={bike.maker || 'Unknown'} />
+                                    <SpecRow label={t('specs.vin')} value={bike.vin || '-'} />
+                                    <SpecRow label={t('specs.engine')} value={bike.engineNumber || '-'} />
+                                    <SpecRow label={t('specs.displacement')} value={bike.displacement || '-'} />
+                                    <SpecRow label={t('specs.mileage')} value={bike.mileage || '-'} />
+                                    {bike.documentMileage && <SpecRow label={t('specs.docMileage')} value={bike.documentMileage} />}
+                                    <SpecRow label={t('specs.color')} value={bike.color || '-'} />
+                                    <SpecRow label={t('specs.firstReg')} value={bike.firstRegistration || '-'} />
+                                    <SpecRow label={t('specs.inspection')} value={bike.inspection || '-'} />
+                                    <SpecRow label={t('specs.parts')} value={bike.hasParts || '-'} />
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* AWA Report (Mobile) */}
+                        {bike.awaReport && (
+                            <Card className="bg-yellow-50/50 border-yellow-100">
+                                <CardContent className="p-4">
+                                    <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">{t('awaReport')}</h3>
+                                    <p className="text-sm text-gray-900 leading-relaxed font-medium">
+                                        {bike.awaReport}
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        )}
+
+                        {/* Seller Declaration (Mobile) */}
+                        {bike.sellerDeclaration && (
+                            <Card className="bg-blue-50/50 border-blue-100">
+                                <CardContent className="p-4">
+                                    <h3 className="text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">{t('sellerDeclaration')}</h3>
+                                    <p className="text-sm text-gray-900 leading-relaxed font-medium">
+                                        {bike.sellerDeclaration}
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        )}
+                    </div>
 
                     {/* Dual Video Section */}
                     {videoUrls.length > 0 && (
@@ -564,21 +632,33 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                 {/* RIGHT COLUMN - Specs & Grades (1/3 width) */}
                 <div className="space-y-6">
 
-                    {/* Bidding Panel */}
-                    <BiddingPanel
-                        currentPrice={currentPrice}
-                        minIncrement={10000}
-                        endsIn={timeLeft}
-                        onBid={handleBid}
-                        bidCount={bids.length}
-                        isWinning={bids.length > 0 && bids[0].isMine}
-                        currencySymbol={CURRENCY_SYMBOLS[selectedCurrency]}
-                        exchangeRate={exchangeRate}
-                        currencyCode={selectedCurrency}
-                        isFirstBid={!bids.some(b => b.isMine)}
-                        isEnded={isAuctionEnded}
-                        endTime={auctionTargetDate}
-                    />
+                    {/* Bidding Panel - Hidden on Mobile */}
+                    <div className="hidden md:block">
+                        <BiddingPanel
+                            currentPrice={currentPrice}
+                            minIncrement={10000}
+                            endsIn={timeLeft}
+                            onBid={handleBid}
+                            bidCount={bids.length}
+                            isWinning={bids.length > 0 && bids[0].isMine}
+                            currencySymbol={CURRENCY_SYMBOLS[selectedCurrency]}
+                            exchangeRate={exchangeRate}
+                            currencyCode={selectedCurrency}
+                            isFirstBid={!bids.some(b => b.isMine)}
+                            isEnded={isAuctionEnded}
+                            endTime={auctionTargetDate}
+                        />
+                    </div>
+
+                    {/* Mobile Price Card Summary (Visible only on mobile to show price inline) */}
+                    <div className="md:hidden">
+                        <Card className="bg-gray-50 border-gray-200">
+                            <CardContent className="p-4 flex justify-between items-center">
+                                <span className="text-gray-500 font-bold text-sm">{t('currentPrice')}</span>
+                                <span className="text-2xl font-black text-[#0F4C81]">{CURRENCY_SYMBOLS[selectedCurrency]}{Math.ceil(currentPrice / exchangeRate).toLocaleString()}</span>
+                            </CardContent>
+                        </Card>
+                    </div>
 
                     {/* Price Card */}
                     <Card className="bg-gradient-to-br from-[#0F4C81] to-[#1e5c94] text-white border-0 shadow-lg">
@@ -602,8 +682,8 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         </CardContent>
                     </Card>
 
-                    {/* AWA Grades */}
-                    <Card>
+                    {/* AWA Grades (Desktop) */}
+                    <Card className="hidden md:block">
                         <CardHeader className="pb-3">
                             <CardTitle>{t('awaGrade')}</CardTitle>
                         </CardHeader>
@@ -627,8 +707,8 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         </CardContent>
                     </Card>
 
-                    {/* Specifications */}
-                    <Card>
+                    {/* Specifications (Desktop) */}
+                    <Card className="hidden md:block">
                         <CardHeader>
                             <CardTitle>{t('vehicleInfo')}</CardTitle>
                         </CardHeader>
@@ -648,9 +728,9 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         </CardContent>
                     </Card>
 
-                    {/* AWA Report */}
+                    {/* AWA Report (Desktop) */}
                     {bike.awaReport && (
-                        <Card className="bg-yellow-50/50 border-yellow-100">
+                        <Card className="hidden md:block bg-yellow-50/50 border-yellow-100">
                             <CardContent className="p-4">
                                 <h3 className="text-xs font-bold text-yellow-800 uppercase tracking-wider mb-2">{t('awaReport')}</h3>
                                 <p className="text-sm text-gray-900 leading-relaxed font-medium">
@@ -660,9 +740,9 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
                         </Card>
                     )}
 
-                    {/* Seller Declaration */}
+                    {/* Seller Declaration (Desktop) */}
                     {bike.sellerDeclaration && (
-                        <Card className="bg-blue-50/50 border-blue-100">
+                        <Card className="hidden md:block bg-blue-50/50 border-blue-100">
                             <CardContent className="p-4">
                                 <h3 className="text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">{t('sellerDeclaration')}</h3>
                                 <p className="text-sm text-gray-900 leading-relaxed font-medium">
@@ -756,7 +836,7 @@ function InspectionBlock({
                     </span>
                 </div>
             </div>
-            <div className="p-4 space-y-3">
+            <div className="p-2 md:p-4 space-y-3">
                 {/* Images Row */}
                 {images.length > 0 && (
                     <div className="flex gap-2 overflow-x-auto pb-2">
@@ -798,7 +878,7 @@ function InspectionBlock({
                                 <li key={key} className="text-sm flex items-start border-b border-gray-100 pb-1 last:border-0 hover:bg-gray-50 p-1 rounded">
                                     <span className="text-gray-500 font-mono text-xs w-8 flex-shrink-0 pt-0.5">{displayNumber}</span>
                                     <span className="text-gray-700 font-semibold text-xs flex-grow pt-0.5">{textPart}</span>
-                                    <span className="text-amber-600 font-bold text-right ml-4 text-xs max-w-[45%] pt-0.5">{value}</span>
+                                    <span className="text-amber-600 font-bold text-right ml-2 md:ml-4 text-xs max-w-[45%] pt-0.5">{value}</span>
                                 </li>
                             );
                         })}
@@ -813,9 +893,9 @@ function InspectionBlock({
 
 function SpecRow({ label, value }: { label: string; value: string }) {
     return (
-        <div className="flex justify-between py-2 px-6 hover:bg-gray-50">
+        <div className="flex justify-between py-2 px-3 md:px-6 hover:bg-gray-50">
             <span className="text-gray-600 font-medium text-sm">{label}</span>
-            <span className="font-bold text-gray-900 text-sm">{value}</span>
+            <span className="font-bold text-gray-900 text-sm text-right break-all ml-4">{value}</span>
         </div>
     );
 }

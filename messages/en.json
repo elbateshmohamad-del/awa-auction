@@ -358,6 +358,7 @@
     "bikeDetail": {
         "notFound": "Bike Not Found",
         "notFoundDesc": "The bike you are looking for does not exist.",
+        "currentPrice": "Current Price",
         "browseAuctions": "Browse Auctions",
         "bidSuccess": "Bid placed!",
         "bidPlaced": "Your bid of ¥{amount} has been placed",

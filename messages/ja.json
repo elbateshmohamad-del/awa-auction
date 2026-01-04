@@ -378,6 +378,7 @@
   "bikeDetail": {
     "notFound": "バイクが見つかりません",
     "notFoundDesc": "お探しのバイクは存在しません。",
+    "currentPrice": "現在価格",
     "browseAuctions": "オークションを見る",
     "bidSuccess": "入札が完了しました！",
     "bidPlaced": "¥{amount} で入札しました",
@@ -432,19 +433,22 @@
     "timeRemaining": "残り時間",
     "ended": "終了",
     "enterBidAmount": "入札価格を入力",
+    "bidAmount": "入札金額",
     "minimum": "最低",
     "bidNow": "入札する",
     "quickBid": "クイック入札",
-    "estimatedShipping": "送料",
-    "auctionFee": "オークション手数料",
-    "estimatedTotal": "総額目安",
+    "estimatedShipping": "概算送料",
+    "auctionFee": "手数料",
+    "estimatedTotal": "概算合計",
     "bidTooLow": "入札金額が低すぎます。最低 {min} 必要です。",
     "confirmBid": "{amount} ({jpyAmount}) で入札しますか？",
     "confirmFirstBid": "【重要】初回入札の確認\n\n選択した通貨: {currency}\n入札後は通貨を変更できません。\n\n{amount} ({jpyAmount}) で入札しますか？",
     "confirmBidTitle": "入札の確認",
     "bidDisclaimer": "この入札を行うことで、オークション利用規約に同意したものとみなされます。\n\n・入札の取り消しはできません。\n・落札後のキャンセルにはキャンセル料が発生します。\n・一度選択した支払い通貨は、入札後に変更することはできません。",
     "cancel": "キャンセル",
-    "confirm": "入札する"
+    "confirm": "確定する",
+    "next": "入力内容を確認",
+    "back": "戻る"
   },
   "auth": {
     "login": {

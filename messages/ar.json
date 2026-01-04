@@ -353,6 +353,7 @@
     "bikeDetail": {
         "notFound": "الدراجة غير موجودة",
         "notFoundDesc": "الدراجة التي تبحث عنها غير موجودة.",
+        "currentPrice": "السعر الحالي",
         "browseAuctions": "تصفح المزادات",
         "bidSuccess": "تم تقديم المزايدة!",
         "bidPlaced": "تم تقديم مزايدتك بقيمة ¥{amount}",
