@@ -62,6 +62,7 @@ import { AuthProvider } from '@/context/AuthContext';
 
 import { WatchlistProvider } from '@/context/WatchlistContext';
 import { AuthSessionProvider } from '@/components/providers/SessionProvider';
+import { LocaleSync } from '@/components/functional/LocaleSync';
 
 export default async function LocaleLayout({ children, params }: Props) {
     const { locale } = await params;
@@ -87,6 +88,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                     <AuthSessionProvider>
                         <AuthProvider>
                             <WatchlistProvider>
+                                <LocaleSync />
                                 {children}
                             </WatchlistProvider>
                         </AuthProvider>

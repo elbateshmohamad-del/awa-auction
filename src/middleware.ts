@@ -59,6 +59,36 @@ export async function middleware(request: NextRequest) {
             return NextResponse.redirect(newUrl);
         }
     }
+
+    // 3. Enforce Language Persistence
+    // If the user has a preferred locale in cookies (NEXT_LOCALE), and the current URL locale differs,
+    // redirect them to their preferred locale. This fixes the issue where "Back" button reverts language.
+    // Note: We only do this for GET requests to prevent breaking form submissions, though middleware runs before that usually.
+    // Also, we must allow the LanguageSwitcher to actually change the locale.
+    // The LanguageSwitcher updates the cookie via next-intl router.
+    // However, if we redirect immediately, we might fight the router?
+    // standard next-intl router replaces URL -> middleware sees new URL.
+    // If cookie is NOT yet updated (client side), we might bounce back?
+    // next-intl sets cookie on the client side or via API? Usually client side document.cookie.
+    // So if user clicks "EN", cookie becomes "en", then router pushes "/en". Middleware sees "/en" and cookie "en". OK.
+    // If user hits Back to "/ja", middleware sees "/ja", cookie "en". Redirect to "/en". OK.
+
+    // We must ensure we don't redirect if it's an asset or API (already handled by matcher but be safe)
+    if (localeMatch && request.method === 'GET') {
+        const savedLocale = request.cookies.get('NEXT_LOCALE')?.value;
+        const currentUrlLocale = localeMatch[1];
+
+        // Only redirect if valid locale and different
+        if (savedLocale &&
+            ['ja', 'en', 'ar'].includes(savedLocale) &&
+            savedLocale !== currentUrlLocale) {
+
+            // Construct new URL with saved locale
+            const newUrl = new URL(request.url);
+            newUrl.pathname = request.nextUrl.pathname.replace(`/${currentUrlLocale}`, `/${savedLocale}`);
+            return NextResponse.redirect(newUrl);
+        }
+    }
     // -----------------------------------
 
     // Check Authentication with JWT verification
