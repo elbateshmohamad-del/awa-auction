@@ -112,7 +112,12 @@
     "learnMore": "詳しく見る",
     "readMore": "続きを読む",
     "seeDetails": "詳細を見る",
-    "noData": "データがありません"
+    "noData": "データがありません",
+    "memberExclusive": "会員限定",
+    "memberExclusiveDesc": "このコンテンツを表示するにはログインしてください。",
+    "memberExclusiveBenefits": "会員はオークション、キャンペーン報酬などにアクセスできます。",
+    "apply": "適用",
+    "noResults": "結果がありません"
   },
   "catalog": {
     "bikesAvailable": "台のバイクが出品中"
@@ -469,7 +474,8 @@
       "termsNotice": "ログインすることで、以下に同意したものとみなされます：",
       "termsOfService": "利用規約",
       "and": "と",
-      "privacyPolicy": "プライバシーポリシー"
+      "privacyPolicy": "プライバシーポリシー",
+      "signInWithGoogle": "Googleでログイン"
     },
     "forgotPasswordPage": {
       "title": "パスワードをお忘れですか？",
@@ -1472,7 +1478,7 @@
   },
   "subscription": {
     "title": "サブスクリプションプラン",
-    "subtitle": "あなたのニーズに合ったプランを選択",
+    "subtitle": "あなたのニーズに合った\nプランを選択",
     "monthly": "月額",
     "yearly": "年額",
     "mostPopular": "一番人気",
@@ -1820,8 +1826,8 @@
   },
   "careers": {
     "badge": "採用情報",
-    "title": "グローバルオークションの未来を共に創ろう",
-    "subtitle": "日本と世界をつなぐ、最も透明で効率的なオークションプラットフォームの構築に参加しませんか。",
+    "title": "グローバルオークションの未来を\n共に創ろう",
+    "subtitle": "日本と世界をつなぐ、最も透明で効率的な\nオークションプラットフォームの構築に参加しませんか。",
     "cta": "募集職種を見る",
     "culture": {
       "title": "なぜAWA Auctionなのか？",
@@ -3061,5 +3067,14 @@
       "placeholder": "メールアドレスを入力",
       "subscribe": "登録する"
     }
+  },
+  "help": {
+    "title": "ヘルプセンター",
+    "gettingStarted": "始め方",
+    "howToBid": "入札方法",
+    "shippingGuide": "配送ガイド",
+    "faq": "よくある質問",
+    "videoGuides": "動画ガイド",
+    "contact": "お問い合わせ"
   }
 }

@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation';
 
 interface WatchlistContextType {
     watchlist: string[];
@@ -18,6 +18,7 @@ export function WatchlistProvider({ children }: { children: React.ReactNode }) {
     const { user, isAuthenticated } = useAuth();
     const [watchlist, setWatchlist] = useState<string[]>([]);
     const router = useRouter();
+    const pathname = usePathname();
 
     // Load watchlist on user change
     useEffect(() => {
@@ -47,7 +48,7 @@ export function WatchlistProvider({ children }: { children: React.ReactNode }) {
 
     const addToWatchlist = (bikeId: string) => {
         if (!isAuthenticated) {
-            router.push('/login');
+            router.push(`/login?callbackUrl=${encodeURIComponent(pathname)}`);
             return;
         }
         if (!watchlist.includes(bikeId)) {
@@ -62,7 +63,7 @@ export function WatchlistProvider({ children }: { children: React.ReactNode }) {
 
     const toggleWatchlist = (bikeId: string) => {
         if (!isAuthenticated) {
-            router.push('/login');
+            router.push(`/login?callbackUrl=${encodeURIComponent(pathname)}`);
             return;
         }
         if (isInWatchlist(bikeId)) {

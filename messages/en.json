@@ -111,7 +111,12 @@
         "learnMore": "Learn More",
         "readMore": "Read More",
         "seeDetails": "See Details",
-        "noData": "No data found"
+        "noData": "No data found",
+        "memberExclusive": "Member Exclusive",
+        "memberExclusiveDesc": "Please login to view this content.",
+        "memberExclusiveBenefits": "Members get access to auctions, campaign rewards, and more.",
+        "apply": "Apply",
+        "noResults": "No results found"
     },
     "header": {
         "navigation": {
@@ -449,7 +454,8 @@
             "termsNotice": "By signing in, you agree to our",
             "termsOfService": "Terms of Service",
             "and": "and",
-            "privacyPolicy": "Privacy Policy"
+            "privacyPolicy": "Privacy Policy",
+            "signInWithGoogle": "Sign in with Google"
         },
         "forgotPasswordPage": {
             "title": "Forgot password?",
@@ -3040,5 +3046,14 @@
             "placeholder": "Enter your email",
             "subscribe": "Subscribe"
         }
+    },
+    "help": {
+        "title": "Help Center",
+        "gettingStarted": "Getting Started",
+        "howToBid": "How to Bid",
+        "shippingGuide": "Shipping Guide",
+        "faq": "FAQ",
+        "videoGuides": "Video Guides",
+        "contact": "Contact"
     }
 }

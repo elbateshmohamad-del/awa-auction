@@ -25,8 +25,8 @@ export default function SubscriptionPage() {
             <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#F5F5F7] to-[#FFFFFF]">
                 <div className="text-center max-w-[1200px] px-6">
                     <Badge className="mb-6">{t('subscription.title')}</Badge>
-                    <h1 className="text-[40px] md:text-[56px] lg:text-[72px] font-bold leading-[1.1] tracking-[-2px] mb-6 whitespace-nowrap">{t('subscription.subtitle')}</h1>
-                    <p className="text-[18px] md:text-[22px] text-[#86868B] whitespace-nowrap">
+                    <h1 className="text-[32px] md:text-[56px] lg:text-[72px] font-bold leading-[1.1] tracking-[-2px] mb-6 whitespace-pre-line">{t('subscription.subtitle')}</h1>
+                    <p className="text-[18px] md:text-[22px] text-[#86868B]">
                         {t('about.vision.description')}
                     </p>
                 </div>
@@ -113,7 +113,7 @@ export default function SubscriptionPage() {
             <section className="min-h-screen flex items-center justify-center bg-[#F5F5F7] py-16">
                 <div className="container mx-auto max-w-6xl px-6">
                     <h2 className="text-[36px] md:text-[56px] font-bold text-[#1D1D1F] text-center mb-12">{t('subscription.featureComparison')}</h2>
-                    <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div className="bg-white rounded-3xl shadow-2xl overflow-x-auto">
                         <table className="w-full text-lg">
                             <thead>
                                 <tr className="bg-[#007AFF] text-white">

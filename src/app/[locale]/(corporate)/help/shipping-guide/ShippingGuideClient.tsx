@@ -59,15 +59,15 @@ export default function ShippingGuideClient() {
             {/* Shipping Rates Section */}
             <section className="min-h-screen flex items-center justify-center bg-[#F5F5F7] py-16">
                 <div className="container mx-auto max-w-5xl px-6">
-                    <h2 className="text-[36px] md:text-[48px] font-bold text-center mb-16">{t('rates.title')}</h2>
-                    <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <h2 className="text-[36px] md:text-[48px] font-bold text-center mb-16 break-keep">{t('rates.title')}</h2>
+                    <div className="bg-white rounded-3xl shadow-2xl overflow-x-auto">
                         <table className="w-full text-lg">
                             <thead>
                                 <tr className="bg-[#007AFF] text-white">
-                                    <th className="text-left p-6 font-bold">{t('rates.headers.region')}</th>
-                                    <th className="text-left p-6 font-bold">{t('rates.headers.port')}</th>
-                                    <th className="text-center p-6 font-bold">{t('rates.headers.time')}</th>
-                                    <th className="text-center p-6 font-bold">{t('rates.headers.cost')}</th>
+                                    <th className="text-left p-6 font-bold whitespace-nowrap">{t('rates.headers.region')}</th>
+                                    <th className="text-left p-6 font-bold whitespace-nowrap">{t('rates.headers.port')}</th>
+                                    <th className="text-center p-6 font-bold whitespace-nowrap">{t('rates.headers.time')}</th>
+                                    <th className="text-center p-6 font-bold whitespace-nowrap">{t('rates.headers.cost')}</th>
                                 </tr>
                             </thead>
                             <tbody>

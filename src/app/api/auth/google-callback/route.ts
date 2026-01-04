@@ -53,8 +53,12 @@ export async function GET(request: NextRequest) {
             .setExpirationTime('7d')
             .sign(JWT_SECRET);
 
-        // Create response with redirect to dashboard
-        const response = NextResponse.redirect(new URL('/dashboard', request.url));
+        // Create response with redirect to dashboard or callbackUrl
+        const url = new URL(request.url);
+        const callbackUrl = url.searchParams.get('callbackUrl') || '/dashboard';
+        console.log('[GoogleCallback] Redirecting to:', callbackUrl);
+
+        const response = NextResponse.redirect(new URL(callbackUrl, request.url));
 
         // Set the auth_token cookie (same as email/password login)
         response.cookies.set('auth_token', token, {

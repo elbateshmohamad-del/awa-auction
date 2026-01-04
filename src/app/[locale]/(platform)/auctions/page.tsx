@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link, useRouter, usePathname } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { FilterSidebar } from '@/components/catalog/FilterSidebar';
+import { MobileFilterSheet, FilterFAB } from '@/components/catalog/MobileFilterSheet';
 import { BikeCard } from '@/components/catalog/BikeCard';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
@@ -257,6 +258,9 @@ export default function AuctionsPage() {
         setFilters(newFilters);
         setCurrentPage(1);
     };
+
+    // Mobile filter sheet state
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     // Fetch bikes from API
     useEffect(() => {
@@ -625,13 +629,15 @@ export default function AuctionsPage() {
                     {/* Main Content */}
                     <main className="container mx-auto px-4 py-8">
                         <div className="flex flex-col lg:flex-row gap-8">
-                            {/* Filter Sidebar */}
-                            <FilterSidebar
-                                counts={counts}
-                                filters={filters}
-                                onFilterChange={handleFilterChange}
-                                currencySymbol={getCurrencySymbol(selectedCurrency)}
-                            />
+                            {/* Filter Sidebar - Desktop only */}
+                            <div className="hidden lg:block">
+                                <FilterSidebar
+                                    counts={counts}
+                                    filters={filters}
+                                    onFilterChange={handleFilterChange}
+                                    currencySymbol={getCurrencySymbol(selectedCurrency)}
+                                />
+                            </div>
 
                             {/* Filtered & Paginated Content */}
                             {/* Bike Grid */}
@@ -755,6 +761,38 @@ export default function AuctionsPage() {
                 </>
             )}
 
+            {/* Mobile Filter FAB */}
+            {isAuthenticated && (
+                <FilterFAB
+                    onClick={() => setIsFilterOpen(true)}
+                    activeCount={
+                        filters.makers.length +
+                        filters.grades.length +
+                        filters.regions.length +
+                        filters.colors.length +
+                        filters.displacement.length +
+                        (filters.minPrice ? 1 : 0) +
+                        (filters.maxPrice ? 1 : 0) +
+                        (filters.minYear ? 1 : 0) +
+                        (filters.maxYear ? 1 : 0) +
+                        (filters.maxMileage ? 1 : 0) +
+                        (filters.inspection ? 1 : 0) +
+                        (filters.minScore.engine ? 1 : 0) +
+                        (filters.minScore.frame ? 1 : 0) +
+                        (filters.minScore.exterior ? 1 : 0)
+                    }
+                />
+            )}
+
+            {/* Mobile Filter Sheet */}
+            <MobileFilterSheet
+                isOpen={isFilterOpen}
+                onClose={() => setIsFilterOpen(false)}
+                counts={counts}
+                filters={filters}
+                onApply={handleFilterChange}
+                currencySymbol={getCurrencySymbol(selectedCurrency)}
+            />
         </div>
     );
 }

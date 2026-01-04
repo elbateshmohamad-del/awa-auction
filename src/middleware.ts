@@ -107,12 +107,19 @@ export async function middleware(request: NextRequest) {
     // Protect Dashboard Routes
     if (pathWithoutLocale.startsWith('/dashboard')) {
         if (!isLoggedIn) {
-            return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
+            const loginUrl = new URL(`/${locale}/login`, request.url);
+            loginUrl.searchParams.set('callbackUrl', pathname + request.nextUrl.search);
+            return NextResponse.redirect(loginUrl);
         }
     }
 
     // Handle i18n routing
-    return intlMiddleware(request);
+    const response = intlMiddleware(request);
+
+    // Add x-pathname header for not-found page locale detection
+    response.headers.set('x-pathname', pathname);
+
+    return response;
 }
 
 export const config = {

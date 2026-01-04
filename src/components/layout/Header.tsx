@@ -1,6 +1,7 @@
 'use client';
 
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
@@ -12,8 +13,16 @@ export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const t = useTranslations();
     const router = useRouter();
-    const { isAuthenticated, logout } = useAuth();
+    const { isAuthenticated, isLoading, logout } = useAuth();
     const pathname = usePathname();
+    const searchParams = useSearchParams();
+
+    // Construct callback URL with query parameters
+    const getCallbackUrl = () => {
+        const currentPath = pathname || '/';
+        const queryString = searchParams.toString();
+        return queryString ? `${currentPath}?${queryString}` : currentPath;
+    };
 
     // Hide Header on Admin pages
     // Using simple string check strictly. Modify logic if specialized admin routes are needed.
@@ -33,8 +42,8 @@ export function Header() {
 
     const handleLogout = () => {
         logout();
-        router.refresh();
-        router.push('/');
+        // Redirect to auctions page after logout to avoid being redirected to login page from protected pages
+        router.push('/auctions');
     };
 
     return (
@@ -69,7 +78,13 @@ export function Header() {
                         <NotificationCenter />
                         <div className="h-6 w-px bg-gray-200"></div>
 
-                        {isAuthenticated ? (
+                        {isLoading ? (
+                            // Skeleton placeholder to prevent hydration mismatch
+                            <>
+                                <div className="h-5 w-16 bg-gray-200 rounded animate-pulse" />
+                                <div className="h-10 w-24 bg-gray-200 rounded animate-pulse" />
+                            </>
+                        ) : isAuthenticated ? (
                             <>
                                 <button
                                     onClick={handleLogout}
@@ -85,7 +100,7 @@ export function Header() {
                             </>
                         ) : (
                             <>
-                                <Link href="/login" className="font-bold text-[#0F4C81] hover:text-[#0a355c]">
+                                <Link href={`/login?callbackUrl=${encodeURIComponent(getCallbackUrl())}`} className="font-bold text-[#0F4C81] hover:text-[#0a355c]">
                                     {t('header.auth.login')}
                                 </Link>
                                 <Link href="/register">
@@ -135,7 +150,13 @@ export function Header() {
                                 </Link>
                             ))}
                             <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
-                                {isAuthenticated ? (
+                                {isLoading ? (
+                                    // Skeleton placeholder for mobile
+                                    <>
+                                        <div className="h-10 w-full bg-gray-200 rounded animate-pulse" />
+                                        <div className="h-10 w-full bg-gray-200 rounded animate-pulse" />
+                                    </>
+                                ) : isAuthenticated ? (
                                     <>
                                         <Link href="/dashboard" className="w-full">
                                             <Button variant="primary" className="w-full justify-center">{t('header.auth.dashboard')}</Button>
@@ -149,7 +170,7 @@ export function Header() {
                                     </>
                                 ) : (
                                     <>
-                                        <Link href="/login" className="w-full">
+                                        <Link href={`/login?callbackUrl=${encodeURIComponent(getCallbackUrl())}`} className="w-full">
                                             <Button variant="ghost" className="w-full justify-center">{t('header.auth.login')}</Button>
                                         </Link>
                                         <Link href="/register" className="w-full">
@@ -165,3 +186,4 @@ export function Header() {
         </header>
     );
 }
+

@@ -11,7 +11,7 @@ export default function DashboardGuard({ children }: { children: React.ReactNode
 
     useEffect(() => {
         if (!isLoading && !isAuthenticated) {
-            router.push('/login');
+            router.push(`/login?callbackUrl=${encodeURIComponent(pathname)}`);
         }
     }, [isLoading, isAuthenticated, router, pathname]);
 

@@ -22,8 +22,8 @@ export default function CareersClient() {
             <section className="bg-[#0F4C81] text-white py-24">
                 <div className="container mx-auto px-4 text-center">
                     <Badge variant="info" className="mb-4">{t('badge')}</Badge>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ color: '#ffffff' }}>{t('title')}</h1>
-                    <p className="text-xl text-[#E0F2FE] max-w-2xl mx-auto mb-8">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 whitespace-pre-line" style={{ color: '#ffffff' }}>{t('title')}</h1>
+                    <p className="text-xl text-[#E0F2FE] max-w-2xl mx-auto mb-8 whitespace-pre-line">
                         {t('subtitle')}
                     </p>
                     <Button

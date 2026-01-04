@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/Badge';
 import { CheckCircle2, AlertCircle, Youtube, Instagram, Twitter, Lock } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter, Link } from '@/i18n/navigation';
+import { usePathname } from 'next/navigation';
 
 interface Bike {
     id: string;
@@ -19,6 +20,7 @@ interface Bike {
 export default function SnsCampaignPage() {
     const { isAuthenticated, isLoading } = useAuth();
     const router = useRouter();
+    const pathname = usePathname();
 
     const [formData, setFormData] = useState({
         platform: 'YouTube',
@@ -133,12 +135,12 @@ export default function SnsCampaignPage() {
                             </p>
                         </div>
                         <div className="flex gap-4">
-                            <Link href="/login">
+                            <Link href={`/login?callbackUrl=${encodeURIComponent(pathname)}`}>
                                 <Button className="bg-[#0F4C81] text-white hover:bg-[#0c3b66]">
                                     Log In
                                 </Button>
                             </Link>
-                            <Link href="/register">
+                            <Link href={`/register?callbackUrl=${encodeURIComponent(pathname)}`}>
                                 <Button variant="outline">
                                     Create Account
                                 </Button>

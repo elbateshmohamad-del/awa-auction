@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { BiddingPanel } from '@/components/auction/BiddingPanel';
 import { useAuction } from '@/hooks/useAuction';
 import { useAuth } from '@/context/AuthContext';
@@ -237,6 +237,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
     const { currentPrice, bids, timeLeft, placeBid, status } = useAuction(bikeId, bike?.startPrice || 0, auctionTargetDate);
     const { isInWatchlist, toggleWatchlist } = useWatchlist();
     const router = useRouter();
+    const pathname = usePathname();
 
     const [bidSuccess, setBidSuccess] = useState<{ amount: number } | null>(null);
 
@@ -245,7 +246,7 @@ export default function BikeDetailClient({ bikeId }: BikeDetailClientProps) {
 
     const handleBid = async (amount: number) => {
         if (!user) {
-            router.push('/login');
+            router.push(`/login?callbackUrl=${encodeURIComponent(pathname)}`);
             return;
         }
 

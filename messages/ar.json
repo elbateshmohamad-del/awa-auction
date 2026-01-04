@@ -111,7 +111,12 @@
         "learnMore": "اعرف المزيد",
         "readMore": "اقرأ المزيد",
         "seeDetails": "عرض التفاصيل",
-        "noData": "لا توجد بيانات"
+        "noData": "لا توجد بيانات",
+        "memberExclusive": "حصري للأعضاء",
+        "memberExclusiveDesc": "يرجى تسجيل الدخول لعرض هذا المحتوى.",
+        "memberExclusiveBenefits": "يحصل الأعضاء على وصول للمزادات ومكافآت الحملات والمزيد.",
+        "apply": "تطبيق",
+        "noResults": "لم يتم العثور على نتائج"
     },
     "header": {
         "navigation": {
@@ -444,7 +449,8 @@
             "termsNotice": "بتسجيل الدخول، فإنك توافق على",
             "termsOfService": "شروط الخدمة",
             "and": "و",
-            "privacyPolicy": "سياسة الخصوصية"
+            "privacyPolicy": "سياسة الخصوصية",
+            "signInWithGoogle": "تسجيل الدخول عبر جوجل"
         },
         "forgotPasswordPage": {
             "title": "نسيت كلمة المرور؟",
@@ -2957,5 +2963,14 @@
             "placeholder": "أدخل بريدك الإلكتروني",
             "subscribe": "اشترك"
         }
+    },
+    "help": {
+        "title": "مركز المساعدة",
+        "gettingStarted": "البداية",
+        "howToBid": "كيفية المزايدة",
+        "shippingGuide": "دليل الشحن",
+        "faq": "أسئلة شائعة",
+        "videoGuides": "أدلة الفيديو",
+        "contact": "اتصل"
     }
 }
