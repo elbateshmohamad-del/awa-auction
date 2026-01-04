@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -147,13 +148,16 @@ export function BikeCard({
             <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
                 {/* Bike Image */}
                 {image && !imageError ? (
-                    <img
-                        src={image}
-                        alt={name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                        onError={() => setImageError(true)}
-                    />
+                    <div className="w-full h-full">
+                        <Image
+                            src={image.startsWith('/') ? image : `/api/proxy-image?url=${encodeURIComponent(image)}`}
+                            alt={name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            onError={() => setImageError(true)}
+                        />
+                    </div>
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-6xl group-hover:scale-105 transition-transform duration-500">
                         🏍️

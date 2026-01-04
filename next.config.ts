@@ -11,6 +11,13 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    localPatterns: [
+      {
+        pathname: '/api/proxy-image/**',
+      },
+    ],
+  },
 };
 
 export default withNextIntl(nextConfig);
