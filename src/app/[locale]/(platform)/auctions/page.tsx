@@ -262,68 +262,96 @@ export default function AuctionsPage() {
     // Mobile filter sheet state
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-    // Fetch bikes from API
+    // Fetch bikes from API (Progressive Loading Strategy)
     useEffect(() => {
+        let isCancelled = false;
+
         async function fetchBikes() {
+            setLoading(true);
             try {
-                // Pass locale to API to get backend-translated fields
-                const response = await fetch(`/api/bikes?locale=${locale}`);
-                const data = await response.json();
-                if (data.success) {
-                    // Safe price parsing helper
-                    const parsePrice = (val: any): number => {
-                        if (typeof val === 'number') return val;
-                        if (!val) return 0;
-                        // Remove commas, currency symbols, and whitespace
-                        const str = String(val).replace(/[^0-9.-]/g, '');
-                        const num = Number(str);
-                        return isNaN(num) ? 0 : num;
-                    };
+                // 1. FAST INITIAL LOAD: Get only the first 30 items
+                // This makes the page interactive quickly
+                const initialRes = await fetch(`/api/bikes?locale=${locale}&page=1&limit=30`);
+                const initialData = await initialRes.json();
 
-                    // Filter out bikes with invalid data and merge with localStorage auction state
-                    const validBikes = data.data.filter((bike: Bike) =>
-                        bike.status === 'active'
-                    ).map((bike: Bike) => {
-                        const startPrice = parsePrice(bike.startPrice);
-                        let bidCount = bike.bidCount || 0;
-                        let currentPrice = bike.currentPrice || startPrice;
+                if (initialRes.ok && initialData.success) {
+                    const parsedInitial = processBikes(initialData.data);
+                    if (!isCancelled) {
+                        setBikes(parsedInitial);
+                        setLoading(false); // Enable interaction immediately
+                    }
 
-                        // Merge client-side simulation state if available
-                        if (typeof window !== 'undefined') {
-                            const key = `auction_state_${bike.id}`;
-                            const stored = localStorage.getItem(key);
-                            if (stored) {
-                                try {
-                                    const parsed = JSON.parse(stored);
-                                    if (parsed.bids && Array.isArray(parsed.bids)) {
-                                        bidCount = Math.max(bidCount, parsed.bids.length);
-                                    }
-                                    if (parsed.currentPrice && typeof parsed.currentPrice === 'number') {
-                                        currentPrice = Math.max(currentPrice, parsed.currentPrice);
-                                    }
-                                } catch (e) {
-                                    // Ignore parse errors
-                                }
-                            }
-                        }
+                    // 2. BACKGROUND FETCH: Get the REST of the data (limit=0 for all, or large number)
+                    // This allows client-side filtering to work correctly on the full dataset
+                    // We skip the first 30 to avoid duplicates if we appended, but easier to just fetch ALL and replace
+                    // or fetch rest. Let's fetch ALL (limit=0) in background to be safe about consistency,
+                    // but that repeats work. Better: fetch page=2&limit=1000 or similar.
+                    // Actually, `getAllBikes` API doesn't support "all except first 30" easily without `skip`.
+                    // Let's just fetch EVERYTHING in background (limit=0) if we want total consistency,
+                    // OR fetch `limit=0` (all) directly in the background request.
 
-                        return {
-                            ...bike,
-                            startPrice,
-                            bidCount,
-                            currentPrice
-                        };
-                    });
-                    setBikes(validBikes);
+                    // A better UX for "slowness" is: Show 30. Then fetch ALL.
+                    const fullRes = await fetch(`/api/bikes?locale=${locale}&limit=0`);
+                    const fullData = await fullRes.json();
+
+                    if (fullRes.ok && fullData.success && !isCancelled) {
+                        const parsedFull = processBikes(fullData.data);
+                        setBikes(parsedFull);
+                    }
                 }
             } catch (error) {
-                // console.error('Failed to fetch bikes:', error);
-            } finally {
+                console.error('Failed to fetch bikes:', error);
                 setLoading(false);
             }
         }
+
+        // Helper to process raw API data
+        function processBikes(apiData: any[]): Bike[] {
+            const parsePrice = (val: any): number => {
+                if (typeof val === 'number') return val;
+                if (!val) return 0;
+                const str = String(val).replace(/[^0-9.-]/g, '');
+                const num = Number(str);
+                return isNaN(num) ? 0 : num;
+            };
+
+            return apiData.filter((bike: any) =>
+                bike.status === 'active'
+            ).map((bike: any) => {
+                const startPrice = parsePrice(bike.startPrice);
+                let bidCount = bike.bidCount || 0;
+                let currentPrice = bike.currentPrice || startPrice;
+
+                // Merge client-side simulation state
+                if (typeof window !== 'undefined') {
+                    const key = `auction_state_${bike.id}`;
+                    const stored = localStorage.getItem(key);
+                    if (stored) {
+                        try {
+                            const parsed = JSON.parse(stored);
+                            if (parsed.bids && Array.isArray(parsed.bids)) {
+                                bidCount = Math.max(bidCount, parsed.bids.length);
+                            }
+                            if (parsed.currentPrice && typeof parsed.currentPrice === 'number') {
+                                currentPrice = Math.max(currentPrice, parsed.currentPrice);
+                            }
+                        } catch (e) { }
+                    }
+                }
+
+                return {
+                    ...bike,
+                    startPrice,
+                    bidCount,
+                    currentPrice
+                };
+            });
+        }
+
         fetchBikes();
-    }, [locale]); // Add locale dependency
+
+        return () => { isCancelled = true; };
+    }, [locale]);
 
     useEffect(() => {
         // Initial calculation

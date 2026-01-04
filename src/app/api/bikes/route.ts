@@ -10,11 +10,23 @@ export async function GET(request: Request) {
     const statusParam = searchParams.get('status');
     const locale = searchParams.get('locale') as 'ja' | 'en' | 'ar' | null;
 
-    let bikes = await getAllBikes({
-        status: statusParam ? statusParam.split(',').map(s => s.trim()) : undefined
+    const pageParam = searchParams.get('page');
+    const limitParam = searchParams.get('limit');
+
+    // Default to page 1, 30 items per page
+    const page = pageParam ? parseInt(pageParam) : 1;
+    const limit = limitParam ? parseInt(limitParam) : 30;
+
+    const { bikes: rawBikes, total } = await getAllBikes({
+        status: statusParam ? statusParam.split(',').map(s => s.trim()) : undefined,
+        page,
+        limit
     });
 
-    // Filter by maker if provided
+    let bikes = rawBikes;
+
+    // Filter by maker if provided (Note: Ideally filter in DB, but legacy logic kept for now)
+    // If maker filter exists, we might return fewer than limit. For strict pagination, add maker to getAllBikes options later.
     if (maker) {
         bikes = bikes.filter(bike => bike.maker.toLowerCase() === maker.toLowerCase());
     }
@@ -44,6 +56,9 @@ export async function GET(request: Request) {
     return NextResponse.json({
         success: true,
         count: bikes.length,
+        total, // Total items in DB (useful for frontend pagination)
+        page,
+        limit,
         data: bikes,
     });
 }

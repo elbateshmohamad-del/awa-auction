@@ -45,7 +45,11 @@ function parseBike(bike: any) {
     };
 }
 
-export async function getAllBikes(options?: { status?: string | string[] }) {
+export async function getAllBikes(options?: {
+    status?: string | string[],
+    page?: number,
+    limit?: number
+}) {
     const where: any = {};
 
     if (options?.status) {
@@ -58,11 +62,28 @@ export async function getAllBikes(options?: { status?: string | string[] }) {
         where.status = 'active'; // Default behavior
     }
 
-    const bikes = await prisma.bike.findMany({
+    const page = options?.page || 1;
+    const limit = options?.limit || 0; // 0 means no limit (all)
+
+    const findOptions: any = {
         where,
-        orderBy: { importedAt: 'desc' }
-    });
-    return bikes.map(parseBike);
+        orderBy: { importedAt: 'desc' },
+    };
+
+    if (limit > 0) {
+        findOptions.skip = (page - 1) * limit;
+        findOptions.take = limit;
+    }
+
+    const [bikes, total] = await Promise.all([
+        prisma.bike.findMany(findOptions),
+        prisma.bike.count({ where })
+    ]);
+
+    return {
+        bikes: bikes.map(parseBike),
+        total
+    };
 }
 
 export async function getBikeById(id: string) {
